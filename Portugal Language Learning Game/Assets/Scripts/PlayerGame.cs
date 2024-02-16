@@ -20,6 +20,7 @@ public class PlayerGame : MonoBehaviour
 
     public void StartGame()
     {  
+
         FindObjectOfType<SceneSwitch>().LoadPlayGameScene();
     }
     public void RestartGame()

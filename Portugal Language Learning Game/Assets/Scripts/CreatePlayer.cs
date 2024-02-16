@@ -73,7 +73,7 @@ public class CreatePlayer : MonoBehaviour
         newPlayerInfo.AddField("password", Password.text);
 
 
-        UnityWebRequest CreatePostRequest = UnityWebRequest.Post("http://localhost/cruds/newplayer.php", newPlayerInfo);
+        UnityWebRequest CreatePostRequest = UnityWebRequest.Post("http://ec2-34-201-217-216.compute-1.amazonaws.com/cruds/newplayer.php", newPlayerInfo);
         yield return CreatePostRequest.SendWebRequest();
 
         if (CreatePostRequest.error == null)
