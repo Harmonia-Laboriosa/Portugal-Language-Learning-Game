@@ -64,6 +64,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                     rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
                     //make is draggable true
                     isDraggable = false;
+                   
+                    //Debug.Log("1");
                     return; // Exit the loop once a valid slot is found
                 }
             }
