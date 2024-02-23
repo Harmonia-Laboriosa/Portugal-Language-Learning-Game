@@ -11,7 +11,6 @@ public class SlotManage : MonoBehaviour
     public bool[] scoreIncreased; // Array to store whether the score has been increased for each question panel
     public SManage scoreManager;
 
-
     public QManage questionManager;
 
     // Start is called before the first frame update
@@ -33,7 +32,6 @@ public class SlotManage : MonoBehaviour
     public void CheckAllObjectsPlacedInPanel(GameObject panel, int panelIndex)
     {
         bool allPlaced = true;
-
         foreach (Transform slot in panel.transform)
         {
             DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
@@ -44,12 +42,25 @@ public class SlotManage : MonoBehaviour
             }
         }
 
+
         allObjectsPlaced[panelIndex] = allPlaced;
 
         // Increase score if all objects are placed and the score has not been increased for this panel yet
         if (allPlaced && !scoreIncreased[panelIndex])
         {
-            scoreManager.IncreaseScore(1); // Increase score when all objects are placed
+            
+            foreach (Transform slot in panel.transform)
+            {
+                DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
+                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                {   
+                    
+                }
+            }
+            scoreManager.IncreaseScore(1);
+            // Increase score when all objects are placed correctly  
+
+
             scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
         }
 

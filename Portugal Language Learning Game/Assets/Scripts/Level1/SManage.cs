@@ -42,7 +42,10 @@ public class SManage : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
-        UpdateScoreText(); // Update the score text after increasing the score
+        
+            UpdateScoreText();
+        
+       // Update the score text after increasing the score
     }
 
     public void ResetScore()
@@ -51,6 +54,7 @@ public class SManage : MonoBehaviour
     }
 
     // Method to decrease the score by a specified amount
+/*
     public void DecreaseScore(int amount)
     {
         score -= amount;
@@ -58,6 +62,7 @@ public class SManage : MonoBehaviour
         score = Mathf.Max(score, 0);
         UpdateScoreText(); // Update the score text after decreasing the score
     }
+*/
 
     // Method to update the score text UI
     private void UpdateScoreText()
@@ -65,6 +70,7 @@ public class SManage : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString(); // Update the text to display the current score
+            Debug.Log(score);
         }
     }
 }

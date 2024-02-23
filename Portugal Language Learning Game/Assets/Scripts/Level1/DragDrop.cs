@@ -11,6 +11,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private CanvasGroup canvasGroup;       //reference to CanvasGroup
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
+    public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
+    public bool isPlacedCorrect = false;
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
@@ -60,17 +62,49 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
             foreach (GameObject hoveredObject in eventData.hovered)
             {
+
                 if (hoveredObject.CompareTag(tag))
                 {
                     // If dropped onto a slot, snap to its position
                     //rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
                     //make is draggable true
-                    
-                    isDraggable = false;
-                   
+
+                    //isDraggable = false;
+                    /*
+                    string slotTag = GetComponent<ItemSlot>().Placedobjecttag;
+                    if(slotTag==gameObject.tag)
+                    {
+                        isPlaceCorrect = true;  
+                    }
+                    */
                     //Debug.Log("1");
+                    // If dropped onto a slot, get the Placedobjecttag from the ItemSlot component
+                    ItemSlot itemSlot = hoveredObject.GetComponent<ItemSlot>();
+                    if (itemSlot != null)
+                    {
+                        // Get the Placedobjecttag from the ItemSlot component
+                        string placedObjectTag = itemSlot.Placedobjecttag;
+
+                        // Do something with the placedObjectTag
+                        Debug.Log("Placed object tag: " + placedObjectTag);
+
+                        // Check if the placed object tag matches the tag of this object
+                        if (placedObjectTag == gameObject.tag)
+                        {
+                            isPlaceCorrect = true;
+                            Debug.Log("Object placed correctly!");
+                        }
+                        else
+                        {
+                            isPlaceCorrect = false;
+                            Debug.Log("Object placed incorrectly!");
+                        }
+                    }
+
+                    isDraggable = false;
                     return; // Exit the loop once a valid slot is found
                 }
+
                 
             }
         }
