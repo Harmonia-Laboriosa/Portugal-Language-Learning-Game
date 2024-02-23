@@ -14,12 +14,14 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
+    
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = rectTransform.anchoredPosition;
+        
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -61,13 +63,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                 if (hoveredObject.CompareTag(tag))
                 {
                     // If dropped onto a slot, snap to its position
-                    rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
+                    //rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
                     //make is draggable true
+                    
                     isDraggable = false;
                    
                     //Debug.Log("1");
                     return; // Exit the loop once a valid slot is found
                 }
+                
             }
         }
 
