@@ -14,6 +14,7 @@ public class SlotManage : MonoBehaviour
     public QManage questionManager;
     public float waitForNextQuestion;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +59,7 @@ public class SlotManage : MonoBehaviour
                     TempScore = TempScore + 1;
                     if (TempScore == 3 || TempScore ==6)
                     {
-                       
+                        
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
                     }
@@ -73,10 +74,8 @@ public class SlotManage : MonoBehaviour
         // Activate next panel if all objects are placed
         if (allPlaced)
         {
-
             ActivateNextPanel(panelIndex);
-           
-           
+                
         }
     }
 
