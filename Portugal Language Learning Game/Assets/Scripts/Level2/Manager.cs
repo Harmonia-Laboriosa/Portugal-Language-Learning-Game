@@ -9,10 +9,13 @@ using TMPro;
 public class Manager : MonoBehaviour
 {
     public GameObject[] levels;
-    public GameObject EndgamePanel;
+    public GameObject DialoguePanel;
+    
+    public GameObject CanvasforQuestions;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
+
 
 
     void Start()
@@ -56,14 +59,16 @@ public class Manager : MonoBehaviour
         if (currentQuestion + 1 < levels.Length)
         {
             currentQuestion++;
-            
+
             ActivateCurrentQuestion();
         }
         else
         {
-            Debug.Log("Quiz completed!");
+            Debug.Log("Quiz completed! and conversation started");
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            CanvasforQuestions.SetActive(false);
+            DialoguePanel.SetActive(true);
+          
         }
     }
 

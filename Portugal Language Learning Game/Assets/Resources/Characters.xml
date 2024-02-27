@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CharacterCollection>
+  <Characters>
+    <Character name="Sjerd">
+      <Name>Sjerd</Name>
+      <Greeting>
+        Hello! I'm [name of NPC]. How are you?
+        <Response next="0">
+          Hello! I'm good. I'm [name of player].
+        </Response>
+        <Response next="Quit">
+          Bye
+        </Response>
+      </Greeting>
+      <Tree0>
+        I'm alright, little busy though
+        <Response next="1">
+          I have a mission to find a Victory Card, do you know if there is one?
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree0>
+      <Tree1>
+        Hmm, I've heard of something similar here in the kingdom... but the path is treacherous... What leads you to want to find it?
+        <Response next="2">
+          I want to discover more about Portuguese culture
+        </Response>
+        <Response next="Quit">
+          Nope
+        </Response>
+        <Response next="Quit">
+          MY BRAIN!
+        </Response>
+      </Tree1>
+      <Tree2>
+        Ah, yes! If I remember correctly, to reach the VC, you need to go through two difficult challenges. First, you have to unlock the entrance to the cave. But be careful... Mistakes will cost you dearly!
+        <Response next="3">
+          How can I do that?
+        </Response>
+        <Response next="Quit">
+          No thanks, I should go
+        </Response>
+      </Tree2>
+      <Tree3>
+        You have to go through a series of challenges that will take you to a village of wizards. But remember... Each mistake can block your entry.
+        <Response next="4">
+          Where is the village?
+        </Response>
+        <Response next="Quit">
+          See you then
+        </Response>
+      </Tree3>
+      <Tree4>
+        There's a portal in the cave that takes you to the village. There, you have to adapt to their customs. Dress like them, speak like them, eat like them. That way, you'll gain their trust. Then, the wizards will help you find the castle where the VC is kept.
+        <Response next="5">
+          How do I get into the castle?
+        </Response>
+        <Response next="Quit">
+          See you then
+        </Response>
+      </Tree4>
+      <Tree5>
+        After gaining the trust of the wizards, you have to gain the trust of the castle guards. Dress like one of them and pass their tests. If you succeed, you'll have access to the castle. The VC is there.
+        <Response next="6">
+          So, now do I have everything to get the VC?
+        </Response>
+        <Response next="Quit">
+          See you then
+        </Response>
+      </Tree5>
+      <Tree6>
+        No. You still have to solve one last challenge. In the end, the VC can finally be yours. Are you up to the challenges?
+        <Response next="7">
+          Yes.
+        </Response>
+        <Response next="Quit">
+          See you then
+        </Response>
+      </Tree6>
+      <Tree7>
+        I wish you luck on your journey.
+        <Response next="Quit">
+          See you then
+        </Response>
+      </Tree7>
+    </Character>
+  </Characters>
+</CharacterCollection>
