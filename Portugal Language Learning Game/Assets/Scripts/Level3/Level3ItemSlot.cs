@@ -12,7 +12,7 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
     [SerializeField]
     public string Placedobjecttag;
     public Level3Manager level3Manager;
-    public string tag;
+    //public string tag;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -42,6 +42,5 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
 
         level3Manager.NextQuestion();
     }
-
 
 }
