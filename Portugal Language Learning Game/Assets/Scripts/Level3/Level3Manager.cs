@@ -13,11 +13,12 @@ public class Level3Manager : MonoBehaviour
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
-
+    public GameObject Answerbuttons;
 
     void Start()
     {
         StartQuiz();
+        Answerbuttons.SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,6 +62,7 @@ public class Level3Manager : MonoBehaviour
         }
         else
         {
+            Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel
             EndgamePanel.SetActive(true);
@@ -112,4 +114,10 @@ public class Level3Manager : MonoBehaviour
 
         NextQuestion();
     }
+
+    public void OpenAnswerPanel()
+    {
+        Answerbuttons.SetActive(true);
+    }
+
 }

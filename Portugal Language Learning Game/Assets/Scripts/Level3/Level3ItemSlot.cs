@@ -12,6 +12,7 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
     [SerializeField]
     public string Placedobjecttag;
     public Level3Manager level3Manager;
+    public string tag;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -30,14 +31,17 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             StartCoroutine(ActivateNextQuestionPanel());
-            
+
             //eventData.pointerDrag.gameObject.SetActive(false);
         }
     }
 
     private IEnumerator ActivateNextQuestionPanel()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
+
         level3Manager.NextQuestion();
     }
+
+
 }
