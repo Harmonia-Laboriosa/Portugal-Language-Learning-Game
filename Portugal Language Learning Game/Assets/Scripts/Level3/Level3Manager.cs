@@ -50,7 +50,7 @@ public class Level3Manager : MonoBehaviour
         }
     }
 
-    void NextQuestion()
+    public void NextQuestion()
     {
 
         if (currentQuestion + 1 < levels.Length)

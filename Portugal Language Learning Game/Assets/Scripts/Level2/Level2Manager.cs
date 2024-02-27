@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class Manager : MonoBehaviour
+public class Level2Manager : MonoBehaviour
 {
     public GameObject[] levels;
     public GameObject DialoguePanel;
