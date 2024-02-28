@@ -14,6 +14,7 @@ public class Conversation : MonoBehaviour
     public delegate void LockConvo(bool talks);
     public LockConvo ConvoLocker;
     public GameObject EndPanel;
+    public GameObject FailedPanel;
     private bool isTalking;
 
     [SerializeField]
@@ -95,6 +96,10 @@ public class Conversation : MonoBehaviour
         {
             EndConversation();
         }
+        else if(lineTree == "TreeSuccess")
+        {
+            SucessConversation();
+        }
         else
         {
             SManage.instance.IncreaseScore(1);
@@ -113,6 +118,19 @@ public class Conversation : MonoBehaviour
     }
 
     void EndConversation()
+    {
+        namePrinter.PrintToUI("");
+        dialogeueText.text = "";
+
+        isTalking = false;
+        FailedPanel.SetActive(true);
+        if (ConvoLocker != null)
+        {
+            ConvoLocker(isTalking);
+        }
+    }
+
+    void SucessConversation()
     {
         namePrinter.PrintToUI("");
         dialogeueText.text = "";
