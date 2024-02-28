@@ -140,7 +140,12 @@ public class Level3Manager : MonoBehaviour
 
     public void OpenAnswerPanel()
     {
-        Answerbuttons.SetActive(true);
+        StartCoroutine(OpenAnswerPanelWithDelay());
     }
 
+    private IEnumerator OpenAnswerPanelWithDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Answerbuttons.SetActive(true);
+    }
 }
