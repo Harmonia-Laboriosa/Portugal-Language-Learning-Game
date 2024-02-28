@@ -12,7 +12,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
-  
+    public GameObject SoundBtn;
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
@@ -86,7 +86,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                     {
                         // Get the Placedobjecttag from the ItemSlot component
                         string placed_ObjectTag = itemSlot.Placedobjecttag;
-
+                        SoundBtn.SetActive(false);
                         // Do something with the placedObjectTag
                         Debug.Log("Placed object tag: " + placed_ObjectTag);
 

@@ -93,11 +93,34 @@ public class Level3Manager : MonoBehaviour
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.red;
 
+        // Shake the selected button
+        StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
+
         // Disable all answer buttons after an answer is selected
         // DisableAnswerButtons();
 
         // Pause the game and show the pause panel
         StartCoroutine(DelayBeforeNextQuestion());
+    }
+
+    IEnumerator ShakeButton(GameObject buttonObject, float duration, float magnitude)
+    {
+        Vector3 originalPosition = buttonObject.transform.position;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = originalPosition.x + Random.Range(-1f, 1f) * magnitude;
+            /*float y = originalPosition.y + Random.Range(-1f, 1f) * magnitude;*/
+
+            buttonObject.transform.position = new Vector3(x, originalPosition.y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        buttonObject.transform.position = originalPosition;
     }
 
     void UpdateScoreText()

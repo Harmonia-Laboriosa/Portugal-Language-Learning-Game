@@ -23,43 +23,44 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             
             if(droppedObjectTag == "open A")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1+ 'á' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'á' + word + "</i>";
             }
             if(droppedObjectTag == "open O")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'ó' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'ó' + word + "</i>";
             }
             if(droppedObjectTag == "closed A")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'a' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'a' + word + "</i>";
             }
             if (droppedObjectTag == "closed O")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'o' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'o' + word + "</i>";
             }
             if (droppedObjectTag == "closed E")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'e' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'e' + word + "</i>";
             }
             if (droppedObjectTag == "open E")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'é' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'é' + word + "</i>";
             }
             if (droppedObjectTag == "middle E")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'e' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'e' + word + "</i>";
             }
             if (droppedObjectTag == "i")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'i' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'i' + word + "</i>";
+
             }
             if (droppedObjectTag == "middle O")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'o' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'o' + word + "</i>";
             }
             if (droppedObjectTag == "u")
             {
-                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = word1 + 'u' + word;
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'u' + word + "</i>";
             }
 
 

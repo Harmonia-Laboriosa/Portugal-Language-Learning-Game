@@ -50,7 +50,7 @@ public class Timer : MonoBehaviour
         else
         {
             // Reset text color to white and stop blinking if time is greater than 10 seconds
-            timerText.color = Color.white;
+            /*timerText.color = Color.white;*/
             if (blinkCoroutine != null)
             {
                 StopCoroutine(blinkCoroutine);

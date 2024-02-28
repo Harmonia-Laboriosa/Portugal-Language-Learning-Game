@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class ChoiceButtonHandler : MonoBehaviour {
 
@@ -14,7 +14,7 @@ public class ChoiceButtonHandler : MonoBehaviour {
 
     [SerializeField]
     private float xPos;
-    const float yPosOffset = 100f;
+    const float yPosOffset = 110f;
 
     public delegate void ChoicePasser(string lineTree);
     public ChoicePasser PassChoice;
@@ -34,7 +34,7 @@ public class ChoiceButtonHandler : MonoBehaviour {
         currentButtons = new GameObject[playerChoices.Length];
 
         int i = 0;
-        float offsetCounter = 210;
+        float offsetCounter = 24;
 
         //for each string in response options array for the player
         foreach (string s in playerChoices)
@@ -49,7 +49,8 @@ public class ChoiceButtonHandler : MonoBehaviour {
 
             Button choiceButton = choiceButtonObj.GetComponent<Button>();
             //assign appropriate text to button
-            choiceButton.GetComponentInChildren<Text>().text = playerChoices[i];
+            choiceButton.GetComponentInChildren<TMP_Text>().text = playerChoices[i];
+
 
             Vector2 pos = Vector2.zero;
             pos.y = offsetCounter;
