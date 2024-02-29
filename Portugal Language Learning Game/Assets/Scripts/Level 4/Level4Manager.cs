@@ -14,6 +14,8 @@ public class Level4Manager : MonoBehaviour
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
 
+    public GameObject shattered, shatter;
+
 
     void Start()
     {
@@ -65,6 +67,8 @@ public class Level4Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        Instantiate(shattered, shatter.transform.position, Quaternion.identity);
+        //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
         // Shatter all answer buttons after an answer is selected
@@ -76,7 +80,7 @@ public class Level4Manager : MonoBehaviour
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
 
         // Shake the selected button
-        StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
+        //StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
 
         // Disable all answer buttons after an answer is selected
         // DisableAnswerButtons();
@@ -114,7 +118,7 @@ public class Level4Manager : MonoBehaviour
     IEnumerator DelayBeforeNextQuestion()
     {
         // Delay for a short time before moving to the next question
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
 
         NextQuestion();
