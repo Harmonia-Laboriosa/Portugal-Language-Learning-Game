@@ -396,6 +396,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1307965746510586427}
+  textWord: 
   tag: Slot
 --- !u!225 &24972786
 CanvasGroup:
@@ -639,6 +640,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3742697893111962393}
+  textWord: 
   tag: Slot
 --- !u!225 &31543656
 CanvasGroup:
@@ -1111,6 +1113,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 6143993290345343987}
+  textWord: 
   tag: Slot
 --- !u!225 &86363494
 CanvasGroup:
@@ -2748,6 +2751,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3341509871255462732}
+  textWord: 
   tag: Slot
 --- !u!225 &176752901
 CanvasGroup:
@@ -3667,6 +3671,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 4885837419224077151}
+  textWord: 
   tag: Slot
 --- !u!225 &197483856
 CanvasGroup:
@@ -3753,7 +3758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 3}
   m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204487573
@@ -3776,11 +3781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The story arises, here it begins,
-
-    Full of magic and fantasy
-
-'
+  m_text: "A hist\xF3ria surge, aqui inicia,\r         Cheiade magia e fantasia.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -4130,6 +4131,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 4454705857060557603}
+  textWord: 
   tag: Slot
 --- !u!225 &216204132
 CanvasGroup:
@@ -4828,6 +4830,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 114798346}
+  textWord: 
   tag: Slot
 --- !u!1 &264014195
 GameObject:
@@ -5157,6 +5160,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1674809825461297223}
+  textWord: 
   tag: Slot
 --- !u!225 &268899686
 CanvasGroup:
@@ -5485,6 +5489,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3903155403694682460}
+  textWord: i
   tag: Slot
 --- !u!225 &295104760
 CanvasGroup:
@@ -5948,13 +5953,14 @@ GameObject:
   - component: {fileID: 342540413}
   - component: {fileID: 342540412}
   - component: {fileID: 342540411}
+  - component: {fileID: 342540414}
   m_Layer: 5
   m_Name: EndPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &342540411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6015,6 +6021,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &342540414
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342540410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8cb718ddb903f646bf3ec2a932d105b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &362763503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6385,6 +6412,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1486857933578227220}
+  textWord: "\xF3"
   tag: Slot
 --- !u!225 &375386161
 CanvasGroup:
@@ -7061,7 +7089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -700, y: -90}
+  m_AnchoredPosition: {x: 700, y: -90}
   m_SizeDelta: {x: 412, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425265184
@@ -7445,6 +7473,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 4777302099976130139}
+  textWord: 
   tag: Slot
 --- !u!225 &436789001
 CanvasGroup:
@@ -7784,6 +7813,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1530876454251107361}
+  textWord: 
   tag: Slot
 --- !u!225 &445579763
 CanvasGroup:
@@ -10182,6 +10212,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1172573189}
+  textWord: 
   tag: Slot
 --- !u!225 &637447637
 CanvasGroup:
@@ -10291,6 +10322,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3153305408755289484}
+  textWord: 
   tag: Slot
 --- !u!225 &639224422
 CanvasGroup:
@@ -11463,6 +11495,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 2066239364886907622}
+  textWord: 
   tag: Slot
 --- !u!225 &681831031
 CanvasGroup:
@@ -11841,6 +11874,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 6097530037455220189}
+  textWord: 
   tag: Slot
 --- !u!225 &688419271
 CanvasGroup:
@@ -12087,6 +12121,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 4061308434817087465}
+  textWord: 
   tag: Slot
 --- !u!225 &696538411
 CanvasGroup:
@@ -12668,6 +12703,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 4434672545131703186}
+  textWord: 
   tag: Slot
 --- !u!225 &720988681
 CanvasGroup:
@@ -12914,6 +12950,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3520847800898235177}
+  textWord: 
   tag: Slot
 --- !u!225 &737691156
 CanvasGroup:
@@ -13551,6 +13588,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1689395694339390633}
+  textWord: 
   tag: Slot
 --- !u!225 &755439141
 CanvasGroup:
@@ -14261,7 +14299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 75}
+  m_AnchoredPosition: {x: -475, y: 50}
   m_SizeDelta: {x: 412, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826691458
@@ -14871,6 +14909,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 5780431744749119742}
+  textWord: e
   tag: Slot
 --- !u!225 &857076380
 CanvasGroup:
@@ -16981,7 +17020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
+  m_AnchoredPosition: {x: -700, y: -90}
   m_SizeDelta: {x: 412, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967325326
@@ -18412,7 +18451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: -90}
+  m_AnchoredPosition: {x: 475, y: 50}
   m_SizeDelta: {x: 412, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072583326
@@ -19347,6 +19386,7 @@ MonoBehaviour:
   TempScore: 0
   questionManager: {fileID: 1380914661}
   waitForNextQuestion: 1
+  EndPanel: {fileID: 342540410}
 --- !u!1 &1112816633
 GameObject:
   m_ObjectHideFlags: 0
@@ -19679,6 +19719,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 7802990590872116333}
+  textWord: 
   tag: Slot
 --- !u!225 &1123145344
 CanvasGroup:
@@ -20791,6 +20832,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 7106481531735958295}
+  textWord: 
   tag: Slot
 --- !u!225 &1173643214
 CanvasGroup:
@@ -20900,6 +20942,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 9143614008474630807}
+  textWord: i
   tag: Slot
 --- !u!225 &1174427306
 CanvasGroup:
@@ -21371,6 +21414,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3911898784102713552}
+  textWord: 
   tag: Slot
 --- !u!225 &1227355369
 CanvasGroup:
@@ -23228,6 +23272,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 2025581227}
+  textWord: 
   tag: Slot
 --- !u!225 &1342364767
 CanvasGroup:
@@ -23427,6 +23472,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1394067654262734149}
+  textWord: 
   tag: Slot
 --- !u!225 &1349440413
 CanvasGroup:
@@ -24254,6 +24300,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 3211236901610779508}
+  textWord: 
   tag: Slot
 --- !u!225 &1417242910
 CanvasGroup:
@@ -25354,7 +25401,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278255615
   m_fontColor: {r: 1, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -27556,6 +27603,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 6821964150001178927}
+  textWord: 
   tag: Slot
 --- !u!225 &1660606459
 CanvasGroup:
@@ -28234,6 +28282,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 4522589511456404104}
+  textWord: a
   tag: Slot
 --- !u!225 &1719696055
 CanvasGroup:
@@ -30980,6 +31029,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 924975231241114493}
+  textWord: 
   tag: Slot
 --- !u!225 &1856341608
 CanvasGroup:
@@ -31203,7 +31253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 75}
+  m_AnchoredPosition: {x: 225, y: 200}
   m_SizeDelta: {x: 412, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860486121
@@ -31941,6 +31991,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 891339087631852206}
+  textWord: 
   tag: Slot
 --- !u!225 &1888842710
 CanvasGroup:
@@ -33459,7 +33510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 210}
+  m_AnchoredPosition: {x: -225, y: 200}
   m_SizeDelta: {x: 412, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966578417
@@ -33573,6 +33624,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 7649111655712082146}
+  textWord: 
   tag: Slot
 --- !u!225 &1991426020
 CanvasGroup:
@@ -33682,6 +33734,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 7298626586063063658}
+  textWord: 
   tag: Slot
 --- !u!225 &1993558437
 CanvasGroup:
@@ -34858,6 +34911,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 8271698756454336610}
+  textWord: 
   tag: Slot
 --- !u!225 &2044031338
 CanvasGroup:
@@ -35505,6 +35559,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 9139419547322117863}
+  textWord: 
   tag: Slot
 --- !u!225 &2056899492
 CanvasGroup:
@@ -35614,6 +35669,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 6986358200090275790}
+  textWord: 
   tag: Slot
 --- !u!225 &2062050415
 CanvasGroup:
@@ -35723,6 +35779,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 1894660586518437177}
+  textWord: a
   tag: Slot
 --- !u!225 &2062957500
 CanvasGroup:
@@ -36802,6 +36859,7 @@ MonoBehaviour:
   isDraggable: 1
   isPlaceCorrect: 0
   SoundBtn: {fileID: 5544746213622136960}
+  textWord: 
   tag: Slot
 --- !u!225 &2143889690
 CanvasGroup:

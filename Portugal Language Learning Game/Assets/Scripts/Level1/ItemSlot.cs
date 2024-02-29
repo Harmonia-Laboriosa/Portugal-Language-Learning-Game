@@ -65,7 +65,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
 
             //eventData.pointerDrag.GetComponentInChildren<Button>().onClick.RemoveAllListeners(); 
-            eventData.pointerDrag.GetComponentInChildren<Button>().interactable = false; 
+            if(eventData.pointerDrag.GetComponentInChildren<Button>()!=null)
+            {
+                eventData.pointerDrag.GetComponentInChildren<Button>().interactable = false;
+            }
+            
             // Print the tag of the dropped object
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
 

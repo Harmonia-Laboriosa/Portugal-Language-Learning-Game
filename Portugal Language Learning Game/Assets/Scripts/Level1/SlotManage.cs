@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class SlotManage : MonoBehaviour
 {
@@ -13,21 +10,40 @@ public class SlotManage : MonoBehaviour
     public int TempScore =0;
     public QManage questionManager;
     public float waitForNextQuestion;
+    public GameObject EndPanel;
 
+    private int correctObjectCount; // Variable to track the number of correct objects placed
+    private bool isLastQuestion; // Flag to check if it's the last question
 
     // Start is called before the first frame update
     void Start()
     {
         allObjectsPlaced = new bool[questionPanels.Length];
         scoreIncreased = new bool[questionPanels.Length];
+        if (questionPanels.Length > 0)
+        {
+            isLastQuestion = true;
+        }
+
     }
 
     private void FixedUpdate()
     {
-        // Check all question panels for placed objects
-        for (int i = 0; i < questionPanels.Length; i++)
+
+        if (isLastQuestion)
         {
-            CheckAllObjectsPlacedInPanel(questionPanels[i], i);
+            for (int i = 0; i < questionPanels.Length; i++)
+            {
+                if(i<questionPanels.Length-1)
+                {
+                    CheckAllObjectsPlacedInPanel(questionPanels[i], i);
+                }
+                else
+                {
+                    CheckAllObjectsinLsstPlacedInPanel(questionPanels[i], i);
+                }
+
+            }
         }
     }
 
@@ -108,4 +124,73 @@ public class SlotManage : MonoBehaviour
 
 
     // Add other methods as needed
+
+    public void CheckAllObjectsinLsstPlacedInPanel(GameObject panel, int panelIndex)
+    {
+        bool allPlaced = true;
+        bool allCorrect = true; // Track if all placed objects are correct
+        correctObjectCount = 0; // Reset correct object count for the panel
+
+        foreach (Transform slot in panel.transform)
+        {
+            DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
+            if (dragDrop != null && dragDrop.isDraggable)
+            {
+                allPlaced = false;
+                break;
+            }
+
+            if (dragDrop != null)
+            {
+                if (dragDrop.isPlaceCorrect)
+                {
+                    correctObjectCount++;
+                }
+                else
+                {
+                    allCorrect = false;
+                }
+            }
+        }
+
+        allObjectsPlaced[panelIndex] = allPlaced;
+
+        if (allPlaced && !scoreIncreased[panelIndex])
+        {
+            // Increase score if all objects are placed and the score has not been increased for this panel yet
+            foreach (Transform slot in panel.transform)
+            {
+                DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
+                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                {
+                    scoreManager.IncreaseScore(1);
+                }
+            }
+
+            scoreIncreased[panelIndex] = true;
+        }
+
+        if (allPlaced && allCorrect)
+        {
+            // Activate next panel if all objects are placed and all are correct for the last question
+            EndPanel.SetActive(true);
+        }
+        else if (allPlaced && !allCorrect)
+        {
+            // Reset all objects to their original position if not all correct for the last question
+            ResetObjects(panel);
+        }
+    }
+    private void ResetObjects(GameObject panel)
+    {
+        foreach (Transform slot in panel.transform)
+        {
+            DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
+            if (dragDrop != null)
+            {
+                dragDrop.ResetToOriginalPosition();
+            }
+        }
+        CheckAllObjectsinLsstPlacedInPanel(questionPanels[questionPanels.Length-1], questionPanels.Length-1);
+    }
 }

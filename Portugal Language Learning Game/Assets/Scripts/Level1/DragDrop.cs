@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -13,6 +15,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
     public GameObject SoundBtn;
+    public string textWord;
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
@@ -88,18 +91,18 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                         string placed_ObjectTag = itemSlot.Placedobjecttag;
                         SoundBtn.SetActive(false);
                         // Do something with the placedObjectTag
-                        Debug.Log("Placed object tag: " + placed_ObjectTag);
+                        //Debug.Log("Placed object tag: " + placed_ObjectTag);
 
                         // Check if the placed object tag matches the tag of this object
                         if (string.Equals(placed_ObjectTag, gameObject.tag))
                         {
                             isPlaceCorrect = true;
-                            Debug.Log("Object placed correctly!");
+                            //Debug.Log("Object placed correctly!");
                         }
                         else
                         {
                             isPlaceCorrect = false;
-                            Debug.Log("Object placed incorrectly!");
+                            //Debug.Log("Object placed incorrectly!");
                         }
                     }
 
@@ -119,5 +122,29 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("OnPointerDown");
+    }
+    public void ResetToOriginalPosition()
+    {
+        rectTransform.anchoredPosition = originalPosition;
+        isDraggable = true;
+        isPlaceCorrect = false;
+
+        foreach (Transform child in transform)
+        {
+            TextMeshProUGUI textComponent = child.GetComponent<TextMeshProUGUI>();
+            if (textComponent != null)
+            {
+                // Change the text as needed
+                textComponent.text = textWord;
+            }
+
+            Button buttonComponent = child.GetComponent<Button>();
+            if (buttonComponent != null)
+            {
+                SoundBtn.SetActive(true);
+                // Make the button interactable
+                buttonComponent.interactable = true;
+            }
+        }
     }
 }
