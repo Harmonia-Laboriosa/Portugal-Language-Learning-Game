@@ -13,6 +13,8 @@ public class Level4Manager : MonoBehaviour
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
+    public string tagFromCollission;
+
 
     public GameObject shattered, shatter;
 
@@ -88,7 +90,7 @@ public class Level4Manager : MonoBehaviour
         // Pause the game and show the pause panel
         StartCoroutine(DelayBeforeNextQuestion());
     }
-
+    
     IEnumerator ShakeButton(GameObject buttonObject, float duration, float magnitude)
     {
         Vector3 originalPosition = buttonObject.transform.position;
@@ -108,6 +110,7 @@ public class Level4Manager : MonoBehaviour
 
         buttonObject.transform.position = originalPosition;
     }
+    
 
     void UpdateScoreText()
     {
@@ -122,6 +125,33 @@ public class Level4Manager : MonoBehaviour
 
 
         NextQuestion();
+    }
+
+
+    //logic of Level 4 part
+
+    public void CheckAnswwer()
+    {
+        Debug.Log(tagFromCollission);
+        if (levels[currentQuestion].gameObject.tag==tagFromCollission)
+        {
+            CorrectAnswerPart1();
+        }
+        else
+        {
+            IncorrectAnswerPart1();
+        }
+    }
+    public void CorrectAnswerPart1()
+    {;
+        SManage.instance.IncreaseScore(1);
+        UpdateScoreText();
+        StartCoroutine(DelayBeforeNextQuestion());
+    }
+
+    public void IncorrectAnswerPart1()
+    {
+        StartCoroutine(DelayBeforeNextQuestion());
     }
 
 
