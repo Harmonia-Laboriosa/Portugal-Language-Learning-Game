@@ -143,7 +143,7 @@ public class Level4Manager : MonoBehaviour
         }
     }
     public void CorrectAnswerPart1()
-    {;
+    {
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
         StartCoroutine(DelayBeforeNextQuestion());
