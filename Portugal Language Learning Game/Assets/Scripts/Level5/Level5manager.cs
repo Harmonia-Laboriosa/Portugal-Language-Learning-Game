@@ -16,6 +16,13 @@ public class Level5manager : MonoBehaviour
     [HideInInspector] public bool tagFromCollissionHour;
     [HideInInspector] public bool tagFromCollissionMinute;
 
+    private int correctObjectCount; // Variable to track the number of correct objects placed
+    private bool isLastQuestion; // Flag to check if it's the last question
+
+    public bool[] allObjectsPlaced;
+    public bool[] scoreIncreased;
+
+
     void Start()
     {
         StartQuiz();
@@ -25,7 +32,21 @@ public class Level5manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isLastQuestion)
+        {
+            for (int i = 0; i < levels.Length; i++)
+            {
+                if (i < levels.Length - 1)
+                {
+                   // CheckAllObjectsPlacedInPanel(questionPanels[i], i);
+                }
+                else
+                {
+                    CheckAllObjectsinLsstPlacedInPanel(levels[i], i);
+                }
 
+            }
+        }
     }
 
     void StartQuiz()
@@ -124,7 +145,7 @@ public class Level5manager : MonoBehaviour
     }
 
 
-    //logic of Level 4 part
+    //logic of Level 5 part
 
     public void CheckAnswwer()
     {
@@ -155,5 +176,75 @@ public class Level5manager : MonoBehaviour
         StartCoroutine(DelayBeforeNextQuestion());
     }
 
+    public void CheckAllObjectsinLsstPlacedInPanel(GameObject panel, int panelIndex)
+    {
+        bool allPlaced = true;
+        bool allCorrect = true; // Track if all placed objects are correct
+        correctObjectCount = 0; // Reset correct object count for the panel
+
+        foreach (Transform slot in panel.transform)
+        {
+            DragDropLevel5 dragDrop = slot.GetComponentInChildren<DragDropLevel5>();
+            if (dragDrop != null && dragDrop.isDraggable)
+            {
+                allPlaced = false;
+                break;
+            }
+
+            if (dragDrop != null)
+            {
+                if (dragDrop.isPlaceCorrect)
+                {
+                    correctObjectCount++;
+                }
+                else
+                {
+                    allCorrect = false;
+                }
+            }
+        }
+
+        allObjectsPlaced[panelIndex] = allPlaced;
+
+        if (allPlaced && !scoreIncreased[panelIndex])
+        {
+            // Increase score if all objects are placed and the score has not been increased for this panel yet
+            foreach (Transform slot in panel.transform)
+            {
+                DragDropLevel5 dragDrop = slot.GetComponentInChildren<DragDropLevel5>();
+                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                {
+                    SManage.instance.IncreaseScore(1);
+                }
+            }
+
+            scoreIncreased[panelIndex] = true;
+        }
+
+        if (allPlaced && allCorrect)
+        {
+            // Activate next panel if all objects are placed and all are correct for the last question
+            Debug.Log("All");
+            EndgamePanel.SetActive(true);
+        }
+        else if (allPlaced && !allCorrect)
+        {
+            // Reset all objects to their original position if not all correct for the last question
+            ResetObjects(panel);
+        }
+    }
+
+    private void ResetObjects(GameObject panel)
+    {
+        foreach (Transform slot in panel.transform)
+        {
+            DragDropLevel5 dragDrop = slot.GetComponentInChildren<DragDropLevel5>();
+            if (dragDrop != null)
+            {
+                dragDrop.ResetToOriginalPosition();
+            }
+        }
+        CheckAllObjectsinLsstPlacedInPanel(levels[levels.Length - 1], levels.Length - 1);
+    }
 
 }
