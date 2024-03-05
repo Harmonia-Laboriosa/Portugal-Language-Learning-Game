@@ -12,33 +12,29 @@ public class Level5manager : MonoBehaviour
     public GameObject EndgamePanel;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
+    public Button[] checkButtons; // Changed to an array of buttons
     private int currentQuestion;
     [HideInInspector] public bool tagFromCollissionHour;
     [HideInInspector] public bool tagFromCollissionMinute;
 
     private int correctObjectCount; // Variable to track the number of correct objects placed
-    private bool isLastQuestion; // Flag to check if it's the last question
 
-    public bool[] allObjectsPlaced;
-    public bool[] scoreIncreased;
+    public bool allObjectsPlaced;
 
 
     void Start()
     {
         StartQuiz();
-
+        Debug.Log(levels.Length);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        if (isLastQuestion)
-        {
             for (int i = 0; i < levels.Length; i++)
             {
                 if (i < levels.Length - 1)
                 {
-                   // CheckAllObjectsPlacedInPanel(questionPanels[i], i);
+                    //CheckAllObjectsPlacedInPanel(levels[i], i);
                 }
                 else
                 {
@@ -46,7 +42,6 @@ public class Level5manager : MonoBehaviour
                 }
 
             }
-        }
     }
 
     void StartQuiz()
@@ -63,6 +58,20 @@ public class Level5manager : MonoBehaviour
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].SetActive(i == currentQuestion);
+            /*
+            if (i==levels.Length-1)
+            {
+                Debug.Log(i);
+                Debug.Log("Called");
+                CheckAllObjectsinLsstPlacedInPanel(levels[i], i);
+                // CheckAllObjectsPlacedInPanel(questionPanels[i], i);
+                //Debug.Log(" working");
+            }
+            */
+        }
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true;
         }
     }
 
@@ -72,8 +81,12 @@ public class Level5manager : MonoBehaviour
         if (currentQuestion + 1 < levels.Length)
         {
             currentQuestion++;
-
+            Debug.Log("Question : " + currentQuestion);
             ActivateCurrentQuestion();
+            if (currentQuestion == 10)
+            {
+                CheckAllObjectsinLsstPlacedInPanel(levels[currentQuestion], currentQuestion);
+            }
         }
         else
         {
@@ -128,7 +141,6 @@ public class Level5manager : MonoBehaviour
         buttonObject.transform.position = originalPosition;
     }
 
-
     void UpdateScoreText()
     {
         // Update the score text using ScoreManager
@@ -139,11 +151,14 @@ public class Level5manager : MonoBehaviour
     {
         // Delay for a short time before moving to the next question
         yield return new WaitForSeconds(1f);
-
+        // Disable all buttons during the delay
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = false;
+        }
 
         NextQuestion();
     }
-
 
     //logic of Level 5 part
 
@@ -184,18 +199,20 @@ public class Level5manager : MonoBehaviour
 
         foreach (Transform slot in panel.transform)
         {
-            DragDropLevel5 dragDrop = slot.GetComponentInChildren<DragDropLevel5>();
-            if (dragDrop != null && dragDrop.isDraggable)
+            DragDropLevel5 drag = slot.GetComponentInChildren<DragDropLevel5>();
+            if (drag != null && drag.isDraggable)
             {
                 allPlaced = false;
+                Debug.Log("false");
                 break;
             }
 
-            if (dragDrop != null)
+            if (drag != null)
             {
-                if (dragDrop.isPlaceCorrect)
+                if (drag.isPlaceCorrect)
                 {
                     correctObjectCount++;
+                    Debug.Log("Placed one");
                 }
                 else
                 {
@@ -204,27 +221,13 @@ public class Level5manager : MonoBehaviour
             }
         }
 
-        allObjectsPlaced[panelIndex] = allPlaced;
-
-        if (allPlaced && !scoreIncreased[panelIndex])
-        {
-            // Increase score if all objects are placed and the score has not been increased for this panel yet
-            foreach (Transform slot in panel.transform)
-            {
-                DragDropLevel5 dragDrop = slot.GetComponentInChildren<DragDropLevel5>();
-                if (dragDrop != null && dragDrop.isPlaceCorrect)
-                {
-                    SManage.instance.IncreaseScore(1);
-                }
-            }
-
-            scoreIncreased[panelIndex] = true;
-        }
+        allObjectsPlaced = allPlaced;
 
         if (allPlaced && allCorrect)
         {
             // Activate next panel if all objects are placed and all are correct for the last question
             Debug.Log("All");
+            SManage.instance.IncreaseScore(1);
             EndgamePanel.SetActive(true);
         }
         else if (allPlaced && !allCorrect)
@@ -238,10 +241,10 @@ public class Level5manager : MonoBehaviour
     {
         foreach (Transform slot in panel.transform)
         {
-            DragDropLevel5 dragDrop = slot.GetComponentInChildren<DragDropLevel5>();
-            if (dragDrop != null)
+            DragDropLevel5 drag = slot.GetComponentInChildren<DragDropLevel5>();
+            if (drag != null)
             {
-                dragDrop.ResetToOriginalPosition();
+                drag.ResetToOriginalPosition();
             }
         }
         CheckAllObjectsinLsstPlacedInPanel(levels[levels.Length - 1], levels.Length - 1);

@@ -19,12 +19,6 @@ public class DaySlot : MonoBehaviour
             // Get the tag of the dropped object
             string droppedObjectTag = eventData.pointerDrag.tag;
 
-            //eventData.pointerDrag.GetComponentInChildren<Button>().onClick.RemoveAllListeners(); 
-            if (eventData.pointerDrag.GetComponentInChildren<Button>() != null)
-            {
-                eventData.pointerDrag.GetComponentInChildren<Button>().interactable = false;
-            }
-
             // Print the tag of the dropped object
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
 

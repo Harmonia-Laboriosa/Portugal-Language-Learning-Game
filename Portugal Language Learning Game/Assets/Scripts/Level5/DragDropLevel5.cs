@@ -17,6 +17,8 @@ public class DragDropLevel5 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
+    [SerializeField]
+    private Vector2 originalSize;  // Reference to the original size of the object
 
 
     private void Awake()
@@ -24,7 +26,7 @@ public class DragDropLevel5 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = rectTransform.anchoredPosition;
-
+        originalSize = rectTransform.sizeDelta;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -82,25 +84,25 @@ public class DragDropLevel5 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                     */
                     //Debug.Log("1");
                     // If dropped onto a slot, get the Placedobjecttag from the ItemSlot component
-                    ItemSlot itemSlot = hoveredObject.GetComponent<ItemSlot>();
-                    if (itemSlot != null)
+                    DaySlot Slot = hoveredObject.GetComponent<DaySlot>();
+                    if (Slot != null)
                     {
                         // Get the Placedobjecttag from the ItemSlot component
-                        string placed_ObjectTag = itemSlot.Placedobjecttag;
+                        string placed_ObjectTag = Slot.Placedobjecttag;
                         
                         // Do something with the placedObjectTag
-                        //Debug.Log("Placed object tag: " + placed_ObjectTag);
+                        Debug.Log("Placed object tag: " + placed_ObjectTag);
 
                         // Check if the placed object tag matches the tag of this object
                         if (string.Equals(placed_ObjectTag, gameObject.tag))
                         {
                             isPlaceCorrect = true;
-                            //Debug.Log("Object placed correctly!");
+                            Debug.Log("Object placed correctly!");
                         }
                         else
                         {
                             isPlaceCorrect = false;
-                            //Debug.Log("Object placed incorrectly!");
+                            Debug.Log("Object placed incorrectly!");
                         }
                     }
 
@@ -124,6 +126,7 @@ public class DragDropLevel5 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     public void ResetToOriginalPosition()
     {
         rectTransform.anchoredPosition = originalPosition;
+        rectTransform.sizeDelta = originalSize;
         isDraggable = true;
         isPlaceCorrect = false;
 
