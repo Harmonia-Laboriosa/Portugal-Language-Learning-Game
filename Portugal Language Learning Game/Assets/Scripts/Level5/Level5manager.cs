@@ -10,6 +10,7 @@ public class Level5manager : MonoBehaviour
 {
     public GameObject[] levels;
     public GameObject EndgamePanel;
+    public GameObject FailedPanel;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     public Button[] checkButtons; // Changed to an array of buttons
@@ -32,13 +33,14 @@ public class Level5manager : MonoBehaviour
     {
             for (int i = 0; i < levels.Length; i++)
             {
-                if (i < levels.Length - 1)
+                if (i==levels.Length - 1)
                 {
-                    //CheckAllObjectsPlacedInPanel(levels[i], i);
-                }
-                else
+                CheckAllObjectsinLsstPlacedInPanel(levels[i], i);
+
+                //CheckAllObjectsPlacedInPanel(levels[i], i);
+            }
+            else
                 {
-                    CheckAllObjectsinLsstPlacedInPanel(levels[i], i);
                 }
 
             }
@@ -69,10 +71,7 @@ public class Level5manager : MonoBehaviour
             }
             */
         }
-        foreach (Button button in answerButtons)
-        {
-            button.interactable = true;
-        }
+        EnableAnswerButtons();
     }
 
     public void NextQuestion()
@@ -94,6 +93,7 @@ public class Level5manager : MonoBehaviour
             // Display end game panel
             EndgamePanel.SetActive(true);
         }
+        EnableAnswerButtons();
     }
 
 
@@ -109,6 +109,8 @@ public class Level5manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        FailedPanel.SetActive(false);
+        /*
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
 
         // Shake the selected button
@@ -119,6 +121,8 @@ public class Level5manager : MonoBehaviour
 
         // Pause the game and show the pause panel
         StartCoroutine(DelayBeforeNextQuestion());
+        */
+        DisableAnswerButtons();
     }
 
     IEnumerator ShakeButton(GameObject buttonObject, float duration, float magnitude)
@@ -149,13 +153,11 @@ public class Level5manager : MonoBehaviour
 
     IEnumerator DelayBeforeNextQuestion()
     {
+        DisableAnswerButtons();
         // Delay for a short time before moving to the next question
         yield return new WaitForSeconds(1f);
         // Disable all buttons during the delay
-        foreach (Button button in answerButtons)
-        {
-            button.interactable = false;
-        }
+        
 
         NextQuestion();
     }
@@ -203,7 +205,6 @@ public class Level5manager : MonoBehaviour
             if (drag != null && drag.isDraggable)
             {
                 allPlaced = false;
-                Debug.Log("false");
                 break;
             }
 
@@ -248,6 +249,22 @@ public class Level5manager : MonoBehaviour
             }
         }
         CheckAllObjectsinLsstPlacedInPanel(levels[levels.Length - 1], levels.Length - 1);
+    }
+
+    void DisableAnswerButtons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = false;
+        }
+    }
+
+    void EnableAnswerButtons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true;
+        }
     }
 
 }

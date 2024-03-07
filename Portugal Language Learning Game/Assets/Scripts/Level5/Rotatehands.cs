@@ -5,6 +5,8 @@ using UnityEngine;
 public class Rotatehands : MonoBehaviour
 {
     public float rotationSpeed = 100f;
+    [SerializeField] public float snapAngle;
+    private float currentRotation = 0f;
 
     // Enum to define different clock hands
     public enum ClockHand
@@ -36,7 +38,7 @@ public class Rotatehands : MonoBehaviour
     {
         // Keyboard input
         float rotationInput = Input.GetAxis(inputAxis);
-        RotateHand(rotationInput);
+        RotateHand(rotationInput * rotationSpeed * Time.deltaTime);
         /*
         // Mobile input
         if (Input.touchCount > 0)
@@ -49,10 +51,12 @@ public class Rotatehands : MonoBehaviour
     }
 
     // Rotate the clock hand based on input
-    void RotateHand(float rotationInput)
+    public void RotateHand(float rotationAmount)
     {
-        float rotationAngle = rotationInput * rotationSpeed * Time.deltaTime;
-        transform.Rotate(0f, 0f, rotationAngle);
+        currentRotation += rotationAmount;
+
+        float targetAngle = Mathf.Round(currentRotation / snapAngle) * snapAngle;
+        transform.rotation = Quaternion.Euler(0f, 0f, targetAngle);
     }
 
     // Method to switch the selected clock hand

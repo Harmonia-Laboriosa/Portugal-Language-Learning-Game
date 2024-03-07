@@ -51,6 +51,7 @@ public class Level4Manager : MonoBehaviour
     public void NextQuestion()
     {
 
+
         if (currentQuestion + 1 < levels.Length)
         {
             currentQuestion++;
@@ -63,6 +64,7 @@ public class Level4Manager : MonoBehaviour
             // Display end game panel
             EndgamePanel.SetActive(true);
         }
+        EnableAnswerButtons();
     }
 
 
@@ -120,6 +122,7 @@ public class Level4Manager : MonoBehaviour
 
     IEnumerator DelayBeforeNextQuestion()
     {
+        DisableAnswerButtons();
         // Delay for a short time before moving to the next question
         yield return new WaitForSeconds(1f);
 
@@ -154,5 +157,19 @@ public class Level4Manager : MonoBehaviour
         StartCoroutine(DelayBeforeNextQuestion());
     }
 
+    void DisableAnswerButtons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = false;
+        }
+    }
 
+    void EnableAnswerButtons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true;
+        }
+    }
 }
