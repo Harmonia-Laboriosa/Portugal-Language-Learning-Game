@@ -85,5 +85,95 @@
         </Response>
       </Tree7>
     </Character>
+    <Character name="Shreya">
+      <Name>Local 1</Name>
+      <Greeting>
+        Hello! I'm [name of NPC]. How are you?
+        <Response next="0">
+          Hello, how are you?
+        </Response>
+        <Response next="Quit">
+          Bye
+        </Response>
+      </Greeting>
+      <Tree0>
+        I'm very well. Nice to meet you. Are you new around here?
+        <Response next="1">
+          Yes, I am! Could you tell me where the village clothing store is?
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree0>
+      <Tree1>
+        Of course. It's to the right of the café, right under the big tree with green leaves.
+        <Response next="Success">
+          Thank you so much, and nice to meet you!
+        </Response>
+      </Tree1>
+    </Character>
+    <Character name="AJ">
+      <Name>Local 2</Name>
+      <Greeting>
+        Hello! I'm [name of NPC]. How are you?
+        <Response next="0">
+          Good afternoon, what is the fastest means of transportation to the clothing store?
+        </Response>
+        <Response next="Quit">
+          Bye
+        </Response>
+      </Greeting>
+      <Tree0>
+        Hello! The fastest means of transportation is by car, takes about 5 minutes.
+        <Response next="1">
+          Thank you, and what is the cheapest, please?
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree0>
+      <Tree1>
+        The cheapest is to go by bike or on foot, takes between 20 to 25 minutes.
+        <Response next="2">
+          And if I want something in between, faster than a bike but cheaper than a car?
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree1> 
+      <Tree2>
+        Ah, you can take the bus, it takes approximately 10 minutes.
+        <Response next="Success">
+          Thank you very much!
+        </Response>
+      </Tree2>
+    </Character>
+    <Character name="MJ">
+      <Name>Local 3</Name>
+      <Greeting>
+        Hello! I'm [name of NPC]. How are you?
+        <Response next="0">
+          Good afternoon, I would like to buy typical clothes from your village.
+        </Response>
+        <Response next="Quit">
+          Bye
+        </Response>
+      </Greeting>
+      <Tree0>
+        Ah yes, of course, this is the typical attire of this Portuguese village.
+        <Response next="1">
+          Sorry, could you repeat? I didn't understand what you meant by "attire."
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree0>
+      <Tree1>
+        Of course, attire refers to typical clothing of a particular group. This is the typical one for this village. shows attire
+        <Response next="Success">
+          Ah, I see! Thank you very much.
+        </Response>
+      </Tree1> 
+    </Character>
   </Characters>
 </CharacterCollection>

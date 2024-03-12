@@ -7,8 +7,8 @@ public class Conversation : MonoBehaviour
 {
     XmlReader reader = new XmlReader();
 
-    private StringUIPrinter namePrinter;
-    private TMP_Text dialogeueText; // Using TextMeshPro for dialogue text
+    public StringUIPrinter namePrinter;
+    public TMP_Text dialogeueText; // Using TextMeshPro for dialogue text
     private ChoiceButtonHandler choiceButtons;
 
     public delegate void LockConvo(bool talks);
@@ -16,7 +16,7 @@ public class Conversation : MonoBehaviour
     public GameObject EndPanel;
     public GameObject FailedPanel;
     private bool isTalking;
-
+    
     [SerializeField]
     private string file;    //xml file name
     [SerializeField]
@@ -34,7 +34,7 @@ public class Conversation : MonoBehaviour
     void Awake()
     {
         choiceButtons = GameObject.FindWithTag(Tags.canvasTag).GetComponent<ChoiceButtonHandler>();
-        namePrinter = GameObject.FindWithTag(Tags.nameText).GetComponent<StringUIPrinter>();
+        /*namePrinter = GameObject.FindWithTag(Tags.nameText).GetComponent<StringUIPrinter>();*/
         dialogeueText = GameObject.FindWithTag(Tags.dialogueText).GetComponent<TMP_Text>(); // Using TextMeshPro for dialogue text
     }
 
@@ -130,11 +130,11 @@ public class Conversation : MonoBehaviour
         }
     }
 
-    void SucessConversation()
+    public void SucessConversation()
     {
         namePrinter.PrintToUI("");
         dialogeueText.text = "";
-
+        gameObject.SetActive(false);
         isTalking = false;
         EndPanel.SetActive(true);
         if (ConvoLocker != null)
