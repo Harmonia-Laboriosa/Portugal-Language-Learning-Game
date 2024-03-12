@@ -71,7 +71,7 @@ public class Level4Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
-        Instantiate(shattered, shatter.transform.position, Quaternion.identity);
+        //Instantiate(shattered, shatter.transform.position, Quaternion.identity);
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
