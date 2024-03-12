@@ -8,11 +8,17 @@ public class RotateWheel : MonoBehaviour
     [SerializeField]public float snapAngle;
     private float currentRotation = 0f;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        // Check if the space bar is pressed
+        if (Input.GetKey(KeyCode.Space))
+        {
+            // Rotate the wheel
+            RotateImage(rotationSpeed*Time.deltaTime);
+        }
         //keyboard input
-        float rotationInput = Input.GetAxis("Horizontal");
-        RotateImage(rotationInput*rotationSpeed*Time.deltaTime);
+        //float rotationInput = Input.GetAxis("Horizontal");
+        //RotateImage(rotationInput*rotationSpeed*Time.deltaTime);
         /*
         // mobile input
         if (Input.touchCount > 0)
@@ -27,9 +33,10 @@ public class RotateWheel : MonoBehaviour
 
     void RotateImage(float rotationAmount)
     {
-        currentRotation += rotationAmount;
-
-        float targetAngle = Mathf.Round(currentRotation / snapAngle) * snapAngle;
-        transform.rotation = Quaternion.Euler(0f, 0f, targetAngle);
+        //currentRotation += rotationAmount;
+        //float smoothRotation = Mathf.LerpAngle(transform.eulerAngles.z, currentRotation, Time.deltaTime * rotationSpeed);
+        //float targetAngle = Mathf.Round(smoothRotation / snapAngle) * snapAngle;
+        //transform.rotation = Quaternion.Euler(0f, 0f, targetAngle);
+        transform.Rotate(0f, 0f, rotationAmount);
     }
 }

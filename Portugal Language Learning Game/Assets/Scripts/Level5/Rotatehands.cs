@@ -56,7 +56,7 @@ public class Rotatehands : MonoBehaviour
         currentRotation += rotationAmount;
 
         float targetAngle = Mathf.Round(currentRotation / snapAngle) * snapAngle;
-        transform.rotation = Quaternion.Euler(0f, 0f, targetAngle);
+        transform.rotation = Quaternion.Euler(0f, 0f, -targetAngle);
     }
 
     // Method to switch the selected clock hand

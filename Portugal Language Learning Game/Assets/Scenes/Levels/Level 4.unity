@@ -137,10 +137,9 @@ GameObject:
   - component: {fileID: 9592349}
   - component: {fileID: 9592348}
   - component: {fileID: 9592347}
-  - component: {fileID: 9592350}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: as
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +307,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -319,33 +318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
-  m_EdgeRadius: 0
---- !u!61 &9592350
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9592343}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!1 &11757087
 GameObject:
@@ -361,10 +334,9 @@ GameObject:
   - component: {fileID: 11757093}
   - component: {fileID: 11757092}
   - component: {fileID: 11757091}
-  - component: {fileID: 11757094}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +504,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -543,33 +515,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
-  m_EdgeRadius: 0
---- !u!61 &11757094
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11757087}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!1 &88951171
 GameObject:
@@ -584,7 +530,7 @@ GameObject:
   - component: {fileID: 88951173}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1480,7 +1426,7 @@ GameObject:
   - component: {fileID: 203820824}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Question1
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2576,9 +2522,11 @@ GameObject:
   - component: {fileID: 371040489}
   - component: {fileID: 371040488}
   - component: {fileID: 371040487}
+  - component: {fileID: 371040491}
+  - component: {fileID: 371040490}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2746,7 +2694,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2757,7 +2705,59 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
+  m_EdgeRadius: 0
+--- !u!61 &371040490
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371040483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5, y: 40}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 75, y: 50}
+  m_EdgeRadius: 0
+--- !u!61 &371040491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371040483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5, y: 40}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!1 &376373650
 GameObject:
@@ -2773,10 +2773,12 @@ GameObject:
   - component: {fileID: 376373656}
   - component: {fileID: 376373655}
   - component: {fileID: 376373654}
+  - component: {fileID: 376373659}
+  - component: {fileID: 376373658}
   - component: {fileID: 376373657}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2944,7 +2946,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2955,7 +2957,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!61 &376373657
 BoxCollider2D:
@@ -2970,7 +2972,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2981,7 +2983,59 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
+  m_EdgeRadius: 0
+--- !u!61 &376373658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376373650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5, y: 40}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 75, y: 50}
+  m_EdgeRadius: 0
+--- !u!61 &376373659
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376373650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5, y: 40}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!1 &406861460
 GameObject:
@@ -4263,7 +4317,7 @@ GameObject:
   - component: {fileID: 624349253}
   m_Layer: 5
   m_Name: Question 5
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5388,7 +5442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66446848bab64a34a9cd3d6ee9cad946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 80
+  rotationSpeed: 50
   snapAngle: 60
 --- !u!114 &716874098
 MonoBehaviour:
@@ -7149,7 +7203,7 @@ GameObject:
   - component: {fileID: 919770522}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7680,7 +7734,7 @@ GameObject:
   - component: {fileID: 991356907}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7815,7 +7869,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7826,7 +7880,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!114 &991356906
 MonoBehaviour:
@@ -9533,7 +9587,7 @@ GameObject:
   - component: {fileID: 1240588155}
   m_Layer: 5
   m_Name: Question 3
-  m_TagString: Untagged
+  m_TagString: a
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9611,7 +9665,7 @@ GameObject:
   - component: {fileID: 1247319097}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: as
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9746,7 +9800,7 @@ GameObject:
   - component: {fileID: 1259698343}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9881,7 +9935,7 @@ GameObject:
   - component: {fileID: 1317639431}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10260,7 +10314,7 @@ GameObject:
   - component: {fileID: 1373287539}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11339,7 +11393,7 @@ GameObject:
   - component: {fileID: 1620038318}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Question1
+  m_TagString: as
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11598,7 +11652,7 @@ GameObject:
   - component: {fileID: 1631884376}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Untagged
+  m_TagString: a
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11735,7 +11789,7 @@ GameObject:
   - component: {fileID: 1643675188}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Question1
+  m_TagString: a
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11994,7 +12048,7 @@ GameObject:
   - component: {fileID: 1655456261}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Untagged
+  m_TagString: as
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12669,7 +12723,7 @@ GameObject:
   - component: {fileID: 1750098065}
   m_Layer: 5
   m_Name: Question 6
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12749,7 +12803,7 @@ GameObject:
   - component: {fileID: 1763860429}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Question1
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13143,10 +13197,10 @@ GameObject:
   - component: {fileID: 1849592289}
   - component: {fileID: 1849592288}
   - component: {fileID: 1849592287}
-  - component: {fileID: 1849592290}
+  - component: {fileID: 1849592291}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: a
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13314,7 +13368,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13325,9 +13379,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
---- !u!61 &1849592290
+--- !u!61 &1849592291
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13340,7 +13394,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 50}
+  m_Offset: {x: -0.5, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13351,7 +13405,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 125}
+  m_Size: {x: 75, y: 50}
   m_EdgeRadius: 0
 --- !u!1 &1878887056
 GameObject:
@@ -13449,7 +13503,7 @@ GameObject:
   - component: {fileID: 1896559327}
   m_Layer: 5
   m_Name: Question 4
-  m_TagString: Untagged
+  m_TagString: as
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13527,7 +13581,7 @@ GameObject:
   - component: {fileID: 1897893422}
   m_Layer: 5
   m_Name: Question 2
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13875,7 +13929,7 @@ GameObject:
   - component: {fileID: 1934123881}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14012,7 +14066,7 @@ GameObject:
   - component: {fileID: 1936808328}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Question1
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14258,7 +14312,7 @@ GameObject:
   - component: {fileID: 1969411396}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14393,7 +14447,7 @@ GameObject:
   - component: {fileID: 2005777778}
   m_Layer: 5
   m_Name: Question 1
-  m_TagString: Question1
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14606,7 +14660,7 @@ GameObject:
   - component: {fileID: 2069021780}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14743,7 +14797,7 @@ GameObject:
   - component: {fileID: 2120909560}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Question1
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15111,7 +15165,7 @@ GameObject:
   - component: {fileID: 2147281385}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: a
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

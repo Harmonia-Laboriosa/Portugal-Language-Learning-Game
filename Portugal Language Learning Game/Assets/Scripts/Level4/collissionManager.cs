@@ -19,8 +19,9 @@ public class collissionManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.tag);
+        Debug.Log(gameObject.tag);
         Level4Manager level4 = FindObjectOfType<Level4Manager>();
-        level4.tagFromCollission = collision.gameObject.tag;
+        level4.tagFromCollission = gameObject.tag;
     }
 
 }

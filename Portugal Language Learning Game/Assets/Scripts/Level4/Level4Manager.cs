@@ -71,7 +71,7 @@ public class Level4Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
-        Instantiate(shattered, shatter.transform.position, Quaternion.identity);
+        //Instantiate(shattered, shatter.transform.position, Quaternion.identity);
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
@@ -136,6 +136,7 @@ public class Level4Manager : MonoBehaviour
     public void CheckAnswwer()
     {
         Debug.Log(tagFromCollission);
+        Debug.Log(levels[currentQuestion].gameObject.tag);
         if (levels[currentQuestion].gameObject.tag==tagFromCollission)
         {
             CorrectAnswerPart1();
