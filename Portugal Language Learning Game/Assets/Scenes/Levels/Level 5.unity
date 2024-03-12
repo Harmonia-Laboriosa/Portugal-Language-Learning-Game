@@ -10979,7 +10979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  snapAngle: 0
+  snapAngle: 30
   selectedHand: 0
 --- !u!1 &1586677099
 GameObject:
@@ -11211,7 +11211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  snapAngle: 0
+  snapAngle: 30
   selectedHand: 1
 --- !u!1 &1694160097
 GameObject:
@@ -19613,7 +19613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b35236f0c9694a901b8d1696b1753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreShow: {fileID: 0}
+  scoreShow: {fileID: 1596365728}
   scoreText: {fileID: 6009744476570311273}
   showScore: 0
 --- !u!224 &6009744477132212539
