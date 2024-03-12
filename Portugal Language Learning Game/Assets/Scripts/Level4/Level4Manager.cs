@@ -136,6 +136,7 @@ public class Level4Manager : MonoBehaviour
     public void CheckAnswwer()
     {
         Debug.Log(tagFromCollission);
+        Debug.Log(levels[currentQuestion].gameObject.tag);
         if (levels[currentQuestion].gameObject.tag==tagFromCollission)
         {
             CorrectAnswerPart1();
