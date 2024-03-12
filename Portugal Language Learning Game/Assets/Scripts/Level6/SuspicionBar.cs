@@ -33,7 +33,7 @@ public class SuspicionBar : MonoBehaviour
     }
 
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health += damage;
         health = Mathf.Max(health, 0f);
