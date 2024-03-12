@@ -109,7 +109,7 @@ public class Level5manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
-        FailedPanel.SetActive(false);
+        FailedPanel.SetActive(true);
         /*
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
 
