@@ -14,6 +14,7 @@ public class Level4Manager : MonoBehaviour
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
     public string tagFromCollission;
+    public TMP_Text letter;
 
 
     public GameObject shattered, shatter;
@@ -28,7 +29,7 @@ public class Level4Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        letter.text = tagFromCollission;
     }
 
     void StartQuiz()
