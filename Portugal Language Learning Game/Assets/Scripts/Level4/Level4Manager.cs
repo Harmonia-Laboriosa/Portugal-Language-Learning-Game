@@ -15,15 +15,13 @@ public class Level4Manager : MonoBehaviour
     private int currentQuestion;
     public string tagFromCollission;
     public TMP_Text letter;
-
-
-    public GameObject shattered, shatter;
-
+    public GameObject rocks;
+    public GameObject[] rockRigidbody;
 
     void Start()
     {
         StartQuiz();
-
+        rocks.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +44,7 @@ public class Level4Manager : MonoBehaviour
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].SetActive(i == currentQuestion);
+
         }
     }
 
@@ -56,7 +55,10 @@ public class Level4Manager : MonoBehaviour
         if (currentQuestion + 1 < levels.Length)
         {
             currentQuestion++;
-
+            if(currentQuestion == 6)
+            {
+                ActivateRocks();
+            }
             ActivateCurrentQuestion();
         }
         else
@@ -172,6 +174,19 @@ public class Level4Manager : MonoBehaviour
         foreach (Button button in answerButtons)
         {
             button.interactable = true;
+        }
+    }
+
+    void ActivateRocks()
+    {
+        rocks.gameObject.SetActive(true);
+    }
+
+    public void ActivateRigidBodyGravity()
+    {
+        foreach(GameObject rocks in rockRigidbody)
+        {
+            rocks.GetComponentInChildren<Rigidbody2D>().gravityScale = 5;
         }
     }
 }
