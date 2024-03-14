@@ -11,8 +11,9 @@ public class Level6Manager : MonoBehaviour
     public GameObject[] levels;
     public GameObject EndgamePanel;
     public GameObject FailedPanel;
+    public GameObject dialoguePanel; // Dialogue panel reference
     public TMP_Text scoreText;
-    public Button[] answerButtons; // Changed to an array of buttons
+    public Button[] answerButtons;
     private int currentQuestion;
 
     void Start()
@@ -45,7 +46,15 @@ public class Level6Manager : MonoBehaviour
         {
             currentQuestion++;
 
-            ActivateCurrentQuestion();
+            if (currentQuestion == 3) // Activate dialogue panel after question 3
+            {
+                ActivateDialoguePanel();
+            }
+            else
+            {
+                dialoguePanel.SetActive(false);
+                ActivateCurrentQuestion();
+            }
         }
         else
         {
@@ -56,7 +65,20 @@ public class Level6Manager : MonoBehaviour
         EnableAnswerButtons();
     }
 
+    void ActivateDialoguePanel()
+    {
+        // Deactivate all question panels
+        foreach (GameObject level in levels)
+        {
+            level.SetActive(false);
+        }
 
+        // Activate the dialogue panel
+        dialoguePanel.SetActive(true);
+
+        // Disable answer buttons during dialogue
+        DisableAnswerButtons();
+    }
 
     public void CorrectAnswer(int correctButtonIndex)
     {
@@ -81,7 +103,7 @@ public class Level6Manager : MonoBehaviour
         */
         // Pause the game and show the pause panel
         StartCoroutine(DelayBeforeNextQuestion());
-        
+
         //DisableAnswerButtons();
     }
 
@@ -137,5 +159,4 @@ public class Level6Manager : MonoBehaviour
             button.interactable = true;
         }
     }
-
 }

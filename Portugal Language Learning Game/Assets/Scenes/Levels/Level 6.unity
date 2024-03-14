@@ -719,6 +719,7 @@ MonoBehaviour:
   dialogeueText: {fileID: 1101419221}
   EndPanel: {fileID: 1212312933}
   FailedPanel: {fileID: 6009744477132212678}
+  healthSlider: {fileID: 383978935}
   file: Characters
   path: CharacterCollection/Characters/Character
   id: 1
@@ -1199,6 +1200,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1753431001}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 410065486}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &284512152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1556,7 +1581,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383978932}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcd3896e8a8fa1149942da3bd13df265, type: 3}
   m_Name: 
@@ -1611,7 +1636,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2182,6 +2207,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1753431001}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 410065486}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &500571068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,6 +2627,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Level6Manager, Assembly-CSharp
         m_MethodName: IncorrectAnswer
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1753431001}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 410065486}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4712,7 +4785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &835475819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7177,6 +7250,7 @@ MonoBehaviour:
   dialogeueText: {fileID: 2126281378}
   EndPanel: {fileID: 490948697}
   FailedPanel: {fileID: 6009744477132212678}
+  healthSlider: {fileID: 383978935}
   file: Characters
   path: CharacterCollection/Characters/Character
   id: 3
@@ -7614,6 +7688,7 @@ MonoBehaviour:
   - {fileID: 1322447276}
   EndgamePanel: {fileID: 5502172506114089719}
   FailedPanel: {fileID: 6009744477132212678}
+  dialoguePanel: {fileID: 1753431001}
   scoreText: {fileID: 4604587689585125939}
   answerButtons:
   - {fileID: 33527141}
@@ -9710,7 +9785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1753431002
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14479,7 +14554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2b35236f0c9694a901b8d1696b1753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreShow: {fileID: 0}
+  scoreShow: {fileID: 1596365728}
   scoreText: {fileID: 6009744476570311273}
   showScore: 0
 --- !u!224 &6009744477132212539

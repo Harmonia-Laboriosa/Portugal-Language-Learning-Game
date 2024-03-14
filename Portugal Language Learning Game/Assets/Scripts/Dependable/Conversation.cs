@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-
+using UnityEngine.UI;
 public class Conversation : MonoBehaviour
 {
     XmlReader reader = new XmlReader();
@@ -16,7 +16,7 @@ public class Conversation : MonoBehaviour
     public GameObject EndPanel;
     public GameObject FailedPanel;
     private bool isTalking;
-    
+    public Slider healthSlider;
     [SerializeField]
     private string file;    //xml file name
     [SerializeField]
@@ -25,7 +25,7 @@ public class Conversation : MonoBehaviour
     private int id;         //number that represents the relevant character script in the xml file character array
     [SerializeField]
     private string initialXmlTag;   //the part of the xml that is first shown to the player upon starting a conversation
-
+  
     private string text;
     private float typingSpeed = 0.08f; // Adjust typing speed here
 
@@ -102,7 +102,8 @@ public class Conversation : MonoBehaviour
         }
         else
         {
-            SManage.instance.IncreaseScore(1);
+            healthSlider.value += 10;
+           // SManage.instance.IncreaseScore(1);
             // Print relevant data to screen depending on player's latest choice
             text = reader.ReadXml(file, path, lineTree, id);
             // Clear existing text before typing new dialogue
@@ -123,11 +124,12 @@ public class Conversation : MonoBehaviour
         dialogeueText.text = "";
 
         isTalking = false;
-        FailedPanel.SetActive(true);
+      FailedPanel.SetActive(true);
         if (ConvoLocker != null)
         {
             ConvoLocker(isTalking);
         }
+      
     }
 
     public void SucessConversation()
