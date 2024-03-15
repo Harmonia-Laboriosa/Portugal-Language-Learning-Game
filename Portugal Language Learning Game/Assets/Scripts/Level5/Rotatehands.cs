@@ -53,11 +53,26 @@ public class Rotatehands : MonoBehaviour
     // Rotate the clock hand based on input
     public void RotateHand(float rotationAmount)
     {
+
         currentRotation += rotationAmount;
 
         float targetAngle = Mathf.Round(currentRotation / snapAngle) * snapAngle;
         transform.rotation = Quaternion.Euler(0f, 0f, -targetAngle);
+        
     }
+    /*
+     * public void RotateHand(float rotationAmount)
+{
+    currentRotation += rotationAmount * rotationSpeed * Time.deltaTime;
+
+    // Calculate the target angle using modulo to ensure it stays within 360 degrees
+    float targetAngle = currentRotation % 360f;
+
+    // Apply smooth rotation using Quaternion.Lerp
+    Quaternion targetRotation = Quaternion.Euler(0f, 0f, -targetAngle);
+    transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+}
+     */
 
     // Method to switch the selected clock hand
     public void SwitchHand()
