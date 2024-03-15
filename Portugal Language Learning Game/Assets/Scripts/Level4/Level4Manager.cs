@@ -17,11 +17,13 @@ public class Level4Manager : MonoBehaviour
     public TMP_Text letter;
     public GameObject rocks;
     public GameObject[] rockRigidbody;
+    public GameObject rock;
 
     void Start()
     {
         StartQuiz();
         rocks.gameObject.SetActive(false);
+        rock.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -180,6 +182,7 @@ public class Level4Manager : MonoBehaviour
     void ActivateRocks()
     {
         rocks.gameObject.SetActive(true);
+        rock.gameObject.SetActive(true);
     }
 
     public void ActivateRigidBodyGravity()
