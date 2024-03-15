@@ -174,6 +174,7 @@ public class Level7Manager : MonoBehaviour
     private int currentQuestion;
 
     // List to keep track of correct answers for each question
+    [SerializeField]
     private List<int> correctAnswerIndices = new List<int>();
 
     void Start()
@@ -258,6 +259,7 @@ public class Level7Manager : MonoBehaviour
     IEnumerator DelayBeforeNextQuestion()
     {
         DisableAnswerButtons();
+            correctAnswerIndices.Clear();
         // Delay for a short time before moving to the next question
         yield return new WaitForSeconds(1f);
         // Disable all buttons during the delay
