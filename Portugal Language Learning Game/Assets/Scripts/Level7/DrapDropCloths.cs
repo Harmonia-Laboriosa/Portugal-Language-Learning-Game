@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DrapDropCloths : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField]
     private Canvas canvas;                 //reference to Canvas
@@ -13,10 +13,10 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     private CanvasGroup canvasGroup;       //reference to CanvasGroup
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
-    public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
+    public bool isPlaceCorrect = false;    //isDraggable bool to check whether you can drag the gameobject 
 
     [SerializeField]
-    private string stag;                    //tag of the gameobject where object will be placed
+    private string tag;                    //tag of the gameobject where object will be placed
 
 
     private void Awake()
@@ -29,27 +29,29 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //if isDraggable is false than return the function and cannot drag
+        // If isDraggable is false then return the function and cannot drag
         if (!isDraggable) return;
-        //make the draggable object little transparent
+
+        // Make the draggable object slightly transparent
         canvasGroup.alpha = 0.75f;
         canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //if isDraggable is false than return the function and cannot drag
+        // If isDraggable is false then return the function and cannot drag
         if (!isDraggable) return;
-        //You can drag the object and it should drag with pointer
+
+        // Drag the object with the pointer
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //if isDraggable is false than return the function and cannot drag
+        // If isDraggable is false then return the function and cannot drag
         if (!isDraggable) return;
 
-        //make the draggable object opaque again
+        // Make the draggable object opaque again
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
 
@@ -57,48 +59,41 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         {
             foreach (GameObject hoveredObject in eventData.hovered)
             {
-                if (hoveredObject.CompareTag(stag))
+                if (hoveredObject.CompareTag(tag))
                 {
                     // If dropped onto a slot, snap to its position
                     rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
                     RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
                     rectTransform.sizeDelta = hoveredRectTransform.sizeDelta;
-                    //make is draggable true
 
-                    // If dropped onto a slot, get the Placedobjecttag from the ItemSlot component
-                    IngridentSlot itemSlot = hoveredObject.GetComponent<IngridentSlot>();
+                    // If dropped onto a slot, check if placement is correct
+                    HumanSlot  itemSlot = hoveredObject.GetComponent<HumanSlot>();
                     if (itemSlot != null)
                     {
-                        // Get the Placedobjecttag from the ItemSlot component
                         string placed_ObjectTag = itemSlot.Placedobjecttag;
-                        // Do something with the placedObjectTag
-
-                        // Check if the placed object tag matches the tag of this object
-                        if (string.Equals(placed_ObjectTag, gameObject.tag))
-                        {
-                            isPlaceCorrect = true;
-                            //Debug.Log("Object placed correctly!");
-                        }
-                        else
-                        {
-                            isPlaceCorrect = false;
-                            //Debug.Log("Object placed incorrectly!");
-                        }
+                        isPlaceCorrect = string.Equals(placed_ObjectTag, gameObject.tag);
                     }
 
-                    isDraggable = false;
+                    // If placement is correct, object is no longer draggable
+                    isDraggable = !isPlaceCorrect;
+
                     return; // Exit the loop once a valid slot is found
                 }
             }
         }
+
         // If not dropped onto a slot, return to original position
         rectTransform.anchoredPosition = originalPosition;
+
+        // Reset draggable if placement is incorrect
+        isDraggable = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("OnPointerDown");
     }
+
     public void ResetToOriginalPosition()
     {
         rectTransform.anchoredPosition = originalPosition;

@@ -43,7 +43,7 @@ public class SManage : MonoBehaviour
     {
         score += amount;
         
-            UpdateScoreText();
+        UpdateScoreText();
         
        // Update the score text after increasing the score
     }
