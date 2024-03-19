@@ -21,12 +21,12 @@ public class Level8Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allObjectsPlaced = new bool[5];
-        scoreIncreased = new bool[5];
+        allObjectsPlaced = new bool[6];
+        scoreIncreased = new bool[6];
     }
     private void FixedUpdate()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {       
             CheckAllObjectsPlacedInPanel(questionPanels[i], i);       
         }    
@@ -73,13 +73,14 @@ public class Level8Manager : MonoBehaviour
     private void ActivateNextPanel(int currentPanelIndex)
     {
         // Activate the panel for the next question if available
-        if (currentPanelIndex < questionPanels.Length)
+        if (currentPanelIndex + 1 < questionPanels.Length)
         {
 
             StartCoroutine(ActivatePanelWithDelay(currentPanelIndex + 1));
         }
         else
         {
+          
             // Activate end panel if all questions are completed
             EndPanel.SetActive(true);
         }
@@ -88,22 +89,20 @@ public class Level8Manager : MonoBehaviour
     {
         // Wait for few seconds
         yield return new WaitForSeconds(waitForNextQuestion);
-        
+
         // Activate the next panel after the delay
-        questionManager.panels[nextPanelIndex].SetActive(true);
-        questionManager.panels[nextPanelIndex - 1].SetActive(false);
+      
+        
+            questionManager.panels[nextPanelIndex].SetActive(true);
+            questionManager.panels[nextPanelIndex - 1].SetActive(false);
+        
     }
 
 
-    public void correctAnswer(int panel)
+    public void correctAnswer()
     {
         SManage.instance.IncreaseScore(1);
-        ActivateNextPanel(panel);
-        //StartCoroutine(ActivatePanelWithDelay(panel));
+      
     }
-    public void incorrectAnswer(int panel)
-    {
-        ActivateNextPanel(panel);
-        //StartCoroutine(ActivatePanelWithDelay(panel));
-    }
+   
 }
