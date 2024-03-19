@@ -21,12 +21,12 @@ public class Level8Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allObjectsPlaced = new bool[questionManager.panels.Length];
-        scoreIncreased = new bool[questionManager.panels.Length];
+        allObjectsPlaced = new bool[6];
+        scoreIncreased = new bool[6];
     }
     private void FixedUpdate()
     {
-        for (int i = 0; i < questionManager.panels.Length; i++)
+        for (int i = 0; i < 6; i++)
         {       
             CheckAllObjectsPlacedInPanel(questionPanels[i], i);       
         }    
