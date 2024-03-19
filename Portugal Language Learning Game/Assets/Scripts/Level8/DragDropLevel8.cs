@@ -172,6 +172,7 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                         RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
                         rectTransform.SetParent(hoveredRectTransform); // Set draggable object's parent to the slot
                         rectTransform.anchoredPosition = Vector2.zero; // Reset position relative to the slot
+                        
                     }
                     else
                     {
@@ -188,12 +189,19 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                         string placed_ObjectTag = itemSlot.Placedobjecttag;
                         // Do something with the placedObjectTag
 
+                        
                         // Check if the placed object tag matches the tag of this object
                         if (string.Equals(placed_ObjectTag, gameObject.tag))
                         {
                             isPlaceCorrect = true;
                             // Debug.Log("Object placed correctly!");
                         }
+                        /*
+                        else if(string.Equals(GetComponentInParent<IngridentSlot>().Placedobjecttag,gameObject.tag))
+                        {
+
+                        }
+                        */
                         else
                         {
                             isPlaceCorrect = false;

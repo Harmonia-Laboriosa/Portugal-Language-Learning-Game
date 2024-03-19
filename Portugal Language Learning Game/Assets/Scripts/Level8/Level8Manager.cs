@@ -53,14 +53,22 @@ public class Level8Manager : MonoBehaviour
                 DragDropLevel8 dragDrop = slot.GetComponentInChildren<DragDropLevel8>();
                 if (dragDrop != null && dragDrop.isPlaceCorrect)
                 {
+                    
                     TempScore = TempScore + 1;
+                    
                     Debug.Log(TempScore);
                     if (TempScore == 6)
                     {
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
                     }
+                    
                 }
+                if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
+                {
+                    scoreManager.IncreaseScore(1);
+                }
+
             }
             scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
         }
