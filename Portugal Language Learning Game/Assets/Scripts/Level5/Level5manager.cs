@@ -21,6 +21,7 @@ public class Level5manager : MonoBehaviour
     private int correctObjectCount; // Variable to track the number of correct objects placed
 
     public bool allObjectsPlaced;
+    public GameObject rock;
 
 
     void Start()
@@ -160,6 +161,17 @@ public class Level5manager : MonoBehaviour
         
 
         NextQuestion();
+    }
+
+    public void RockA()
+    {
+        StartCoroutine("RockActive");
+    }
+    public IEnumerator RockActive()
+    { 
+        yield return new WaitForSeconds(1f);
+        
+        rock.SetActive(true);   
     }
 
     //logic of Level 5 part
