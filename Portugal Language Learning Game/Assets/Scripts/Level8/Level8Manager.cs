@@ -21,12 +21,12 @@ public class Level8Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allObjectsPlaced = new bool[questionManager.panels.Length];
-        scoreIncreased = new bool[questionManager.panels.Length];
+        allObjectsPlaced = new bool[questionPanels.Length];
+        scoreIncreased = new bool[questionPanels.Length];
     }
     private void FixedUpdate()
     {
-        for (int i = 0; i < questionManager.panels.Length; i++)
+        for (int i = 0; i < questionPanels.Length; i++)
         {       
             CheckAllObjectsPlacedInPanel(questionPanels[i], i);       
         }    
@@ -53,14 +53,22 @@ public class Level8Manager : MonoBehaviour
                 DragDropLevel8 dragDrop = slot.GetComponentInChildren<DragDropLevel8>();
                 if (dragDrop != null && dragDrop.isPlaceCorrect)
                 {
+                    
                     TempScore = TempScore + 1;
+                    
                     Debug.Log(TempScore);
                     if (TempScore == 6)
                     {
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
                     }
+                    
                 }
+                if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
+                {
+                    scoreManager.IncreaseScore(1);
+                }
+
             }
             scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
         }
@@ -102,7 +110,6 @@ public class Level8Manager : MonoBehaviour
     public void correctAnswer()
     {
         SManage.instance.IncreaseScore(1);
-      
     }
    
 }

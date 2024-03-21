@@ -167,9 +167,19 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                 if (hoveredObject.CompareTag(stag))
                 {
                     // If dropped onto a slot, snap to its position
-                    RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
-                    rectTransform.SetParent(hoveredRectTransform); // Set draggable object's parent to the slot
-                    rectTransform.anchoredPosition = Vector2.zero; // Reset position relative to the slot
+                    if(hoveredObject.gameObject.GetComponentInChildren<VerticalLayoutGroup>())
+                    {
+                        RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
+                        rectTransform.SetParent(hoveredRectTransform); // Set draggable object's parent to the slot
+                        rectTransform.anchoredPosition = Vector2.zero; // Reset position relative to the slot
+                        
+                    }
+                    else
+                    {
+                        rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
+                        RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
+                        rectTransform.sizeDelta = hoveredRectTransform.sizeDelta;
+                    }
 
                     // If dropped onto a slot, get the Placedobjecttag from the ItemSlot component
                     IngridentSlot itemSlot = hoveredObject.GetComponent<IngridentSlot>();
@@ -179,12 +189,19 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                         string placed_ObjectTag = itemSlot.Placedobjecttag;
                         // Do something with the placedObjectTag
 
+                        
                         // Check if the placed object tag matches the tag of this object
                         if (string.Equals(placed_ObjectTag, gameObject.tag))
                         {
                             isPlaceCorrect = true;
                             // Debug.Log("Object placed correctly!");
                         }
+                        /*
+                        else if(string.Equals(GetComponentInParent<IngridentSlot>().Placedobjecttag,gameObject.tag))
+                        {
+
+                        }
+                        */
                         else
                         {
                             isPlaceCorrect = false;
@@ -198,7 +215,7 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
             }
         }
         // If not dropped onto a slot, return to original position
-        rectTransform.SetParent(canvas.transform); // Reset parent to canvas
+        //rectTransform.SetParent(canvas.transform); // Reset parent to canvas
         rectTransform.anchoredPosition = originalPosition;
     }
 

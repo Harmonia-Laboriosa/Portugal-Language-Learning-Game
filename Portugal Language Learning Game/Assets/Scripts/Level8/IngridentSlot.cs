@@ -11,6 +11,7 @@ public class IngridentSlot : MonoBehaviour
 {
     [SerializeField]
     public string Placedobjecttag;
+    public bool canbePlaced;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -23,7 +24,7 @@ public class IngridentSlot : MonoBehaviour
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
 
             // Move the dropped object to the slot
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         }
     }
 }
