@@ -74,7 +74,7 @@ public class Level10Part2Manager : MonoBehaviour
         // On click send out ray to see if we click a piece.
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.zero);
             if (hit)
             {
                 // Go through the list, the index tells us the position.
