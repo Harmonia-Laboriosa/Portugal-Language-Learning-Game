@@ -15,7 +15,7 @@ public class Level10Managers : MonoBehaviour
     private int currentQuestion;
     public GameObject Answerbuttons;
     int fromSlot;
-    int iScore;
+    public int iScore=0;
 
     void Start()
     {
@@ -173,27 +173,22 @@ public class Level10Managers : MonoBehaviour
     {
         
         fromSlot = fromSlot + temp;
+        
         Debug.Log(fromSlot);
         if(fromSlot == 2)
         {
             // Update the score using ScoreManager
             StartCoroutine(DelayBeforeNextQuestion());
-
+            if(iScore == 2)
+            {
+                SManage.instance.IncreaseScore(1);
+                iScore = 0;
+            }
+            else
+            {
+                iScore = 0;
+            }
             fromSlot = 0;
         }
     }
-
-    public void IncScore(int temp)
-    {
-
-        iScore = iScore + temp;
-        Debug.Log(iScore);
-        if (iScore == 2)
-        {
-            // Update the score using ScoreManager
-            SManage.instance.IncreaseScore(0);
-            iScore = 0;
-        }
-    }
-
 }

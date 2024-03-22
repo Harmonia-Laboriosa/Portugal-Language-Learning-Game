@@ -16,7 +16,7 @@ public class CollissionHandMinute : MonoBehaviour
             Level5manager level5 = FindObjectOfType<Level5manager>();
             level5.tagFromCollissionMinute = true;
         }
-    else
+        else
         {
             Level5manager level5 = FindObjectOfType<Level5manager>();
             level5.tagFromCollissionMinute = false;

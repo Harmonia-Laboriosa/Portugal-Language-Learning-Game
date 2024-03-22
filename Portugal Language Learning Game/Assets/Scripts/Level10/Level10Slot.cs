@@ -27,7 +27,7 @@ public class Level10Slot : MonoBehaviour, IDropHandler
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
             if(eventData.pointerDrag.tag==Placedobjecttag)
             {
-                level10Manager.IncScore(mark);
+                level10Manager.iScore+=1;
                 //SManage.instance.IncreaseScore(1);
             }
             // Move the dropped object to the slot
