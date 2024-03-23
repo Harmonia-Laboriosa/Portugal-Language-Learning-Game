@@ -68,7 +68,7 @@ public class Level7Manager : MonoBehaviour
         correctAnswerIndices.Add(correctButtonIndex);
 
         // Check if all correct answers are selected
-        if (correctAnswerIndices.Count == 5) // Assuming there are 5 correct answers
+        if (correctAnswerIndices.Count == 4) // Assuming there are 5 correct answers
         {
             // Increase score only when all correct answers are selected
             SManage.instance.IncreaseScore(1);
