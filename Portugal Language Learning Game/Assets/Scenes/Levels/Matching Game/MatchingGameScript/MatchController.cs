@@ -22,7 +22,7 @@ public class MatchController : MonoBehaviour
 
     private void Awake()
     {
-        puzzles = Resources.LoadAll<Sprite>("MSprites");
+        //puzzles = Resources.LoadAll<Sprite>("MSprites");
     }
 
     // Start is called before the first frame update
@@ -49,9 +49,9 @@ public class MatchController : MonoBehaviour
     {
         int looper = btns.Count;
         int index = 0;
-        for(int i = 0;i < looper;i++)
+        for(int i = 0;i <looper;i++)
         {
-            if(index==looper/2)
+            if(index==looper)
             {
                 index = 0;
             }
@@ -70,8 +70,8 @@ public class MatchController : MonoBehaviour
 
     public void PuzzlePick()
     {
-        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
-        //Debug.Log("You clicked " + name);
+        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.tag;
+        //Debug.Log("You clicked " + tag);
         if(!firstGuess)
         {
             firstGuess = true;
