@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
-public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class Level10dragger : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField]
     private Canvas canvas;                 //reference to Canvas
@@ -12,7 +14,6 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
-
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
@@ -69,7 +70,6 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
                     rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
                     RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
                     rectTransform.sizeDelta = hoveredRectTransform.sizeDelta;
-                    //make is draggable true
 
                     // If dropped onto a slot, get the Placedobjecttag from the ItemSlot component
                     Level10slots itemSlot = hoveredObject.GetComponent<Level10slots>();
@@ -78,24 +78,20 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
                         // Get the Placedobjecttag from the ItemSlot component
                         string placed_ObjectTag = itemSlot.Placedobjecttag;
 
-                        // Do something with the placedObjectTag
-                        Debug.Log("Placed object tag: " + placed_ObjectTag);
-
                         // Check if the placed object tag matches the tag of this object
                         if (string.Equals(placed_ObjectTag, gameObject.tag))
                         {
                             isPlaceCorrect = true;
-                            Debug.Log("Object placed correctly!");
+                            //Debug.Log("Object placed correctly!");
                         }
                         else
                         {
                             isPlaceCorrect = false;
-                            Debug.Log("Object placed incorrectly!");
+                            //Debug.Log("Object placed incorrectly!");
                         }
                     }
 
                     isDraggable = false;
-                  
                     return; // Exit the loop once a valid slot is found
                 }
 
@@ -112,5 +108,11 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     {
         //Debug.Log("OnPointerDown");
     }
+    public void ResetToOriginalPosition()
+    {
+        rectTransform.anchoredPosition = originalPosition;
+        isDraggable = true;
+        isPlaceCorrect = false;
 
+    }
 }

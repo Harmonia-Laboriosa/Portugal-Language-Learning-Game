@@ -81,7 +81,7 @@ public class Level3DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                     */
                     //Debug.Log("1");
                     // If dropped onto a slot, get the Placedobjecttag from the ItemSlot component
-                    ItemSlot itemSlot = hoveredObject.GetComponent<ItemSlot>();
+                    Level3ItemSlot itemSlot = hoveredObject.GetComponent<Level3ItemSlot>();
                     if (itemSlot != null)
                     {
                         // Get the Placedobjecttag from the ItemSlot component

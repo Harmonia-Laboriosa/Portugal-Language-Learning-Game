@@ -16,11 +16,18 @@ public class Level10Managers : MonoBehaviour
     public GameObject Answerbuttons;
     int fromSlot;
     public int iScore=0;
+    public bool[] allObjectsPlaced;
+    public int TempScore = 0;
+    public SManage scoreManager;
+    public bool[] scoreIncreased; 
 
     void Start()
     {
+        allObjectsPlaced = new bool[questions.Length];
+        scoreIncreased = new bool[questions.Length];
         fromSlot = 0;
         StartQuiz();
+    
         Answerbuttons.SetActive(false);
     }
 
@@ -37,6 +44,63 @@ public class Level10Managers : MonoBehaviour
         currentQuestion = 0;
         ActivateCurrentQuestion();
         //StartTimer();
+    }
+    private void FixedUpdate()
+    {
+        // Iterate over question panels for questions 6, 7, and 8 only if they are active
+        for (int i = 5; i <= 7; i++)
+        {
+            if (questions[i].activeSelf)
+            {
+                CheckAllObjectsPlacedInPanel(questions[i], i);
+            }
+        }
+    }
+
+    public void CheckAllObjectsPlacedInPanel(GameObject panel, int panelIndex)
+    {
+        bool allPlaced = true;
+        foreach (Transform slot in panel.transform)
+        {
+            Level10DragDrop dragDrop = slot.GetComponentInChildren<Level10DragDrop>();
+            if (dragDrop != null && dragDrop.isDraggable)
+            {
+                allPlaced = false;
+                break;
+            }
+        }
+        allObjectsPlaced[panelIndex] = allPlaced;
+
+        // Increase score if all objects are placed and the score has not been increased for this panel yet
+        if (allPlaced && !scoreIncreased[panelIndex])
+        {
+            foreach (Transform slot in panel.transform)
+            {
+                Level10DragDrop dragDrop = slot.GetComponentInChildren<Level10DragDrop>();
+                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                {
+
+                    TempScore = TempScore + 1;
+
+                    Debug.Log(TempScore);
+                    if (TempScore == 9)
+                    {
+                        scoreManager.IncreaseScore(1);
+                        StartCoroutine(DelayBeforeNextQuestion());
+                        TempScore = 0;
+                    }
+
+                }
+                if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
+                {
+                    scoreManager.IncreaseScore(1);
+                }
+
+            }
+            scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
+        }
+        // Activate next panel if all objects are placed
+
     }
 
     void ActivateCurrentQuestion()
@@ -106,26 +170,6 @@ public class Level10Managers : MonoBehaviour
         // Pause the game and show the pause panel
         StartCoroutine(DelayBeforeNextQuestion());
     }
-
-    //IEnumerator ShakeButton(GameObject buttonObject, float duration, float magnitude)
-    //{
-    //    Vector3 originalPosition = buttonObject.transform.position;
-    //    float elapsed = 0.0f;
-
-    //    while (elapsed < duration)
-    //    {
-    //        float x = originalPosition.x + Random.Range(-1f, 1f) * magnitude;
-    //        /*float y = originalPosition.y + Random.Range(-1f, 1f) * magnitude;*/
-
-    //        buttonObject.transform.position = new Vector3(x, originalPosition.y, originalPosition.z);
-
-    //        elapsed += Time.deltaTime;
-
-    //        yield return null;
-    //    }
-
-    //    buttonObject.transform.position = originalPosition;
-    //}
 
     void UpdateScoreText()
     {

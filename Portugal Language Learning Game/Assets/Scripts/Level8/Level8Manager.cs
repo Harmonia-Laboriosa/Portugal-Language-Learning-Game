@@ -99,7 +99,6 @@ public class Level8Manager : MonoBehaviour
         yield return new WaitForSeconds(waitForNextQuestion);
 
         // Activate the next panel after the delay
-      
         
             questionManager.panels[nextPanelIndex].SetActive(true);
             questionManager.panels[nextPanelIndex - 1].SetActive(false);
