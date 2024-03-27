@@ -1905,7 +1905,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 983130506}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2700,7 +2700,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 983130506}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3679,10 +3679,10 @@ RectTransform:
   - {fileID: 1213066164}
   - {fileID: 96985058}
   - {fileID: 433114041}
+  - {fileID: 607414413}
   - {fileID: 1311282164}
   - {fileID: 1549545807}
   - {fileID: 738270724}
-  - {fileID: 607414413}
   - {fileID: 280439317}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -4189,8 +4189,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13a62fb73e9b444588f23bf03042734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namePrinter: {fileID: 791701571}
+  dialogeueText: {fileID: 1421772972}
   EndPanel: {fileID: 1549545806}
   FailedPanel: {fileID: 1311282163}
+  healthSlider: {fileID: 0}
   file: Characters
   path: CharacterCollection/Characters/Character
   id: 0
@@ -4942,7 +4945,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1256436698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6299605158374326918, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LoadLevel3
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1256436698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4963,7 +4978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83d3696474d78e94882bd966c491aded, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 366afa2151bde144a94667064866ccea, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5556,7 +5571,7 @@ RectTransform:
   - {fileID: 1719162671}
   - {fileID: 1525762669}
   m_Father: {fileID: 983130506}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6639,7 +6654,7 @@ RectTransform:
   - {fileID: 1563085789}
   - {fileID: 1272093509}
   m_Father: {fileID: 983130506}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7881,7 +7896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1864860016}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6299605158374326918, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1864860016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8099,7 +8126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 607414415}
-  totalRemainingTime: 300
+  totalRemainingTime: 120
   failedPanel: {fileID: 1311282163}
   endPanel: {fileID: 1549545806}
 --- !u!1 &1961879793
