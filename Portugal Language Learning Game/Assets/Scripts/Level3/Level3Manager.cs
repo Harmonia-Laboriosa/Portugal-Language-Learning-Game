@@ -148,7 +148,7 @@ public class Level3Manager : MonoBehaviour
 
     private IEnumerator OpenAnswerPanelWithDelay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         Answerbuttons.SetActive(true);
     }
 }

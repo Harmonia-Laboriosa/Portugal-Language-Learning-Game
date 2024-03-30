@@ -21,17 +21,21 @@ public class Level3Animations : MonoBehaviour
         
     }
 
-    public void IsJump()
+    public void RightJump()
     {
-            m_Animator.SetBool("jump", true);
+            m_Animator.SetBool("rightJump", true);
             StartCoroutine("IsNotJump");        
-            //m_Animator.SetBool("jump", false);
-        
+    }
+    public void LeftJump()
+    {
+        m_Animator.SetBool("leftJump", true);
+        StartCoroutine("IsNotJump");
     }
 
     public IEnumerator IsNotJump()
     {
         yield return new WaitForSeconds(1.5f);
-        m_Animator.SetBool("jump", false);
+        m_Animator.SetBool("rightJump", false);
+        m_Animator.SetBool("leftJump", false);
     }
 }
