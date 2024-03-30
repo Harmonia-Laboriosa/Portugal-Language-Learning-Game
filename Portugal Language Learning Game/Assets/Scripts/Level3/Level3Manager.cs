@@ -14,11 +14,13 @@ public class Level3Manager : MonoBehaviour
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
     public GameObject Answerbuttons;
+    
 
     void Start()
     {
         StartQuiz();
         Answerbuttons.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -83,8 +85,9 @@ public class Level3Manager : MonoBehaviour
 
         // Disable all answer buttons after an answer is selected
         // DisableAnswerButtons();
-
+        
         StartCoroutine(DelayBeforeNextQuestion());
+
     }
 
     public void IncorrectAnswer(int correctButtonIndex)
