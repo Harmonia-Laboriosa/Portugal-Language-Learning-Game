@@ -20,7 +20,7 @@ public class Level2Manager : MonoBehaviour
 
     void Start()
     {
-        StartQuiz();
+        //StartQuiz();
     }
 
     // Update is called once per frame

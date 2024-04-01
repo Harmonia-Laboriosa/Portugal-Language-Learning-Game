@@ -102,7 +102,8 @@ public class Conversation : MonoBehaviour
         }
         else
         {
-            healthSlider.value += 10;
+            IncreaseSliderValue();
+           
            // SManage.instance.IncreaseScore(1);
             // Print relevant data to screen depending on player's latest choice
             text = reader.ReadXml(file, path, lineTree, id);
@@ -117,7 +118,13 @@ public class Conversation : MonoBehaviour
 
         }
     }
-
+    void IncreaseSliderValue()
+    {
+        if (healthSlider != null)
+        {
+            healthSlider.value += 10;
+        }
+    }
     void EndConversation()
     {
         namePrinter.PrintToUI("");

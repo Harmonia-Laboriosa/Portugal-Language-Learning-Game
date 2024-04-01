@@ -148,6 +148,41 @@
         </Response>
       </Tree2>
     </Character>
+
+    <Character name="OldMan">
+      <Name>OldMan</Name>
+      <Greeting>
+        Hello! I'm [name of NPC].
+        <Response next="0">
+          Hello! I'm [name of player]. How are you?
+        </Response>
+        <Response next="Quit">
+          Bye
+        </Response>
+      </Greeting>
+      <Tree0>
+        Hello! I'm good. What are you looking for here?
+
+        <Response next="1">
+          I need help to complete a mission. Could you help me?
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree0>
+      <Tree1>
+        Hmm lets do the follwoing: if you asnwer my enigmas, I will help you. If you cant answer, I wont be able to help you.
+
+        <Response next="Success">
+          Deal. Lets go.
+
+        </Response>
+        <Response next="Quit">
+          Okay, I'll leave you be then
+        </Response>
+      </Tree1> 
+     
+    </Character>
     <Character name="MJ">
       <Name>Local 3</Name>
       <Greeting>
