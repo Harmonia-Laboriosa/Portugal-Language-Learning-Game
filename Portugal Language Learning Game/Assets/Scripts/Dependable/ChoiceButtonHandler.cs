@@ -22,6 +22,18 @@ public class ChoiceButtonHandler : MonoBehaviour {
     [SerializeField]
     private string subTree; // this is the name tag of the next section of the xml that the conversation should go to
 
+    public Level2Animation_NPC1 npcanim;
+    public Level2Animation_NPC2 npcanim2;
+    public bool talk=false;
+
+    public GameObject dialogue;
+
+    public void Start()
+    {
+        npcanim = FindObjectOfType<Level2Animation_NPC1>();
+        npcanim2 = FindObjectOfType<Level2Animation_NPC2>();
+    }
+
     public void GetChoices(string[] receivedChoices, string[] choiceAttributes)
     {
         attributes = choiceAttributes;
@@ -32,7 +44,21 @@ public class ChoiceButtonHandler : MonoBehaviour {
     void CreateChoiceButtons()
     {
         currentButtons = new GameObject[playerChoices.Length];
-
+        if(!talk)
+        {
+            
+            if(dialogue.active)
+            {
+                npcanim2.idleNotTalk();
+            }
+            else
+            {
+                npcanim.idleNotTalk();
+            }
+            
+            talk = true;
+        }
+        
         int i = 0;
         float offsetCounter = 24;
 
@@ -80,7 +106,18 @@ public class ChoiceButtonHandler : MonoBehaviour {
         {
             Destroy(currentButtons[i]);
         }
-
+        if (talk)
+        {
+            if (dialogue.active)
+            {
+                npcanim2.idleTalk();
+            }
+            else
+            {
+                npcanim.idleTalk();
+            }
+            talk = false;
+        }
         //prepare all variable for next choice batch
         currentButtons = null;
 

@@ -15,7 +15,9 @@ public class Level2Manager : MonoBehaviour
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
-
+    public GameObject dialogue1;
+    public GameObject dialogue2;
+    public GameObject player;
 
 
     void Start()
@@ -26,7 +28,14 @@ public class Level2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(dialogue1.active || dialogue2.active)
+        {
+            player.SetActive(true);
+        }
+        else
+        {
+            player.SetActive(false);
+        }
     }
 
     void StartQuiz()
