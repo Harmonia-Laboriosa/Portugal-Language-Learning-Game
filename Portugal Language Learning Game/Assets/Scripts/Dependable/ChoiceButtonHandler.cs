@@ -30,8 +30,8 @@ public class ChoiceButtonHandler : MonoBehaviour {
 
     public void Start()
     {
-        npcanim = FindObjectOfType<Level2Animation_NPC1>();
-        npcanim2 = FindObjectOfType<Level2Animation_NPC2>();
+        //npcanim = FindObjectOfType<Level2Animation_NPC1>();
+        //npcanim2 = FindObjectOfType<Level2Animation_NPC2>();
     }
 
     public void GetChoices(string[] receivedChoices, string[] choiceAttributes)

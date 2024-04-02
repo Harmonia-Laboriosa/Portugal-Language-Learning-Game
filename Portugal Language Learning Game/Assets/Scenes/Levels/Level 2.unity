@@ -3783,8 +3783,8 @@ MonoBehaviour:
   choiceButtonPrefab: {fileID: 1120045487601428871, guid: b7235cd19b2bc5c46b915efd543a22d4, type: 3}
   xPos: -640
   subTree: Tree
-  npcanim: {fileID: 0}
-  npcanim2: {fileID: 0}
+  npcanim: {fileID: 1354332690}
+  npcanim2: {fileID: 1068507818}
   talk: 0
   dialogue: {fileID: 914057691}
 --- !u!1 &1009996453
@@ -4233,7 +4233,7 @@ GameObject:
   - component: {fileID: 1068507819}
   - component: {fileID: 1068507818}
   m_Layer: 5
-  m_Name: NPC
+  m_Name: NPC2
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4272,7 +4272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namePrinter: {fileID: 791701571}
-  dialogeueText: {fileID: 0}
+  dialogeueText: {fileID: 1838834987}
   EndPanel: {fileID: 1549545806}
   FailedPanel: {fileID: 1311282163}
   healthSlider: {fileID: 0}
@@ -5787,7 +5787,7 @@ GameObject:
   - component: {fileID: 1354332689}
   - component: {fileID: 1354332690}
   m_Layer: 5
-  m_Name: NPC
+  m_Name: NPC1
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
