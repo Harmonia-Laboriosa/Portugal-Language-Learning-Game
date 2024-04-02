@@ -26,7 +26,7 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
             if(eventData.pointerDrag.tag==Placedobjecttag)
             {
-                SManage.instance.IncreaseScore(1);
+                level3Manager.Increasescore();
             }
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;

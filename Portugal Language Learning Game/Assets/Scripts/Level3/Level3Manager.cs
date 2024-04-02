@@ -14,13 +14,18 @@ public class Level3Manager : MonoBehaviour
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
     public GameObject Answerbuttons;
-    
+    public GameObject bg2;
+    public GameObject player;
+    public GameObject[] bars;
+    public GameObject[] unAnimatedbars;
+    int barcount = 5;
 
     void Start()
     {
         StartQuiz();
         Answerbuttons.SetActive(false);
-        
+        player.SetActive(true);
+        bg2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -150,5 +155,26 @@ public class Level3Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         Answerbuttons.SetActive(true);
+    }
+
+    public void disableMC()
+    {
+        StartCoroutine("disableplayer");
+    }
+
+    public IEnumerator disableplayer()
+    {
+        bg2.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        player.SetActive(false);
+        
+    }
+
+    public void Increasescore()
+    {
+        SManage.instance.IncreaseScore(1);
+        barcount -= 1;
+        unAnimatedbars[barcount].SetActive(false);
+        bars[barcount].SetActive(true);
     }
 }
