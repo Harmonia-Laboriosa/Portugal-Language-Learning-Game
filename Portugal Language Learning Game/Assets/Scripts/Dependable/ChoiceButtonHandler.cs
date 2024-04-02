@@ -46,16 +46,23 @@ public class ChoiceButtonHandler : MonoBehaviour {
         currentButtons = new GameObject[playerChoices.Length];
         if(!talk)
         {
-            
-            if(dialogue.active)
+            if (dialogue != null)
             {
-                npcanim2.idleNotTalk();
+                if (dialogue.active)
+                {
+                    if (npcanim2 != null)
+                    {
+                        npcanim2.idleNotTalk();
+                    }
+                }
+                else
+                {
+                    if (npcanim != null)
+                    {
+                        npcanim.idleNotTalk();
+                    }
+                }
             }
-            else
-            {
-                npcanim.idleNotTalk();
-            }
-            
             talk = true;
         }
         
@@ -108,13 +115,16 @@ public class ChoiceButtonHandler : MonoBehaviour {
         }
         if (talk)
         {
-            if (dialogue.active)
+            if (dialogue != null)
             {
-                npcanim2.idleTalk();
-            }
-            else
-            {
-                npcanim.idleTalk();
+                if (dialogue.active)
+                {
+                    npcanim2.idleTalk();
+                }
+                else
+                {
+                    npcanim.idleTalk();
+                }
             }
             talk = false;
         }
