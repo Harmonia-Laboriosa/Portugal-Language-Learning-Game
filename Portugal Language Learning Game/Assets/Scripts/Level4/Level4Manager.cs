@@ -15,15 +15,19 @@ public class Level4Manager : MonoBehaviour
     private int currentQuestion;
     public string tagFromCollission;
     public TMP_Text letter;
+    public GameObject boulder;
+    public GameObject background;
     public GameObject rocks;
-    public GameObject[] rockRigidbody;
-    public GameObject rock;
+    public int animationscore=0;
+    public Level4Animation animations;
 
     void Start()
     {
         StartQuiz();
+        boulder.gameObject.SetActive(false);
+        background.gameObject.SetActive(false);
         rocks.gameObject.SetActive(false);
-        rock.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -59,7 +63,9 @@ public class Level4Manager : MonoBehaviour
             currentQuestion++;
             if(currentQuestion == 6)
             {
-                ActivateRocks();
+                background.gameObject.SetActive(true);
+                boulder.gameObject.SetActive(true);
+                rocks.gameObject.SetActive(true);
             }
             ActivateCurrentQuestion();
         }
@@ -82,6 +88,9 @@ public class Level4Manager : MonoBehaviour
         UpdateScoreText();
         // Shatter all answer buttons after an answer is selected
         StartCoroutine(DelayBeforeNextQuestion());
+        animationscore += 1;
+        animations.playAnimation(animationscore);
+       
     }
 
     public void IncorrectAnswer(int correctButtonIndex)
@@ -179,17 +188,4 @@ public class Level4Manager : MonoBehaviour
         }
     }
 
-    void ActivateRocks()
-    {
-        rocks.gameObject.SetActive(true);
-        rock.gameObject.SetActive(true);
-    }
-
-    public void ActivateRigidBodyGravity()
-    {
-        foreach(GameObject rocks in rockRigidbody)
-        {
-            rocks.GetComponentInChildren<Rigidbody2D>().gravityScale = 5;
-        }
-    }
 }

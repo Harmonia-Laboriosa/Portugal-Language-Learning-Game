@@ -187,8 +187,12 @@ public class Level3Manager : MonoBehaviour
     {
         SManage.instance.IncreaseScore(1);
         barcount -= 1;
-        unAnimatedbars[barcount].SetActive(false);
-        bars[barcount].SetActive(true);
+        if(barcount<=0)
+        {
+            unAnimatedbars[barcount].SetActive(false);
+            bars[barcount].SetActive(true);
+        }
+
     }
 }
 

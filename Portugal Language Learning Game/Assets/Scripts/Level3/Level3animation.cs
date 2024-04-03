@@ -4,40 +4,44 @@ using UnityEngine;
 
 public class Level3animation : MonoBehaviour
 {
-
     Animator m_Animator;
     RectTransform pos;
-    public bool m_Jump;
-    Vector3 currentPosition;
+    bool m_Jump;
+    Vector3 targetPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_Animator = this.gameObject.GetComponent<Animator>();
+        m_Animator = GetComponent<Animator>();
         m_Jump = false;
-        pos = this.gameObject.GetComponent<RectTransform>();
-        currentPosition = pos.position;
+        pos = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (m_Jump)
+        {
+            pos.position = Vector3.Lerp(pos.position, targetPosition, Time.deltaTime*2f);
+        }
     }
 
     public void RightJump()
     {
-        Vector3 currentPosition = pos.position;
-        m_Animator.SetBool("isJumpingRight", true);
-        float newX = currentPosition.x + 300.0f;
-        pos.position = new Vector3(newX, pos.position.y, pos.position.z);
-        StartCoroutine("IsNotJump");
+        if (!m_Jump)
+        {
+            m_Jump = true; // Set m_Jump to true only if it's not already jumping
+            m_Animator.SetBool("isJumpingRight", true);
+            float newX = pos.position.x + 350.0f;
+            targetPosition = new Vector3(newX, pos.position.y, pos.position.z);
+            StartCoroutine("IsNotJump");
+        }
     }
 
-    public IEnumerator IsNotJump()
+    IEnumerator IsNotJump()
     {
         yield return new WaitForSeconds(1f);
         m_Animator.SetBool("isJumpingRight", false);
-
+        m_Jump = false; // Reset m_Jump after animation completes
     }
 }
