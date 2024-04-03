@@ -36,7 +36,7 @@ public class Level3animation : MonoBehaviour
 
     public IEnumerator IsNotJump()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         m_Animator.SetBool("isJumpingRight", false);
 
     }

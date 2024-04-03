@@ -14,18 +14,19 @@ public class Level3Manager : MonoBehaviour
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
     public GameObject Answerbuttons;
-    public GameObject bg2;
+    //public GameObject bg2;
     public GameObject player;
     public GameObject[] bars;
     public GameObject[] unAnimatedbars;
     int barcount = 5;
+    public Level3animation Player;
 
     void Start()
     {
         StartQuiz();
         Answerbuttons.SetActive(false);
         player.SetActive(true);
-        bg2.SetActive(false);
+      //  bg2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,6 +48,10 @@ public class Level3Manager : MonoBehaviour
     {
         for (int i = 0; i < levels.Length; i++)
         {
+            if (currentQuestion == 5)
+            {
+                Answerbuttons.SetActive(true);
+            }
             levels[i].SetActive(i == currentQuestion);
         }
 
@@ -63,6 +68,7 @@ public class Level3Manager : MonoBehaviour
 
         if (currentQuestion + 1 < levels.Length)
         {
+            
             currentQuestion++;
 
             ActivateCurrentQuestion();
@@ -139,8 +145,9 @@ public class Level3Manager : MonoBehaviour
 
     IEnumerator DelayBeforeNextQuestion()
     {
-        // Delay for a short time before moving to the next question
-        yield return new WaitForSeconds(0.5f);
+        // Delay for a short time before moving to the next
+        Player.RightJump();
+        yield return new WaitForSeconds(2f);
 
 
         NextQuestion();
@@ -153,8 +160,8 @@ public class Level3Manager : MonoBehaviour
 
     private IEnumerator OpenAnswerPanelWithDelay()
     {
-        yield return new WaitForSeconds(1.5f);
-        Answerbuttons.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        
     }
 
     public void disableMC()
@@ -164,10 +171,12 @@ public class Level3Manager : MonoBehaviour
 
     public IEnumerator disableplayer()
     {
-        bg2.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        player.SetActive(false);
-        
+        //player.SetActive(false);
+        yield return new WaitForSeconds(2f*Time.deltaTime);
+        //bg2.SetActive(true);
+
+
+
     }
 
     public void Increasescore()
@@ -178,3 +187,5 @@ public class Level3Manager : MonoBehaviour
         bars[barcount].SetActive(true);
     }
 }
+
+
