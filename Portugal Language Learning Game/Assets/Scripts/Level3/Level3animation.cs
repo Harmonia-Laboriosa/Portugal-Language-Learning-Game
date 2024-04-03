@@ -29,7 +29,7 @@ public class Level3animation : MonoBehaviour
     {
         Vector3 currentPosition = pos.position;
         m_Animator.SetBool("isJumpingRight", true);
-        float newX = currentPosition.x + 120.0f;
+        float newX = currentPosition.x + 300.0f;
         pos.position = new Vector3(newX, pos.position.y, pos.position.z);
         StartCoroutine("IsNotJump");
     }

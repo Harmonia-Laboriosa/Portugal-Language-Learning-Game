@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,7 +14,8 @@ public class Level3Manager : MonoBehaviour
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
     public GameObject Answerbuttons;
-    //public GameObject bg2;
+    public GameObject bg2;
+    public GameObject bg1;
     public GameObject player;
     public GameObject[] bars;
     public GameObject[] unAnimatedbars;
@@ -51,6 +52,9 @@ public class Level3Manager : MonoBehaviour
             if (currentQuestion == 5)
             {
                 Answerbuttons.SetActive(true);
+                bg2.SetActive(true);
+                bg1.SetActive(false);
+                player.SetActive(false);
             }
             levels[i].SetActive(i == currentQuestion);
         }
@@ -171,9 +175,9 @@ public class Level3Manager : MonoBehaviour
 
     public IEnumerator disableplayer()
     {
-        //player.SetActive(false);
+      
         yield return new WaitForSeconds(2f*Time.deltaTime);
-        //bg2.SetActive(true);
+        
 
 
 
