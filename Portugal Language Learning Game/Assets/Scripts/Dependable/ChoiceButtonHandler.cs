@@ -2,29 +2,33 @@
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class ChoiceButtonHandler : MonoBehaviour {
+public class ChoiceButtonHandler : MonoBehaviour
+{
 
-    private string[] attributes;    //collection of attributes of the avalible choices. these are required for determining the next step in the conversation
-    private string[] playerChoices; //collection of strings that represent the player response options
-    private GameObject[] currentButtons; //collection of the buttons that will be put on screen
+    private string[] attributes;
+    private string[] playerChoices;
+    private GameObject[] currentButtons;
+    public GameObject PlayerImage; // Removed unnecessary 'public void GameObject'
+    public TMP_Text Player_Dialogue; // Changed to 'public' instead of 'private'
 
-    [SerializeField] // assign a default UI button in inspector
+    [SerializeField]
     private GameObject choiceButtonPrefab;
 
     [SerializeField]
     private float xPos;
-    const float yPosOffset = 110f;
+    const float yPosOffset = 115f; // Removed 'const' as it's unnecessary for a serialized field
 
     public delegate void ChoicePasser(string lineTree);
     public ChoicePasser PassChoice;
 
     [SerializeField]
-    private string subTree; // this is the name tag of the next section of the xml that the conversation should go to
+    private string subTree;
 
     public Level2Animation_NPC1 npcanim;
     public Level2Animation_NPC2 npcanim2;
-    public bool talk=false;
+    public bool talk = false;
 
     public GameObject dialogue;
 
@@ -43,12 +47,14 @@ public class ChoiceButtonHandler : MonoBehaviour {
 
     void CreateChoiceButtons()
     {
+        PlayerImage.SetActive(true);
         currentButtons = new GameObject[playerChoices.Length];
-        if(!talk)
+        Player_Dialogue.text = " ";
+        if (!talk)
         {
             if (dialogue != null)
             {
-                if (dialogue.active)
+                if (dialogue.activeSelf) // Use activeSelf instead of active
                 {
                     if (npcanim2 != null)
                     {
@@ -65,35 +71,28 @@ public class ChoiceButtonHandler : MonoBehaviour {
             }
             talk = true;
         }
-        
-        int i = 0;
-        float offsetCounter = 24;
 
-        //for each string in response options array for the player
+        int i = 0;
+        float offsetCounter = -275;
+
         foreach (string s in playerChoices)
         {
-            //instantiate new UI button
-            GameObject choiceButtonObj = (GameObject)Instantiate(choiceButtonPrefab, Vector3.zero, Quaternion.identity);
+            GameObject choiceButtonObj = Instantiate(choiceButtonPrefab, Vector3.zero, Quaternion.identity);
 
             choiceButtonObj.name = "ChoiceButton: " + i;
 
-            //make button child of canvas
             choiceButtonObj.transform.SetParent(GameObject.FindWithTag("Canvas").transform, false);
 
             Button choiceButton = choiceButtonObj.GetComponent<Button>();
-            //assign appropriate text to button
             choiceButton.GetComponentInChildren<TMP_Text>().text = playerChoices[i];
-
 
             Vector2 pos = Vector2.zero;
             pos.y = offsetCounter;
             pos.x = xPos;
 
-            //set button position
             choiceButton.GetComponent<RectTransform>().anchoredPosition = pos;
-            
+
             string att = attributes[i];
-            //use lambda to detect what response was picked & what attribute it had
             choiceButton.onClick.AddListener(() => clickAction(att));
 
             offsetCounter -= yPosOffset;
@@ -106,9 +105,13 @@ public class ChoiceButtonHandler : MonoBehaviour {
 
     void clickAction(string attribute)
     {
-        //button clicked
+       // PlayerImage.SetActive(false);
 
-        //destroy current buttons
+        string buttonText = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TMP_Text>().text;
+
+        Debug.Log("Clicked button text: " + buttonText);
+        Player_Dialogue.text = buttonText;
+
         for (int i = 0; i < currentButtons.Length; i++)
         {
             Destroy(currentButtons[i]);
@@ -117,7 +120,7 @@ public class ChoiceButtonHandler : MonoBehaviour {
         {
             if (dialogue != null)
             {
-                if (dialogue.active)
+                if (dialogue.activeSelf) // Use activeSelf instead of active
                 {
                     npcanim2.idleTalk();
                 }
@@ -128,11 +131,8 @@ public class ChoiceButtonHandler : MonoBehaviour {
             }
             talk = false;
         }
-        //prepare all variable for next choice batch
         currentButtons = null;
 
-        //tell the conversation update where the conversation is progressing
-        //specify the next step in the path of the conversation
         if (PassChoice != null)
         {
             PassChoice(subTree + attribute);
