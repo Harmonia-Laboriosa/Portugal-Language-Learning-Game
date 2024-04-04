@@ -8,9 +8,9 @@ public class Conversation : MonoBehaviour
     XmlReader reader = new XmlReader();
 
     public StringUIPrinter namePrinter;
-    public TMP_Text dialogeueText; // Using TextMeshPro for dialogue text
+    private TMP_Text dialogeueText; // Using TextMeshPro for dialogue text
     private ChoiceButtonHandler choiceButtons;
-
+    public ChoiceButtonHandler Btn;
     public delegate void LockConvo(bool talks);
     public LockConvo ConvoLocker;
     public GameObject EndPanel;
@@ -25,7 +25,7 @@ public class Conversation : MonoBehaviour
     private int id;         //number that represents the relevant character script in the xml file character array
     [SerializeField]
     private string initialXmlTag;   //the part of the xml that is first shown to the player upon starting a conversation
-  
+    public GameObject NPCImage;
     private string text;
     private float typingSpeed = 0.08f; // Adjust typing speed here
 
@@ -35,11 +35,12 @@ public class Conversation : MonoBehaviour
     {
         choiceButtons = GameObject.FindWithTag(Tags.canvasTag).GetComponent<ChoiceButtonHandler>();
         /*namePrinter = GameObject.FindWithTag(Tags.nameText).GetComponent<StringUIPrinter>();*/
-        dialogeueText = GameObject.FindWithTag(Tags.dialogueText).GetComponent<TMP_Text>(); // Using TextMeshPro for dialogue text
+        dialogeueText = GameObject.FindWithTag(Tags.dialogueText).GetComponentInChildren<TMP_Text>();// Using TextMeshPro for dialogue text
     }
 
     public void ConversationStart()
     {
+        NPCImage.SetActive(true);
         isTalking = true;
         if (ConvoLocker != null)
         {
@@ -127,6 +128,7 @@ public class Conversation : MonoBehaviour
     }
     void EndConversation()
     {
+        Btn.PlayerImage.SetActive(false);
         namePrinter.PrintToUI("");
         dialogeueText.text = "";
 
@@ -136,11 +138,12 @@ public class Conversation : MonoBehaviour
         {
             ConvoLocker(isTalking);
         }
-      
+        NPCImage.SetActive(false);
     }
 
     public void SucessConversation()
     {
+        Btn.PlayerImage.SetActive(false);
         namePrinter.PrintToUI("");
         dialogeueText.text = "";
         gameObject.SetActive(false);
@@ -150,5 +153,6 @@ public class Conversation : MonoBehaviour
         {
             ConvoLocker(isTalking);
         }
+        NPCImage.SetActive(false);
     }
 }
