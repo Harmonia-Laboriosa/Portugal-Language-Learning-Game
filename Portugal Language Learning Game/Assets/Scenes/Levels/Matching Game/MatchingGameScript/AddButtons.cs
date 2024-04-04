@@ -5,13 +5,13 @@ using UnityEngine;
 public class AddButtons : MonoBehaviour
 {
     [SerializeField] private Transform puzzleField;
-    [SerializeField] private GameObject btn;
+    [SerializeField] private GameObject[] btn;
 
     private void Awake()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 12; i++)
         {
-            GameObject button = Instantiate(btn);
+            GameObject button = Instantiate(btn[i]);
             button.name = "" + i;
             button.transform.SetParent(puzzleField, false);
         }
