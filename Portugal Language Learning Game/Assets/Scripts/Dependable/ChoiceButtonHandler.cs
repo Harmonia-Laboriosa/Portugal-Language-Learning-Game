@@ -58,14 +58,14 @@ public class ChoiceButtonHandler : MonoBehaviour
                 {
                     if (npcanim2 != null)
                     {
-                        npcanim2.idleNotTalk();
+                        npcanim2.idleTalk();
                     }
                 }
                 else
                 {
                     if (npcanim != null)
                     {
-                        npcanim.idleNotTalk();
+                        npcanim.idleTalk();
                     }
                 }
             }
@@ -122,11 +122,11 @@ public class ChoiceButtonHandler : MonoBehaviour
             {
                 if (dialogue.activeSelf) // Use activeSelf instead of active
                 {
-                    npcanim2.idleTalk();
+                    npcanim2.idleNotTalk();
                 }
                 else
                 {
-                    npcanim.idleTalk();
+                    npcanim.idleNotTalk();
                 }
             }
             talk = false;

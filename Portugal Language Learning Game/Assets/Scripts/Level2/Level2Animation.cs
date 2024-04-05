@@ -8,6 +8,7 @@ public class Level2Animation : MonoBehaviour
     bool reachedOriginalpos=false;
     public Conversation chat;
     public GameObject dialogueimage;
+    public string anamationName;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class Level2Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.mc_anim.GetCurrentAnimatorStateInfo(0).IsName("MC_Idle") && !reachedOriginalpos)
+        if (this.mc_anim.GetCurrentAnimatorStateInfo(0).IsName(anamationName) && !reachedOriginalpos)
         {
             reachedOriginalpos = true;
             

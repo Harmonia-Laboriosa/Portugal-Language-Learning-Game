@@ -133,7 +133,7 @@ public class Conversation : MonoBehaviour
         dialogeueText.text = "";
 
         isTalking = false;
-      FailedPanel.SetActive(true);
+        FailedPanel.SetActive(true);
         if (ConvoLocker != null)
         {
             ConvoLocker(isTalking);
