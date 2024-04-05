@@ -19,7 +19,7 @@ public class Level3Manager : MonoBehaviour
     public GameObject player;
     public GameObject[] bars;
     public GameObject[] unAnimatedbars;
-    int barcount = 5;
+    int barcount = 6;
     public Level3animation Player;
 
     void Start()
@@ -185,9 +185,10 @@ public class Level3Manager : MonoBehaviour
 
     public void Increasescore()
     {
+        Debug.Log("Animated");
         SManage.instance.IncreaseScore(1);
-        barcount -= 1;
-        if(barcount<=0)
+        barcount = barcount-1;
+        if(barcount>=0)
         {
             unAnimatedbars[barcount].SetActive(false);
             bars[barcount].SetActive(true);

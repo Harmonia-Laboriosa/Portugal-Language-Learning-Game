@@ -617,7 +617,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2150c32e92a95a5458e5a0de9cf92b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgImage: {fileID: 21300000, guid: 9b65154bc532c2b4dbd568c12edee49b, type: 3}
+  bgImage:
+  - {fileID: 21300000, guid: 1402a9f5f9f818240a42a105b5cf9648, type: 3}
+  - {fileID: 21300000, guid: 51b1069c0324e1649b6f3e5add61b5d4, type: 3}
+  - {fileID: 21300000, guid: 90bc892d17ec4214f83bc4d3e9dc3564, type: 3}
+  - {fileID: 21300000, guid: 885b09f20a809094bb34d03dacf79e4a, type: 3}
+  - {fileID: 21300000, guid: d8fff41ac6e81a04db88f2d712226022, type: 3}
+  - {fileID: 21300000, guid: f8d8e318a5afab7439de49863a861a2e, type: 3}
+  - {fileID: 21300000, guid: f3c5ffad1fdda5e44b01494648f12b37, type: 3}
+  - {fileID: 21300000, guid: c6201e3186bbb1e4a8b425245bd5d8b0, type: 3}
+  - {fileID: 21300000, guid: 61e620585a8ac7646b13993b689f3c2f, type: 3}
+  - {fileID: 21300000, guid: 2cd34e995343b784184e21db64bab3af, type: 3}
+  - {fileID: 21300000, guid: 71e5fc750719164448d92ad8d5ecdd35, type: 3}
+  - {fileID: 21300000, guid: 8e65ad8adfd7ef94ea45585992d7736e, type: 3}
   puzzles:
   - {fileID: 21300000, guid: b49d66bca11ecc249b836030d0d80093, type: 3}
   - {fileID: 21300000, guid: 5530c8e6dea043943a476468d51fc801, type: 3}
@@ -628,7 +640,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d26ad9f16fc454a44a5388b0f553a98e, type: 3}
   - {fileID: 21300000, guid: c5190a58f770dd5488ac93b5e23f4b48, type: 3}
   - {fileID: 21300000, guid: b49d66bca11ecc249b836030d0d80093, type: 3}
-  - {fileID: 21300000, guid: 30fc430a8372be341907a1089c5e2f47, type: 3}
+  - {fileID: 21300000, guid: b49d66bca11ecc249b836030d0d80093, type: 3}
   - {fileID: 21300000, guid: 30fc430a8372be341907a1089c5e2f47, type: 3}
   - {fileID: 21300000, guid: 30fc430a8372be341907a1089c5e2f47, type: 3}
   gamePuzzles: []

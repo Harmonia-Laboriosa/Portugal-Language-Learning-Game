@@ -23,6 +23,7 @@ public class Level5manager : MonoBehaviour
     public bool allObjectsPlaced;
     public GameObject rock;
 
+    public Animator rockAnimator;
 
     void Start()
     {
@@ -53,6 +54,7 @@ public class Level5manager : MonoBehaviour
         SManage.instance.ResetScore();
         currentQuestion = 0;
         ActivateCurrentQuestion();
+        rock.SetActive(false);
         //StartTimer();
     }
 
@@ -91,12 +93,17 @@ public class Level5manager : MonoBehaviour
         else
         {
             Debug.Log("Quiz completed!");
+            rockAnimator.SetBool("MoveBoulder", true);
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            StartCoroutine("endPanelActive");
         }
         EnableAnswerButtons();
     }
-
+    IEnumerator endPanelActive()
+    {
+        yield return new WaitForSeconds(1.5f);
+        EndgamePanel.SetActive(true);
+    }
 
 
     public void CorrectAnswer(int correctButtonIndex)
@@ -241,7 +248,9 @@ public class Level5manager : MonoBehaviour
             // Activate next panel if all objects are placed and all are correct for the last question
             Debug.Log("All");
             SManage.instance.IncreaseScore(1);
-            EndgamePanel.SetActive(true);
+            rockAnimator.SetBool("MoveBoulder", true);
+            // Display end game panel
+            StartCoroutine("endPanelActive");
         }
         else if (allPlaced && !allCorrect)
         {

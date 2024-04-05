@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MatchController : MonoBehaviour
 {
-    [SerializeField] private Sprite bgImage;
+    [SerializeField] private Sprite[] bgImage;
     public Sprite[] puzzles;
     public List<Sprite> gamePuzzles = new List<Sprite>();
     public List<Button> btns = new List<Button>();
@@ -41,7 +41,7 @@ public class MatchController : MonoBehaviour
         for(int i = 0; i < objects.Length; i++)
         {
             btns.Add(objects[i].GetComponent<Button>());
-            btns[i].image.sprite = bgImage;
+            btns[i].image.sprite = bgImage[i];
         }
     }
 
@@ -110,8 +110,8 @@ public class MatchController : MonoBehaviour
         {
             yield return new WaitForSeconds(0.25f);
 
-            btns[firstGuessIndex].image.sprite = bgImage;
-            btns[secondGuessIndex].image.sprite = bgImage;
+            btns[firstGuessIndex].image.sprite = bgImage[firstGuessIndex];
+            btns[secondGuessIndex].image.sprite = bgImage[secondGuessIndex];
         }
         yield return new WaitForSeconds(0.25f);
         firstGuess = secondGuess = false;

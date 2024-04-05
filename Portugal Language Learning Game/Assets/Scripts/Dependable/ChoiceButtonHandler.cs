@@ -26,9 +26,9 @@ public class ChoiceButtonHandler : MonoBehaviour
     [SerializeField]
     private string subTree;
 
-    public Level2Animation_NPC1 npcanim;
-    public Level2Animation_NPC2 npcanim2;
-    public bool talk = false;
+    //public Level2Animation_NPC1 npcanim;
+    //public Level2Animation_NPC2 npcanim2;
+    //public bool talk = false;
 
     public GameObject dialogue;
 
@@ -50,27 +50,27 @@ public class ChoiceButtonHandler : MonoBehaviour
         PlayerImage.SetActive(true);
         currentButtons = new GameObject[playerChoices.Length];
         Player_Dialogue.text = " ";
-        if (!talk)
-        {
-            if (dialogue != null)
-            {
-                if (dialogue.activeSelf) // Use activeSelf instead of active
-                {
-                    if (npcanim2 != null)
-                    {
-                        npcanim2.idleTalk();
-                    }
-                }
-                else
-                {
-                    if (npcanim != null)
-                    {
-                        npcanim.idleTalk();
-                    }
-                }
-            }
-            talk = true;
-        }
+        //if (!talk)
+        //{
+        //    if (dialogue != null)
+        //    {
+        //        if (dialogue.activeSelf) // Use activeSelf instead of active
+        //        {
+        //            if (npcanim2 != null)
+        //            {
+        //                npcanim2.idleTalk();
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (npcanim != null)
+        //            {
+        //                npcanim.idleTalk();
+        //            }
+        //        }
+        //    }
+        //    talk = true;
+        //}
 
         int i = 0;
         float offsetCounter = -275;
@@ -116,21 +116,21 @@ public class ChoiceButtonHandler : MonoBehaviour
         {
             Destroy(currentButtons[i]);
         }
-        if (talk)
-        {
-            if (dialogue != null)
-            {
-                if (dialogue.activeSelf) // Use activeSelf instead of active
-                {
-                    npcanim2.idleNotTalk();
-                }
-                else
-                {
-                    npcanim.idleNotTalk();
-                }
-            }
-            talk = false;
-        }
+        //if (talk)
+        //{
+        //    if (dialogue != null)
+        //    {
+        //        if (dialogue.activeSelf) // Use activeSelf instead of active
+        //        {
+        //            npcanim2.idleNotTalk();
+        //        }
+        //        else
+        //        {
+        //            npcanim.idleNotTalk();
+        //        }
+        //    }
+        //    talk = false;
+        //}
         currentButtons = null;
 
         if (PassChoice != null)

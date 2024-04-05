@@ -31,8 +31,14 @@ public class Conversation : MonoBehaviour
 
     private Coroutine typingCoroutine; // Coroutine reference for typing animation
 
+    public Level2Animation_NPC1 npcanim;
+    public Level2Animation_NPC2 npcanim2;
+    public bool talk = true;
+
+    public Level2AudioManager audio;
     void Awake()
     {
+        audio = FindObjectOfType<Level2AudioManager>();
         choiceButtons = GameObject.FindWithTag(Tags.canvasTag).GetComponent<ChoiceButtonHandler>();
         /*namePrinter = GameObject.FindWithTag(Tags.nameText).GetComponent<StringUIPrinter>();*/
         dialogeueText = GameObject.FindWithTag(Tags.dialogueText).GetComponentInChildren<TMP_Text>();// Using TextMeshPro for dialogue text
@@ -40,6 +46,12 @@ public class Conversation : MonoBehaviour
 
     public void ConversationStart()
     {
+        talk = true;
+        if (talk && npcanim!=null && npcanim2!=null)
+        {
+            npcanim.idleTalk();
+            npcanim2.idleTalk();
+        }
         NPCImage.SetActive(true);
         isTalking = true;
         if (ConvoLocker != null)
@@ -65,9 +77,10 @@ public class Conversation : MonoBehaviour
         foreach (char letter in dialogue)
         {
             dialogeueText.text += letter;
+            audio.playTypesound();
             yield return new WaitForSeconds(typingSpeed);
         }
-
+        audio.stopTypesound();
         // After typing is complete, present UI button choices loaded from xml.
         GetChoices("/" + initialXmlTag);
     }
@@ -76,21 +89,35 @@ public class Conversation : MonoBehaviour
         foreach (char letter in dialogue)
         {
             dialogeueText.text += letter;
+            audio.playTypesound();
             yield return new WaitForSeconds(typingSpeed);
         }
-
+        audio.stopTypesound();
         // After typing is complete, present UI button choices loaded from XML.
         GetChoices("/" + location);
     }
 
     void GetChoices(string location)
     {
+        talk = false;
+        if(!talk && npcanim != null && npcanim2 != null)
+        {
+            npcanim.idleNotTalk();
+            npcanim2.idleNotTalk();
+        }
         choiceButtons.GetChoices(reader.ReadSubnodes(file, path + location, id), reader.ChoiceAttributes);
         choiceButtons.PassChoice += ConversationUpdate;
     }
 
     void ConversationUpdate(string lineTree)
     {
+        talk=true;
+        if(talk && npcanim != null && npcanim2 != null)
+        {
+            npcanim.idleTalk();
+            npcanim2.idleTalk();
+        }
+        
         choiceButtons.PassChoice -= ConversationUpdate;
 
         if (lineTree == "TreeQuit")
@@ -128,6 +155,12 @@ public class Conversation : MonoBehaviour
     }
     void EndConversation()
     {
+        talk = false;
+        if (!talk && npcanim != null && npcanim2 != null)
+        {
+            npcanim.idleNotTalk();
+            npcanim2.idleNotTalk();
+        }
         Btn.PlayerImage.SetActive(false);
         namePrinter.PrintToUI("");
         dialogeueText.text = "";
