@@ -8875,7 +8875,7 @@ MonoBehaviour:
   - {fileID: 461275938}
   - {fileID: 1484042488}
   - {fileID: 1700813663}
-  Player: {fileID: 1689929638}
+  PlayerAnim: {fileID: 1689929638}
 --- !u!1 &1311968086
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,8 +11294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -835, y: -70}
-  m_SizeDelta: {x: 250, y: 500}
+  m_AnchoredPosition: {x: 0, y: -70}
+  m_SizeDelta: {x: 1920, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1689929635
 Animator:
@@ -11338,7 +11338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1bab08251a0ecd04392c6b9819089324, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e97a85008a3a7454bbd34ebfc43d1509, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

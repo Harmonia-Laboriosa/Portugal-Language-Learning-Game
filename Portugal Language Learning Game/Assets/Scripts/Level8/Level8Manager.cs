@@ -26,7 +26,7 @@ public class Level8Manager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        for (int i = 0; i < questionPanels.Length; i++)
+        for (int i = 2; i < questionPanels.Length; i++)
         {       
             CheckAllObjectsPlacedInPanel(questionPanels[i], i);       
         }    
@@ -78,17 +78,17 @@ public class Level8Manager : MonoBehaviour
             ActivateNextPanel(panelIndex);
         }
     }
-    private void ActivateNextPanel(int currentPanelIndex)
+    public void ActivateNextPanel(int currentPanelIndex)
     {
+        
         // Activate the panel for the next question if available
-        if (currentPanelIndex + 1 < questionPanels.Length)
+        if (currentPanelIndex+1<questionPanels.Length)
         {
 
             StartCoroutine(ActivatePanelWithDelay(currentPanelIndex + 1));
         }
         else
-        {
-          
+        {  
             // Activate end panel if all questions are completed
             EndPanel.SetActive(true);
         }
@@ -100,9 +100,8 @@ public class Level8Manager : MonoBehaviour
 
         // Activate the next panel after the delay
         
-            questionManager.panels[nextPanelIndex].SetActive(true);
-            questionManager.panels[nextPanelIndex - 1].SetActive(false);
-        
+        questionManager.panels[nextPanelIndex].SetActive(true);
+        questionManager.panels[nextPanelIndex - 1].SetActive(false);     
     }
 
 
