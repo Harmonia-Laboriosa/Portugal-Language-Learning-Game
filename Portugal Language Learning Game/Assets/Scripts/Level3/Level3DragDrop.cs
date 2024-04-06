@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class Level3DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -12,7 +14,7 @@ public class Level3DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
-
+    private Image img;
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
@@ -20,6 +22,7 @@ public class Level3DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     private void Awake()
     {
+        img = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = rectTransform.anchoredPosition;
@@ -69,6 +72,8 @@ public class Level3DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                     rectTransform.anchoredPosition = hoveredObject.GetComponent<RectTransform>().anchoredPosition;
                     RectTransform hoveredRectTransform = hoveredObject.GetComponent<RectTransform>();
                     rectTransform.sizeDelta = hoveredRectTransform.sizeDelta;
+                    var newColor = new Color(255, 255, 255, 0);
+                    img.color = newColor;
                     //make is draggable true
 
                     //isDraggable = false;
