@@ -12,7 +12,7 @@ public class ChoiceButtonHandler : MonoBehaviour
     private GameObject[] currentButtons;
     public GameObject PlayerImage; // Removed unnecessary 'public void GameObject'
     public TMP_Text Player_Dialogue; // Changed to 'public' instead of 'private'
-
+   // public AudioSource PlayerOptionSound;
     [SerializeField]
     private GameObject choiceButtonPrefab;
 
@@ -93,6 +93,7 @@ public class ChoiceButtonHandler : MonoBehaviour
             choiceButton.GetComponent<RectTransform>().anchoredPosition = pos;
 
             string att = attributes[i];
+            //choiceButton.onClick.AddListener(() => PlayerOptionSound.Play());
             choiceButton.onClick.AddListener(() => clickAction(att));
 
             offsetCounter -= yPosOffset;
@@ -105,8 +106,8 @@ public class ChoiceButtonHandler : MonoBehaviour
 
     void clickAction(string attribute)
     {
-       // PlayerImage.SetActive(false);
-
+        // PlayerImage.SetActive(false);
+        
         string buttonText = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TMP_Text>().text;
 
         Debug.Log("Clicked button text: " + buttonText);

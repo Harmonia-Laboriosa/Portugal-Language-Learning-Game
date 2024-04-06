@@ -1,32 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Level2AudioManager : MonoBehaviour
 {
-    public AudioClip audioClip;
-    public AudioSource sources;
-    // Start is called before the first frame update
+    public AudioClip typingSound; // Assign your typing sound clip in the Unity Editor
+    private AudioSource audioSource; // Reference to the AudioSource component
+
     void Start()
     {
-       sources = this.gameObject.GetComponent<AudioSource>();
+        // Get the AudioSource component attached to the GameObject
+        audioSource = GetComponent<AudioSource>();
+
+        // Assign the typing sound clip to the AudioSource
+        audioSource.clip = typingSound;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Method to play the typing sound
     public void playTypesound()
     {
-        sources.clip = audioClip;
-        sources.Play();
-    }
-    public void stopTypesound()
-    {
-        sources.clip = audioClip;
-        sources.Stop();
+        // Check if the AudioSource is not playing already to avoid overlap
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
     }
 
+    // Method to stop playing the typing sound
+    public void stopTypesound()
+    {
+        audioSource.Stop();
+    }
 }

@@ -18,7 +18,8 @@ public class Level2Manager : MonoBehaviour
     public GameObject dialogue1;
     public GameObject dialogue2;
     public GameObject player;
-
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
 
     void Start()
     {
@@ -85,6 +86,7 @@ public class Level2Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        RightAnswer.Play();
         // Change the selected (incorrect) answer button color to green
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.green;
@@ -101,10 +103,11 @@ public class Level2Manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        WrongAnswer.Play();
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.red;
-
+        
         // Shake the selected button
         StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
 
@@ -144,7 +147,7 @@ public class Level2Manager : MonoBehaviour
     IEnumerator DelayBeforeNextQuestion()
     {
         // Delay for a short time before moving to the next question
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
 
 
         NextQuestion();

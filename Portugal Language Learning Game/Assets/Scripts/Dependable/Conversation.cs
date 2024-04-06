@@ -27,7 +27,7 @@ public class Conversation : MonoBehaviour
     private string initialXmlTag;   //the part of the xml that is first shown to the player upon starting a conversation
     public GameObject NPCImage;
     private string text;
-    private float typingSpeed = 0.08f; // Adjust typing speed here
+    private float typingSpeed = 0.02f; // Adjust typing speed here
 
     private Coroutine typingCoroutine; // Coroutine reference for typing animation
 
@@ -60,7 +60,7 @@ public class Conversation : MonoBehaviour
         }
 
         text = reader.ReadXml(file, path, "Name", id);
-        namePrinter.PrintToUI(text);
+        //namePrinter.PrintToUI(text);
 
         // Clear existing text before typing new dialogue
         dialogeueText.text = "";
@@ -76,8 +76,9 @@ public class Conversation : MonoBehaviour
     {
         foreach (char letter in dialogue)
         {
-            dialogeueText.text += letter;
             audio.playTypesound();
+            dialogeueText.text += letter;
+           
             yield return new WaitForSeconds(typingSpeed);
         }
         audio.stopTypesound();
@@ -88,8 +89,9 @@ public class Conversation : MonoBehaviour
     {
         foreach (char letter in dialogue)
         {
-            dialogeueText.text += letter;
             audio.playTypesound();
+            dialogeueText.text += letter;
+           
             yield return new WaitForSeconds(typingSpeed);
         }
         audio.stopTypesound();
@@ -176,12 +178,14 @@ public class Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
-        Btn.PlayerImage.SetActive(false);
-        namePrinter.PrintToUI("");
-        dialogeueText.text = "";
-        gameObject.SetActive(false);
         isTalking = false;
         EndPanel.SetActive(true);
+        Btn.PlayerImage.SetActive(false);
+        //namePrinter.PrintToUI("");
+        dialogeueText.text = "";
+        gameObject.SetActive(false);
+       
+        
         if (ConvoLocker != null)
         {
             ConvoLocker(isTalking);
