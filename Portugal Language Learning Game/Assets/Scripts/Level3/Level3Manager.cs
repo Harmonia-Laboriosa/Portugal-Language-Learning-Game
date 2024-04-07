@@ -20,13 +20,16 @@ public class Level3Manager : MonoBehaviour
     public GameObject[] bars;
     public GameObject[] unAnimatedbars;
     int barcount = 6;
-    public Level3animation Player;
+    public Level3animation PlayerAnim;
+    int animCount = 0;
 
     void Start()
     {
         StartQuiz();
         Answerbuttons.SetActive(false);
         player.SetActive(true);
+        bg2.SetActive(false);
+        bg1.SetActive(true);
       //  bg2.SetActive(false);
     }
 
@@ -47,6 +50,7 @@ public class Level3Manager : MonoBehaviour
 
     void ActivateCurrentQuestion()
     {
+        enablebuttons();
         for (int i = 0; i < levels.Length; i++)
         {
             if (currentQuestion == 5)
@@ -100,7 +104,8 @@ public class Level3Manager : MonoBehaviour
 
         // Disable all answer buttons after an answer is selected
         // DisableAnswerButtons();
-        
+        animCount += 1;
+        PlayerAnim.RightJump(animCount);
         StartCoroutine(DelayBeforeNextQuestion());
 
     }
@@ -116,7 +121,8 @@ public class Level3Manager : MonoBehaviour
 
         // Disable all answer buttons after an answer is selected
         // DisableAnswerButtons();
-
+        animCount += 1;
+        PlayerAnim.RightJump(animCount);
         // Pause the game and show the pause panel
         StartCoroutine(DelayBeforeNextQuestion());
     }
@@ -149,11 +155,9 @@ public class Level3Manager : MonoBehaviour
 
     IEnumerator DelayBeforeNextQuestion()
     {
+        disablebuttons();
         // Delay for a short time before moving to the next
-        Player.RightJump();
-        yield return new WaitForSeconds(2f);
-
-
+        yield return new WaitForSeconds(1f);
         NextQuestion();
     }
 
@@ -164,8 +168,7 @@ public class Level3Manager : MonoBehaviour
 
     private IEnumerator OpenAnswerPanelWithDelay()
     {
-        yield return new WaitForSeconds(1f);
-        
+        yield return new WaitForSeconds(1f);   
     }
 
     public void disableMC()
@@ -177,10 +180,6 @@ public class Level3Manager : MonoBehaviour
     {
       
         yield return new WaitForSeconds(2f*Time.deltaTime);
-        
-
-
-
     }
 
     public void Increasescore()
@@ -194,6 +193,22 @@ public class Level3Manager : MonoBehaviour
             bars[barcount].SetActive(true);
         }
 
+    }
+
+    public void disablebuttons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = false;
+        }
+    }
+
+    public void enablebuttons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true;
+        }
     }
 }
 

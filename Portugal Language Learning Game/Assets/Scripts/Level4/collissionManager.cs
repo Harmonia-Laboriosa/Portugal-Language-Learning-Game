@@ -24,4 +24,16 @@ public class collissionManager : MonoBehaviour
         level4.tagFromCollission = gameObject.tag;
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Level4Manager level4 = FindObjectOfType<Level4Manager>();
+        level4.tagFromCollission = gameObject.tag;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Level4Manager level4 = FindObjectOfType<Level4Manager>();
+        level4.tagFromCollission = gameObject.tag;
+    }
+
 }
