@@ -40,6 +40,7 @@ public class Level5manager : MonoBehaviour
     {
         yield return new WaitForSeconds(4.5f);
         StartQuiz();
+        playerAnim.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -51,11 +52,11 @@ public class Level5manager : MonoBehaviour
                 CheckAllObjectsinLsstPlacedInPanel(levels[i], i);
 
                 //CheckAllObjectsPlacedInPanel(levels[i], i);
-            }
-            else
+                 }
+                else
                 {
-                }
 
+                }
             }
     }
 
@@ -84,6 +85,10 @@ public class Level5manager : MonoBehaviour
                 //Debug.Log(" working");
             }
             */
+            if(i==5)
+            {
+                bg1.SetActive(true);
+            }
         }
         EnableAnswerButtons();
     }
