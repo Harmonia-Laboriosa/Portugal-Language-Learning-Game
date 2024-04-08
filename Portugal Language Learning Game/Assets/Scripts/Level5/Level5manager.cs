@@ -25,10 +25,21 @@ public class Level5manager : MonoBehaviour
 
     public Animator rockAnimator;
 
+    public GameObject bg;
+    public GameObject bg1;
+    public GameObject playerAnim;
+
     void Start()
     {
+        bg.SetActive(true);
+        bg1.SetActive(false);
+        playerAnim.SetActive(true);
+        StartCoroutine("StartLevel");
+    }
+    IEnumerator StartLevel()
+    {
+        yield return new WaitForSeconds(4.5f);
         StartQuiz();
-        Debug.Log(levels.Length);
     }
 
     private void FixedUpdate()

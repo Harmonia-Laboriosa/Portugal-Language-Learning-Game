@@ -1,61 +1,110 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Level9Manager : MonoBehaviour
 {
-    public RectTransform[] tiles; // Array to hold the tiles
-    public RectTransform emptyTile; // Reference to the empty tile
-    public float slideSpeed = 5f; // Speed of sliding
+    public GameObject[] questionPanels; // Array to store references to all question panels
+    public bool[] allObjectsPlaced; // Array to store whether all objects are placed in each question panel
+    public bool[] scoreIncreased; // Array to store whether the score has been increased for each question panel
+    public SManage scoreManager;
+    public int TempScore = 0;
+    public Level9 questionManager;
+    public float waitForNextQuestion;
+    public GameObject EndPanel;
+    public int currentQuestion = 0;
 
-    private bool isMoving; // Flag to check if a tile is currently moving
-
+    // Start is called before the first frame update
     void Start()
     {
-        // Set the empty tile initially
-        emptyTile = tiles[tiles.Length - 1];
+        allObjectsPlaced = new bool[questionPanels.Length];
+        scoreIncreased = new bool[questionPanels.Length];
     }
-
-    void Update()
+    private void FixedUpdate()
     {
-        // Check for player input and move tiles accordingly
-        if (!isMoving)
+        for (int i = 0; i < 5; i++)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                MoveTile(emptyTile.anchoredPosition + Vector2.right * emptyTile.sizeDelta.x);
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                MoveTile(emptyTile.anchoredPosition + Vector2.left * emptyTile.sizeDelta.x);
-            }
+            CheckAllObjectsPlacedInPanel(questionPanels[i], i);
         }
     }
-
-    void MoveTile(Vector2 targetPosition)
+    public void CheckAllObjectsPlacedInPanel(GameObject panel, int panelIndex)
     {
-        // Find the tile to move based on the target position
-        for (int i = 0; i < tiles.Length; i++)
+        bool allPlaced = true;
+        foreach (Transform slot in panel.transform)
         {
-            if (Vector2.Distance(tiles[i].anchoredPosition, targetPosition) < 0.1f)
+            Level9DragDrop dragDrop = slot.GetComponentInChildren<Level9DragDrop>();
+            if (dragDrop != null && dragDrop.isDraggable)
             {
-                // Move the tile to the empty tile's position
-                StartCoroutine(SlideTile(tiles[i], emptyTile.anchoredPosition));
-                emptyTile.anchoredPosition = tiles[i].anchoredPosition;
-                return;
+                allPlaced = false;
+                break;
             }
         }
+        allObjectsPlaced[panelIndex] = allPlaced;
+
+        // Increase score if all objects are placed and the score has not been increased for this panel yet
+        if (allPlaced && !scoreIncreased[panelIndex])
+        {
+            foreach (Transform slot in panel.transform)
+            {
+                Level9DragDrop dragDrop = slot.GetComponentInChildren<Level9DragDrop>();
+                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                {
+
+                    TempScore = TempScore + 1;
+
+                    Debug.Log(TempScore);
+                    if (TempScore == 6)
+                    {
+                        scoreManager.IncreaseScore(1);
+                        TempScore = 0;
+                    }
+
+                }
+               
+
+            }
+            scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
+        }
+        // Activate next panel if all objects are placed
+        if (allPlaced)
+        {
+            ActivateNextPanel(panelIndex);
+        }
+    }
+    public void ActivateNextPanel(int currentPanelIndex)
+    {
+
+        // Activate the panel for the next question if available
+        if (currentPanelIndex + 1 < questionPanels.Length)
+        {
+
+            StartCoroutine(ActivatePanelWithDelay(currentPanelIndex + 1));
+        }
+        else
+        {
+            // Activate end panel if all questions are completed
+            EndPanel.SetActive(true);
+        }
+    }
+    private IEnumerator ActivatePanelWithDelay(int nextPanelIndex)
+    {
+        // Wait for few seconds
+        yield return new WaitForSeconds(waitForNextQuestion);
+
+        // Activate the next panel after the delay
+
+        questionManager.panels[nextPanelIndex].SetActive(true);
+        questionManager.panels[nextPanelIndex - 1].SetActive(false);
     }
 
-    IEnumerator SlideTile(RectTransform tile, Vector2 targetPosition)
+
+    public void correctAnswer()
     {
-        isMoving = true;
-        while (Vector2.Distance(tile.anchoredPosition, targetPosition) > 0.1f)
-        {
-            tile.anchoredPosition = Vector2.MoveTowards(tile.anchoredPosition, targetPosition, slideSpeed * Time.deltaTime);
-            yield return null;
-        }
-        isMoving = false;
+        SManage.instance.IncreaseScore(1);
     }
+
 }

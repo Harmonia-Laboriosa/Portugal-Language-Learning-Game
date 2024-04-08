@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namePrinter: {fileID: 2052979176}
-  dialogeueText: {fileID: 1101419221}
+  Btn: {fileID: 0}
   EndPanel: {fileID: 1212312933}
   FailedPanel: {fileID: 6009744477132212678}
   healthSlider: {fileID: 383978935}
@@ -724,6 +724,11 @@ MonoBehaviour:
   path: CharacterCollection/Characters/Character
   id: 1
   initialXmlTag: Greeting
+  NPCImage: {fileID: 0}
+  npcanim: {fileID: 0}
+  npcanim2: {fileID: 0}
+  talk: 1
+  audio: {fileID: 0}
 --- !u!114 &178774198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2535,12 +2540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf28e58ecb2c6dc4cbf46d616b11946e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerImage: {fileID: 0}
+  Player_Dialogue: {fileID: 0}
   choiceButtonPrefab: {fileID: 1120045487601428871, guid: b7235cd19b2bc5c46b915efd543a22d4, type: 3}
   xPos: -640
   subTree: Tree
-  npcanim: {fileID: 0}
-  npcanim2: {fileID: 0}
-  talk: 0
   dialogue: {fileID: 0}
 --- !u!1 &580112142
 GameObject:
@@ -7114,7 +7118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namePrinter: {fileID: 2120006944}
-  dialogeueText: {fileID: 2126281378}
+  Btn: {fileID: 0}
   EndPanel: {fileID: 490948697}
   FailedPanel: {fileID: 6009744477132212678}
   healthSlider: {fileID: 383978935}
@@ -7122,6 +7126,11 @@ MonoBehaviour:
   path: CharacterCollection/Characters/Character
   id: 3
   initialXmlTag: Greeting
+  NPCImage: {fileID: 0}
+  npcanim: {fileID: 0}
+  npcanim2: {fileID: 0}
+  talk: 1
+  audio: {fileID: 0}
 --- !u!114 &1212312936
 MonoBehaviour:
   m_ObjectHideFlags: 0

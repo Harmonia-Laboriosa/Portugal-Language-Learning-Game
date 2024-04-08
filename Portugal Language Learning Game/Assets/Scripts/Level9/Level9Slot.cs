@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class IngridentSlot : MonoBehaviour, IDropHandler
+public class Level9Slot : MonoBehaviour, IDropHandler
 
 {
     [SerializeField]
     public string Placedobjecttag;
-    public bool canbePlaced;
+    public bool canbePlaced = true;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -23,7 +23,7 @@ public class IngridentSlot : MonoBehaviour, IDropHandler
 
             // Print the tag of the dropped object
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
-
+            canbePlaced = false;
             // Move the dropped object to the slot
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         }
