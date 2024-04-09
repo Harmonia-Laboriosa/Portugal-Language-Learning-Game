@@ -24,15 +24,19 @@ public class Level5manager : MonoBehaviour
     public GameObject rock;
 
     public Animator rockAnimator;
+    public Animator player2Animator;
 
     public GameObject bg;
     public GameObject bg1;
     public GameObject playerAnim;
+    public GameObject player2;
+    public GameObject q11;
 
     void Start()
     {
         bg.SetActive(true);
         bg1.SetActive(false);
+        player2.SetActive(false);
         playerAnim.SetActive(true);
         StartCoroutine("StartLevel");
     }
@@ -69,6 +73,7 @@ public class Level5manager : MonoBehaviour
         rock.SetActive(false);
         //StartTimer();
     }
+
 
     void ActivateCurrentQuestion()
     {
@@ -117,7 +122,7 @@ public class Level5manager : MonoBehaviour
     }
     IEnumerator endPanelActive()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         EndgamePanel.SetActive(true);
     }
 
@@ -195,6 +200,7 @@ public class Level5manager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         
         rock.SetActive(true);   
+        player2.SetActive(true);
     }
 
     //logic of Level 5 part
@@ -264,7 +270,10 @@ public class Level5manager : MonoBehaviour
             // Activate next panel if all objects are placed and all are correct for the last question
             Debug.Log("All");
             SManage.instance.IncreaseScore(1);
+            q11.SetActive(false);
             rockAnimator.SetBool("MoveBoulder", true);
+            player2Animator.SetBool("move", true);
+
             // Display end game panel
             StartCoroutine("endPanelActive");
         }
