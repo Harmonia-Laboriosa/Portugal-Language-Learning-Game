@@ -17,7 +17,7 @@ public class Level9Manager : MonoBehaviour
     public float waitForNextQuestion;
     public GameObject EndPanel;
     public int currentQuestion = 0;
-
+    public Conversation conversation;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,7 +87,11 @@ public class Level9Manager : MonoBehaviour
         else
         {
             // Activate end panel if all questions are completed
+           
+
+            
             EndPanel.SetActive(true);
+           // conversation.ConversationStart();
         }
     }
     private IEnumerator ActivatePanelWithDelay(int nextPanelIndex)

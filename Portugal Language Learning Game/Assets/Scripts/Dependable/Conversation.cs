@@ -76,12 +76,18 @@ public class Conversation : MonoBehaviour
     {
         foreach (char letter in dialogue)
         {
-            audio.playTypesound();
+            if (audio != null)
+            {
+                audio.playTypesound();
+            }
             dialogeueText.text += letter;
            
             yield return new WaitForSeconds(typingSpeed);
         }
-        audio.stopTypesound();
+        if (audio != null)
+        {
+            audio.stopTypesound();
+        }
         // After typing is complete, present UI button choices loaded from xml.
         GetChoices("/" + initialXmlTag);
     }
@@ -89,12 +95,19 @@ public class Conversation : MonoBehaviour
     {
         foreach (char letter in dialogue)
         {
-            audio.playTypesound();
+
+            if (audio != null)
+            {
+                audio.playTypesound();
+            }
             dialogeueText.text += letter;
            
             yield return new WaitForSeconds(typingSpeed);
         }
-        audio.stopTypesound();
+       if (audio != null)
+        {
+            audio.stopTypesound();
+        }
         // After typing is complete, present UI button choices loaded from XML.
         GetChoices("/" + location);
     }
@@ -158,6 +171,7 @@ public class Conversation : MonoBehaviour
     void EndConversation()
     {
         talk = false;
+        
         if (!talk && npcanim != null && npcanim2 != null)
         {
             npcanim.idleNotTalk();
@@ -178,6 +192,8 @@ public class Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
+        
+      
         isTalking = false;
         EndPanel.SetActive(true);
         Btn.PlayerImage.SetActive(false);

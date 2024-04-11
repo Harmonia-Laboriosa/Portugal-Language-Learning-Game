@@ -15,10 +15,12 @@ public class Level6Manager : MonoBehaviour
     public TMP_Text scoreText;
     public Button[] answerButtons;
     private int currentQuestion;
+    public Conversation conversation;
 
     void Start()
     {
-        StartQuiz();
+        //StartQuiz();
+        conversation.ConversationStart();
         Debug.Log(levels.Length);
     }
 
@@ -27,11 +29,12 @@ public class Level6Manager : MonoBehaviour
         // Reset the score when starting the quiz
         SManage.instance.ResetScore();
         currentQuestion = 0;
-        ActivateCurrentQuestion();
+        ActivateDialoguePanel();
+       
         //StartTimer();
     }
 
-    void ActivateCurrentQuestion()
+    public void ActivateCurrentQuestion()
     {
         for (int i = 0; i < levels.Length; i++)
         {
@@ -46,15 +49,10 @@ public class Level6Manager : MonoBehaviour
         {
             currentQuestion++;
 
-            if (currentQuestion == 3) // Activate dialogue panel after question 3
-            {
-                ActivateDialoguePanel();
-            }
-            else
-            {
-                dialoguePanel.SetActive(false);
+          
+       
                 ActivateCurrentQuestion();
-            }
+            
         }
         else
         {
