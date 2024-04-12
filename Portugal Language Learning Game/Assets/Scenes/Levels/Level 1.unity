@@ -6026,7 +6026,7 @@ RectTransform:
   - {fileID: 1954994824}
   - {fileID: 433399393}
   m_Father: {fileID: 983130506}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11311,7 +11311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 334968234}
-  totalRemainingTime: 120
+  totalRemainingTime: 300
   failedPanel: {fileID: 1155154815}
   endPanel: {fileID: 342540410}
 --- !u!1 &670292899
@@ -17698,8 +17698,8 @@ RectTransform:
   - {fileID: 1059876209}
   - {fileID: 738270724}
   - {fileID: 334968232}
-  - {fileID: 342540413}
   - {fileID: 1155154818}
+  - {fileID: 342540413}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20533,7 +20533,7 @@ RectTransform:
   - {fileID: 1505907600}
   - {fileID: 2123042888}
   m_Father: {fileID: 983130506}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -33718,8 +33718,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 270934772}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadLevel2
-        m_Mode: 3
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

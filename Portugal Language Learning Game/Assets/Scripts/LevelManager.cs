@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private static LevelManager _instance;
+    private static bool _instanceExists = false;
 
     public static LevelManager Instance
     {
@@ -14,10 +15,11 @@ public class LevelManager : MonoBehaviour
             if (_instance == null)
             {
                 _instance = FindObjectOfType<LevelManager>();
-                if (_instance == null)
+                if (_instance == null && !_instanceExists)
                 {
                     GameObject singleton = new GameObject(typeof(LevelManager).Name);
                     _instance = singleton.AddComponent<LevelManager>();
+                    _instanceExists = true;
                 }
             }
             return _instance;
@@ -40,39 +42,10 @@ public class LevelManager : MonoBehaviour
         int currentscene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentscene);
     }
-    public void LoadLevel2(int levelNumber)
+    public void LoadNextLevel()
     {
-        SceneManager.LoadScene(levelNumber);
-    }
-
-    public void LoadLevel3(int levelNumber)
-    {
-        SceneManager.LoadScene(levelNumber);
-    }
-
-    public void LoadLevel4(int levelNumber)
-    {
-        SceneManager.LoadScene(levelNumber);
-    }
-
-    public void LoadLevel5(int levelNumber)
-    {
-        SceneManager.LoadScene(levelNumber);
-    }
-
-    public void LoadLevel6(int levelNumber)
-    {
-        SceneManager.LoadScene(levelNumber);
-    }
-
-    public void LoadLevel7(int levelNumber)
-    {
-        SceneManager.LoadScene(levelNumber);
-    }
-
-    public void LoadLevel8(int levelNumber)
-    {
-        SceneManager.LoadScene(levelNumber);
+        int currentscene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentscene+1);
     }
 
 }
