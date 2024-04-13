@@ -16,6 +16,8 @@ public class Level6Manager : MonoBehaviour
     public Button[] answerButtons;
     private int currentQuestion;
     public Conversation conversation;
+    public Animator playerLevel6;
+    public GameObject Q4;
 
     void Start()
     {
@@ -49,8 +51,6 @@ public class Level6Manager : MonoBehaviour
         {
             currentQuestion++;
 
-          
-       
                 ActivateCurrentQuestion();
             
         }
@@ -157,4 +157,21 @@ public class Level6Manager : MonoBehaviour
             button.interactable = true;
         }
     }
+
+    public void walk()
+    {
+        StartCoroutine("WalkAndRead");
+    }
+    IEnumerator WalkAndRead()
+    {
+        if (playerLevel6 != null)
+        {
+            playerLevel6.SetBool("walk", true);
+            yield return new WaitForSeconds(6.5f);
+            Debug.Log("true");
+            Q4.SetActive(true);
+            Debug.Log("false");
+        }
+    }
+
 }

@@ -36,6 +36,9 @@ public class Conversation : MonoBehaviour
     public bool talk = true;
 
     public Level2AudioManager audio;
+
+    public Level6Manager level6;
+
     void Awake()
     {
         audio = FindObjectOfType<Level2AudioManager>();
@@ -192,20 +195,21 @@ public class Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
-        
-      
         isTalking = false;
-        EndPanel.SetActive(true);
+       
+        level6.walk();
         Btn.PlayerImage.SetActive(false);
         //namePrinter.PrintToUI("");
         dialogeueText.text = "";
         gameObject.SetActive(false);
-       
-        
+    
         if (ConvoLocker != null)
         {
             ConvoLocker(isTalking);
         }
         NPCImage.SetActive(false);
     }
+
+   
+        
 }

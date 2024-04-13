@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &70492754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6299605158374326913, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_Name
+      value: LevelManger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1444.1036
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 578.1353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.0099976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299605158374326919, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14a59b795a3d41148b8c401805231863, type: 3}
 --- !u!1 &96985057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,9 +1084,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848215135}
-        m_TargetAssemblyTypeName: Game, Assembly-CSharp
-        m_MethodName: Endgame
+      - m_Target: {fileID: 1572297253}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: Replay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5302,7 +5359,7 @@ GameObject:
   - component: {fileID: 1256436698}
   - component: {fileID: 1256436697}
   m_Layer: 5
-  m_Name: Retry
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5375,8 +5432,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6299605158374326918, guid: 14a59b795a3d41148b8c401805231863, type: 3}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadLevel3
-        m_Mode: 3
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5728,7 +5785,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 237, y: -195}
-  m_SizeDelta: {x: 250, y: 75}
+  m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272093510
 MonoBehaviour:
@@ -5750,7 +5807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Retry
+  m_text: NEXT LEVEL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -7488,7 +7545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu
+  m_text: REPLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -7701,6 +7758,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566651588}
   m_CullTransparentMesh: 1
+--- !u!114 &1572297253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6299605158374326918, guid: 14a59b795a3d41148b8c401805231863, type: 3}
+  m_PrefabInstance: {fileID: 70492754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a186d095f32b2ad49be41a305ff41b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636628330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8963,7 +9031,7 @@ GameObject:
   - component: {fileID: 1864860016}
   - component: {fileID: 1864860015}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: Replay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
