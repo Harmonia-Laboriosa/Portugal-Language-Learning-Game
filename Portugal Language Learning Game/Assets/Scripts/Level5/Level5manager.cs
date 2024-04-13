@@ -42,7 +42,7 @@ public class Level5manager : MonoBehaviour
     }
     IEnumerator StartLevel()
     {
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(6f);
         StartQuiz();
         playerAnim.SetActive(false);
     }
