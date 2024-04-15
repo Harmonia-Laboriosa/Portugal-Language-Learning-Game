@@ -172,7 +172,9 @@ public class Conversation : MonoBehaviour
         }
     }
     void EndConversation()
+
     {
+        FailedPanel.SetActive(true);
         talk = false;
         
         if (!talk && npcanim != null && npcanim2 != null)
@@ -181,11 +183,11 @@ public class Conversation : MonoBehaviour
             npcanim2.idleNotTalk();
         }
         Btn.PlayerImage.SetActive(false);
-        namePrinter.PrintToUI("");
+        //namePrinter.PrintToUI("");
         dialogeueText.text = "";
 
         isTalking = false;
-        FailedPanel.SetActive(true);
+       
         if (ConvoLocker != null)
         {
             ConvoLocker(isTalking);
@@ -195,9 +197,12 @@ public class Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
+        EndPanel.SetActive(true);
         isTalking = false;
-       
-        level6.walk();
+        if (level6 != null)
+        {
+            level6.walk();
+        }
         Btn.PlayerImage.SetActive(false);
         //namePrinter.PrintToUI("");
         dialogeueText.text = "";
