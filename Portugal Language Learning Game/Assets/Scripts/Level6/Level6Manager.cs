@@ -15,7 +15,7 @@ public class Level6Manager : MonoBehaviour
     public TMP_Text scoreText;
     public Button[] answerButtons;
     private int currentQuestion;
-    public Conversation conversation;
+    public ConversationLevel6 conversation;
     public Animator playerLevel6;
     public GameObject Q4;
 

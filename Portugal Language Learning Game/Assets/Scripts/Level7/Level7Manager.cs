@@ -15,17 +15,20 @@ public class Level7Manager : MonoBehaviour
     public Button[] answerButtons;
     private int currentQuestion;
 
+    public GameObject part2;
+
     // List to keep track of correct answers for each question
     [SerializeField]
     private List<int> correctAnswerIndices = new List<int>();
 
     void Start()
     {
-        StartQuiz();
+        //StartQuiz();
         Debug.Log(levels.Length);
+        part2.SetActive(false);
     }
 
-    void StartQuiz()
+    public void StartQuiz()
     {
         // Reset the score when starting the quiz
         SManage.instance.ResetScore();
@@ -57,6 +60,7 @@ public class Level7Manager : MonoBehaviour
         }
         EnableAnswerButtons();
     }
+
 
     public void CorrectAnswer(int correctButtonIndex)
     {

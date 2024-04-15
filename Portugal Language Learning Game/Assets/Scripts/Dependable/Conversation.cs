@@ -197,7 +197,7 @@ public class Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
-        EndPanel.SetActive(true);
+        EbdPanelActivation();
         isTalking = false;
         if (level6 != null)
         {
@@ -215,6 +215,9 @@ public class Conversation : MonoBehaviour
         NPCImage.SetActive(false);
     }
 
-   
-        
+    public void EbdPanelActivation()
+    {
+        EndPanel.SetActive(true);
+    }
+     
 }
