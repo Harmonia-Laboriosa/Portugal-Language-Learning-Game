@@ -95,19 +95,19 @@ AnimationClip:
       value: {fileID: 21300000, guid: 5d87958bec6aacf4ca0f2c4bfdba2f8d, type: 3}
     - time: 7.4
       value: {fileID: 21300000, guid: d7cd0c9564f30684fa7c5e41e81c2e7f, type: 3}
-    - time: 7.6
-      value: {fileID: 21300000, guid: d55da60219a899747914227c534bf69e, type: 3}
-    - time: 7.8
-      value: {fileID: 21300000, guid: 40c1fe737dd5fb647a3467386c43c18f, type: 3}
-    - time: 8
-      value: {fileID: 21300000, guid: 9e82f87ce8eabc64fbb5194e32795201, type: 3}
     - time: 8.2
-      value: {fileID: 21300000, guid: dcfe53a41ab591e43a1e1b815343f7b6, type: 3}
-    - time: 8.4
-      value: {fileID: 21300000, guid: 2322e128f5fe96c44b34d0905bf49925, type: 3}
-    - time: 8.6
-      value: {fileID: 21300000, guid: 312bf28fcf70e2943871cc29f60ef4f7, type: 3}
+      value: {fileID: 21300000, guid: d55da60219a899747914227c534bf69e, type: 3}
     - time: 8.8
+      value: {fileID: 21300000, guid: 40c1fe737dd5fb647a3467386c43c18f, type: 3}
+    - time: 9.4
+      value: {fileID: 21300000, guid: 9e82f87ce8eabc64fbb5194e32795201, type: 3}
+    - time: 10
+      value: {fileID: 21300000, guid: dcfe53a41ab591e43a1e1b815343f7b6, type: 3}
+    - time: 10.6
+      value: {fileID: 21300000, guid: 2322e128f5fe96c44b34d0905bf49925, type: 3}
+    - time: 11.2
+      value: {fileID: 21300000, guid: 312bf28fcf70e2943871cc29f60ef4f7, type: 3}
+    - time: 11.8
       value: {fileID: 21300000, guid: 83ab5c7e102ff8941b61235a73ced9b4, type: 3}
     attribute: m_Sprite
     path: 
@@ -178,7 +178,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 9.2
+    m_StopTime: 12
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -205,7 +205,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9.2
+  - time: 8.8
+    functionName: StopNPC
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 11.8
     functionName: playGame
     data: 
     objectReferenceParameter: {fileID: 0}

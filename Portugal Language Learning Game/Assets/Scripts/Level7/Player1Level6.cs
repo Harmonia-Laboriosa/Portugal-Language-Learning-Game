@@ -12,6 +12,11 @@ public class Player1Level6 : MonoBehaviour
         NPC1anim.SetBool("Wave", true);   
     }
 
+    public void StopNPC()
+    {
+        NPC1anim.SetBool("Wave", false);
+    }
+
     public void playGame()
     {
         Level7Manager.StartQuiz();

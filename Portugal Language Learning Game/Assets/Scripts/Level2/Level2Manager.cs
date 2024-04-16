@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using Random = UnityEngine.Random;
 
 public class Level2Manager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class Level2Manager : MonoBehaviour
     public GameObject player;
     public AudioSource WrongAnswer;
     public AudioSource RightAnswer;
+    public Conversation conversation;
 
     void Start()
     {
@@ -53,6 +56,7 @@ public class Level2Manager : MonoBehaviour
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].SetActive(i == currentQuestion);
+            
         }
 
         // Enable all answer buttons for the current question
@@ -78,7 +82,8 @@ public class Level2Manager : MonoBehaviour
             // Display end game panel
             CanvasforQuestions.SetActive(false);
             DialoguePanel.SetActive(true);
-          
+            conversation.ConversationStart();
+
         }
     }
 
@@ -147,9 +152,10 @@ public class Level2Manager : MonoBehaviour
     IEnumerator DelayBeforeNextQuestion()
     {
         // Delay for a short time before moving to the next question
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
 
         NextQuestion();
     }
+
 }

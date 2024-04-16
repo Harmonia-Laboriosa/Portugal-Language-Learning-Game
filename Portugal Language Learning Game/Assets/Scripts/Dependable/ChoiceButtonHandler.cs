@@ -18,7 +18,7 @@ public class ChoiceButtonHandler : MonoBehaviour
 
     [SerializeField]
     private float xPos;
-    const float yPosOffset = 115f; // Removed 'const' as it's unnecessary for a serialized field
+    const float yPosOffset = 100f; // Removed 'const' as it's unnecessary for a serialized field
 
     public delegate void ChoicePasser(string lineTree);
     public ChoicePasser PassChoice;
@@ -81,7 +81,7 @@ public class ChoiceButtonHandler : MonoBehaviour
 
             choiceButtonObj.name = "ChoiceButton: " + i;
 
-            choiceButtonObj.transform.SetParent(GameObject.FindWithTag("Canvas").transform, false);
+            choiceButtonObj.transform.SetParent(GameObject.FindWithTag("ChoiceButtons").transform, false);
 
             Button choiceButton = choiceButtonObj.GetComponent<Button>();
             choiceButton.GetComponentInChildren<TMP_Text>().text = playerChoices[i];
