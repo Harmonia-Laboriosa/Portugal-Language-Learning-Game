@@ -18,6 +18,12 @@ public class Level8Manage : MonoBehaviour
         endPanel.SetActive(false);
 
         // Activate the first question panel
+        StartCoroutine("startLevel");
+    }
+
+    IEnumerator startLevel()
+    {
+        yield return new WaitForSeconds(7f);
         if (panels.Length > 0)
         {
             panels[0].SetActive(true);
