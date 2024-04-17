@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fire : MonoBehaviour
 {
     public GameObject firelit;
+    public Image[] images;
+    public Image[] hands;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,16 @@ public class Fire : MonoBehaviour
     public void fireON()
     {
         firelit.SetActive(true);
+        for(int i=0; i< images.Length; i++)
+        {
+            images[i].color = Color.white;
+        }
+        for (int i = 0; i < hands.Length; i++)
+        {
+            hands[i].color = ColorUtility.TryParseHtmlString("#FF7C00", out Color color) ? color : Color.white;
+
+        }
+
     }
 
 }
