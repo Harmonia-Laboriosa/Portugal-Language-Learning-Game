@@ -90,10 +90,7 @@ public class Level5manager : MonoBehaviour
                 //Debug.Log(" working");
             }
             */
-            if(i==5)
-            {
-                bg1.SetActive(true);
-            }
+
         }
         EnableAnswerButtons();
     }
@@ -106,6 +103,10 @@ public class Level5manager : MonoBehaviour
             currentQuestion++;
             Debug.Log("Question : " + currentQuestion);
             ActivateCurrentQuestion();
+            if (currentQuestion == 5)
+            {
+                bg1.SetActive(true);
+            }
             if (currentQuestion == 10)
             {
                 CheckAllObjectsinLsstPlacedInPanel(levels[currentQuestion], currentQuestion);
