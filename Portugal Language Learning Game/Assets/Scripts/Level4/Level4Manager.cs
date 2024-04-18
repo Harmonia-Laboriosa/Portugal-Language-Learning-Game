@@ -23,6 +23,8 @@ public class Level4Manager : MonoBehaviour
     public int animationscore=0;
     public Level4Animation animations;
 
+    private bool gameEnded = false;
+
     void Start()
     {
         StartQuiz();
@@ -77,13 +79,21 @@ public class Level4Manager : MonoBehaviour
         {
             Debug.Log("Quiz completed!");
             // Display end game panel
+            EndGameScore();
+        }
+        EnableAnswerButtons();
+    }
+
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
             if (SManage.instance.score <= 6)
             {
                 failedPanel.SetActive(true);
             }
             else
             {
-
                 if (SManage.instance.score >= 9)
                 {
                     victoryPanel.SetActive(true);
@@ -93,11 +103,10 @@ public class Level4Manager : MonoBehaviour
                     EndgamePanel.SetActive(true);
                 }
             }
+
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
         }
-        EnableAnswerButtons();
     }
-
-
 
     public void CorrectAnswer(int correctButtonIndex)
     {

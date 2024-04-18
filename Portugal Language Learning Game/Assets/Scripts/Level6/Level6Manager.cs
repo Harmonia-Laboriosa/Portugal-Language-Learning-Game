@@ -11,6 +11,7 @@ public class Level6Manager : MonoBehaviour
     public GameObject[] levels;
     public GameObject EndgamePanel;
     public GameObject FailedPanel;
+    public GameObject victoryPanel;
     public GameObject dialoguePanel; // Dialogue panel reference
     public TMP_Text scoreText;
     public Button[] answerButtons;
@@ -19,6 +20,7 @@ public class Level6Manager : MonoBehaviour
     public Animator playerLevel6;
     public GameObject Q4;
 
+    private bool gameEnded = false;
     void Start()
     {
         //StartQuiz();
@@ -32,7 +34,9 @@ public class Level6Manager : MonoBehaviour
         SManage.instance.ResetScore();
         currentQuestion = 0;
         ActivateDialoguePanel();
-       
+        EndgamePanel.SetActive(false);
+        FailedPanel.SetActive(false);
+        victoryPanel.SetActive(false);
         //StartTimer();
     }
 
@@ -58,9 +62,33 @@ public class Level6Manager : MonoBehaviour
         {
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            EndGameScore();
         }
         EnableAnswerButtons();
+    }
+
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (SManage.instance.score <= 2)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                if (SManage.instance.score >= 4)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndgamePanel.SetActive(true);
+                }
+            }
+
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
+        }
     }
 
     void ActivateDialoguePanel()

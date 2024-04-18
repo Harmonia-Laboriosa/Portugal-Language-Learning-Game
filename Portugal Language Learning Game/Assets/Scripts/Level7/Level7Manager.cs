@@ -11,6 +11,7 @@ public class Level7Manager : MonoBehaviour
     public GameObject[] levels;
     public GameObject EndgamePanel;
     public GameObject FailedPanel;
+    public GameObject victoryPanel;
     public TMP_Text scoreText;
     public Button[] answerButtons;
     private int currentQuestion;
@@ -20,6 +21,8 @@ public class Level7Manager : MonoBehaviour
     // List to keep track of correct answers for each question
     [SerializeField]
     private List<int> correctAnswerIndices = new List<int>();
+
+    private bool gameEnded = false;
 
     void Start()
     {
@@ -56,12 +59,34 @@ public class Level7Manager : MonoBehaviour
         {
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            EndGameScore();
         }
         EnableAnswerButtons();
     }
 
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (SManage.instance.score <= 2)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                if (SManage.instance.score >= 4)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndgamePanel.SetActive(true);
+                }
+            }
 
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
+        }
+    }
     public void CorrectAnswer(int correctButtonIndex)
     {
         // Change color of the correct answer button to green

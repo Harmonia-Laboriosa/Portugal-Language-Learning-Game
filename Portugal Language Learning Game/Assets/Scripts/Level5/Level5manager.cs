@@ -34,6 +34,8 @@ public class Level5manager : MonoBehaviour
     public GameObject player2;
     public GameObject q11;
 
+    private bool gameEnded = false;
+
     void Start()
     {
         bg.SetActive(true);
@@ -291,19 +293,7 @@ public class Level5manager : MonoBehaviour
             player2Animator.SetBool("move", true);
 
             // Display end game panel
-            if (SManage.instance.score <= 6)
-            {
-                FailedPanel.SetActive(true);
-            }
-            else
-            {
-                EndgamePanel.SetActive(true);
-                if (SManage.instance.score >= 9)
-                {
-                    victoryPanel.SetActive(true);
-                }
-
-            }
+            EndGameScore();
         }
         else if (allPlaced && !allCorrect)
         {
@@ -312,6 +302,29 @@ public class Level5manager : MonoBehaviour
         }
     }
 
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (SManage.instance.score <= 6)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                if (SManage.instance.score >= 9)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndgamePanel.SetActive(true);
+                }
+            }
+
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
+        }
+    }
     private void ResetObjects(GameObject panel)
     {
         foreach (Transform slot in panel.transform)

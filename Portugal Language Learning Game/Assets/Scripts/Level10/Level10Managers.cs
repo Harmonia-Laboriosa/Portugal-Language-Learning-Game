@@ -9,7 +9,9 @@ using TMPro;
 public class Level10Managers : MonoBehaviour
 {
     public GameObject[] questions;
-    public GameObject EndgamePanel;
+    public GameObject EndPanel;
+    public GameObject FailedPanel;
+    public GameObject victoryPanel;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
@@ -19,15 +21,17 @@ public class Level10Managers : MonoBehaviour
     public bool[] allObjectsPlaced;
     public int TempScore = 0;
     public SManage scoreManager;
-    public bool[] scoreIncreased; 
-
+    public bool[] scoreIncreased;
+    private bool gameEnded = false;
     void Start()
     {
         allObjectsPlaced = new bool[questions.Length];
         scoreIncreased = new bool[questions.Length];
         fromSlot = 0;
         StartQuiz();
-    
+        EndPanel.SetActive(false);
+        FailedPanel.SetActive(false);
+        victoryPanel.SetActive(false);
         Answerbuttons.SetActive(false);
     }
 
@@ -132,12 +136,34 @@ public class Level10Managers : MonoBehaviour
             Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            EndGameScore();
         }
         EnableAnswerButton();
     }
 
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (SManage.instance.score <= 6)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                if (SManage.instance.score >= 9)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndPanel.SetActive(true);
+                }
+            }
 
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
+        }
+    }
 
     public void CorrectAnswer(int correctButtonIndex)
     {

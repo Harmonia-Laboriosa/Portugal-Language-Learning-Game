@@ -16,13 +16,21 @@ public class Level8Manager : MonoBehaviour
     public Level8Manage questionManager;
     public float waitForNextQuestion;
     public GameObject EndPanel;
+    public GameObject FailedPanel;
+    public GameObject victoryPanel;
     public int currentQuestion = 0;
+
+    private bool gameEnded = false;
 
     // Start is called before the first frame update
     void Start()
     {
         allObjectsPlaced = new bool[questionPanels.Length];
         scoreIncreased = new bool[questionPanels.Length];
+
+        EndPanel.SetActive(false);
+        FailedPanel.SetActive(false);
+        victoryPanel.SetActive(false);
     }
     private void FixedUpdate()
     {
@@ -88,9 +96,34 @@ public class Level8Manager : MonoBehaviour
             StartCoroutine(ActivatePanelWithDelay(currentPanelIndex + 1));
         }
         else
-        {  
+        {
             // Activate end panel if all questions are completed
-            EndPanel.SetActive(true);
+            EndGameScore();
+
+        }
+    }
+
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (SManage.instance.score <= 2)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                if (SManage.instance.score >= 4)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndPanel.SetActive(true);
+                }
+            }
+
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
         }
     }
     private IEnumerator ActivatePanelWithDelay(int nextPanelIndex)
