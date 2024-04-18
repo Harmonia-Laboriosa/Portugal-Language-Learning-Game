@@ -17,6 +17,8 @@ public class SlotManage : MonoBehaviour
     private int correctObjectCount; // Variable to track the number of correct objects placed
     private bool isLastQuestion; // Flag to check if it's the last question
 
+    private bool gameEnded = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -184,17 +186,7 @@ public class SlotManage : MonoBehaviour
 
         if (allPlaced && allCorrect)
         {
-            if(scoreManager.score<=6)
-            {
-                failedPanel.SetActive(true);
-            }
-            else if(scoreManager.score >= 9)
-            {
-                EndPanel.SetActive(true);
-                //victoryPanel.SetActive(true);
-            }
-            // Activate next panel if all objects are placed and all are correct for the last question
-            
+            EndGameScore();
         }
         else if (allPlaced && !allCorrect)
         {
@@ -202,6 +194,28 @@ public class SlotManage : MonoBehaviour
             ResetObjects(panel);
         }
     }
+
+    private void EndGameScore()
+    {
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (scoreManager.score <= 6)
+            {
+                failedPanel.SetActive(true);
+            }
+            else
+            {
+                EndPanel.SetActive(true);
+                if (scoreManager.score >= 9)
+                {
+                    victoryPanel.SetActive(true);
+                }
+            }
+
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
+        }
+    }
+
     private void ResetObjects(GameObject panel)
     {
         foreach (Transform slot in panel.transform)
