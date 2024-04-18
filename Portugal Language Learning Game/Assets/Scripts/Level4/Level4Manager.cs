@@ -10,6 +10,8 @@ public class Level4Manager : MonoBehaviour
 {
     public GameObject[] levels;
     public GameObject EndgamePanel;
+    public GameObject failedPanel;
+    public GameObject victoryPanel;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
@@ -27,7 +29,9 @@ public class Level4Manager : MonoBehaviour
         boulder.gameObject.SetActive(false);
         background.gameObject.SetActive(false);
         rocks.gameObject.SetActive(false);
-        
+        EndgamePanel.SetActive(false);
+        failedPanel.SetActive(false);
+        victoryPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,7 +77,22 @@ public class Level4Manager : MonoBehaviour
         {
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            if (SManage.instance.score <= 6)
+            {
+                failedPanel.SetActive(true);
+            }
+            else
+            {
+
+                if (SManage.instance.score >= 9)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndgamePanel.SetActive(true);
+                }
+            }
         }
         EnableAnswerButtons();
     }

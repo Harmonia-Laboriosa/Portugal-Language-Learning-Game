@@ -11,6 +11,7 @@ public class Level5manager : MonoBehaviour
     public GameObject[] levels;
     public GameObject EndgamePanel;
     public GameObject FailedPanel;
+    public GameObject victoryPanel;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     public Button[] checkButtons; // Changed to an array of buttons
@@ -21,6 +22,7 @@ public class Level5manager : MonoBehaviour
     private int correctObjectCount; // Variable to track the number of correct objects placed
 
     public bool allObjectsPlaced;
+    public bool scoreIncreased;
     public GameObject rock;
 
     public Animator rockAnimator;
@@ -123,8 +125,21 @@ public class Level5manager : MonoBehaviour
     }
     IEnumerator endPanelActive()
     {
+        SManage.instance.IncreaseScore(1);
         yield return new WaitForSeconds(2f);
-        EndgamePanel.SetActive(true);
+        if (SManage.instance.score <= 6)
+        {
+            FailedPanel.SetActive(true);
+        }
+        else
+        {
+            EndgamePanel.SetActive(true);
+            if (SManage.instance.score >= 9)
+            {
+                victoryPanel.SetActive(true);
+            }
+
+        }
     }
 
 
@@ -265,18 +280,30 @@ public class Level5manager : MonoBehaviour
         }
 
         allObjectsPlaced = allPlaced;
-
+        scoreIncreased = true;
         if (allPlaced && allCorrect)
         {
             // Activate next panel if all objects are placed and all are correct for the last question
             Debug.Log("All");
-            SManage.instance.IncreaseScore(1);
+            
             q11.SetActive(false);
             rockAnimator.SetBool("MoveBoulder", true);
             player2Animator.SetBool("move", true);
 
             // Display end game panel
-            StartCoroutine("endPanelActive");
+            if (SManage.instance.score <= 6)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                EndgamePanel.SetActive(true);
+                if (SManage.instance.score >= 9)
+                {
+                    victoryPanel.SetActive(true);
+                }
+
+            }
         }
         else if (allPlaced && !allCorrect)
         {

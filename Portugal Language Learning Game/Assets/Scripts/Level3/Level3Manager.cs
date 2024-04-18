@@ -10,6 +10,8 @@ public class Level3Manager : MonoBehaviour
 {
     public GameObject[] levels;
     public GameObject EndgamePanel;
+    public GameObject failedPanel;
+    public GameObject victoryPanel;
     public TMP_Text scoreText;
     public Button[] answerButtons; // Changed to an array of buttons
     private int currentQuestion;
@@ -30,6 +32,9 @@ public class Level3Manager : MonoBehaviour
         player.SetActive(true);
         bg2.SetActive(false);
         bg1.SetActive(true);
+        EndgamePanel.SetActive(false);
+        failedPanel.SetActive(false);
+        victoryPanel.SetActive(false);
       //  bg2.SetActive(false);
     }
 
@@ -86,7 +91,23 @@ public class Level3Manager : MonoBehaviour
             Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndgamePanel.SetActive(true);
+            if(SManage.instance.score<=6)
+            {
+                failedPanel.SetActive(true);
+            }
+            else 
+            {
+                
+                if (SManage.instance.score >= 9)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndgamePanel.SetActive(true);
+                }
+            }
+            
         }
     }
 

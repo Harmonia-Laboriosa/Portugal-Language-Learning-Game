@@ -11,6 +11,8 @@ public class SlotManage : MonoBehaviour
     public QManage questionManager;
     public float waitForNextQuestion;
     public GameObject EndPanel;
+    public GameObject victoryPanel;
+    public GameObject failedPanel;
 
     private int correctObjectCount; // Variable to track the number of correct objects placed
     private bool isLastQuestion; // Flag to check if it's the last question
@@ -18,6 +20,10 @@ public class SlotManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        victoryPanel.SetActive(false);
+        failedPanel.SetActive(false);
+        EndPanel.SetActive(false);
+
         allObjectsPlaced = new bool[questionPanels.Length];
         scoreIncreased = new bool[questionPanels.Length];
         if (questionPanels.Length > 0)
@@ -163,7 +169,13 @@ public class SlotManage : MonoBehaviour
                 DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
                 if (dragDrop != null && dragDrop.isPlaceCorrect)
                 {
-                    scoreManager.IncreaseScore(1);
+                    TempScore = TempScore + 1;
+                    if (TempScore == 3 || TempScore == 6)
+                    {
+
+                        scoreManager.IncreaseScore(1);
+                        TempScore = 0;
+                    }
                 }
             }
 
@@ -172,8 +184,17 @@ public class SlotManage : MonoBehaviour
 
         if (allPlaced && allCorrect)
         {
+            if(scoreManager.score<=6)
+            {
+                failedPanel.SetActive(true);
+            }
+            else if(scoreManager.score >= 9)
+            {
+                EndPanel.SetActive(true);
+                //victoryPanel.SetActive(true);
+            }
             // Activate next panel if all objects are placed and all are correct for the last question
-            EndPanel.SetActive(true);
+            
         }
         else if (allPlaced && !allCorrect)
         {
