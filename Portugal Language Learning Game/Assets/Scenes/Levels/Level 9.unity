@@ -469,8 +469,8 @@ GameObject:
   - component: {fileID: 55925639}
   - component: {fileID: 55925641}
   - component: {fileID: 55925640}
-  - component: {fileID: 55925642}
   - component: {fileID: 55925643}
+  - component: {fileID: 55925644}
   m_Layer: 5
   m_Name: NPC
   m_TagString: NPC
@@ -536,33 +536,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55925638}
   m_CullTransparentMesh: 1
---- !u!114 &55925642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55925638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c13a62fb73e9b444588f23bf03042734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  namePrinter: {fileID: 0}
-  Btn: {fileID: 23440062}
-  EndPanel: {fileID: 1417187946}
-  FailedPanel: {fileID: 1421690686}
-  healthSlider: {fileID: 0}
-  file: Characters
-  path: CharacterCollection/Characters/Character
-  id: 2
-  initialXmlTag: Greeting
-  NPCImage: {fileID: 627144179}
-  npcanim: {fileID: 0}
-  npcanim2: {fileID: 0}
-  talk: 0
-  audio: {fileID: 0}
-  level6: {fileID: 0}
 --- !u!114 &55925643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,8 +580,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 55925642}
-        m_TargetAssemblyTypeName: Conversation, Assembly-CSharp
+      - m_Target: {fileID: 55925644}
+        m_TargetAssemblyTypeName: Level9Conversation, Assembly-CSharp
         m_MethodName: ConversationStart
         m_Mode: 1
         m_Arguments:
@@ -619,6 +592,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &55925644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55925638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e09b13847ce5aa428e96eba588fd53a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namePrinter: {fileID: 0}
+  Btn: {fileID: 23440062}
+  EndPanel: {fileID: 1417187946}
+  FailedPanel: {fileID: 1421690686}
+  healthSlider: {fileID: 0}
+  file: Characters
+  path: CharacterCollection/Characters/Character
+  id: 2
+  initialXmlTag: Greeting
+  NPCImage: {fileID: 627144179}
+  npcanim: {fileID: 0}
+  npcanim2: {fileID: 0}
+  talk: 0
+  audio: {fileID: 0}
+  level6: {fileID: 0}
 --- !u!1 &58333775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3291,7 @@ MonoBehaviour:
   waitForNextQuestion: 1
   EndPanel: {fileID: 1947321412}
   currentQuestion: 0
-  conversation: {fileID: 55925642}
+  conversation: {fileID: 0}
 --- !u!1 &377301343
 GameObject:
   m_ObjectHideFlags: 0
