@@ -22,7 +22,7 @@ public class Level2Manager : MonoBehaviour
     public GameObject player;
     public AudioSource WrongAnswer;
     public AudioSource RightAnswer;
-    public Conversation conversation;
+    public Level2Conversation conversation;
 
     void Start()
     {
