@@ -27,7 +27,7 @@ public class ChoiceButtonHandler : MonoBehaviour
     [SerializeField]
     private string subTree;
    
-    float offsetCounter = -275;
+    
     //public Level2Animation_NPC1 npcanim;
     //public Level2Animation_NPC2 npcanim2;
     //public bool talk = false;
@@ -49,6 +49,7 @@ public class ChoiceButtonHandler : MonoBehaviour
 
     void CreateChoiceButtons()
     {
+        float offsetCounter = -275;
         PlayerImage.SetActive(true);
         currentButtons = new GameObject[playerChoices.Length];
         Player_Dialogue.text = " ";
