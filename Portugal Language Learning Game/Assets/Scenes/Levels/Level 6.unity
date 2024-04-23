@@ -1469,7 +1469,7 @@ MonoBehaviour:
   PlayerImage: {fileID: 797789009}
   Player_Dialogue: {fileID: 28116440}
   choiceButtonPrefab: {fileID: 1120045487601428871, guid: b7235cd19b2bc5c46b915efd543a22d4, type: 3}
-  xPos: -380
+  xPos: -400
   subTree: Tree
   dialogue: {fileID: 1753431001}
 --- !u!1 &589640142
@@ -8464,11 +8464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9175313405616180650, guid: b9d8dbe65fa70a64ebac806f47643fc6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 540
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 9175313405616180650, guid: b9d8dbe65fa70a64ebac806f47643fc6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: -105
       objectReference: {fileID: 0}
     - target: {fileID: 9175313405616180650, guid: b9d8dbe65fa70a64ebac806f47643fc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

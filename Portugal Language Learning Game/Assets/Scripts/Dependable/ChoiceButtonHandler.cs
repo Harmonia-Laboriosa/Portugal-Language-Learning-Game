@@ -18,14 +18,16 @@ public class ChoiceButtonHandler : MonoBehaviour
 
     [SerializeField]
     private float xPos;
-    const float yPosOffset = 100f; // Removed 'const' as it's unnecessary for a serialized field
+
+    private float yPosOffset = 100f; // Removed 'const' as it's unnecessary for a serialized field
 
     public delegate void ChoicePasser(string lineTree);
     public ChoicePasser PassChoice;
 
     [SerializeField]
     private string subTree;
-
+   
+    float offsetCounter = -275;
     //public Level2Animation_NPC1 npcanim;
     //public Level2Animation_NPC2 npcanim2;
     //public bool talk = false;
@@ -73,7 +75,7 @@ public class ChoiceButtonHandler : MonoBehaviour
         //}
 
         int i = 0;
-        float offsetCounter = -275;
+       
 
         foreach (string s in playerChoices)
         {
