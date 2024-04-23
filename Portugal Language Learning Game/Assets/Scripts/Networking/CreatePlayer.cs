@@ -73,7 +73,7 @@ public class CreatePlayer : MonoBehaviour
         newPlayerInfo.AddField("password", Password.text);
 
 
-        UnityWebRequest CreatePostRequest = UnityWebRequest.Post("http://ec2-34-201-217-216.compute-1.amazonaws.com/cruds/newplayer.php", newPlayerInfo);
+        UnityWebRequest CreatePostRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/newplayer.php", newPlayerInfo);
         yield return CreatePostRequest.SendWebRequest();
 
         if (CreatePostRequest.error == null)
@@ -83,6 +83,7 @@ public class CreatePlayer : MonoBehaviour
             {
                 ErrorMessage("Server Error");
             }
+      
             else if (response == "3")
             {
                 ErrorMessage("UserName Already exists");
@@ -91,6 +92,7 @@ public class CreatePlayer : MonoBehaviour
             {
                 ErrorMessage("Email Already Exists");
             }
+            
             else
             {
                 Debug.Log("Good to go!");

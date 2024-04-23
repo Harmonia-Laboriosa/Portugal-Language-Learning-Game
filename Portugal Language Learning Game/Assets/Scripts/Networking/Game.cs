@@ -47,7 +47,7 @@ public class Game : MonoBehaviour
         scoreForm.AddField("apppassword", "thisisfromtheapp");
         scoreForm.AddField("username", username);
         scoreForm.AddField("score", scoreFromPlayer);
-        UnityWebRequest updatePlayerRequest = UnityWebRequest.Post("http://ec2-34-201-217-216.compute-1.amazonaws.com/cruds/updateplayerscore.php", scoreForm);
+        UnityWebRequest updatePlayerRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/updateplayerscore.php", scoreForm);
         yield return updatePlayerRequest.SendWebRequest();
         if(updatePlayerRequest.error == null)
         {
