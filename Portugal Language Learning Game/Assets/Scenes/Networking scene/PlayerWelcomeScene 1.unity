@@ -801,8 +801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -244.89624, y: 287.70825}
-  m_SizeDelta: {x: 1394.0576, y: 476.6729}
+  m_AnchoredPosition: {x: -448.2945, y: 324.52}
+  m_SizeDelta: {x: 987.261, y: 403.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &385158038
 MonoBehaviour:
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 743392540}
   - component: {fileID: 743392539}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resume
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -2614,7 +2614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1732227449
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2923,7 +2923,7 @@ GameObject:
   - component: {fileID: 1899927766}
   - component: {fileID: 1899927768}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
