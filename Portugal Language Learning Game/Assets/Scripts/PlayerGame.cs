@@ -7,7 +7,8 @@ using TMPro;
 
 public class PlayerGame : MonoBehaviour
 {
-    public TMP_Text UserInfoText;
+    public TMP_Text UserNameText;
+    public TMP_Text UserScoreText;
     int CurrentPlayerScore;
     private void Start()
     {
@@ -15,7 +16,8 @@ public class PlayerGame : MonoBehaviour
         string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
 
-        UserInfoText.text = "User: " + CurrentPlayerUsername + " | " + "Score: " + CurrentPlayerScore.ToString();
+        UserNameText.text =  CurrentPlayerUsername  ;
+        UserScoreText.text = CurrentPlayerScore.ToString(); 
     }
 
     public void StartGame()

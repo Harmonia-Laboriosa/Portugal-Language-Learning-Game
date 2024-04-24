@@ -13,35 +13,38 @@ public class SceneSwitch : MonoBehaviour
     }
     public void LoadWelcomeScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("WelcomeScene");
     }
 
     public void LoadNewUserScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("NewUserPlayer");
     }
 
     public void LoadLoginUserScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("LoginUser");
     }
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("PlayerWelcomeScene 1");
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Menu");
     }
     public void LoadPlayGameScene()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Cut Scene");
     }
 
-   
+    public void LoadVictoryCardScene()
+    {
+        SceneManager.LoadScene("VictoryCard");
+    }
 
-  
+
 
 
 }
