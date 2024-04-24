@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.Networking;
 public class Level9Manager : MonoBehaviour
 {
     public GameObject[] questionPanels; // Array to store references to all question panels
@@ -18,11 +18,26 @@ public class Level9Manager : MonoBehaviour
     public GameObject EndPanel;
     public int currentQuestion = 0;
     public Conversation conversation;
+
+    private bool gameEnded = false;
+
+    public TMP_Text UserNameText;
+    public TMP_Text UserScoreText;
+    int CurrentPlayerScore;
+
     // Start is called before the first frame update
     void Start()
     {
+        //Player
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        UserNameText.text = CurrentPlayerUsername;
+
         allObjectsPlaced = new bool[questionPanels.Length];
         scoreIncreased = new bool[questionPanels.Length];
+
+
     }
     private void FixedUpdate()
     {

@@ -9,6 +9,9 @@ public class SManage : MonoBehaviour
 {
     public static SManage instance;
 
+    public int[] LevelScore ;
+    public int Level1Score ;
+    public int totalScore=0;
     public int score = 0; // Current score
     public TMP_Text scoreText; // Reference to the UI text displaying the score
 

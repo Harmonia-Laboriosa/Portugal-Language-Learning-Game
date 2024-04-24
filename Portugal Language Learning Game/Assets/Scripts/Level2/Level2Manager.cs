@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.Networking;
 using Random = UnityEngine.Random;
 
 public class Level2Manager : MonoBehaviour
@@ -24,9 +25,18 @@ public class Level2Manager : MonoBehaviour
     public AudioSource RightAnswer;
     public Level2Conversation conversation;
 
+    public TMP_Text UserNameText;
+    public TMP_Text UserScoreText;
+    int CurrentPlayerScore;
+
+    // Start is called before the first frame update
     void Start()
     {
-        //StartQuiz();
+        //Player
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        UserNameText.text = CurrentPlayerUsername;
     }
 
     // Update is called once per frame

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Networking;
 
 public class Level7Manager : MonoBehaviour
 {
@@ -24,8 +25,20 @@ public class Level7Manager : MonoBehaviour
 
     private bool gameEnded = false;
 
+
+    public TMP_Text UserNameText;
+    public TMP_Text UserScoreText;
+    int CurrentPlayerScore;
+
+    // Start is called before the first frame update
     void Start()
     {
+        //Player
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        UserNameText.text = CurrentPlayerUsername;
+
         //StartQuiz();
         Debug.Log(levels.Length);
         part2.SetActive(false);

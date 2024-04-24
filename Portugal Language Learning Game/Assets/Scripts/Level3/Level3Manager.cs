@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Networking;
 
 public class Level3Manager : MonoBehaviour
 {
@@ -25,8 +26,20 @@ public class Level3Manager : MonoBehaviour
     public Level3animation PlayerAnim;
     int animCount = 0;
 
+    public TMP_Text UserNameText;
+    public TMP_Text UserScoreText;
+    int CurrentPlayerScore;
+
+    // Start is called before the first frame update
     void Start()
     {
+        //Player
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        UserNameText.text = CurrentPlayerUsername;
+
+
         StartQuiz();
         Answerbuttons.SetActive(false);
         player.SetActive(true);

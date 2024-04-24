@@ -16,6 +16,7 @@ public class Level9Conversation : MonoBehaviour
     public LockConvo ConvoLocker;
     public GameObject EndPanel;
     public GameObject FailedPanel;
+    public GameObject victoryPanel;
     private bool isTalking;
     public Slider healthSlider;
     [SerializeField]
@@ -40,12 +41,18 @@ public class Level9Conversation : MonoBehaviour
 
     public Level6Manager level6;
 
+    private bool gameEnded = false;
+
     void Awake()
     {
         audio = FindObjectOfType<Level2AudioManager>();
         choiceButtons = GameObject.FindWithTag(Tags.canvasTag).GetComponent<ChoiceButtonHandler>();
         /*namePrinter = GameObject.FindWithTag(Tags.nameText).GetComponent<StringUIPrinter>();*/
         dialogeueText = GameObject.FindWithTag(Tags.dialogueText).GetComponentInChildren<TMP_Text>();// Using TextMeshPro for dialogue text
+
+        EndPanel.SetActive(false);
+        FailedPanel.SetActive(false);
+        victoryPanel.SetActive(false);
     }
 
     public void ConversationStart()
@@ -198,7 +205,7 @@ public class Level9Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
-        EbdPanelActivation();
+        EndGameScore();
         isTalking = false;
         if (level6 != null)
         {
@@ -216,9 +223,28 @@ public class Level9Conversation : MonoBehaviour
         NPCImage.SetActive(false);
     }
 
-    public void EbdPanelActivation()
+    private void EndGameScore()
     {
-        EndPanel.SetActive(true);
+        if (!gameEnded) // Check if the game has not ended yet
+        {
+            if (SManage.instance.score <= 2)
+            {
+                FailedPanel.SetActive(true);
+            }
+            else
+            {
+                if (SManage.instance.score >= 4)
+                {
+                    victoryPanel.SetActive(true);
+                }
+                else
+                {
+                    EndPanel.SetActive(true);
+                }
+            }
+
+            gameEnded = true; // Set the flag to true to indicate that the game has ended
+        }
     }
 
 }

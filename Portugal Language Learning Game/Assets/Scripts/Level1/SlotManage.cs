@@ -1,5 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+using TMPro;
 
 public class SlotManage : MonoBehaviour
 {
@@ -19,9 +22,20 @@ public class SlotManage : MonoBehaviour
 
     private bool gameEnded = false;
 
+    //public TMP_Text UserNameText;
+    //public TMP_Text UserScoreText;
+    int CurrentPlayerScore;
+    public GameObject CurrentPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
+        //Player
+        CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        //string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        //CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        //UserNameText.text = CurrentPlayerUsername;
+
         victoryPanel.SetActive(false);
         failedPanel.SetActive(false);
         EndPanel.SetActive(false);
@@ -197,16 +211,34 @@ public class SlotManage : MonoBehaviour
 
     private void EndGameScore()
     {
+
+        SManage.instance.totalScore=SManage.instance.totalScore+SManage.instance.score;
+        /*
+        if(SManage.instance.totalScore>=0 && SManage.instance.totalScore<=12)
+        {
+
+        }
+        CurrentPlayer.GetComponent<CurrentPlayer>().Score = SManage.instance.totalScore;
+        */
         if (!gameEnded) // Check if the game has not ended yet
         {
-            if (scoreManager.score <= 6)
+            if (scoreManager.score < 9)
             {
                 failedPanel.SetActive(true);
             }
             else
             {
+                /*
+                if (SManage.instance.score > SManage.instance.Level1Score)
+                {
+                    CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+                    SManage.instance.Level1Score = SManage.instance.score;
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score += SManage.instance.Level1Score;
+                    StartCoroutine(SavePlayerScore());
+                }
+                */
                 EndPanel.SetActive(true);
-                if (scoreManager.score >= 9)
+                if (scoreManager.score==12)
                 {
                     victoryPanel.SetActive(true);
                 }
@@ -214,6 +246,37 @@ public class SlotManage : MonoBehaviour
 
             gameEnded = true; // Set the flag to true to indicate that the game has ended
         }
+    }
+
+    IEnumerator SavePlayerScore()
+    {
+        string username = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        string scoreFromPlayer = CurrentPlayer.GetComponent<CurrentPlayer>().Score.ToString();
+        WWWForm scoreForm = new WWWForm();
+        scoreForm.AddField("apppassword", "thisisfromtheapp");
+        scoreForm.AddField("username", username);
+        scoreForm.AddField("score", scoreFromPlayer);
+        UnityWebRequest updatePlayerRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/updateplayerscore.php", scoreForm);
+        yield return updatePlayerRequest.SendWebRequest();
+        if (updatePlayerRequest.error == null)
+        {
+
+            string result = updatePlayerRequest.downloadHandler.text;
+            Debug.Log(result);
+            if (result == "0")
+            {
+                //FindObjectOfType<SceneSwitch>().LoadGameScene();
+            }
+            else
+            {
+                Debug.Log("error");
+            }
+        }
+        else
+        {
+            Debug.Log(updatePlayerRequest.error);
+        }
+
     }
 
     private void ResetObjects(GameObject panel)
