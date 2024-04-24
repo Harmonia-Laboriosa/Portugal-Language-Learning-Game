@@ -23,7 +23,7 @@ public class Level8Manage : MonoBehaviour
 
     IEnumerator startLevel()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
         if (panels.Length > 0)
         {
             panels[0].SetActive(true);

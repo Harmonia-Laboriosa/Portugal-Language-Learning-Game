@@ -23,18 +23,22 @@ public class Level8Manager : MonoBehaviour
 
     private bool gameEnded = false;
 
-    public TMP_Text UserNameText;
-    public TMP_Text UserScoreText;
-    int CurrentPlayerScore;
+    public Animator player1;
+    public GameObject bg1;
+    public GameObject bg2;
+
+    //public TMP_Text UserNameText;
+    //public TMP_Text UserScoreText;
+    //int CurrentPlayerScore;
 
     // Start is called before the first frame update
     void Start()
     {
         //Player
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-        string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
-        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
-        UserNameText.text = CurrentPlayerUsername;
+        //var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        //string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        //CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        //UserNameText.text = CurrentPlayerUsername;
 
         allObjectsPlaced = new bool[questionPanels.Length];
         scoreIncreased = new bool[questionPanels.Length];
@@ -42,6 +46,8 @@ public class Level8Manager : MonoBehaviour
         EndPanel.SetActive(false);
         FailedPanel.SetActive(false);
         victoryPanel.SetActive(false);
+        bg1.SetActive(false);
+        bg2.SetActive(false);   
     }
     private void FixedUpdate()
     {
@@ -105,6 +111,10 @@ public class Level8Manager : MonoBehaviour
         {
 
             StartCoroutine(ActivatePanelWithDelay(currentPanelIndex + 1));
+            if(currentPanelIndex==6)
+            {
+                bg2.SetActive(true);
+            }
         }
         else
         {
@@ -148,7 +158,10 @@ public class Level8Manager : MonoBehaviour
         questionManager.panels[nextPanelIndex - 1].SetActive(false);     
     }
 
-
+    public void StartWalkAwayanim()
+    {
+        player1.SetBool("walkAway", true);
+    }
     public void correctAnswer()
     {
         SManage.instance.IncreaseScore(1);
