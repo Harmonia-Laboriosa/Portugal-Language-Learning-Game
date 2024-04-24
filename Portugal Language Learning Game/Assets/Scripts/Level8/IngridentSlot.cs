@@ -25,7 +25,8 @@ public class IngridentSlot : MonoBehaviour, IDropHandler
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
 
             // Move the dropped object to the slot
-            //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            eventData.pointerDrag.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
         }
+        
     }
 }

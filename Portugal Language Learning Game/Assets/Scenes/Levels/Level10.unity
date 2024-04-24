@@ -4046,6 +4046,8 @@ MonoBehaviour:
   TempScore: 0
   scoreManager: {fileID: 1292150323}
   scoreIncreased: 
+  UserNameText: {fileID: 0}
+  UserScoreText: {fileID: 0}
 --- !u!1 &381634193
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,7 +6720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6609a8a0eaf086e4690bdc4fc9f1a0e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f74d178980074a740969be30bec53e69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13454,6 +13456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1a49589599d2443b7b5661656e2b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelScore: 
+  Level1Score: 0
+  totalScore: 0
   score: 300
   scoreText: {fileID: 1707449310}
 --- !u!1 &1303145200
