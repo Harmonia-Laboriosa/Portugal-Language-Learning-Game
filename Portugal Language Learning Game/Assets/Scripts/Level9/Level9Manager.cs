@@ -72,7 +72,7 @@ public class Level9Manager : MonoBehaviour
                     TempScore = TempScore + 1;
 
                     Debug.Log(TempScore);
-                    if (TempScore == 6)
+                    if (TempScore == 4)
                     {
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
