@@ -26,6 +26,7 @@ public class Level9Slot : MonoBehaviour, IDropHandler
             canbePlaced = false;
             // Move the dropped object to the slot
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            eventData.pointerDrag.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
         }
     }
 }
