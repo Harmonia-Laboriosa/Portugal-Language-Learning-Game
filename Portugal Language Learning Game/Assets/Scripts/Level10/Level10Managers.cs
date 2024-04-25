@@ -25,18 +25,18 @@ public class Level10Managers : MonoBehaviour
     public bool[] scoreIncreased;
     private bool gameEnded = false;
 
-    public TMP_Text UserNameText;
-    public TMP_Text UserScoreText;
-    int CurrentPlayerScore;
+    //public TMP_Text UserNameText;
+    //public TMP_Text UserScoreText;
+    //int CurrentPlayerScore;
 
     // Start is called before the first frame update
     void Start()
     {
         //Player
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-        string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
-        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
-        UserNameText.text = CurrentPlayerUsername;
+        //var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        //string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        //CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        //UserNameText.text = CurrentPlayerUsername;
 
         allObjectsPlaced = new bool[questions.Length];
         scoreIncreased = new bool[questions.Length];
@@ -53,7 +53,10 @@ public class Level10Managers : MonoBehaviour
     {
 
     }
+    public void startAnimation()
+    {
 
+    }
     void StartQuiz()
     {
         // Reset the score when starting the quiz
