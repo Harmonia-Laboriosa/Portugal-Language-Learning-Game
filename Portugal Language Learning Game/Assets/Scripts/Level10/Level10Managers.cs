@@ -24,6 +24,7 @@ public class Level10Managers : MonoBehaviour
     public SManage scoreManager;
     public bool[] scoreIncreased;
     private bool gameEnded = false;
+    public Level10animation animations;
 
     //public TMP_Text UserNameText;
     //public TMP_Text UserScoreText;
@@ -56,7 +57,7 @@ public class Level10Managers : MonoBehaviour
     }
     public IEnumerator startAnimation()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3.5f);
         StartQuiz();
     }
     void StartQuiz()
@@ -154,9 +155,16 @@ public class Level10Managers : MonoBehaviour
             Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndGameScore();
+            StartCoroutine("endAnimation");
         }
         EnableAnswerButton();
+    }
+
+    public IEnumerator endAnimation()
+    {
+        animations.end();
+        yield return new WaitForSeconds(2f);
+        EndGameScore();
     }
 
     private void EndGameScore()

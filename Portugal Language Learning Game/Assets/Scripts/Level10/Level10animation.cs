@@ -25,4 +25,10 @@ public class Level10animation : MonoBehaviour
         guard1.SetBool("sword1", true);
         guard2.SetBool("sword2", true);
     }
+
+    public void end()
+    {
+        guard1.SetBool("removesword1", true);
+        guard2.SetBool("removesword2", true);
+    }
 }
