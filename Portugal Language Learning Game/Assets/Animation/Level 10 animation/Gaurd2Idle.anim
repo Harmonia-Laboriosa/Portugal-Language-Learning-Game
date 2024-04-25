@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gaurd1 idle talk
+  m_Name: Gaurd2Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 67149344d16be4b4d982c6789d77db17, type: 3}
-    - time: 0.2
-      value: {fileID: 21300000, guid: d329ffbf3d4b1e745b58cb044d4b1c43, type: 3}
+      value: {fileID: 21300000, guid: 0af3480ad8c224b4cb11d97b84603008, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -42,14 +40,13 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 67149344d16be4b4d982c6789d77db17, type: 3}
-    - {fileID: 21300000, guid: d329ffbf3d4b1e745b58cb044d4b1c43, type: 3}
+    - {fileID: 21300000, guid: 0af3480ad8c224b4cb11d97b84603008, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -41,7 +41,8 @@ public class Level10Managers : MonoBehaviour
         allObjectsPlaced = new bool[questions.Length];
         scoreIncreased = new bool[questions.Length];
         fromSlot = 0;
-        StartQuiz();
+        
+        StartCoroutine("startAnimation");
         EndPanel.SetActive(false);
         FailedPanel.SetActive(false);
         victoryPanel.SetActive(false);
@@ -51,11 +52,12 @@ public class Level10Managers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-    public void startAnimation()
+    public IEnumerator startAnimation()
     {
-
+        yield return new WaitForSeconds(5f);
+        StartQuiz();
     }
     void StartQuiz()
     {
