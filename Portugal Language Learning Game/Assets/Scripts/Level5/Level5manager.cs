@@ -141,17 +141,29 @@ public class Level5manager : MonoBehaviour
     {
         SManage.instance.IncreaseScore(1);
         yield return new WaitForSeconds(2f);
-        if (SManage.instance.score <= 6)
+        if (SManage.instance.score < 11)
         {
             FailedPanel.SetActive(true);
         }
         else
         {
-            EndgamePanel.SetActive(true);
-            if (SManage.instance.score >= 9)
+            var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+            if (SManage.instance.score == 11)
             {
                 victoryPanel.SetActive(true);
+                EndgamePanel.SetActive(true);
+                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 4)
+                {
+                    Debug.Log("Victory Card 5 and level 6 Unlocked ");
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 5;
+                    SManage.instance.StartCoroutine("SavePlayerScore");
+                }
+                else
+                {
+                    Debug.Log("Victory Card 5 was already unlocked");
+                }
             }
+
 
         }
     }

@@ -33,10 +33,12 @@ public class Level2Manager : MonoBehaviour
     void Start()
     {
         //Player
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        /*var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
-        UserNameText.text = CurrentPlayerUsername;
+        UserNameText.text = CurrentPlayerUsername;*/
+
+        SManage.instance.ResetScore();
     }
 
     // Update is called once per frame
@@ -91,6 +93,22 @@ public class Level2Manager : MonoBehaviour
             Debug.Log("Quiz completed! and conversation started");
             // Display end game panel
             CanvasforQuestions.SetActive(false);
+            var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+            if (SManage.instance.score == 5)
+            {
+                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 1)
+                {
+                    Debug.Log("Victory Card 2 and level 3 Unlocked ");
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 2;
+                    SManage.instance.StartCoroutine("SavePlayerScore");
+                }
+                else
+                {
+                    Debug.Log("Victory Card 2 was already unlocked");
+                }
+            }
+          
+            
             DialoguePanel.SetActive(true);
             conversation.ConversationStart();
 

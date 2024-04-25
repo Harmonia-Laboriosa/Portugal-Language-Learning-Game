@@ -24,14 +24,13 @@ public class SlotManage : MonoBehaviour
 
     //public TMP_Text UserNameText;
     //public TMP_Text UserScoreText;
-    int CurrentPlayerScore;
-    public GameObject CurrentPlayer;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         //Player
-        CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        //CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         //string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         //CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
         //UserNameText.text = CurrentPlayerUsername;
@@ -222,7 +221,8 @@ public class SlotManage : MonoBehaviour
         */
         if (!gameEnded) // Check if the game has not ended yet
         {
-            if (scoreManager.score < 9)
+            CheckVictoryCard();
+            if (scoreManager.score < 13)
             {
                 failedPanel.SetActive(true);
             }
@@ -238,7 +238,7 @@ public class SlotManage : MonoBehaviour
                 }
                 */
                 EndPanel.SetActive(true);
-                if (scoreManager.score==12)
+                if (scoreManager.score==13)
                 {
                     victoryPanel.SetActive(true);
                 }
@@ -250,6 +250,8 @@ public class SlotManage : MonoBehaviour
 
     IEnumerator SavePlayerScore()
     {
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+
         string username = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         string scoreFromPlayer = CurrentPlayer.GetComponent<CurrentPlayer>().Score.ToString();
         WWWForm scoreForm = new WWWForm();
@@ -278,7 +280,23 @@ public class SlotManage : MonoBehaviour
         }
 
     }
-
+    public void CheckVictoryCard()
+    {
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+        if (SManage.instance.score == 13)
+        {
+            if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 0)
+            {
+                Debug.Log("Victory 1 and level 2 Unlocked");
+                CurrentPlayer.GetComponent<CurrentPlayer>().Score = 1;
+                StartCoroutine(SavePlayerScore());
+            }
+            else
+            {
+                Debug.Log("Already Victory 1 was uncloked so unable to increase the score.");
+            }
+        }
+    }
     private void ResetObjects(GameObject panel)
     {
         foreach (Transform slot in panel.transform)
@@ -292,3 +310,4 @@ public class SlotManage : MonoBehaviour
         CheckAllObjectsinLsstPlacedInPanel(questionPanels[questionPanels.Length-1], questionPanels.Length-1);
     }
 }
+   

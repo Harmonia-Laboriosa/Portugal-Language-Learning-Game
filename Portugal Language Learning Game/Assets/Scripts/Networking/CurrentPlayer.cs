@@ -7,7 +7,7 @@ public class CurrentPlayer : MonoBehaviour
     public string Username;
     public string Email;
     public int Score;
-
+   
     private void Awake()
     {
         var players = FindObjectsOfType<CurrentPlayer>();
@@ -16,5 +16,7 @@ public class CurrentPlayer : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        
     }
+    
 }

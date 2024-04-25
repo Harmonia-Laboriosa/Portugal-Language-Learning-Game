@@ -217,26 +217,22 @@ public class Level2Conversation : MonoBehaviour
 
     private void EndGameScore()
     {
-        if (!gameEnded) // Check if the game has not ended yet
-        {
-            if (SManage.instance.score <= 6)
+          if (SManage.instance.score < 5)
             {
                 FailedPanel.SetActive(true);
             }
-            else
+         else
             {
-                if (SManage.instance.score >= 9)
+                if (SManage.instance.score == 5)
                 {
                     victoryPanel.SetActive(true);
-                }
-                else
-                {
                     EndPanel.SetActive(true);
                 }
+                
             }
 
-            gameEnded = true; // Set the flag to true to indicate that the game has ended
-        }
+         
+        
     }
 
 }

@@ -14,7 +14,7 @@ public class PlayerGame : MonoBehaviour
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
-        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
+        CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score*5;
 
         UserNameText.text =  CurrentPlayerUsername  ;
         UserScoreText.text = CurrentPlayerScore.ToString(); 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Networking;
 public class SManage : MonoBehaviour
 {
     public static SManage instance;
@@ -73,7 +73,39 @@ public class SManage : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString(); // Update the text to display the current score
-            Debug.Log(score);
+            Debug.Log(" "+ "The current score : " + score);
         }
+    }
+    IEnumerator SavePlayerScore()
+    {
+        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+
+        string username = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
+        string scoreFromPlayer = CurrentPlayer.GetComponent<CurrentPlayer>().Score.ToString();
+        WWWForm scoreForm = new WWWForm();
+        scoreForm.AddField("apppassword", "thisisfromtheapp");
+        scoreForm.AddField("username", username);
+        scoreForm.AddField("score", scoreFromPlayer);
+        UnityWebRequest updatePlayerRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/updateplayerscore.php", scoreForm);
+        yield return updatePlayerRequest.SendWebRequest();
+        if (updatePlayerRequest.error == null)
+        {
+
+            string result = updatePlayerRequest.downloadHandler.text;
+            Debug.Log(result);
+            if (result == "0")
+            {
+                //FindObjectOfType<SceneSwitch>().LoadGameScene();
+            }
+            else
+            {
+                Debug.Log("error");
+            }
+        }
+        else
+        {
+            Debug.Log(updatePlayerRequest.error);
+        }
+
     }
 }

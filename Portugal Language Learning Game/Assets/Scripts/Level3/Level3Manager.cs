@@ -104,21 +104,30 @@ public class Level3Manager : MonoBehaviour
             Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel
-            if(SManage.instance.score<=6)
+            if(SManage.instance.score<11)
             {
                 failedPanel.SetActive(true);
             }
             else 
             {
-                
-                if (SManage.instance.score >= 9)
+                var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+                if (SManage.instance.score == 11)
                 {
                     victoryPanel.SetActive(true);
-                }
-                else
-                {
                     EndgamePanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 2)
+                    {
+                        Debug.Log("Victory Card 3 and level 4 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 3;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 3 was already unlocked");
+                    }
                 }
+                
+               
             }
             
         }

@@ -98,25 +98,30 @@ public class Level4Manager : MonoBehaviour
 
     private void EndGameScore()
     {
-        if (!gameEnded) // Check if the game has not ended yet
+        if (SManage.instance.score < 11)
         {
-            if (SManage.instance.score <= 6)
+            failedPanel.SetActive(true);
+        }
+        else
+        {
+            var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+            if (SManage.instance.score == 11)
             {
-                failedPanel.SetActive(true);
-            }
-            else
-            {
-                if (SManage.instance.score >= 9)
+                victoryPanel.SetActive(true);
+                EndgamePanel.SetActive(true);
+                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 3)
                 {
-                    victoryPanel.SetActive(true);
+                    Debug.Log("Victory Card 4 and level 5 Unlocked ");
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 4;
+                    SManage.instance.StartCoroutine("SavePlayerScore");
                 }
                 else
                 {
-                    EndgamePanel.SetActive(true);
+                    Debug.Log("Victory Card 4 was already unlocked");
                 }
             }
 
-            gameEnded = true; // Set the flag to true to indicate that the game has ended
+
         }
     }
 
