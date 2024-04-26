@@ -6440,6 +6440,8 @@ MonoBehaviour:
   WrongAnswer: {fileID: 1939882417}
   RightAnswer: {fileID: 673201034}
   conversation: {fileID: 1068507820}
+  UserNameText: {fileID: 0}
+  UserScoreText: {fileID: 0}
 --- !u!4 &1293453462
 Transform:
   m_ObjectHideFlags: 0
@@ -7853,7 +7855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1549545807
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9078,6 +9080,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1a49589599d2443b7b5661656e2b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelScore: 
+  Level1Score: 0
+  totalScore: 0
   score: 0
   scoreText: {fileID: 738270722}
 --- !u!1 &1783462067
@@ -10133,7 +10138,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 536870911
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 2

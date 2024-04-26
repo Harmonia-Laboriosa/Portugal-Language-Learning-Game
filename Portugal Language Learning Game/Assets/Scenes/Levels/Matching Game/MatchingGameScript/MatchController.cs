@@ -19,7 +19,7 @@ public class MatchController : MonoBehaviour
     private int firstGuessIndex, secondGuessIndex;
 
     private string firstGuessPuzzle, secondGuessPuzzle;
-
+    public GameObject EndGamePanel;
     private void Awake()
     {
         //puzzles = Resources.LoadAll<Sprite>("MSprites");
@@ -33,6 +33,7 @@ public class MatchController : MonoBehaviour
         AddGamePuzzles();
         Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count/2;
+        EndGamePanel.SetActive(false);
     }
 
     void GetButtons()
@@ -126,7 +127,7 @@ public class MatchController : MonoBehaviour
         {
             Debug.Log("Game Finished");
             Debug.Log("It took you " + countGuesses+" guesses.");
-
+            EndGamePanel.SetActive(true);
         }
     }
 

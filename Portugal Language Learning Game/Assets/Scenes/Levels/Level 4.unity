@@ -2192,7 +2192,7 @@ GameObject:
   - component: {fileID: 342540411}
   - component: {fileID: 342540414}
   m_Layer: 5
-  m_Name: EndPanel
+  m_Name: EndPanelAnimated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9215,6 +9215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1a49589599d2443b7b5661656e2b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelScore: 
+  Level1Score: 0
+  totalScore: 0
   score: 0
   scoreText: {fileID: 738270722}
 --- !u!1 &1112746098
@@ -9304,6 +9307,8 @@ MonoBehaviour:
   rocks: {fileID: 1777573387}
   animationscore: 0
   animations: {fileID: 1777573392}
+  UserNameText: {fileID: 0}
+  UserScoreText: {fileID: 0}
 --- !u!1 &1155154815
 GameObject:
   m_ObjectHideFlags: 0

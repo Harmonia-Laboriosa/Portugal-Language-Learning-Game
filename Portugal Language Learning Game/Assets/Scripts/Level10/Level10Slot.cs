@@ -32,7 +32,7 @@ public class Level10Slot : MonoBehaviour, IDropHandler
             }
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            
+            eventData.pointerDrag.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
             level10Manager.Next(mark);
             //eventData.pointerDrag.gameObject.SetActive(false);
         }
