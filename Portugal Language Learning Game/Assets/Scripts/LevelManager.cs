@@ -26,8 +26,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void Awake()
+   /* private void Awake()
     {
+        
         if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
@@ -35,9 +36,12 @@ public class LevelManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         
-    }
+            
 
-    public void Replay()
+
+     }*/
+
+        public void Replay()
     {
         int currentscene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentscene);

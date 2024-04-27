@@ -9137,6 +9137,8 @@ MonoBehaviour:
   - {fileID: 1484042488}
   - {fileID: 1700813663}
   PlayerAnim: {fileID: 1689929638}
+  UserNameText: {fileID: 0}
+  UserScoreText: {fileID: 0}
 --- !u!1 &1311968086
 GameObject:
   m_ObjectHideFlags: 0
@@ -10167,7 +10169,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1537966085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 315076331}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1537966085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12168,6 +12182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1a49589599d2443b7b5661656e2b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelScore: 
+  Level1Score: 0
+  totalScore: 0
   score: 0
   scoreText: {fileID: 738270722}
 --- !u!1 &1759012939

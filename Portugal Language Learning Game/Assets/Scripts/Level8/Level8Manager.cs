@@ -126,25 +126,30 @@ public class Level8Manager : MonoBehaviour
 
     private void EndGameScore()
     {
-        if (!gameEnded) // Check if the game has not ended yet
+        if (SManage.instance.score < 12)
         {
-            if (SManage.instance.score <= 2)
+            FailedPanel.SetActive(true);
+        }
+        else
+        {
+            var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+            if (SManage.instance.score == 12)
             {
-                FailedPanel.SetActive(true);
-            }
-            else
-            {
-                if (SManage.instance.score >= 4)
+                victoryPanel.SetActive(true);
+               EndPanel.SetActive(true);
+                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 7)
                 {
-                    victoryPanel.SetActive(true);
+                    Debug.Log("Victory Card 8 and level 9 Unlocked ");
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 8;
+                    SManage.instance.StartCoroutine("SavePlayerScore");
                 }
                 else
                 {
-                    EndPanel.SetActive(true);
+                    Debug.Log("Victory Card 8 was already unlocked");
                 }
             }
 
-            gameEnded = true; // Set the flag to true to indicate that the game has ended
+
         }
     }
     private IEnumerator ActivatePanelWithDelay(int nextPanelIndex)

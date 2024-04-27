@@ -1259,7 +1259,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wedding
+  m_text: 'Camisola
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -2839,8 +2841,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -503, y: 18}
-  m_SizeDelta: {x: 200, y: 400}
+  m_AnchoredPosition: {x: -566, y: 55}
+  m_SizeDelta: {x: 183.747, y: 330.2391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210721279
 MonoBehaviour:
@@ -5394,8 +5396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: -175}
-  m_SizeDelta: {x: 200, y: 400}
+  m_AnchoredPosition: {x: -83.305115, y: -184}
+  m_SizeDelta: {x: 308.5325, y: 541.3823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495112142
 MonoBehaviour:
@@ -13155,7 +13157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1421127274}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -14037,7 +14039,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1292268229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 783866146}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1292268229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15527,6 +15541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80bdd5cf0753ddc4a99ebbef98ddc0af, type: 3}
+--- !u!1 &1421127274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6524417994036197184, guid: 80bdd5cf0753ddc4a99ebbef98ddc0af, type: 3}
+  m_PrefabInstance: {fileID: 1421127273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423167942
 GameObject:
   m_ObjectHideFlags: 0
@@ -16262,8 +16281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 780, y: -175}
-  m_SizeDelta: {x: 200, y: 400}
+  m_AnchoredPosition: {x: 672.6731, y: -184}
+  m_SizeDelta: {x: 325.275, y: 541.3823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480858076
 MonoBehaviour:
@@ -19329,8 +19348,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 485, y: -175}
-  m_SizeDelta: {x: 200, y: 400}
+  m_AnchoredPosition: {x: 305.34717, y: -184}
+  m_SizeDelta: {x: 319.6942, y: 541.3823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870641792
 MonoBehaviour:
@@ -21774,7 +21793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2063719386
 RectTransform:
   m_ObjectHideFlags: 0

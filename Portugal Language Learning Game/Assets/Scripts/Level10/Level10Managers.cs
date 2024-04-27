@@ -169,25 +169,30 @@ public class Level10Managers : MonoBehaviour
 
     private void EndGameScore()
     {
-        if (!gameEnded) // Check if the game has not ended yet
+        if (SManage.instance.score < 13)
         {
-            if (SManage.instance.score <= 6)
+            FailedPanel.SetActive(true);
+        }
+        else
+        {
+            var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+            if (SManage.instance.score == 13)
             {
-                FailedPanel.SetActive(true);
-            }
-            else
-            {
-                if (SManage.instance.score >= 9)
+                victoryPanel.SetActive(true);
+                EndPanel.SetActive(true);
+                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 9)
                 {
-                    victoryPanel.SetActive(true);
+                    Debug.Log("Victory Card 10 and level 9 Unlocked ");
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 10;
+                    SManage.instance.StartCoroutine("SavePlayerScore");
                 }
                 else
                 {
-                    EndPanel.SetActive(true);
+                    Debug.Log("Victory Card 9 was already unlocked");
                 }
             }
 
-            gameEnded = true; // Set the flag to true to indicate that the game has ended
+
         }
     }
 
