@@ -33,8 +33,6 @@ public class Level9Conversation : MonoBehaviour
 
     private Coroutine typingCoroutine; // Coroutine reference for typing animation
 
-    public Level2Animation_NPC1 npcanim;
-    public Level2Animation_NPC2 npcanim2;
     public bool talk = true;
 
     public Level2AudioManager audio;
@@ -42,6 +40,8 @@ public class Level9Conversation : MonoBehaviour
     public Level6Manager level6;
 
     private bool gameEnded = false;
+
+    public Animator player;
 
     void Awake()
     {
@@ -58,11 +58,7 @@ public class Level9Conversation : MonoBehaviour
     public void ConversationStart()
     {
         talk = true;
-        if (talk && npcanim != null && npcanim2 != null)
-        {
-            npcanim.idleTalk();
-            npcanim2.idleTalk();
-        }
+
         NPCImage.SetActive(true);
         isTalking = true;
         if (ConvoLocker != null)
@@ -126,11 +122,6 @@ public class Level9Conversation : MonoBehaviour
     void GetChoices(string location)
     {
         talk = false;
-        if (!talk && npcanim != null && npcanim2 != null)
-        {
-            npcanim.idleNotTalk();
-            npcanim2.idleNotTalk();
-        }
         choiceButtons.GetChoices(reader.ReadSubnodes(file, path + location, id), reader.ChoiceAttributes);
         choiceButtons.PassChoice += ConversationUpdate;
     }
@@ -138,11 +129,6 @@ public class Level9Conversation : MonoBehaviour
     void ConversationUpdate(string lineTree)
     {
         talk = true;
-        if (talk && npcanim != null && npcanim2 != null)
-        {
-            npcanim.idleTalk();
-            npcanim2.idleTalk();
-        }
 
         choiceButtons.PassChoice -= ConversationUpdate;
 
@@ -184,12 +170,6 @@ public class Level9Conversation : MonoBehaviour
     {
         FailedPanel.SetActive(true);
         talk = false;
-
-        if (!talk && npcanim != null && npcanim2 != null)
-        {
-            npcanim.idleNotTalk();
-            npcanim2.idleNotTalk();
-        }
         Btn.PlayerImage.SetActive(false);
         //namePrinter.PrintToUI("");
         dialogeueText.text = "";
@@ -206,6 +186,7 @@ public class Level9Conversation : MonoBehaviour
     public void SucessConversation()
     {
         EndGameScore();
+        player.gameObject.GetComponent<Animator>().enabled = false;
         isTalking = false;
         if (level6 != null)
         {
