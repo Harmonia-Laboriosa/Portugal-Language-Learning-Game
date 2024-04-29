@@ -133,19 +133,22 @@ public class Level8Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 12)
+            if (CurrentPlayer != null)
             {
-                victoryPanel.SetActive(true);
-               EndPanel.SetActive(true);
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 7)
+                if (SManage.instance.score == 12)
                 {
-                    Debug.Log("Victory Card 8 and level 9 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 8;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 8 was already unlocked");
+                    victoryPanel.SetActive(true);
+                    EndPanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 7)
+                    {
+                        Debug.Log("Victory Card 8 and level 9 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 8;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 8 was already unlocked");
+                    }
                 }
             }
 

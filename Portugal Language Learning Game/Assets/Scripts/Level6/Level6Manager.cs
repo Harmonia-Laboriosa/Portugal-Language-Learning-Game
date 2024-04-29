@@ -89,19 +89,22 @@ public class Level6Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 4)
+            if (CurrentPlayer != null)
             {
-                victoryPanel.SetActive(true);
-                EndgamePanel.SetActive(true);
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 5)
+                if (SManage.instance.score == 4)
                 {
-                    Debug.Log("Victory Card 6 and level 7 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 6;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 6 was already unlocked");
+                    victoryPanel.SetActive(true);
+                    EndgamePanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 5)
+                    {
+                        Debug.Log("Victory Card 6 and level 7 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 6;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 6 was already unlocked");
+                    }
                 }
             }
 

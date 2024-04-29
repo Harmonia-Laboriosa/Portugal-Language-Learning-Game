@@ -10,7 +10,7 @@ public class LevelUpdate : MonoBehaviour
     public GameObject[] UnlockedLevel;
     // Start is called before the first frame update
     void Start()
-    {
+    {/*
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         if (CurrentPlayer != null)
         {
@@ -49,7 +49,7 @@ public class LevelUpdate : MonoBehaviour
                     Debug.Log("Only level 1 Active");
                     break;
             }
-        }
+        }*/
     }
 
    void UpdateLevelButtons(int x)

@@ -34,10 +34,10 @@ public class Level4Manager : MonoBehaviour
     void Start()
     {
         //Player
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+      /*  var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
-        UserNameText.text = CurrentPlayerUsername;
+        UserNameText.text = CurrentPlayerUsername;*/
 
         StartQuiz();
         boulder.gameObject.SetActive(false);
@@ -105,22 +105,24 @@ public class Level4Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 11)
+            if (CurrentPlayer != null)
             {
-                victoryPanel.SetActive(true);
-                EndgamePanel.SetActive(true);
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 3)
+                if (SManage.instance.score == 11)
                 {
-                    Debug.Log("Victory Card 4 and level 5 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 4;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 4 was already unlocked");
+                    victoryPanel.SetActive(true);
+                    EndgamePanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 3)
+                    {
+                        Debug.Log("Victory Card 4 and level 5 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 4;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 4 was already unlocked");
+                    }
                 }
             }
-
 
         }
     }

@@ -176,22 +176,24 @@ public class Level10Managers : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 13)
+            if (CurrentPlayer != null)
             {
-                victoryPanel.SetActive(true);
-                EndPanel.SetActive(true);
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 9)
+                if (SManage.instance.score == 13)
                 {
-                    Debug.Log("Victory Card 10 and level 9 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 10;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 9 was already unlocked");
+                    victoryPanel.SetActive(true);
+                    EndPanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 9)
+                    {
+                        Debug.Log("Victory Card 10 and level 9 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 10;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 9 was already unlocked");
+                    }
                 }
             }
-
 
         }
     }

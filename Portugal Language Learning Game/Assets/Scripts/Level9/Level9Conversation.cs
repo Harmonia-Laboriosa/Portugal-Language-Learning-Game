@@ -232,22 +232,24 @@ public class Level9Conversation : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 5)
+            if (CurrentPlayer != null)
             {
-                victoryPanel.SetActive(true);
-                EndPanel.SetActive(true);
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 8)
+                if (SManage.instance.score == 5)
                 {
-                    Debug.Log("Victory Card 9 and level 10 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 9;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 9 was already unlocked");
+                    victoryPanel.SetActive(true);
+                    EndPanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 8)
+                    {
+                        Debug.Log("Victory Card 9 and level 10 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 9;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 9 was already unlocked");
+                    }
                 }
             }
-
 
         }
     }

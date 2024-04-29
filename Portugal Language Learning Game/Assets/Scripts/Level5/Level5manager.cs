@@ -45,10 +45,10 @@ public class Level5manager : MonoBehaviour
     void Start()
     {
         //Player
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+      /*  var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
-        UserNameText.text = CurrentPlayerUsername;
+        UserNameText.text = CurrentPlayerUsername;*/
 
         bg.SetActive(true);
         bg1.SetActive(false);
@@ -148,19 +148,22 @@ public class Level5manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 11)
+            if (CurrentPlayer != null)
             {
-                victoryPanel.SetActive(true);
-                EndgamePanel.SetActive(true);
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 4)
+                if (SManage.instance.score == 11)
                 {
-                    Debug.Log("Victory Card 5 and level 6 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 5;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 5 was already unlocked");
+                    victoryPanel.SetActive(true);
+                    EndgamePanel.SetActive(true);
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 4)
+                    {
+                        Debug.Log("Victory Card 5 and level 6 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 5;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 5 was already unlocked");
+                    }
                 }
             }
 

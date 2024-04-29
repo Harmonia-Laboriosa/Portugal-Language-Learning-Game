@@ -283,17 +283,20 @@ public class SlotManage : MonoBehaviour
     public void CheckVictoryCard()
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-        if (SManage.instance.score == 13)
+        if (CurrentPlayer != null)
         {
-            if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 0)
+            if (SManage.instance.score == 13)
             {
-                Debug.Log("Victory 1 and level 2 Unlocked");
-                CurrentPlayer.GetComponent<CurrentPlayer>().Score = 1;
-                StartCoroutine(SavePlayerScore());
-            }
-            else
-            {
-                Debug.Log("Already Victory 1 was uncloked so unable to increase the score.");
+                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 0)
+                {
+                    Debug.Log("Victory 1 and level 2 Unlocked");
+                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 1;
+                    StartCoroutine(SavePlayerScore());
+                }
+                else
+                {
+                    Debug.Log("Already Victory 1 was uncloked so unable to increase the score.");
+                }
             }
         }
     }

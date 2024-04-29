@@ -34,10 +34,10 @@ public class Level3Manager : MonoBehaviour
     void Start()
     {
         //Player
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
+       /* var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         string CurrentPlayerUsername = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
         CurrentPlayerScore = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
-        UserNameText.text = CurrentPlayerUsername;
+        UserNameText.text = CurrentPlayerUsername;*/
 
 
         StartQuiz();
@@ -111,23 +111,25 @@ public class Level3Manager : MonoBehaviour
             else 
             {
                 var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-                if (SManage.instance.score == 11)
+                if (CurrentPlayer != null)
                 {
-                    victoryPanel.SetActive(true);
-                    EndgamePanel.SetActive(true);
-                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 2)
+                    if (SManage.instance.score == 11)
                     {
-                        Debug.Log("Victory Card 3 and level 4 Unlocked ");
-                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 3;
-                        SManage.instance.StartCoroutine("SavePlayerScore");
+                        victoryPanel.SetActive(true);
+                        EndgamePanel.SetActive(true);
+                        if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 2)
+                        {
+                            Debug.Log("Victory Card 3 and level 4 Unlocked ");
+                            CurrentPlayer.GetComponent<CurrentPlayer>().Score = 3;
+                            SManage.instance.StartCoroutine("SavePlayerScore");
+                        }
+                        else
+                        {
+                            Debug.Log("Victory Card 3 was already unlocked");
+                        }
                     }
-                    else
-                    {
-                        Debug.Log("Victory Card 3 was already unlocked");
-                    }
+
                 }
-                
-               
             }
             
         }

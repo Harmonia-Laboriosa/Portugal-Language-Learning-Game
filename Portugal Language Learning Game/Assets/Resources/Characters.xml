@@ -1,214 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Greeting said at start of conversation -->
+<!-- NPC tag is the NPC answer to the player's response, will be printed to the dialogue box -->
+<!-- Response tag is a player option that should be printed to a button -->
+<!-- Tree(int) tags are the conversation's contents after the greeting-->
 <CharacterCollection>
   <Characters>
-    <Character name="Sjerd">
-      <Name>Sjerd</Name>
-      <Greeting>
-        Hello! I'm [name of NPC]. How are you?
-        <Response next="0">
-          Hello! I'm good. I'm [name of player].
-        </Response>
-        <Response next="Quit">
-          Bye
-        </Response>
+    <Character name="Alex">
+      
+      <Name>Alex</Name>
+      <Greeting>Ola
+        <Response next="0">Boa tarde!</Response>
+        <Response next="Quit">Boa noite!</Response>
       </Greeting>
-      <Tree0>
-        I'm alright, little busy though
-        <Response next="1">
-          I have a mission to find a Victory Card, do you know if there is one?
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
+  
+      <Tree0>Ora, boa tarde, jovem. Como está?
+        <Response next="1">Estou muito bem, obrigado. E o senhor?</Response>
+        <Response next="Quit">Não sei.</Response>
       </Tree0>
-      <Tree1>
-        Hmm, I've heard of something similar here in the kingdom... but the path is treacherous... What leads you to want to find it?
-        <Response next="2">
-          I want to discover more about Portuguese culture
-        </Response>
-        <Response next="Quit">
-          Nope
-        </Response>
-        <Response next="Quit">
-          MY BRAIN!
-        </Response>
+  
+      <Tree1>Ah sim? Mas nunca o vi por aqui. Quem é?
+        <Response next="2"> Sou um simples rapaz que se mudou para esta bela aldeia. Queria aprender a vestir-me como vocês.</Response>
+        <Response next="Quit">Sou um ladrão e quero roubar-vos.</Response>
       </Tree1>
-      <Tree2>
-        Ah, yes! If I remember correctly, to reach the VC, you need to go through two difficult challenges. First, you have to unlock the entrance to the cave. But be careful... Mistakes will cost you dearly!
-        <Response next="3">
-          How can I do that?
-        </Response>
-        <Response next="Quit">
-          No thanks, I should go
-        </Response>
+  
+      <Tree2>Interessante! E o que faz da vida?
+        <Response next="3">Sou pescador.</Response>
+        <Response next="Quit">sou um ladrão.</Response>
       </Tree2>
-      <Tree3>
-        You have to go through a series of challenges that will take you to a village of wizards. But remember... Each mistake can block your entry.
-        <Response next="4">
-          Where is the village?
-        </Response>
-        <Response next="Quit">
-          See you then
-        </Response>
+      
+      <Tree3>A sério? Também gostava de ser. Como é o seu dia?
+        <Response next="4">O meu dia começa a acordar bem cedo, às 5 horas da manhã.</Response>
+        <Response next="Quit">O meu dia começa bem cedo, às 5 horas da tarde.</Response>
       </Tree3>
-      <Tree4>
-        There's a portal in the cave that takes you to the village. There, you have to adapt to their customs. Dress like them, speak like them, eat like them. That way, you'll gain their trust. Then, the wizards will help you find the castle where the VC is kept.
-        <Response next="5">
-          How do I get into the castle?
-        </Response>
-        <Response next="Quit">
-          See you then
-        </Response>
+  
+      <Tree4>E depois?
+        <Response next="5"> Depois, faço como todos nós: lavo os dentes, tomo o pequeno almoço, visto-me e ponho-me a caminho.</Response>
+        <Response next="Quit">Depois, vou jantar, tomar banho e, finalmente, vou dormir.</Response>
       </Tree4>
-      <Tree5>
-        After gaining the trust of the wizards, you have to gain the trust of the castle guards. Dress like one of them and pass their tests. If you succeed, you'll have access to the castle. The VC is there.
-        <Response next="6">
-          So, now do I have everything to get the VC?
-        </Response>
-        <Response next="Quit">
-          See you then
-        </Response>
+
+      <Tree5>E quando chega do mar?
+        <Response next="6">Quando volto, vou jantar, tomar banho e, finalmente, vou dormir.</Response>
+        <Response next="Quit">Quando volto, vou jantar, tomar banho e, finalmente, vou dormir.</Response>
       </Tree5>
-      <Tree6>
-        No. You still have to solve one last challenge. In the end, the VC can finally be yours. Are you up to the challenges?
-        <Response next="7">
-          Yes.
-        </Response>
-        <Response next="Quit">
-          See you then
-        </Response>
+  
+      <Tree6>E quando chega do mar?Parece-me um dia em cheio!
+        <Response next="7">Sim. Mas hoje não fui trabalhar, pois ando à procura da tal loja de roupa onde posso encontrar uma roupa mágica.</Response>
+        <Response next="Quit">Sim. Mas pare de me chatear e diga-me onde está a loja.</Response>
       </Tree6>
-      <Tree7>
-        I wish you luck on your journey.
-        <Response next="Success">
-          See you then
-        </Response>
+   
+      <Tree7>Para que quer essa roupa? Pode ser perigosa se usada da forma errada, por um não feiticeiro...
+        <Response next="8">Ah, só porque gosto muito de magia e quero adaptar-me aos vossos costumes.</Response>
+        <Response next="Quit">porque quero assaltar o castelo sem que me apanhem.</Response>
       </Tree7>
-    </Character>
-    <Character name="Shreya">
-      <Name>Local 1</Name>
-      <Greeting>
-        Hello! I'm [name of NPC]. How are you?
-        <Response next="0">
-          Hello, how are you?
-        </Response>
-        <Response next="Quit">
-          Bye
-        </Response>
-      </Greeting>
-      <Tree0>
-        I'm very well. Nice to meet you. Are you new around here?
-        <Response next="1">
-          Yes, I am! Could you tell me where the village clothing store is?
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
-      </Tree0>
-      <Tree1>
-        Of course. It's to the right of the café, right under the big tree with green leaves.
-        <Response next="Success">
-          Thank you so much, and nice to meet you!
-        </Response>
-      </Tree1>
-    </Character>
-    <Character name="AJ">
-      <Name>Local 2</Name>
-      <Greeting>
-        Hello! I'm [name of NPC]. How are you?
-        <Response next="0">
-          Good afternoon, what is the fastest means of transportation to the clothing store?
-        </Response>
-        <Response next="Quit">
-          Bye
-        </Response>
-      </Greeting>
-      <Tree0>
-        Hello! The fastest means of transportation is by car, takes about 5 minutes.
-        <Response next="1">
-          Thank you, and what is the cheapest, please?
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
-      </Tree0>
-      <Tree1>
-        The cheapest is to go by bike or on foot, takes between 20 to 25 minutes.
-        <Response next="2">
-          And if I want something in between, faster than a bike but cheaper than a car?
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
-      </Tree1> 
-      <Tree2>
-        Ah, you can take the bus, it takes approximately 10 minutes.
-        <Response next="Success">
-          Thank you very much!
-        </Response>
-      </Tree2>
-    </Character>
-
-    <Character name="OldMan">
-      <Name>OldMan</Name>
-      <Greeting>
-        Hello! I'm [name of NPC].
-        <Response next="0">
-          Hello! I'm [name of player]. How are you?
-        </Response>
-        <Response next="Quit">
-          Bye
-        </Response>
-      </Greeting>
-      <Tree0>
-        Hello! I'm good. What are you looking for here?
-
-        <Response next="1">
-          I need help to complete a mission. Could you help me?
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
-      </Tree0>
-      <Tree1>
-        Hmm lets do the follwoing: if you asnwer my enigmas, I will help you. If you cant answer, I wont be able to help you.
-
-        <Response next="Success">
-          Deal. Lets go.
-
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
-      </Tree1> 
      
-    </Character>
-    <Character name="MJ">
-      <Name>Local 3</Name>
-      <Greeting>
-        Hello! I'm [name of NPC]. How are you?
-        <Response next="0">
-          Good afternoon, I would like to buy typical clothes from your village.
-        </Response>
-        <Response next="Quit">
-          Bye
-        </Response>
+      <Tree8>Muito bem. Parece-me um rapaz simpático, vou ajudá-lo!
+        <Response next="Success"> Muito obrigado!</Response>
+        <Response next="Quit">Finalmente!</Response>
+      </Tree8>
+  
+      </Character>
+
+      <Character name="Harry">
+      
+        <Name>Harry</Name>
+        <Greeting> boa noite, jovem. Como está?
+          <Response next="0">Bem, obrigado. Olhe, o que é que me pode dizer sobre uma tal de Victory Card?</Response>
+          <Response next="Quit"> Bem, obrigado. Olhe, porque é que me pode dizer sobre uma tal de Victory Card?</Response>
+        </Greeting>
+    
+        <Tree0>Bem, eu sei que é um artefacto poderoso que dita o destino do reino.
+          <Response next="1">Exatamente. Onde a posso encontrar?</Response>
+          <Response next="Quit">Exatamente. Onde a posso encontrar?</Response>
+        </Tree0>
+    
+        <Tree1>Hm, qual é o seu interesse na VC?
+          <Response next="2">Apenas curiosidade, senhor. Ouvi contos sobre a sua história. Como posso aprender mais?</Response>
+          <Response next="Quit">Apenas curiosidade, senhor. Ouvi contos sobre a sua história. Porque posso aprender mais?</Response>
+        </Tree1>
+    
+        <Tree2>Bem, o festival da aldeia aproxima-se e, durante a festa, o castelo costuma baixar a guarda.
+          <Response next="3">E quando começa o festival?</Response>
+          <Response next="Quit"> E qual começa o festival?</Response>
+        </Tree2>
+        
+        <Tree3>Começa daqui a uma semana, quando a lua se encher no céu..
+          <Response next="4"> E como é que acha que posso usar a minha roupa mágica da invisibilidade?</Response>
+          <Response next="Quit">E quanto é que acha que posso usar a minha roupa mágica da invisibilidade</Response>
+        </Tree3>
+            
+        <Tree4>Roupa mágica? Que ferramenta poderosa… Pode passar pelos guardas mais facilmente…
+          <Response next="5">Boa idea! Obrigado pela ajuda, amigo.</Response>
+        </Tree4>
+                
+        <Tree5>Lembre-se, com grande poder vem grande responsabilidade. Boa sorte!
+          <Response next="Success">Palavras sábias. Até breve!</Response>
+        </Tree5>
+    
+    
+          
+        </Character>
+
+    <Character name="Sjerd">
+      
+      <Name>Sjerd</Name>
+      <Greeting>Então… tens de desbloquear a entrada da gruta e da aldeia. Cuidado, cada erro pode estragar tudo!
+        <Response next="0">onde fica a aldeia?</Response>
+        <Response next="Quit">Não posso ir direto à VC?</Response>
       </Greeting>
-      <Tree0>
-        Ah yes, of course, this is the typical attire of this Portuguese village.
-        <Response next="1">
-          Sorry, could you repeat? I didn't understand what you meant by "attire."
-        </Response>
-        <Response next="Quit">
-          Okay, I'll leave you be then
-        </Response>
+  
+      <Tree0>Há um portal na gruta que te leva lá. Lá, tens de te ambientar aos costumes.
+        <Response next="1">Que costumes?</Response>
+        <Response next="Quit">deixe lá…</Response>
       </Tree0>
-      <Tree1>
-        Of course, attire refers to typical clothing of a particular group. This is the typical one for this village. shows attire
-        <Response next="Success">
-          Ah, I see! Thank you very much.
-        </Response>
-      </Tree1> 
+  
+      <Tree1>Tens de te vestir, falar e comer como eles e os feiticeiros vão ajudar-te a encontrar o castelo, onde a VC está
+        <Response next="2">Como é que vou entrar no castelo?</Response>
+        <Response next="Quit">Eu acho que não consigo.</Response>
+      </Tree1>
+  
+      <Tree2>Depois dos feiticeiros, tens de conquistar a confiança dos guardas do castelo
+        <Response next="3">E assim, tenho tudo para ganhar a VC?</Response>
+        <Response next="Quit">Pois, se calhar já não tenho interesse…</Response>
+      </Tree2>
+      
+      <Tree3>Não, tens de resolver o último desafio. No fim, a VC será tua. Boa sorte
+        <Response next="Success">SEE YOU THEN!</Response>
+      </Tree3>
+  
+        
+      </Character>
+          
+    <Character name="Armin">
+      
+      <Name>Armin</Name>
+      
+      <Greeting>Ola, my dude!
+        <Response next="0">Olá! Sou o Alex. Tudo bem?</Response>
+      </Greeting>
+
+      <Tree0> Olá! Tudo bem. Sou o Armin. O que procuras por aqui?
+        <Response next="1">Preciso de ajuda para chegar a uma coisa chamada Victory Card. Podias ajudar-me?</Response>
+      </Tree0>
+
+      <Tree1>Hmm vamos fazer assim: se responderes aos meus enigmas, eu ajudo-te. Se não conseguires, não te posso ajudar.
+        <Response next="Success"> Combinado. Vamos a isso.</Response>
+        <Response next="Quit">NO!</Response>
+      </Tree1>
+     
+      
     </Character>
+
+
   </Characters>
 </CharacterCollection>

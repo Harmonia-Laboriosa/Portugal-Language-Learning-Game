@@ -94,20 +94,22 @@ public class Level2Manager : MonoBehaviour
             // Display end game panel
             CanvasforQuestions.SetActive(false);
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (SManage.instance.score == 5)
+            if (CurrentPlayer != null)
             {
-                if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 1)
+                if (SManage.instance.score == 5)
                 {
-                    Debug.Log("Victory Card 2 and level 3 Unlocked ");
-                    CurrentPlayer.GetComponent<CurrentPlayer>().Score = 2;
-                    SManage.instance.StartCoroutine("SavePlayerScore");
-                }
-                else
-                {
-                    Debug.Log("Victory Card 2 was already unlocked");
+                    if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 1)
+                    {
+                        Debug.Log("Victory Card 2 and level 3 Unlocked ");
+                        CurrentPlayer.GetComponent<CurrentPlayer>().Score = 2;
+                        SManage.instance.StartCoroutine("SavePlayerScore");
+                    }
+                    else
+                    {
+                        Debug.Log("Victory Card 2 was already unlocked");
+                    }
                 }
             }
-          
             
             DialoguePanel.SetActive(true);
             conversation.ConversationStart();
