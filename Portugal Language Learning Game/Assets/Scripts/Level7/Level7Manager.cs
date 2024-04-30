@@ -79,6 +79,7 @@ public class Level7Manager : MonoBehaviour
 
     private void EndGameScore()
     {
+        Debug.Log("Level ended");
         if (SManage.instance.score < 10)
         {
             FailedPanel.SetActive(true);
