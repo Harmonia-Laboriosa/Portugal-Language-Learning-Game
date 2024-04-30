@@ -124,8 +124,8 @@ public class Level2Manager : MonoBehaviour
         RightAnswer.Play();
         // Change the selected (incorrect) answer button color to green
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        selectedButton.GetComponent<Image>().color = Color.green;
-
+        selectedButton.GetComponent<Image>().color = Color.green; 
+         
         // Update the score using ScoreManager
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
@@ -181,6 +181,7 @@ public class Level2Manager : MonoBehaviour
 
     IEnumerator DelayBeforeNextQuestion()
     {
+      
         // Delay for a short time before moving to the next question
         yield return new WaitForSeconds(1f);
 
