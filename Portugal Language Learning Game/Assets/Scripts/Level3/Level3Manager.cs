@@ -111,10 +111,12 @@ public class Level3Manager : MonoBehaviour
             else 
             {
                 var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-                if (CurrentPlayer != null)
+                //Error 
+                if (CurrentPlayer != null || CurrentPlayer == null)
                 {
                     if (SManage.instance.score == 11)
                     {
+                        Debug.Log("complete");
                         victoryPanel.SetActive(true);
                         EndgamePanel.SetActive(true);
                         if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 2)

@@ -3007,7 +3007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &216880044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14885,7 +14885,7 @@ GameObject:
   - component: {fileID: 1032912705}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21181,7 +21181,7 @@ GameObject:
   - component: {fileID: 1446795614}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24400,7 +24400,7 @@ GameObject:
   - component: {fileID: 1659994750}
   m_Layer: 0
   m_Name: Day4
-  m_TagString: i
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31950,7 +31950,7 @@ GameObject:
   - component: {fileID: 692456617936155648}
   m_Layer: 0
   m_Name: Day2
-  m_TagString: i
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32171,7 +32171,7 @@ GameObject:
   - component: {fileID: 692456618418893140}
   m_Layer: 0
   m_Name: Day1
-  m_TagString: i
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33000,7 +33000,7 @@ GameObject:
   - component: {fileID: 692456619763980239}
   m_Layer: 0
   m_Name: Day3
-  m_TagString: i
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33924,15 +33924,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Select the correct answers from the given option
 
-    
 
-    Drag and
-    drop the correct ingredients into the bowl
 
-    
+    Drag and drop
+    the correct ingredients into the bowl
 
-    Arrange the steps according
-    to the the recipe in the correct order
+
+
+    Arrange the steps according to the
+    the recipe in the correct order
 
 '
   m_isRightToLeft: 0

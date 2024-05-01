@@ -27,7 +27,11 @@ public class IngridentSlot : MonoBehaviour, IDropHandler
 
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
-            eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text="";
+            if(eventData.pointerDrag.tag == "i")
+            {
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            }
+            
         }
         
     }

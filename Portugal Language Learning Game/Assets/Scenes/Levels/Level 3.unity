@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 1795411}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e84d189c84625a45baefe782a744b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   level3Manager: {fileID: 1293453463}
 --- !u!1 &86766908
 GameObject:
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e84d189c84625a45baefe782a744b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   level3Manager: {fileID: 1293453463}
 --- !u!1 &153921021
 GameObject:
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 236927629}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1176,7 +1176,7 @@ RectTransform:
   m_Children:
   - {fileID: 845137609}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e84d189c84625a45baefe782a744b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   level3Manager: {fileID: 1293453463}
 --- !u!1 &347396345
 GameObject:
@@ -2714,7 +2714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e84d189c84625a45baefe782a744b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   level3Manager: {fileID: 1293453463}
 --- !u!1 &447234156
 GameObject:
@@ -3483,7 +3483,7 @@ GameObject:
   - component: {fileID: 558627899}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3502,7 +3502,7 @@ RectTransform:
   m_Children:
   - {fileID: 532518956}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3609,7 +3609,7 @@ RectTransform:
   m_Children:
   - {fileID: 1275480475}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4493,7 +4493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &664059995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 769664479}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4948,7 +4948,7 @@ RectTransform:
   m_Children:
   - {fileID: 821267310}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5759,7 +5759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: de
+  m_text: "\xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -6771,7 +6771,7 @@ GameObject:
   - component: {fileID: 998394376}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7221,7 +7221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e84d189c84625a45baefe782a744b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   level3Manager: {fileID: 1293453463}
 --- !u!1 &1044785365 stripped
 GameObject:
@@ -7524,7 +7524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1100466920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7562,7 +7562,7 @@ GameObject:
   - component: {fileID: 1109783178}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7581,7 +7581,7 @@ RectTransform:
   m_Children:
   - {fileID: 1850459840}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8226,7 +8226,7 @@ RectTransform:
   m_Children:
   - {fileID: 1001413001}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11026,7 +11026,7 @@ RectTransform:
   m_Children:
   - {fileID: 409937058}
   m_Father: {fileID: 2012323271}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13410,7 +13410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1975157447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13503,13 +13503,13 @@ RectTransform:
   - {fileID: 1687579940}
   - {fileID: 998394371}
   - {fileID: 1795406}
-  - {fileID: 236927624}
   - {fileID: 567944013}
-  - {fileID: 769664478}
   - {fileID: 1109783173}
   - {fileID: 1574843274}
-  - {fileID: 558627898}
   - {fileID: 1245378201}
+  - {fileID: 769664478}
+  - {fileID: 236927624}
+  - {fileID: 558627898}
   m_Father: {fileID: 983130506}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13741,7 +13741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e84d189c84625a45baefe782a744b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   level3Manager: {fileID: 1293453463}
 --- !u!1 &2113452746
 GameObject:
