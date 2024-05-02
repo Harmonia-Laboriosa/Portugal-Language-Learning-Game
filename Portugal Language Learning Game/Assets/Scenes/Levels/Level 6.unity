@@ -4874,7 +4874,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1330768281}
         m_TargetAssemblyTypeName: Level6Manager, Assembly-CSharp
-        m_MethodName: IncorrectAnswer
+        m_MethodName: CorrectAnswer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7524,7 +7524,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1330768281}
         m_TargetAssemblyTypeName: Level6Manager, Assembly-CSharp
-        m_MethodName: CorrectAnswer
+        m_MethodName: IncorrectAnswer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
