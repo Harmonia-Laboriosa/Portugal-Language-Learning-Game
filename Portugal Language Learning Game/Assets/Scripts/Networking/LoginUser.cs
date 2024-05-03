@@ -65,8 +65,9 @@ public class LoginUser : MonoBehaviour
         LoginInfo.AddField("apppassword", "thisisfromtheapp");
         LoginInfo.AddField("username", usernameInput.text);
         LoginInfo.AddField("password", passwordInput.text);
+        UnityWebRequest loginRequest = UnityWebRequest.Post("https://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/loginuser.php", LoginInfo);
         //UnityWebRequest loginRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/loginuser.php", LoginInfo);
-        UnityWebRequest loginRequest = UnityWebRequest.Post("https://gamingpll1.s3.amazonaws.com/PHPFIles/cruds/loginuser.php", LoginInfo);
+        //UnityWebRequest loginRequest = UnityWebRequest.Post("https://gamingpll1.s3.amazonaws.com/PHPFIles/cruds/loginuser.php", LoginInfo);
         yield return loginRequest.SendWebRequest();
         if(loginRequest.error == null)
         {

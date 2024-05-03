@@ -82,7 +82,7 @@ public class Level8Manager : MonoBehaviour
                     TempScore = TempScore + 1;
                     
                     Debug.Log(TempScore);
-                    if (TempScore == 4)
+                    if (TempScore == 6)
                     {
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
@@ -133,7 +133,7 @@ public class Level8Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (CurrentPlayer != null)
+            if (CurrentPlayer != null || CurrentPlayer == null)
             {
                 if (SManage.instance.score == 12)
                 {

@@ -89,7 +89,7 @@ public class Level6Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (CurrentPlayer != null)
+            if (CurrentPlayer != null || CurrentPlayer == null)
             {
                 if (SManage.instance.score == 4)
                 {

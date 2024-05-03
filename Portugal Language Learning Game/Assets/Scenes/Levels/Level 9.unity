@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 42181015}
   m_Layer: 0
   m_Name: Drag3
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 55925640}
   - component: {fileID: 55925643}
   - component: {fileID: 55925644}
+  - component: {fileID: 55925645}
   m_Layer: 5
   m_Name: NPC
   m_TagString: NPC
@@ -530,18 +531,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55925638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1947321413}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 842, y: -244}
-  m_SizeDelta: {x: 272.2982, y: 274.2115}
+  m_SizeDelta: {x: 150, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55925640
 MonoBehaviour:
@@ -563,7 +564,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 674b7750fa33b6f499a01776b6253252, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 375012e2d595d6147998310173f4dd5d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -624,19 +625,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 55925640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 55925644}
-        m_TargetAssemblyTypeName: Level9Conversation, Assembly-CSharp
-        m_MethodName: ConversationStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &55925644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +641,7 @@ MonoBehaviour:
   namePrinter: {fileID: 0}
   Btn: {fileID: 23440062}
   EndPanel: {fileID: 8771637320327030928}
-  FailedPanel: {fileID: 0}
+  FailedPanel: {fileID: 985379763558059938}
   victoryPanel: {fileID: 1645482272}
   healthSlider: {fileID: 0}
   file: Characters
@@ -664,6 +653,27 @@ MonoBehaviour:
   audio: {fileID: 0}
   level6: {fileID: 0}
   player: {fileID: 850970954}
+--- !u!95 &55925645
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55925638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b66ab1025c139c54099ee5085747eba5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &58333775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &104132516
 MonoBehaviour:
@@ -1299,7 +1309,7 @@ GameObject:
   - component: {fileID: 123810192}
   m_Layer: 0
   m_Name: Drag3
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1713,7 +1723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &181795799
 MonoBehaviour:
@@ -2412,7 +2422,7 @@ MonoBehaviour:
   TempScore: 0
   questionManager: {fileID: 1512613125}
   waitForNextQuestion: 1
-  EndPanel: {fileID: 1947321412}
+  EndPanel: {fileID: 8771637320327030928}
   currentQuestion: 0
   conversation: {fileID: 0}
 --- !u!1 &377301343
@@ -3007,7 +3017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &435725605
 MonoBehaviour:
@@ -3213,7 +3223,7 @@ RectTransform:
   m_Children:
   - {fileID: 656829718}
   m_Father: {fileID: 900958402}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3232,7 +3242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &507899697
 MonoBehaviour:
@@ -3879,7 +3889,7 @@ GameObject:
   - component: {fileID: 664773002}
   m_Layer: 0
   m_Name: Drag1
-  m_TagString: o
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4265,7 +4275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &674929683
 MonoBehaviour:
@@ -4779,7 +4789,7 @@ RectTransform:
   m_Children:
   - {fileID: 1461756261}
   m_Father: {fileID: 1718995978}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4798,7 +4808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &747900842
 MonoBehaviour:
@@ -5064,7 +5074,7 @@ GameObject:
   - component: {fileID: 815626171}
   m_Layer: 0
   m_Name: Drag2
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5208,7 +5218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &834974187
 MonoBehaviour:
@@ -5260,6 +5270,7 @@ GameObject:
   - component: {fileID: 850970953}
   - component: {fileID: 850970952}
   - component: {fileID: 850970954}
+  - component: {fileID: 850970955}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -5346,6 +5357,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &850970955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850970950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31ee63157d101646859e430ca64a5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCanim: {fileID: 55925645}
+  dialogue: {fileID: 55925644}
 --- !u!1 &852504299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,7 +5423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &852504302
 MonoBehaviour:
@@ -5470,8 +5495,8 @@ RectTransform:
   - {fileID: 2063294997}
   - {fileID: 1997638605}
   - {fileID: 1385886734}
-  - {fileID: 2009980648}
   - {fileID: 507899695}
+  - {fileID: 2009980648}
   - {fileID: 2054498072}
   - {fileID: 664773001}
   - {fileID: 815626170}
@@ -5846,7 +5871,7 @@ GameObject:
   - component: {fileID: 1005148205}
   m_Layer: 0
   m_Name: Drag4
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6608,7 +6633,7 @@ GameObject:
   - component: {fileID: 1164279489}
   m_Layer: 0
   m_Name: Drag2
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6720,7 +6745,7 @@ GameObject:
   - component: {fileID: 1252539954}
   m_Layer: 0
   m_Name: Drag2
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6827,7 +6852,7 @@ GameObject:
   - component: {fileID: 1261629809}
   m_Layer: 0
   m_Name: Drag3
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6934,7 +6959,7 @@ GameObject:
   - component: {fileID: 1284966712}
   m_Layer: 0
   m_Name: Drag3
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7473,7 +7498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &1385886736
 MonoBehaviour:
@@ -7623,7 +7648,7 @@ RectTransform:
   m_Children:
   - {fileID: 160336450}
   m_Father: {fileID: 1718995978}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7642,7 +7667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &1414104561
 MonoBehaviour:
@@ -9066,7 +9091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &1631661831
 MonoBehaviour:
@@ -9126,7 +9151,7 @@ GameObject:
   - component: {fileID: 1649892385}
   m_Layer: 0
   m_Name: Drag1
-  m_TagString: o
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9233,7 +9258,7 @@ GameObject:
   - component: {fileID: 1652962233}
   m_Layer: 0
   m_Name: Drag1
-  m_TagString: o
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9627,8 +9652,8 @@ RectTransform:
   - {fileID: 392732586}
   - {fileID: 1871325609}
   - {fileID: 181795797}
-  - {fileID: 1414104559}
   - {fileID: 747900840}
+  - {fileID: 1414104559}
   - {fileID: 733926555}
   - {fileID: 2019987853}
   - {fileID: 1252539953}
@@ -10310,7 +10335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &1870316550
 MonoBehaviour:
@@ -10402,7 +10427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &1871325611
 MonoBehaviour:
@@ -10829,7 +10854,7 @@ GameObject:
   - component: {fileID: 1924319175}
   m_Layer: 0
   m_Name: Drag4
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11326,7 +11351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &1997638607
 MonoBehaviour:
@@ -11381,7 +11406,7 @@ GameObject:
   - component: {fileID: 2000439256}
   m_Layer: 0
   m_Name: Drag4
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11506,7 +11531,7 @@ RectTransform:
   m_Children:
   - {fileID: 617814262}
   m_Father: {fileID: 900958402}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11525,7 +11550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &2009980650
 MonoBehaviour:
@@ -11715,7 +11740,7 @@ GameObject:
   - component: {fileID: 2015093712}
   m_Layer: 0
   m_Name: Drag4
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11822,7 +11847,7 @@ GameObject:
   - component: {fileID: 2019987854}
   m_Layer: 0
   m_Name: Drag1
-  m_TagString: o
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11966,7 +11991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &2044693894
 MonoBehaviour:
@@ -12309,7 +12334,7 @@ GameObject:
   - component: {fileID: 2087193139}
   m_Layer: 0
   m_Name: Drag2
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14317,7 +14342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!1 &6009068064545613663
 GameObject:
@@ -14739,7 +14764,7 @@ GameObject:
   - component: {fileID: 6009068065225286594}
   m_Layer: 0
   m_Name: Drag4
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14921,7 +14946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &6555101618481950624
 MonoBehaviour:
@@ -15013,7 +15038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!224 &6555101618518872760
 RectTransform:
@@ -15051,7 +15076,7 @@ GameObject:
   - component: {fileID: 6555101618518872768}
   m_Layer: 0
   m_Name: Drag2
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15272,7 +15297,7 @@ GameObject:
   - component: {fileID: 6555101619001610260}
   m_Layer: 0
   m_Name: Drag1
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15724,7 +15749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509eb574796871409e61b3b185ac7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &6555101619583143408
 MonoBehaviour:
@@ -16058,7 +16083,7 @@ GameObject:
   - component: {fileID: 6555101620348286607}
   m_Layer: 0
   m_Name: Drag3
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

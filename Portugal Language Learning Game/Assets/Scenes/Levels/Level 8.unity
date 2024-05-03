@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 34438322}
   m_Layer: 0
   m_Name: Day2
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &34438323
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -497,7 +497,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 378, y: -12}
-  m_SizeDelta: {x: 50, y: 100}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47164482
 MonoBehaviour:
@@ -514,7 +514,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &47164483
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c775149722d9146b74001225ca2ecb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1412436e2010c9245bdeb465a86f38fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 54787288}
   m_Layer: 0
   m_Name: Day4
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,7 +756,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &54787289
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -845,8 +845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -180}
-  m_SizeDelta: {x: 70, y: 160}
+  m_AnchoredPosition: {x: 203, y: -224}
+  m_SizeDelta: {x: 150, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65261042
 MonoBehaviour:
@@ -863,7 +863,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &65261043
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f5053b59240ed941bb41fb10d68f041, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc5d9bd0e6c816246bd138e5b60fec4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1152,7 +1152,7 @@ GameObject:
   - component: {fileID: 76486615}
   m_Layer: 0
   m_Name: Place3
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &76486615
 MonoBehaviour:
@@ -1516,7 +1516,7 @@ GameObject:
   - component: {fileID: 100372379}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1539,8 +1539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 77}
-  m_SizeDelta: {x: 90, y: 200}
+  m_AnchoredPosition: {x: -880, y: 31}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100372379
 MonoBehaviour:
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a490c8bcf4993f4b9b227ea8ad6b1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4d2b1ee2f22e43478bb590836fe742e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1623,7 +1623,7 @@ GameObject:
   - component: {fileID: 120468815}
   m_Layer: 0
   m_Name: Day3
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1664,7 +1664,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &120468816
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2724,7 +2724,7 @@ GameObject:
   - component: {fileID: 205908095}
   m_Layer: 0
   m_Name: Day3
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2765,7 +2765,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &205908096
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3219,7 +3219,7 @@ GameObject:
   - component: {fileID: 249254982}
   m_Layer: 0
   m_Name: Place1 (3)
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3283,7 +3283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: 
+  Placedobjecttag: o
   canbePlaced: 0
 --- !u!114 &249254984
 MonoBehaviour:
@@ -3490,7 +3490,7 @@ GameObject:
   - component: {fileID: 258897174}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3744,7 +3744,7 @@ GameObject:
   - component: {fileID: 265937326}
   m_Layer: 0
   m_Name: Day3
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3785,7 +3785,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &265937327
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4239,7 +4239,7 @@ GameObject:
   - component: {fileID: 302886886}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4278,7 +4278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &302886886
 MonoBehaviour:
@@ -4333,7 +4333,7 @@ GameObject:
   - component: {fileID: 307818978}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4356,8 +4356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 77}
-  m_SizeDelta: {x: 90, y: 200}
+  m_AnchoredPosition: {x: -869, y: 20}
+  m_SizeDelta: {x: 150, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307818978
 MonoBehaviour:
@@ -4374,7 +4374,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &307818979
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4407,7 +4407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a490c8bcf4993f4b9b227ea8ad6b1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3344a07235ca7354d97d9effe9d1a7b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4628,7 +4628,7 @@ GameObject:
   - component: {fileID: 319393572}
   m_Layer: 0
   m_Name: Place4
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4667,7 +4667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &319393572
 MonoBehaviour:
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 341509450}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5245,7 +5245,7 @@ GameObject:
   - component: {fileID: 350855339}
   m_Layer: 0
   m_Name: Place6
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5284,7 +5284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
   canbePlaced: 0
 --- !u!114 &350855339
 MonoBehaviour:
@@ -5500,7 +5500,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 353, y: -12}
-  m_SizeDelta: {x: 50, y: 100}
+  m_SizeDelta: {x: 125, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368089987
 MonoBehaviour:
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &368089988
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5550,7 +5550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c775149722d9146b74001225ca2ecb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df4986a5ec9266942a0b2bd8b107d399, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5582,7 +5582,7 @@ GameObject:
   - component: {fileID: 373956623}
   m_Layer: 0
   m_Name: Place3
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5621,7 +5621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &373956623
 MonoBehaviour:
@@ -5946,7 +5946,7 @@ GameObject:
   - component: {fileID: 406242401}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5987,7 +5987,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &406242402
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6369,7 +6369,7 @@ GameObject:
   - component: {fileID: 458646136}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6392,8 +6392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 77}
-  m_SizeDelta: {x: 90, y: 200}
+  m_AnchoredPosition: {x: -880, y: 24}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458646136
 MonoBehaviour:
@@ -6410,7 +6410,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &458646137
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6443,7 +6443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a490c8bcf4993f4b9b227ea8ad6b1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3344a07235ca7354d97d9effe9d1a7b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6699,7 +6699,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508074887}
-  m_LocalRotation: {x: -0, y: -0, z: -0.067742474, w: 0.99770284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6707,11 +6707,11 @@ RectTransform:
   - {fileID: 2035094518}
   m_Father: {fileID: 455765880}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195.66895, y: -201.9773}
-  m_SizeDelta: {x: 56.6872, y: 114.9262}
+  m_AnchoredPosition: {x: 195.66895, y: -184}
+  m_SizeDelta: {x: 56.6872, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508074889
 MonoBehaviour:
@@ -6761,7 +6761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f5053b59240ed941bb41fb10d68f041, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e09711cae5d9d9448a716be763034e7e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6970,7 +6970,7 @@ GameObject:
   - component: {fileID: 532853369}
   m_Layer: 0
   m_Name: Day1
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &532853370
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7077,7 +7077,7 @@ GameObject:
   - component: {fileID: 533665216}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7100,8 +7100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.2944, y: -217.49695}
-  m_SizeDelta: {x: 80.5522, y: 103.0061}
+  m_AnchoredPosition: {x: -154, y: -377}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533665216
 MonoBehaviour:
@@ -7151,7 +7151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aaa8f62a60e6bf4294b6eee5ab2f206, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71e43c45b0252a045958e31f2def64bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7242,7 +7242,7 @@ GameObject:
   - component: {fileID: 538598763}
   m_Layer: 0
   m_Name: Day1
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7283,7 +7283,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &538598764
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8327,7 +8327,7 @@ GameObject:
   - component: {fileID: 582208688}
   m_Layer: 0
   m_Name: Day2
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8368,7 +8368,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &582208689
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8578,7 +8578,7 @@ GameObject:
   - component: {fileID: 610625770}
   m_Layer: 0
   m_Name: Place1 (3)
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8642,7 +8642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: 
+  Placedobjecttag: o
   canbePlaced: 0
 --- !u!114 &610625772
 MonoBehaviour:
@@ -8697,7 +8697,7 @@ GameObject:
   - component: {fileID: 622225002}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8738,7 +8738,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &622225003
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8901,7 +8901,7 @@ GameObject:
   - component: {fileID: 645540195}
   m_Layer: 0
   m_Name: Place4
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8940,7 +8940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &645540195
 MonoBehaviour:
@@ -9130,7 +9130,7 @@ GameObject:
   - component: {fileID: 649095824}
   m_Layer: 0
   m_Name: Day1
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9171,7 +9171,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &649095825
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9260,8 +9260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: -12}
-  m_SizeDelta: {x: 85, y: 115}
+  m_AnchoredPosition: {x: -34, y: -25}
+  m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650874994
 MonoBehaviour:
@@ -9278,7 +9278,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &650874995
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9311,7 +9311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 905b211993847a14980c17bfec3eae56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f53ef7f507c3654b947809bd1d6d39c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9344,7 +9344,7 @@ GameObject:
   - component: {fileID: 658440313}
   m_Layer: 0
   m_Name: Day1
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9385,7 +9385,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &658440314
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9451,7 +9451,7 @@ GameObject:
   - component: {fileID: 659428460}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9492,7 +9492,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &659428461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9692,7 +9692,7 @@ GameObject:
   - component: {fileID: 671770603}
   m_Layer: 0
   m_Name: Place5
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9731,7 +9731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
   canbePlaced: 0
 --- !u!114 &671770603
 MonoBehaviour:
@@ -10670,7 +10670,7 @@ GameObject:
   - component: {fileID: 688727253}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10693,8 +10693,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: -380}
-  m_SizeDelta: {x: 130, y: 200}
+  m_AnchoredPosition: {x: -138, y: -402}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688727253
 MonoBehaviour:
@@ -10711,7 +10711,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &688727254
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10744,7 +10744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aaa8f62a60e6bf4294b6eee5ab2f206, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 479c064fe0b200b47960ffdc24f8674f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11223,7 +11223,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &712996975
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11256,7 +11256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c9373a3c991d58439d15eadac6f1e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f70add6ed01b0a4eb6f5b2c039e2fae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11721,7 +11721,7 @@ GameObject:
   - component: {fileID: 752825463}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11760,7 +11760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &752825463
 MonoBehaviour:
@@ -12104,7 +12104,7 @@ GameObject:
   - component: {fileID: 774464596}
   m_Layer: 0
   m_Name: Place5
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12143,7 +12143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
   canbePlaced: 0
 --- !u!114 &774464596
 MonoBehaviour:
@@ -12855,7 +12855,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -178, y: -8}
-  m_SizeDelta: {x: 65, y: 115}
+  m_SizeDelta: {x: 50, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836351924
 MonoBehaviour:
@@ -12905,7 +12905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c9373a3c991d58439d15eadac6f1e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7c838c5c2c0de44990ec75bc1527d59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13072,7 +13072,7 @@ GameObject:
   - component: {fileID: 892524158}
   m_Layer: 0
   m_Name: Place5
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13111,7 +13111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
   canbePlaced: 0
 --- !u!114 &892524158
 MonoBehaviour:
@@ -13376,7 +13376,7 @@ GameObject:
   - component: {fileID: 942569562}
   m_Layer: 0
   m_Name: Place3
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13415,7 +13415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &942569562
 MonoBehaviour:
@@ -13740,7 +13740,7 @@ GameObject:
   - component: {fileID: 966732305}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13763,8 +13763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 77}
-  m_SizeDelta: {x: 90, y: 200}
+  m_AnchoredPosition: {x: -880, y: 48}
+  m_SizeDelta: {x: 90, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966732305
 MonoBehaviour:
@@ -13781,7 +13781,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &966732306
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13814,7 +13814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a490c8bcf4993f4b9b227ea8ad6b1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64834f25203cb6e40b3881d10c16bcf7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13847,7 +13847,7 @@ GameObject:
   - component: {fileID: 972513717}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14041,7 +14041,7 @@ GameObject:
   - component: {fileID: 974812911}
   m_Layer: 0
   m_Name: Place5
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14080,7 +14080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
   canbePlaced: 0
 --- !u!114 &974812911
 MonoBehaviour:
@@ -14539,7 +14539,7 @@ GameObject:
   - component: {fileID: 1009594928}
   m_Layer: 0
   m_Name: Place4
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14578,7 +14578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &1009594928
 MonoBehaviour:
@@ -14633,7 +14633,7 @@ GameObject:
   - component: {fileID: 1009958244}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14674,7 +14674,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1009958245
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14885,7 +14885,7 @@ GameObject:
   - component: {fileID: 1032912705}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: NPC
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14926,7 +14926,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1032912706
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14991,7 +14991,7 @@ GameObject:
   - component: {fileID: 1034006511}
   m_Layer: 0
   m_Name: Place2
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15030,7 +15030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &1034006511
 MonoBehaviour:
@@ -15219,7 +15219,7 @@ GameObject:
   - component: {fileID: 1056958686}
   m_Layer: 0
   m_Name: Place2
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15258,7 +15258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &1056958686
 MonoBehaviour:
@@ -15743,8 +15743,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: -12}
-  m_SizeDelta: {x: 85, y: 115}
+  m_AnchoredPosition: {x: -60, y: -27}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073522130
 MonoBehaviour:
@@ -15794,7 +15794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 905b211993847a14980c17bfec3eae56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26abfe3ee1c295943acff0b151e09d22, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15827,7 +15827,7 @@ GameObject:
   - component: {fileID: 1084082131}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15868,7 +15868,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1084082132
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16636,7 +16636,7 @@ GameObject:
   - component: {fileID: 1159745055}
   m_Layer: 0
   m_Name: Day4
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16677,7 +16677,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1159745056
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16877,7 +16877,7 @@ GameObject:
   - component: {fileID: 1173768247}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16916,7 +16916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &1173768247
 MonoBehaviour:
@@ -17106,7 +17106,7 @@ GameObject:
   - component: {fileID: 1179563698}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17606,8 +17606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178, y: -8}
-  m_SizeDelta: {x: 65, y: 115}
+  m_AnchoredPosition: {x: -178, y: -28}
+  m_SizeDelta: {x: 50, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191965769
 MonoBehaviour:
@@ -17624,7 +17624,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1191965770
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17657,7 +17657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c9373a3c991d58439d15eadac6f1e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98a654beb8ffa0f43b285b9add3125ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17689,7 +17689,7 @@ GameObject:
   - component: {fileID: 1199054302}
   m_Layer: 0
   m_Name: Place4
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17728,7 +17728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &1199054302
 MonoBehaviour:
@@ -18322,7 +18322,7 @@ GameObject:
   - component: {fileID: 1211747706}
   m_Layer: 0
   m_Name: Place6
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18361,7 +18361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
   canbePlaced: 0
 --- !u!114 &1211747706
 MonoBehaviour:
@@ -18416,7 +18416,7 @@ GameObject:
   - component: {fileID: 1238547993}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18457,7 +18457,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1238547994
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18523,7 +18523,7 @@ GameObject:
   - component: {fileID: 1242689748}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18546,8 +18546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: -380}
-  m_SizeDelta: {x: 130, y: 200}
+  m_AnchoredPosition: {x: -280, y: -150}
+  m_SizeDelta: {x: 85, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242689748
 MonoBehaviour:
@@ -18564,7 +18564,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1242689749
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18597,7 +18597,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aaa8f62a60e6bf4294b6eee5ab2f206, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc5c86980f4aa2642bc1984ed484abee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19111,7 +19111,7 @@ GameObject:
   - component: {fileID: 1285808686}
   m_Layer: 0
   m_Name: Day3
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19152,7 +19152,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1285808687
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19374,8 +19374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -180}
-  m_SizeDelta: {x: 70, y: 160}
+  m_AnchoredPosition: {x: -882, y: 31}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314790563
 MonoBehaviour:
@@ -19392,7 +19392,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1314790564
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19425,7 +19425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f5053b59240ed941bb41fb10d68f041, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95e5e56281a73d646845fc1e55382681, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19684,8 +19684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -180}
-  m_SizeDelta: {x: 70, y: 160}
+  m_AnchoredPosition: {x: 203, y: -217}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345710095
 MonoBehaviour:
@@ -19702,7 +19702,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1345710096
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19735,7 +19735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f5053b59240ed941bb41fb10d68f041, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1fafd70a3312d8644b820814108fcc27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20113,7 +20113,7 @@ GameObject:
   - component: {fileID: 1365484641}
   m_Layer: 0
   m_Name: Place2
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20152,7 +20152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &1365484641
 MonoBehaviour:
@@ -20500,8 +20500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178, y: -8}
-  m_SizeDelta: {x: 65, y: 115}
+  m_AnchoredPosition: {x: -161, y: -30}
+  m_SizeDelta: {x: 100, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384235418
 MonoBehaviour:
@@ -20518,7 +20518,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1384235419
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20551,7 +20551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c9373a3c991d58439d15eadac6f1e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd406043f5f61bb42920dfd9af7e4c2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20625,7 +20625,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1389318276
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20658,7 +20658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c775149722d9146b74001225ca2ecb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc5c86980f4aa2642bc1984ed484abee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20715,7 +20715,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -34, y: -12}
-  m_SizeDelta: {x: 85, y: 115}
+  m_SizeDelta: {x: 100, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1391293248
 MonoBehaviour:
@@ -20732,7 +20732,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1391293249
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20765,7 +20765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 905b211993847a14980c17bfec3eae56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4463f7a74330cbd45bc1c427023bdc56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20798,7 +20798,7 @@ GameObject:
   - component: {fileID: 1410700762}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20839,7 +20839,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1410700763
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20928,8 +20928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: -12}
-  m_SizeDelta: {x: 85, y: 115}
+  m_AnchoredPosition: {x: -34, y: 9}
+  m_SizeDelta: {x: 125, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415028478
 MonoBehaviour:
@@ -20946,7 +20946,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1415028479
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20979,7 +20979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 905b211993847a14980c17bfec3eae56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f083c3ad46a7f6b46a48670693bcea80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21087,7 +21087,7 @@ GameObject:
   - component: {fileID: 1428919720}
   m_Layer: 0
   m_Name: Place4
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21126,7 +21126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   canbePlaced: 0
 --- !u!114 &1428919720
 MonoBehaviour:
@@ -21181,7 +21181,7 @@ GameObject:
   - component: {fileID: 1446795614}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: NPC
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21222,7 +21222,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1446795615
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -21287,7 +21287,7 @@ GameObject:
   - component: {fileID: 1456006097}
   m_Layer: 0
   m_Name: Place6
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21326,7 +21326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
   canbePlaced: 0
 --- !u!114 &1456006097
 MonoBehaviour:
@@ -21516,7 +21516,7 @@ GameObject:
   - component: {fileID: 1475963274}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21539,8 +21539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: -380}
-  m_SizeDelta: {x: 130, y: 200}
+  m_AnchoredPosition: {x: 38, y: -226}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475963274
 MonoBehaviour:
@@ -21557,7 +21557,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1475963275
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -21590,7 +21590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aaa8f62a60e6bf4294b6eee5ab2f206, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fe5e54e1ddb39446b2888205df47c94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22162,7 +22162,7 @@ GameObject:
   - component: {fileID: 1487245441}
   m_Layer: 0
   m_Name: Place6
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22201,7 +22201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
   canbePlaced: 0
 --- !u!114 &1487245441
 MonoBehaviour:
@@ -22542,7 +22542,7 @@ GameObject:
   - component: {fileID: 1514003914}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22581,7 +22581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &1514003914
 MonoBehaviour:
@@ -23218,7 +23218,7 @@ GameObject:
   - component: {fileID: 1573952439}
   m_Layer: 0
   m_Name: Place5
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23257,7 +23257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
   canbePlaced: 0
 --- !u!114 &1573952439
 MonoBehaviour:
@@ -23311,7 +23311,7 @@ GameObject:
   - component: {fileID: 1577807068}
   m_Layer: 0
   m_Name: Place2
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23350,7 +23350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &1577807068
 MonoBehaviour:
@@ -24400,7 +24400,7 @@ GameObject:
   - component: {fileID: 1659994750}
   m_Layer: 0
   m_Name: Day4
-  m_TagString: NPC
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24441,7 +24441,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1659994751
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25194,7 +25194,7 @@ GameObject:
   - component: {fileID: 1707840715}
   m_Layer: 0
   m_Name: Day6
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25217,8 +25217,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 77}
-  m_SizeDelta: {x: 90, y: 200}
+  m_AnchoredPosition: {x: 208, y: -215}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707840715
 MonoBehaviour:
@@ -25235,7 +25235,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1707840716
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25268,7 +25268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a490c8bcf4993f4b9b227ea8ad6b1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfd2252ede0609349a436bfe6fe7f094, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25512,7 +25512,7 @@ GameObject:
   - component: {fileID: 1727377747}
   m_Layer: 0
   m_Name: Day2
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25553,7 +25553,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1727377748
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25935,7 +25935,7 @@ GameObject:
   - component: {fileID: 1733026310}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25976,7 +25976,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1733026311
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26523,7 +26523,7 @@ GameObject:
   - component: {fileID: 1804780356}
   m_Layer: 0
   m_Name: Day4
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26564,7 +26564,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1804780357
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26654,7 +26654,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 365, y: -12}
-  m_SizeDelta: {x: 85, y: 115}
+  m_SizeDelta: {x: 100, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805011221
 MonoBehaviour:
@@ -26671,7 +26671,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1805011222
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26704,7 +26704,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 905b211993847a14980c17bfec3eae56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b107d3f3dcaae814a9857c743400e7c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26943,8 +26943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178, y: -8}
-  m_SizeDelta: {x: 65, y: 115}
+  m_AnchoredPosition: {x: -164, y: -25}
+  m_SizeDelta: {x: 150, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816646263
 MonoBehaviour:
@@ -26961,7 +26961,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1816646264
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26994,7 +26994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c9373a3c991d58439d15eadac6f1e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea1beb76a05cf574580d651423531d85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27126,8 +27126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -180}
-  m_SizeDelta: {x: 70, y: 160}
+  m_AnchoredPosition: {x: 177, y: -209}
+  m_SizeDelta: {x: 125, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854801123
 MonoBehaviour:
@@ -27144,7 +27144,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1854801124
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -27177,7 +27177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f5053b59240ed941bb41fb10d68f041, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65e7b976918b5e54db7639f9354a2fb4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28711,8 +28711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: -12}
-  m_SizeDelta: {x: 50, y: 100}
+  m_AnchoredPosition: {x: -41, y: -27}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889254224
 MonoBehaviour:
@@ -28729,7 +28729,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1889254225
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -28762,7 +28762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c775149722d9146b74001225ca2ecb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e436ea02b373164e9683ff83f5b08ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29205,7 +29205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: 
+  Placedobjecttag: 0
   canbePlaced: 0
 --- !u!114 &1932063885
 MonoBehaviour:
@@ -29531,7 +29531,7 @@ GameObject:
   - component: {fileID: 1935964889}
   m_Layer: 0
   m_Name: Place1 (4)
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29595,7 +29595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: 
+  Placedobjecttag: o
   canbePlaced: 0
 --- !u!114 &1935964891
 MonoBehaviour:
@@ -29784,7 +29784,7 @@ GameObject:
   - component: {fileID: 1961063130}
   m_Layer: 0
   m_Name: Place6
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29823,7 +29823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
   canbePlaced: 0
 --- !u!114 &1961063130
 MonoBehaviour:
@@ -29975,7 +29975,7 @@ GameObject:
   - component: {fileID: 1980266970}
   m_Layer: 0
   m_Name: Place3
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30014,7 +30014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &1980266970
 MonoBehaviour:
@@ -30069,7 +30069,7 @@ GameObject:
   - component: {fileID: 1997212118}
   m_Layer: 0
   m_Name: Day5
-  m_TagString: i
+  m_TagString: o
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30092,8 +30092,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: -380}
-  m_SizeDelta: {x: 130, y: 200}
+  m_AnchoredPosition: {x: 20, y: -253}
+  m_SizeDelta: {x: 130, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997212118
 MonoBehaviour:
@@ -30110,7 +30110,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &1997212119
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -30143,7 +30143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aaa8f62a60e6bf4294b6eee5ab2f206, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 035d2972acdb825458f4ac03eff57cbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30252,7 +30252,7 @@ GameObject:
   - component: {fileID: 2020415951}
   m_Layer: 0
   m_Name: Day2
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30293,7 +30293,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &2020415952
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -30494,7 +30494,7 @@ GameObject:
   - component: {fileID: 2030718794}
   m_Layer: 0
   m_Name: Day4
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30535,7 +30535,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!225 &2030718795
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -30894,8 +30894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378, y: -12}
-  m_SizeDelta: {x: 50, y: 100}
+  m_AnchoredPosition: {x: 378, y: -18.51}
+  m_SizeDelta: {x: 100, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060774370
 MonoBehaviour:
@@ -30945,7 +30945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c775149722d9146b74001225ca2ecb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f039ea62daf147744b248b1fa8bb4039, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30978,7 +30978,7 @@ GameObject:
   - component: {fileID: 2071656593}
   m_Layer: 0
   m_Name: Place1 (2)
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31042,7 +31042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: 
+  Placedobjecttag: o
   canbePlaced: 0
 --- !u!114 &2071656595
 MonoBehaviour:
@@ -31742,7 +31742,7 @@ GameObject:
   - component: {fileID: 692456617774299121}
   m_Layer: 0
   m_Name: Place1
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31781,7 +31781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   canbePlaced: 0
 --- !u!114 &692456617774299121
 MonoBehaviour:
@@ -31835,7 +31835,7 @@ GameObject:
   - component: {fileID: 692456617897119461}
   m_Layer: 0
   m_Name: Place2
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31874,7 +31874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   canbePlaced: 0
 --- !u!114 &692456617897119461
 MonoBehaviour:
@@ -31950,7 +31950,7 @@ GameObject:
   - component: {fileID: 692456617936155648}
   m_Layer: 0
   m_Name: Day2
-  m_TagString: NPC
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32020,7 +32020,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!114 &692456618117537376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32171,7 +32171,7 @@ GameObject:
   - component: {fileID: 692456618418893140}
   m_Layer: 0
   m_Name: Day1
-  m_TagString: NPC
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32262,7 +32262,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!224 &692456618693253128
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32547,7 +32547,7 @@ GameObject:
   - component: {fileID: 692456618906983317}
   m_Layer: 0
   m_Name: Place3
-  m_TagString: NPC
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32586,7 +32586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee9916f58da7134982a68e989d9263c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   canbePlaced: 0
 --- !u!114 &692456618906983317
 MonoBehaviour:
@@ -33000,7 +33000,7 @@ GameObject:
   - component: {fileID: 692456619763980239}
   m_Layer: 0
   m_Name: Day3
-  m_TagString: NPC
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33091,7 +33091,7 @@ MonoBehaviour:
   canvas: {fileID: 554120748}
   isDraggable: 1
   isPlaceCorrect: 0
-  stag: NPC
+  stag: Slot
 --- !u!224 &692456619827673752
 RectTransform:
   m_ObjectHideFlags: 0

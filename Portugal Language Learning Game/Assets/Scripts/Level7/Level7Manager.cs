@@ -87,7 +87,7 @@ public class Level7Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (CurrentPlayer != null)
+            if (CurrentPlayer != null || CurrentPlayer == null)
             {
                 if (SManage.instance.score == 10)
                 {

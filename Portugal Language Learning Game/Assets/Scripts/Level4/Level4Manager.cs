@@ -105,7 +105,7 @@ public class Level4Manager : MonoBehaviour
         else
         {
             var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-            if (CurrentPlayer != null)
+            if (CurrentPlayer != null || CurrentPlayer == null)
             {
                 if (SManage.instance.score == 11)
                 {
