@@ -227,7 +227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0ca78057f9a73b545992fc9820e2c286, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2fa572fc3ff9ea4fb3aad69cc3b5a77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -806,8 +806,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 150}
-  m_Spacing: {x: 10, y: 10}
+  m_CellSize: {x: 150, y: 200}
+  m_Spacing: {x: 5, y: 5}
   m_Constraint: 1
   m_ConstraintCount: 4
 --- !u!114 &506838382
@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 646064209}
   - component: {fileID: 646064208}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1608,22 +1608,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgImage:
-  - {fileID: 21300000, guid: 1402a9f5f9f818240a42a105b5cf9648, type: 3}
-  - {fileID: 21300000, guid: 51b1069c0324e1649b6f3e5add61b5d4, type: 3}
-  - {fileID: 21300000, guid: 90bc892d17ec4214f83bc4d3e9dc3564, type: 3}
-  - {fileID: 21300000, guid: 923fd40b5d7af9347b3145955c6cdd28, type: 3}
-  - {fileID: 21300000, guid: 885b09f20a809094bb34d03dacf79e4a, type: 3}
-  - {fileID: 21300000, guid: d8fff41ac6e81a04db88f2d712226022, type: 3}
-  - {fileID: 21300000, guid: f8d8e318a5afab7439de49863a861a2e, type: 3}
-  - {fileID: 21300000, guid: 923fd40b5d7af9347b3145955c6cdd28, type: 3}
-  - {fileID: 21300000, guid: f3c5ffad1fdda5e44b01494648f12b37, type: 3}
-  - {fileID: 21300000, guid: c6201e3186bbb1e4a8b425245bd5d8b0, type: 3}
-  - {fileID: 21300000, guid: 61e620585a8ac7646b13993b689f3c2f, type: 3}
-  - {fileID: 21300000, guid: 923fd40b5d7af9347b3145955c6cdd28, type: 3}
-  - {fileID: 21300000, guid: 2cd34e995343b784184e21db64bab3af, type: 3}
-  - {fileID: 21300000, guid: 71e5fc750719164448d92ad8d5ecdd35, type: 3}
-  - {fileID: 21300000, guid: 8e65ad8adfd7ef94ea45585992d7736e, type: 3}
-  - {fileID: 21300000, guid: 923fd40b5d7af9347b3145955c6cdd28, type: 3}
+  - {fileID: 21300000, guid: 40da3671c882e1942a5e49c02fd71fa6, type: 3}
+  - {fileID: 21300000, guid: c0ff6dc0b8930dc42a1719c4c06b5350, type: 3}
+  - {fileID: 21300000, guid: 5c667d2b4d2b60647a63ac5f95b50aa4, type: 3}
+  - {fileID: 21300000, guid: a8b7a1aefbe59c940828c8a7a57d106a, type: 3}
+  - {fileID: 21300000, guid: 69efc66c4ca903b4ba4a390ce04df1b3, type: 3}
+  - {fileID: 21300000, guid: 4dfba72fd6fe0074f93aaaa493c9fe2a, type: 3}
+  - {fileID: 21300000, guid: 1043554df02629740b61a6eb409a8729, type: 3}
+  - {fileID: 21300000, guid: dc5e1a6782c69234c9e22ceacf9a5de6, type: 3}
+  - {fileID: 21300000, guid: ec6322ceaae639b45b0c65c7399cb6cb, type: 3}
+  - {fileID: 21300000, guid: 7dcd4f8036b93cc45a6397517507b062, type: 3}
+  - {fileID: 21300000, guid: a7cc14693b00e404fb5ddc8fd28e1d32, type: 3}
+  - {fileID: 21300000, guid: c19fc1292dd97e8458108c07b5335ffb, type: 3}
+  - {fileID: 21300000, guid: f7e1801fe27c2ea4d89502e80e2cf810, type: 3}
+  - {fileID: 21300000, guid: 428bfd2200bc6aa4784b26782ead83f4, type: 3}
+  - {fileID: 21300000, guid: 36d2d27e73eabcb42a70bd778b560b26, type: 3}
+  - {fileID: 21300000, guid: 6482f2281a2d8ca4dae94b1cf2925f9b, type: 3}
   puzzles:
   - {fileID: 21300000, guid: cee4ecb4f8bc2d0458dfac6a80b3745b, type: 3}
   - {fileID: 21300000, guid: 485d1bcea83313744ae3c0cd276da43f, type: 3}
