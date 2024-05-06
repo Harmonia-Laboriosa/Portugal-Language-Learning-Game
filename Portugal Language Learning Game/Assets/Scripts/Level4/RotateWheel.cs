@@ -1,42 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+/*using UnityEngine;
+using UnityEngine.UI;
 
 public class RotateWheel : MonoBehaviour
 {
     public float rotationSpeed = 100f;
-    [SerializeField]public float snapAngle;
+    public Button spacealter;
+    [SerializeField] public float snapAngle;
     private float currentRotation = 0f;
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        // Check if the space bar is pressed
-        if (Input.GetKey(KeyCode.Space))
-        {
-            // Rotate the wheel
-            RotateImage(rotationSpeed*Time.deltaTime);
-        }
-        //keyboard input
-        //float rotationInput = Input.GetAxis("Horizontal");
-        //RotateImage(rotationInput*rotationSpeed*Time.deltaTime);
-        /*
-        // mobile input
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            float rotationInput = touch.deltaPosition.x;
-            RotateImage(rotationInput);
-        }
-        */
+    private bool spacePressed = false;
 
+    void Start()
+    {
+        // Add listener for button click event
+        spacealter.onClick.AddListener(OnSpaceButtonClick);
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space) || spacePressed)
+        {
+            RotateImage(rotationSpeed * Time.deltaTime);
+        }
     }
 
     void RotateImage(float rotationAmount)
     {
-        //currentRotation += rotationAmount;
-        //float smoothRotation = Mathf.LerpAngle(transform.eulerAngles.z, currentRotation, Time.deltaTime * rotationSpeed);
-        //float targetAngle = Mathf.Round(smoothRotation / snapAngle) * snapAngle;
-        //transform.rotation = Quaternion.Euler(0f, 0f, targetAngle);
         transform.Rotate(0f, 0f, rotationAmount);
     }
-}
+
+    void OnSpaceButtonClick()
+    {
+        spacePressed = true;
+    }
+}*/
+using UnityEngine;
+using UnityEngine.UI;
+
+public class RotateWheel : MonoBehaviour
+{
+    public float rotationSpeed = 100f;
+    public Button spacealter;
+    [SerializeField] public float snapAngle;
+    private float currentRotation = 0f;
+    private bool isRotating = false;
+
+    void Start()
+    {
+        // Add listener for button click event
+        spacealter.onClick.AddListener(OnSpaceButtonClick);
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space) || isRotating)
+        {
+            RotateImage(rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    void RotateImage(float rotationAmount)
+    {
+        transform.Rotate(0f, 0f, rotationAmount);
+    }
+
+    void OnSpaceButtonClick()
+    {
+        isRotating = !isRotating; // Toggle the rotation state
+    }   }
