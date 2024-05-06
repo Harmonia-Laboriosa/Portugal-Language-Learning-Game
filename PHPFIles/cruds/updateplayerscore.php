@@ -1,5 +1,9 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
 $con = mysqli_connect('localhost', 'root', 'Harmonia@123#', 'course');
 
 if(mysqli_connect_errno())
