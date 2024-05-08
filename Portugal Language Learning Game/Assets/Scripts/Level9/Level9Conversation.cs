@@ -18,7 +18,7 @@ public class Level9Conversation : MonoBehaviour
     public GameObject FailedPanel;
     public GameObject victoryPanel;
     private bool isTalking;
-    public Slider healthSlider;
+    
     [SerializeField]
     private string file;    //xml file name
     [SerializeField]
@@ -35,9 +35,9 @@ public class Level9Conversation : MonoBehaviour
 
     public bool talk = true;
 
-    public Level2AudioManager audio;
 
-    public Level6Manager level6;
+    //public Animator Level9NPC;
+    
 
     private bool gameEnded = false;
 
@@ -45,7 +45,7 @@ public class Level9Conversation : MonoBehaviour
 
     void Awake()
     {
-        audio = FindObjectOfType<Level2AudioManager>();
+        
         choiceButtons = GameObject.FindWithTag(Tags.canvasTag).GetComponent<ChoiceButtonHandler>();
         /*namePrinter = GameObject.FindWithTag(Tags.nameText).GetComponent<StringUIPrinter>();*/
         dialogeueText = GameObject.FindWithTag(Tags.dialogueText).GetComponentInChildren<TMP_Text>();// Using TextMeshPro for dialogue text
@@ -83,18 +83,12 @@ public class Level9Conversation : MonoBehaviour
     {
         foreach (char letter in dialogue)
         {
-            if (audio != null)
-            {
-                audio.playTypesound();
-            }
+            
             dialogeueText.text += letter;
 
             yield return new WaitForSeconds(typingSpeed);
         }
-        if (audio != null)
-        {
-            audio.stopTypesound();
-        }
+        
         // After typing is complete, present UI button choices loaded from xml.
         GetChoices("/" + initialXmlTag);
     }
@@ -103,18 +97,12 @@ public class Level9Conversation : MonoBehaviour
         foreach (char letter in dialogue)
         {
 
-            if (audio != null)
-            {
-                audio.playTypesound();
-            }
+            
             dialogeueText.text += letter;
 
             yield return new WaitForSeconds(typingSpeed);
         }
-        if (audio != null)
-        {
-            audio.stopTypesound();
-        }
+       
         // After typing is complete, present UI button choices loaded from XML.
         GetChoices("/" + location);
     }
@@ -142,7 +130,7 @@ public class Level9Conversation : MonoBehaviour
         }
         else
         {
-            IncreaseSliderValue();
+            
 
             // SManage.instance.IncreaseScore(1);
             // Print relevant data to screen depending on player's latest choice
@@ -158,13 +146,7 @@ public class Level9Conversation : MonoBehaviour
 
         }
     }
-    void IncreaseSliderValue()
-    {
-        if (healthSlider != null)
-        {
-            healthSlider.value += 10;
-        }
-    }
+
     void EndConversation()
 
     {
@@ -188,10 +170,7 @@ public class Level9Conversation : MonoBehaviour
         EndGameScore();
         player.gameObject.GetComponent<Animator>().enabled = false;
         isTalking = false;
-        if (level6 != null)
-        {
-            level6.walk();
-        }
+
         Btn.PlayerImage.SetActive(false);
         //namePrinter.PrintToUI("");
         dialogeueText.text = "";

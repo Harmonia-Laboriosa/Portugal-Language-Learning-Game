@@ -19,5 +19,10 @@ public class Level8animation : MonoBehaviour
         
     }
 
+    public void Level3()
+    {
+        manager.ActivateNextPanel(2);
+    }
+
 
 }

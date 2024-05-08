@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
+using Unity.VisualScripting;
 
 public class Level5manager : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class Level5manager : MonoBehaviour
     {
         yield return new WaitForSeconds(6f);
         StartQuiz();
-        playerAnim.SetActive(false);
+        //playerAnim.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -125,6 +126,7 @@ public class Level5manager : MonoBehaviour
             }
             if (currentQuestion == 10)
             {
+                playerAnim.SetActive(false);
                 CheckAllObjectsinLsstPlacedInPanel(levels[currentQuestion], currentQuestion);
             }
         }
@@ -152,6 +154,7 @@ public class Level5manager : MonoBehaviour
             {
                 if (SManage.instance.score == 11)
                 {
+                    StartCoroutine("TimeDelayEndpanel");
                     victoryPanel.SetActive(true);
                     EndgamePanel.SetActive(true);
                     if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 4)
@@ -171,6 +174,11 @@ public class Level5manager : MonoBehaviour
         }
     }
 
+    IEnumerator TimeDelayEndpanel()
+    {
+        yield return new WaitForSeconds(2f);
+        
+    }
 
     public void CorrectAnswer(int correctButtonIndex)
     {

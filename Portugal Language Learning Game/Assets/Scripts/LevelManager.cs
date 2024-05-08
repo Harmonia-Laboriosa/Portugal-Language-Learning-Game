@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
 
      }*/
 
-        public void Replay()
+    public void Replay()
     {
         int currentscene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentscene);
@@ -53,6 +53,11 @@ public class LevelManager : MonoBehaviour
     }
 
     public void LoadLevel(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
+
+    public void Home(int level)
     {
         SceneManager.LoadScene(level);
     }
