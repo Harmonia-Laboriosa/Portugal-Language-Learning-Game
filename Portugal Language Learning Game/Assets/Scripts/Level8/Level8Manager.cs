@@ -77,23 +77,31 @@ public class Level8Manager : MonoBehaviour
             foreach (Transform slot in panel.transform)
             {
                 DragDropLevel8 dragDrop = slot.GetComponentInChildren<DragDropLevel8>();
-                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                if (dragDrop != null && dragDrop.isPlaceCorrect==true)
                 {
                     TempScore = TempScore + 1;
                     Debug.Log(TempScore);
-                    if (TempScore == 6)
+                    if (TempScore == 2)
                     {
                         scoreManager.IncreaseScore(1);
+                        //TempScore = 0;
+                    }
+                    /*
+                    else
+                    {
                         TempScore = 0;
                     }
+                    */
                     
                 }
+                /*
                 if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
                 {
                     scoreManager.IncreaseScore(1);
                 }
-
+                */
             }
+            TempScore = 0;
             scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
         }
         // Activate next panel if all objects are placed

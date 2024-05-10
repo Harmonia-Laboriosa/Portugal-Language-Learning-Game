@@ -166,6 +166,7 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
             {
                 if (hoveredObject.CompareTag(stag))
                 {
+                    
                     // If dropped onto a slot, snap to its position
                     if(hoveredObject.gameObject.GetComponentInChildren<VerticalLayoutGroup>())
                     {
@@ -191,21 +192,15 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
                         
                         // Check if the placed object tag matches the tag of this object
-                        if (string.Equals(placed_ObjectTag, gameObject.tag))
+                        if (string.Equals(placed_ObjectTag, this.gameObject.tag))
                         {
                             isPlaceCorrect = true;
-                            // Debug.Log("Object placed correctly!");
+                            Debug.Log("Object placed correctly!");
                         }
-                        /*
-                        else if(string.Equals(GetComponentInParent<IngridentSlot>().Placedobjecttag,gameObject.tag))
-                        {
-
-                        }
-                        */
                         else
                         {
                             isPlaceCorrect = false;
-                            //Debug.Log("Object placed incorrectly!");
+                            Debug.Log("Object placed incorrectly!");
                         }
                     }
 

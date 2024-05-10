@@ -28,6 +28,7 @@ public class HumanSlot : MonoBehaviour, IDropHandler
 
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
     }
 }
