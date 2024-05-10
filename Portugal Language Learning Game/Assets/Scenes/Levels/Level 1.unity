@@ -1568,7 +1568,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1d10baebf2b2314f9ab01eccc50c4c0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f89732ca0f7a9994394335d6071f8255, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2708,7 +2708,7 @@ GameObject:
   - component: {fileID: 176752900}
   m_Layer: 0
   m_Name: a(Word)
-  m_TagString: open A
+  m_TagString: closed A
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7783,7 +7783,7 @@ GameObject:
   - component: {fileID: 445579762}
   m_Layer: 0
   m_Name: a(Word)
-  m_TagString: open A
+  m_TagString: closed A
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12028,7 +12028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Chei_de
+  m_text: 'Chei_ de
 
 '
   m_isRightToLeft: 0
@@ -17048,7 +17048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d4f8c68e7c22f4b8228776d5bd280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: open A
+  Placedobjecttag: closed A
   word1: Conquist
   word: r
 --- !u!1 &967325324
@@ -24676,7 +24676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d4f8c68e7c22f4b8228776d5bd280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: open A
+  Placedobjecttag: closed A
   word1: C
   word: ve
 --- !u!1 &1432146233
@@ -31676,7 +31676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: closed A
   word1: Chei
-  word: de
+  word: ' de'
 --- !u!1 &1864175737
 GameObject:
   m_ObjectHideFlags: 0
@@ -43674,7 +43674,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1d10baebf2b2314f9ab01eccc50c4c0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f89732ca0f7a9994394335d6071f8255, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

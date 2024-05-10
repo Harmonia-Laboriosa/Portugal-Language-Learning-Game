@@ -23,7 +23,7 @@ public class IngridentSlot : MonoBehaviour, IDropHandler
             string droppedObjectTag = eventData.pointerDrag.tag;
 
             // Print the tag of the dropped object
-            Debug.Log("Tag of dropped object: " + droppedObjectTag);
+            //Debug.Log("Tag of dropped object: " + droppedObjectTag);
 
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);

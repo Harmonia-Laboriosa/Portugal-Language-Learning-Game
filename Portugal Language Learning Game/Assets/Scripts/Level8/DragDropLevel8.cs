@@ -205,7 +205,7 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                         else
                         {
                             isPlaceCorrect = false;
-                            Debug.Log("Object placed incorrectly!");
+                            //Debug.Log("Object placed incorrectly!");
                         }
                     }
 

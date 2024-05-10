@@ -58,6 +58,7 @@ public class Level8Manager : MonoBehaviour
     }
     public void CheckAllObjectsPlacedInPanel(GameObject panel, int panelIndex)
     {
+        //TempScore = 0;
         bool allPlaced = true;
         foreach (Transform slot in panel.transform)
         {
@@ -78,9 +79,7 @@ public class Level8Manager : MonoBehaviour
                 DragDropLevel8 dragDrop = slot.GetComponentInChildren<DragDropLevel8>();
                 if (dragDrop != null && dragDrop.isPlaceCorrect)
                 {
-                    
                     TempScore = TempScore + 1;
-                    
                     Debug.Log(TempScore);
                     if (TempScore == 6)
                     {
