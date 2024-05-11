@@ -12,7 +12,7 @@ public class LevelUpdate : MonoBehaviour
     void Start()
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-        if (CurrentPlayer != null)
+        if (CurrentPlayer != null && CurrentPlayer == null)
         {
             score = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
             switch (score)
