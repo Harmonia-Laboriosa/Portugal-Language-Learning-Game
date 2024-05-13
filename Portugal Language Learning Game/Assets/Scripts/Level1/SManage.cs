@@ -72,8 +72,8 @@ public class SManage : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString(); // Update the text to display the current score
-            Debug.Log(" "+ "The current score : " + score);
+            scoreText.text = "Points: " + score.ToString(); // Update the text to display the current score
+            Debug.Log(" "+ "The current Points : " + score);
         }
     }
     IEnumerator SavePlayerScore()

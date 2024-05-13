@@ -39,6 +39,8 @@ public class Level2Conversation : MonoBehaviour
 
     public Level6Manager level6;
     private bool gameEnded = false;
+    public GameObject backgroundsound;
+
     void Awake()
     {
         audio = FindObjectOfType<Level2AudioManager>();
@@ -217,7 +219,8 @@ public class Level2Conversation : MonoBehaviour
 
     private void EndGameScore()
     {
-          if (SManage.instance.score < 5)
+        backgroundsound.SetActive(false);
+        if (SManage.instance.score < 5)
             {
                 FailedPanel.SetActive(true);
             }

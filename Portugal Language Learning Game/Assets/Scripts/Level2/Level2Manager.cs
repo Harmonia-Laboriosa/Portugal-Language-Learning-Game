@@ -29,6 +29,8 @@ public class Level2Manager : MonoBehaviour
     public TMP_Text UserScoreText;
     int CurrentPlayerScore;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +92,7 @@ public class Level2Manager : MonoBehaviour
         }
         else
         {
+            
             Debug.Log("Quiz completed! and conversation started");
             // Display end game panel
             CanvasforQuestions.SetActive(false);
@@ -124,7 +127,7 @@ public class Level2Manager : MonoBehaviour
         RightAnswer.Play();
         // Change the selected (incorrect) answer button color to green
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        selectedButton.GetComponent<Image>().color = Color.green; 
+        //selectedButton.GetComponent<Image>().color = Color.green; 
          
         // Update the score using ScoreManager
         SManage.instance.IncreaseScore(1);
@@ -141,7 +144,7 @@ public class Level2Manager : MonoBehaviour
         WrongAnswer.Play();
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        selectedButton.GetComponent<Image>().color = Color.red;
+        //selectedButton.GetComponent<Image>().color = Color.red;
         
         // Shake the selected button
         StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
@@ -176,7 +179,7 @@ public class Level2Manager : MonoBehaviour
     void UpdateScoreText()
     {
         // Update the score text using ScoreManager
-        scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
+        scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
     }
 
     IEnumerator DelayBeforeNextQuestion()
