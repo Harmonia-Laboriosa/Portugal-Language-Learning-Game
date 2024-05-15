@@ -178,7 +178,7 @@ public class Level4Manager : MonoBehaviour
     void UpdateScoreText()
     {
         // Update the score text using ScoreManager
-        scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
+        scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
     }
 
     IEnumerator DelayBeforeNextQuestion()

@@ -118,7 +118,7 @@ public class Level3Manager : MonoBehaviour
                     {
                         Debug.Log("complete");
                         victoryPanel.SetActive(true);
-                        EndgamePanel.SetActive(true);
+                        //EndgamePanel.SetActive(true);
                         if (CurrentPlayer.GetComponent<CurrentPlayer>().Score == 2)
                         {
                             Debug.Log("Victory Card 3 and level 4 Unlocked ");
@@ -143,7 +143,7 @@ public class Level3Manager : MonoBehaviour
     {
         // Change the selected (incorrect) answer button color to green
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        //selectedButton.GetComponent<Image>().color = Color.green;
+        selectedButton.GetComponent<Image>().color = Color.green;
 
         // Update the score using ScoreManager
         SManage.instance.IncreaseScore(1);
@@ -161,7 +161,7 @@ public class Level3Manager : MonoBehaviour
     {
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        //selectedButton.GetComponent<Image>().color = Color.red;
+        selectedButton.GetComponent<Image>().color = Color.red;
 
         // Shake the selected button
         StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
@@ -197,7 +197,7 @@ public class Level3Manager : MonoBehaviour
     void UpdateScoreText()
     {
         // Update the score text using ScoreManager
-        scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
+        scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
     }
 
     IEnumerator DelayBeforeNextQuestion()
