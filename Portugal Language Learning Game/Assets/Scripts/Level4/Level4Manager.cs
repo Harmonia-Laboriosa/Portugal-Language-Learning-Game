@@ -30,6 +30,9 @@ public class Level4Manager : MonoBehaviour
     public TMP_Text UserScoreText;
     int CurrentPlayerScore;
 
+    public AudioSource AudioSource;
+    public AudioClip AudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,6 +136,7 @@ public class Level4Manager : MonoBehaviour
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
+        AudioSource.PlayOneShot(AudioClip, 0.75f);
         // Shatter all answer buttons after an answer is selected
         StartCoroutine(DelayBeforeNextQuestion());
         animationscore += 1;

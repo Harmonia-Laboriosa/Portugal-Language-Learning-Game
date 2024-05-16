@@ -43,6 +43,7 @@ public class RotateWheel : MonoBehaviour
     [SerializeField] public float snapAngle;
     private float currentRotation = 0f;
     private bool isRotating = false;
+    public AudioSource grindSound;
 
     void Start()
     {
@@ -60,10 +61,13 @@ public class RotateWheel : MonoBehaviour
 
     void RotateImage(float rotationAmount)
     {
+        //grindSound.Play();
         transform.Rotate(0f, 0f, rotationAmount);
     }
 
     void OnSpaceButtonClick()
     {
+        grindSound.Stop();
         isRotating = !isRotating; // Toggle the rotation state
-    }   }
+    }   
+}

@@ -42,6 +42,9 @@ public class Level5manager : MonoBehaviour
     public TMP_Text UserScoreText;
     int CurrentPlayerScore;
 
+    public AudioClip clip;
+    public AudioSource[] Asource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +111,8 @@ public class Level5manager : MonoBehaviour
             }
             */
 
+
+
         }
         EnableAnswerButtons();
     }
@@ -123,6 +128,9 @@ public class Level5manager : MonoBehaviour
             if (currentQuestion == 5)
             {
                 bg1.SetActive(true);
+
+                Asource[0].Stop();
+
             }
             if (currentQuestion == 10)
             {
@@ -325,6 +333,7 @@ public class Level5manager : MonoBehaviour
             
             q11.SetActive(false);
             rockAnimator.SetBool("MoveBoulder", true);
+            
             player2Animator.SetBool("move", true);
 
             // Display end game panel
@@ -339,6 +348,7 @@ public class Level5manager : MonoBehaviour
 
     private void EndGameScore()
     {
+        Asource[1].PlayOneShot(clip, 0.15f);
         if (!gameEnded) // Check if the game has not ended yet
         {
             if (SManage.instance.score <= 6)

@@ -8,10 +8,13 @@ public class Fire : MonoBehaviour
     public GameObject firelit;
     public Image[] images;
     public Image[] hands;
+    public Level5manager level5Manager;
+
     // Start is called before the first frame update
     void Start()
     {
         firelit.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -32,7 +35,7 @@ public class Fire : MonoBehaviour
             hands[i].color = ColorUtility.TryParseHtmlString("#FF7C00", out Color color) ? color : Color.white;
 
         }
-
+        level5Manager.Asource[0].Play();
     }
 
 }

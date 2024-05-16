@@ -13,6 +13,7 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
     public string Placedobjecttag;
     public Level3Manager level3Manager;
     //public string tag;
+    public AudioClip clipGarage; 
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -27,6 +28,8 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
             if(eventData.pointerDrag.tag==Placedobjecttag)
             {
                 level3Manager.Increasescore();
+                level3Manager.audios[2].PlayOneShot(clipGarage, 0.15f);
+
             }
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;

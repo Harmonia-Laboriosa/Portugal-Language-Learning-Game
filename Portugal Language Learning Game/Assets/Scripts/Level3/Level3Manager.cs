@@ -30,6 +30,9 @@ public class Level3Manager : MonoBehaviour
     public TMP_Text UserScoreText;
     int CurrentPlayerScore;
 
+    public AudioSource[] audios;
+    public AudioClip[] audioclips;  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -145,6 +148,8 @@ public class Level3Manager : MonoBehaviour
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.green;
 
+        audios[0].PlayOneShot(audioclips[0], 0.15f);
+
         // Update the score using ScoreManager
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
@@ -162,7 +167,7 @@ public class Level3Manager : MonoBehaviour
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.red;
-
+        audios[0].PlayOneShot(audioclips[0], 0.15f);
         // Shake the selected button
         StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
 
