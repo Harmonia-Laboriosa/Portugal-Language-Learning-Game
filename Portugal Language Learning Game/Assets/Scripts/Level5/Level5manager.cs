@@ -43,7 +43,13 @@ public class Level5manager : MonoBehaviour
     int CurrentPlayerScore;
 
     public AudioClip clip;
-    public AudioSource[] Asource;
+    public AudioSource Asource;
+
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -129,7 +135,7 @@ public class Level5manager : MonoBehaviour
             {
                 bg1.SetActive(true);
 
-                Asource[0].Stop();
+                
 
             }
             if (currentQuestion == 10)
@@ -190,6 +196,7 @@ public class Level5manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        RightAnswer.Play();
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
@@ -199,6 +206,7 @@ public class Level5manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        WrongAnswer.Play();
         FailedPanel.SetActive(true);
         /*
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
@@ -239,6 +247,7 @@ public class Level5manager : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     IEnumerator DelayBeforeNextQuestion()
@@ -285,6 +294,7 @@ public class Level5manager : MonoBehaviour
     }
     public void CorrectAnswerPart1()
     {
+        RightAnswer.Play();
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
         StartCoroutine(DelayBeforeNextQuestion());
@@ -348,7 +358,7 @@ public class Level5manager : MonoBehaviour
 
     private void EndGameScore()
     {
-        Asource[1].PlayOneShot(clip, 0.15f);
+        Asource.PlayOneShot(clip, 0.15f);
         if (!gameEnded) // Check if the game has not ended yet
         {
             if (SManage.instance.score <= 6)

@@ -31,7 +31,15 @@ public class Level3Manager : MonoBehaviour
     int CurrentPlayerScore;
 
     public AudioSource[] audios;
-    public AudioClip[] audioclips;  
+    public AudioClip[] audioclips;
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
+
+    public GameObject riverSound;
+
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +88,7 @@ public class Level3Manager : MonoBehaviour
                 bg2.SetActive(true);
                 bg1.SetActive(false);
                 player.SetActive(false);
+                riverSound.SetActive(false);
             }
             levels[i].SetActive(i == currentQuestion);
         }
@@ -148,7 +157,7 @@ public class Level3Manager : MonoBehaviour
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.green;
 
-        audios[0].PlayOneShot(audioclips[0], 0.15f);
+        RightAnswer.Play();
 
         // Update the score using ScoreManager
         SManage.instance.IncreaseScore(1);
@@ -164,6 +173,7 @@ public class Level3Manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        WrongAnswer.Play();
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.red;
@@ -203,6 +213,7 @@ public class Level3Manager : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     IEnumerator DelayBeforeNextQuestion()

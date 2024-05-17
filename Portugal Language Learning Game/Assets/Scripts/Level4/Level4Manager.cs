@@ -33,6 +33,12 @@ public class Level4Manager : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip AudioClip;
 
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -132,6 +138,7 @@ public class Level4Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        RightAnswer.Play();
         //Instantiate(shattered, shatter.transform.position, Quaternion.identity);
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
@@ -146,6 +153,7 @@ public class Level4Manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        WrongAnswer.Play();
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
 
         // Shake the selected button
@@ -183,6 +191,7 @@ public class Level4Manager : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     IEnumerator DelayBeforeNextQuestion()

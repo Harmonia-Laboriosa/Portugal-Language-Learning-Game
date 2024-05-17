@@ -28,7 +28,7 @@ public class Level3ItemSlot : MonoBehaviour, IDropHandler
             if(eventData.pointerDrag.tag==Placedobjecttag)
             {
                 level3Manager.Increasescore();
-                level3Manager.audios[2].PlayOneShot(clipGarage, 0.15f);
+                level3Manager.audios[1].PlayOneShot(clipGarage, 0.15f);
 
             }
             // Move the dropped object to the slot

@@ -15,6 +15,8 @@ public class SManage : MonoBehaviour
     public int score = 0; // Current score
     public TMP_Text scoreText; // Reference to the UI text displaying the score
 
+
+ 
     void Awake()
     {
         if (instance == null)

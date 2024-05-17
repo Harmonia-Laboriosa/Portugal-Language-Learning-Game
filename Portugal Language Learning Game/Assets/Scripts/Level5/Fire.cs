@@ -35,7 +35,7 @@ public class Fire : MonoBehaviour
             hands[i].color = ColorUtility.TryParseHtmlString("#FF7C00", out Color color) ? color : Color.white;
 
         }
-        level5Manager.Asource[0].Play();
+      
     }
 
 }

@@ -24,7 +24,9 @@ public class SlotManage : MonoBehaviour
 
     //public TMP_Text UserNameText;
     //public TMP_Text UserScoreText;
-    
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +100,7 @@ public class SlotManage : MonoBehaviour
                     {
                         
                         scoreManager.IncreaseScore(1);
+                        sourceAudio.PlayOneShot(audioClip, 0.75f);
                         TempScore = 0;
                     }
 
@@ -187,7 +190,7 @@ public class SlotManage : MonoBehaviour
                     TempScore = TempScore + 1;
                     if (TempScore == 3 || TempScore == 6)
                     {
-
+                        sourceAudio.PlayOneShot(audioClip, 0.75f);
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
                     }

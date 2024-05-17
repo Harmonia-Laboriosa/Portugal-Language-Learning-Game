@@ -29,7 +29,8 @@ public class Level2Manager : MonoBehaviour
     public TMP_Text UserScoreText;
     int CurrentPlayerScore;
 
-   
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -180,6 +181,7 @@ public class Level2Manager : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Points: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     IEnumerator DelayBeforeNextQuestion()
