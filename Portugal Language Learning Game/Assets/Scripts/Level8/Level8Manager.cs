@@ -27,6 +27,8 @@ public class Level8Manager : MonoBehaviour
     public GameObject bg1;
     public GameObject bg2;
 
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
     //public TMP_Text UserNameText;
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
@@ -84,6 +86,7 @@ public class Level8Manager : MonoBehaviour
                     if (TempScore == 2)
                     {
                         scoreManager.IncreaseScore(1);
+                        sourceAudio.PlayOneShot(audioClip, 0.75f);
                         //TempScore = 0;
                     }
                     /*
@@ -180,6 +183,7 @@ public class Level8Manager : MonoBehaviour
     public void correctAnswer()
     {
         SManage.instance.IncreaseScore(1);
+
     }
    
 }

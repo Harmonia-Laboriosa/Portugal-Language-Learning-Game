@@ -30,6 +30,12 @@ public class Level10Managers : MonoBehaviour
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
 
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -109,6 +115,7 @@ public class Level10Managers : MonoBehaviour
                     if (TempScore == 9)
                     {
                         scoreManager.IncreaseScore(1);
+                        sourceAudio.PlayOneShot(audioClip, 0.75f);
                         StartCoroutine(DelayBeforeNextQuestion());
                         TempScore = 0;
                     }
@@ -200,6 +207,7 @@ public class Level10Managers : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        RightAnswer.Play();
         // Change the selected (incorrect) answer button color to green
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.green;
@@ -216,6 +224,7 @@ public class Level10Managers : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        WrongAnswer.Play();
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedButton.GetComponent<Image>().color = Color.red;
@@ -234,6 +243,7 @@ public class Level10Managers : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     IEnumerator DelayBeforeNextQuestion()

@@ -30,6 +30,12 @@ public class Level7Manager : MonoBehaviour
     public TMP_Text UserScoreText;
     int CurrentPlayerScore;
 
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,6 +116,7 @@ public class Level7Manager : MonoBehaviour
     }
     public void CorrectAnswer(int correctButtonIndex)
     {
+        RightAnswer.Play();
         // Change color of the correct answer button to green
         answerButtons[correctButtonIndex].image.color = Color.green;
         answerButtons[correctButtonIndex].interactable= false;
@@ -129,6 +136,7 @@ public class Level7Manager : MonoBehaviour
 
     public void IncorrectAnswer()
     {
+        WrongAnswer.Play();
         // Disable the clicked incorrect button
         int clickedButtonIndex = GetClickedButtonIndex();
         answerButtons[clickedButtonIndex].gameObject.SetActive(false);
@@ -167,6 +175,7 @@ public class Level7Manager : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     void DisableAnswerButtons()

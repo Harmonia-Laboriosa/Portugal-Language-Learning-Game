@@ -25,6 +25,9 @@ public class Level9Manager : MonoBehaviour
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
 
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +78,7 @@ public class Level9Manager : MonoBehaviour
                     if (TempScore == 4)
                     {
                         scoreManager.IncreaseScore(1);
+                        sourceAudio.PlayOneShot(audioClip, 0.75f);
                         TempScore = 0;
                     }
 
@@ -124,6 +128,7 @@ public class Level9Manager : MonoBehaviour
     public void correctAnswer()
     {
         SManage.instance.IncreaseScore(1);
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
 }

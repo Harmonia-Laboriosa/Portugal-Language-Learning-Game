@@ -27,6 +27,12 @@ public class Level6Manager : MonoBehaviour
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
 
+    public AudioSource WrongAnswer;
+    public AudioSource RightAnswer;
+
+    public AudioSource sourceAudio;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -129,6 +135,7 @@ public class Level6Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        RightAnswer.Play();
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
         UpdateScoreText();
@@ -138,6 +145,7 @@ public class Level6Manager : MonoBehaviour
 
     public void IncorrectAnswer(int correctButtonIndex)
     {
+        WrongAnswer.Play();
         //FailedPanel.SetActive(false);
         /*
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
@@ -178,6 +186,7 @@ public class Level6Manager : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
+        sourceAudio.PlayOneShot(audioClip, 0.75f);
     }
 
     IEnumerator DelayBeforeNextQuestion()
