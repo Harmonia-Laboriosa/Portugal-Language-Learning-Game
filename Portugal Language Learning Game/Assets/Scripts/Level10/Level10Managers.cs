@@ -26,6 +26,8 @@ public class Level10Managers : MonoBehaviour
     private bool gameEnded = false;
     public Level10animation animations;
 
+    
+
     //public TMP_Text UserNameText;
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
@@ -159,6 +161,7 @@ public class Level10Managers : MonoBehaviour
         }
         else
         {
+            animations.gateOpen();
             Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel

@@ -7,6 +7,7 @@ public class Level10animation : MonoBehaviour
     public Animator player;
     public Animator guard1;
     public Animator guard2;
+    public Animator gate;
 
     // Start is called before the first frame update
     void Start()
@@ -30,5 +31,10 @@ public class Level10animation : MonoBehaviour
     {
         guard1.SetBool("removesword1", true);
         guard2.SetBool("removesword2", true);
+    }
+
+    public void gateOpen()
+    {
+        gate.SetBool("gateopen", true);
     }
 }
