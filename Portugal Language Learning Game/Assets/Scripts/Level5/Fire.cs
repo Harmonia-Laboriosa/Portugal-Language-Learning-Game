@@ -10,6 +10,8 @@ public class Fire : MonoBehaviour
     public Image[] hands;
     public Level5manager level5Manager;
 
+    public AudioSource fireSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Fire : MonoBehaviour
 
     public void fireON()
     {
+        fireSound.Play();
         firelit.SetActive(true);
         for(int i=0; i< images.Length; i++)
         {

@@ -14,6 +14,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public string word1;
     public string word;
 
+    public AudioSource dragSound;
+    public AudioClip dragClip;
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -69,7 +72,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             {
                 eventData.pointerDrag.GetComponentInChildren<Button>().interactable = false;
             }
-            
+            dragSound.PlayOneShot(dragClip);
             // Print the tag of the dropped object
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
 

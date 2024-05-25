@@ -33,6 +33,8 @@ public class Level8Manager : MonoBehaviour
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
 
+    public GameObject ovenSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -124,6 +126,7 @@ public class Level8Manager : MonoBehaviour
             if(currentPanelIndex==6)
             {
                 bg2.SetActive(true);
+                ovenSound.SetActive(false);
             }
         }
         else

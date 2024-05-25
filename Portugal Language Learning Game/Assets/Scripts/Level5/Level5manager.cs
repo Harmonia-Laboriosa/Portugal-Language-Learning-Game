@@ -134,7 +134,7 @@ public class Level5manager : MonoBehaviour
             if (currentQuestion == 5)
             {
                 bg1.SetActive(true);
-
+                playerAnim.SetActive(false);
                 
 
             }

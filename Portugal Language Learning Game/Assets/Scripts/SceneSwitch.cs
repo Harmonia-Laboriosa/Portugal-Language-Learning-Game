@@ -11,6 +11,11 @@ public class SceneSwitch : MonoBehaviour
     {
         SceneManager.LoadScene(x);
     }
+
+    public void LoadScene_Cutscene()
+    {
+        SceneManager.LoadScene("Cut Scene");
+    }
     public void LoadWelcomeScene()
     {
         SceneManager.LoadScene("WelcomeScene");

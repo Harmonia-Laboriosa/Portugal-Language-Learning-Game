@@ -28,6 +28,9 @@ public class SlotManage : MonoBehaviour
     public AudioSource sourceAudio;
     public AudioClip audioClip;
 
+    public GameObject BackgroundSound;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,8 @@ public class SlotManage : MonoBehaviour
         {
             isLastQuestion = true;
         }
+
+        BackgroundSound.SetActive(true);
 
     }
 
@@ -124,10 +129,12 @@ public class SlotManage : MonoBehaviour
 
     private void ActivateNextPanel(int currentPanelIndex)
     {
+        
         // Activate the panel for the next question if available
         if (currentPanelIndex < questionPanels.Length - 1)
         {
             StartCoroutine(ActivatePanelWithDelay(currentPanelIndex + 1));
+            
         }
         else
         {
@@ -138,12 +145,14 @@ public class SlotManage : MonoBehaviour
 
     private IEnumerator ActivatePanelWithDelay(int nextPanelIndex)
     {
+        
         // Wait for 2 seconds
         yield return new WaitForSeconds(waitForNextQuestion);
 
         // Activate the next panel after the delay
         questionManager.panels[nextPanelIndex].SetActive(true);
         questionManager.panels[nextPanelIndex - 1].SetActive(false);
+
     }
 
 

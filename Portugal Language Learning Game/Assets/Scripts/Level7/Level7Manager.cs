@@ -36,6 +36,8 @@ public class Level7Manager : MonoBehaviour
     public AudioSource sourceAudio;
     public AudioClip audioClip;
 
+    public GameObject MarketSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,10 @@ public class Level7Manager : MonoBehaviour
         {
             currentQuestion++;
             ActivateCurrentQuestion();
+            if(currentQuestion == 5)
+            {
+                MarketSound.SetActive(false);
+            }
         }
         else
         {

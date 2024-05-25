@@ -13,6 +13,8 @@ public class Level9Slot : MonoBehaviour, IDropHandler
     [SerializeField]
     public string Placedobjecttag;
     public bool canbePlaced = true;
+    public AudioSource dragSound;
+    public AudioClip dragClip;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -23,6 +25,7 @@ public class Level9Slot : MonoBehaviour, IDropHandler
 
             // Print the tag of the dropped object
             Debug.Log("Tag of dropped object: " + droppedObjectTag);
+            dragSound.PlayOneShot(dragClip);
             canbePlaced = false;
             // Move the dropped object to the slot
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
