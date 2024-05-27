@@ -27,7 +27,7 @@ public class ConversationLevel6 : MonoBehaviour
     private string initialXmlTag;   //the part of the xml that is first shown to the player upon starting a conversation
     public GameObject NPCImage;
     private string text;
-    private float typingSpeed = 0.2f; // Adjust typing speed here
+    private float typingSpeed = 0.02f; // Adjust typing speed here
 
     private Coroutine typingCoroutine; // Coroutine reference for typing animation
 
