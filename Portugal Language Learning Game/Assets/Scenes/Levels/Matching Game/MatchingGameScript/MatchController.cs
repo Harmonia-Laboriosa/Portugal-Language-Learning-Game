@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MatchController : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class MatchController : MonoBehaviour
     public AudioClip matchClip;
     public AudioClip notmatchClip;
 
+    public string sceneName;
 
     private void Awake()
     {
@@ -145,9 +147,16 @@ public class MatchController : MonoBehaviour
             Debug.Log("Game Finished");
             Debug.Log("It took you " + countGuesses+" guesses.");
             EndGamePanel.SetActive(true);
+            StartCoroutine("openFinalCutscene");
         }
     }
 
+    IEnumerator openFinalCutscene()
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene(sceneName);
+
+    }
     void Shuffle(List<Sprite> list)
     {
         for(int i = 0; i < list.Count; i++)
