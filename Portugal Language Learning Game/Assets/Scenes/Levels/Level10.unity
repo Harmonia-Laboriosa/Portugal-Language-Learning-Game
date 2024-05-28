@@ -27098,7 +27098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &3043848409175436661
 GameObject:
   m_ObjectHideFlags: 0
@@ -27197,18 +27197,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fill in the blanks with the appropriate options
-
-
-
-    Unscramble the
-    scrambled images to form the correct profession
-
-
-
-    Choose the correct profession
-
-'
+  m_text: "Trick the guards by selecting the correct professions. Let's bluff our
+    way past!\n\r\nChoose the right options to gain access to the castle. Let's crack
+    this fortress wide open!\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -27274,7 +27265,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3695756343380138522

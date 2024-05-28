@@ -41925,7 +41925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 1500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3448618161741938191
@@ -41948,7 +41948,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue your journey to Level 9
+  m_text: Well done on settling into the new village, but your main goal is not yet
+    completed. To secure the victory card, you must enquire and gather information
+    about it. Keep going!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -42190,19 +42192,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Select the correct answers from the given option
-
-
-
-    Drag and drop
-    the correct ingredients into the bowl
-
-
-
-    Arrange the steps according to the
-    the recipe in the correct order
-
-'
+  m_text: "Choose the correct dish to move forward, then gather the ingredients from
+    the market. Let's get cooking!\r\n\r\nSelect the right ingredients for the recipe
+    above. Let's whip up something delicious!\u201D\n\r\nPut the recipe steps in
+    order so you don't mess it up. Let's cook without chaos!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
