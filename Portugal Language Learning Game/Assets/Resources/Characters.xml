@@ -9,8 +9,9 @@
       
       <Name>Alex</Name>
       <Greeting>Ola
+	    <Response next="Quit">Boa tarde!</Response>
         <Response next="0">Boa noite!</Response>
-        <Response next="Quit">Boa tarde!</Response>
+        
       </Greeting>
   
       <Tree0>Ora, boa tarde, jovem. Como está?
@@ -19,8 +20,9 @@
       </Tree0>
   
       <Tree1>Ah sim? Mas nunca o vi por aqui. Quem é?
+	    <Response next="Quit">Sou um ladrão e quero roubar-vos.</Response>
         <Response next="2"> Sou um simples rapaz que se mudou para esta bela aldeia. Queria aprender a vestir-me como vocês.</Response>
-        <Response next="Quit">Sou um ladrão e quero roubar-vos.</Response>
+        
       </Tree1>
   
       <Tree2>Interessante! E o que faz da vida?
@@ -34,8 +36,9 @@
       </Tree3>
   
       <Tree4>E depois?
+	    <Response next="Quit">Depois, vou jantar, tomar banho e, finalmente, vou dormir.</Response>
         <Response next="5"> Depois, faço como todos nós: lavo os dentes, tomo o pequeno almoço, visto-me e ponho-me a caminho.</Response>
-        <Response next="Quit">Depois, vou jantar, tomar banho e, finalmente, vou dormir.</Response>
+        
       </Tree4>
 
       <Tree5>E quando chega do mar?
@@ -44,8 +47,9 @@
       </Tree5>
   
       <Tree6>E quando chega do mar?Parece-me um dia em cheio!
+	    <Response next="Quit">Sim. Mas pare de me chatear e diga-me onde está a loja.</Response>
         <Response next="7">Sim. Mas hoje não fui trabalhar, pois ando à procura da tal loja de roupa onde posso encontrar uma roupa mágica.</Response>
-        <Response next="Quit">Sim. Mas pare de me chatear e diga-me onde está a loja.</Response>
+        
       </Tree6>
    
       <Tree7>Para que quer essa roupa? Pode ser perigosa se usada da forma errada, por um não feiticeiro...
@@ -54,8 +58,8 @@
       </Tree7>
      
       <Tree8>Muito bem. Parece-me um rapaz simpático, vou ajudá-lo!
-        <Response next="Success"> Muito obrigado!</Response>
         <Response next="Quit">Finalmente!</Response>
+		<Response next="Success"> Muito obrigado!</Response>
       </Tree8>
   
       </Character>
