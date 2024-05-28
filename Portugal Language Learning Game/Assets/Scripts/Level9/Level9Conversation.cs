@@ -43,6 +43,8 @@ public class Level9Conversation : MonoBehaviour
 
     public Animator player;
 
+    public GameObject backgroundsound;
+
     void Awake()
     {
         
@@ -150,6 +152,7 @@ public class Level9Conversation : MonoBehaviour
     void EndConversation()
 
     {
+
         FailedPanel.SetActive(true);
         talk = false;
         Btn.PlayerImage.SetActive(false);
@@ -185,6 +188,7 @@ public class Level9Conversation : MonoBehaviour
 
     private void EndGameScore()
     {
+        backgroundsound.SetActive(false);
         if (SManage.instance.score < 5)
         {
             FailedPanel.SetActive(true);

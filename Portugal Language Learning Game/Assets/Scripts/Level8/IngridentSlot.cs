@@ -13,7 +13,10 @@ public class IngridentSlot : MonoBehaviour, IDropHandler
     [SerializeField]
     public string Placedobjecttag;
     public bool canbePlaced;
-    
+
+    public AudioSource dragSound;
+    public AudioClip dragClip;
+
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -31,8 +34,8 @@ public class IngridentSlot : MonoBehaviour, IDropHandler
             {
                 eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "";
             }
-            
+            dragSound.PlayOneShot(dragClip);
         }
-        
+       
     }
 }

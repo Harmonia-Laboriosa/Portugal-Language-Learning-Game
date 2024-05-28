@@ -38,6 +38,8 @@ public class Level7Manager : MonoBehaviour
 
     public GameObject MarketSound;
 
+    public GameObject backgroundsound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -91,6 +93,7 @@ public class Level7Manager : MonoBehaviour
 
     private void EndGameScore()
     {
+        backgroundsound.SetActive(false);
         Debug.Log("Level ended");
         if (SManage.instance.score < 10)
         {

@@ -26,8 +26,6 @@ public class Level10Managers : MonoBehaviour
     private bool gameEnded = false;
     public Level10animation animations;
 
-    
-
     //public TMP_Text UserNameText;
     //public TMP_Text UserScoreText;
     //int CurrentPlayerScore;
@@ -37,6 +35,9 @@ public class Level10Managers : MonoBehaviour
 
     public AudioSource sourceAudio;
     public AudioClip audioClip;
+
+    public GameObject backgroundsound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -126,6 +127,7 @@ public class Level10Managers : MonoBehaviour
                 if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
                 {
                     scoreManager.IncreaseScore(1);
+                    sourceAudio.PlayOneShot(audioClip);
                 }
 
             }
@@ -179,6 +181,7 @@ public class Level10Managers : MonoBehaviour
 
     private void EndGameScore()
     {
+        backgroundsound.SetActive(false);
         if (SManage.instance.score < 13)
         {
             FailedPanel.SetActive(true);
@@ -246,7 +249,7 @@ public class Level10Managers : MonoBehaviour
     {
         // Update the score text using ScoreManager
         scoreText.text = "Score: " + SManage.instance.GetScore().ToString();
-        sourceAudio.PlayOneShot(audioClip, 0.75f);
+        sourceAudio.PlayOneShot(audioClip);
     }
 
     IEnumerator DelayBeforeNextQuestion()
@@ -298,6 +301,7 @@ public class Level10Managers : MonoBehaviour
             if(iScore == 2)
             {
                 SManage.instance.IncreaseScore(1);
+                sourceAudio.PlayOneShot(audioClip);
                 iScore = 0;
             }
             else

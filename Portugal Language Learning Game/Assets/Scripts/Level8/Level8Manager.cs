@@ -35,6 +35,8 @@ public class Level8Manager : MonoBehaviour
 
     public GameObject ovenSound;
 
+    public GameObject backgroundsound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -139,6 +141,7 @@ public class Level8Manager : MonoBehaviour
 
     private void EndGameScore()
     {
+        backgroundsound.SetActive(false);
         if (SManage.instance.score < 12)
         {
             FailedPanel.SetActive(true);

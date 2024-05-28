@@ -1358,7 +1358,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -70}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76486614
 MonoBehaviour:
@@ -1374,6 +1374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Three
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &76486615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3828,7 +3830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758, y: -257}
+  m_AnchoredPosition: {x: -650, y: -390}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249254982
@@ -3871,6 +3873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: o
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &249254984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3891,7 +3895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4221b89aca32d26479019fb12eab98c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca3278f60cf2da4a89ee471b2eea3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4142,6 +4146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: i
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &258897176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4818,6 +4824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: i
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &289343767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4896,7 +4904,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: 150}
-  m_SizeDelta: {x: 425, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302886885
 MonoBehaviour:
@@ -4912,6 +4920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: One
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &302886886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5331,7 +5341,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -176}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319393571
 MonoBehaviour:
@@ -5347,6 +5357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Four
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &319393572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5871,6 +5883,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: i
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &341509452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6219,7 +6233,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -399}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350855338
 MonoBehaviour:
@@ -6235,6 +6249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Six
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &350855339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6737,7 +6753,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -70}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373956622
 MonoBehaviour:
@@ -6753,6 +6769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Three
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &373956623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10338,7 +10356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758, y: -257}
+  m_AnchoredPosition: {x: -650, y: -390}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610625770
@@ -10381,6 +10399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: o
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &610625772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10401,7 +10421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4221b89aca32d26479019fb12eab98c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca3278f60cf2da4a89ee471b2eea3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10844,7 +10864,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -176}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645540194
 MonoBehaviour:
@@ -10860,6 +10880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Four
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &645540195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11951,7 +11973,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -287}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671770602
 MonoBehaviour:
@@ -11967,6 +11989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Five
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &671770603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12177,7 +12201,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -99, y: -255}
+  m_AnchoredPosition: {x: -627, y: -255}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673887746
@@ -14203,7 +14227,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 150}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752825462
 MonoBehaviour:
@@ -14219,6 +14243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: One
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &752825463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14722,7 +14748,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -287}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &774464595
 MonoBehaviour:
@@ -14738,6 +14764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Five
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &774464596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16411,7 +16439,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -287}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892524157
 MonoBehaviour:
@@ -16427,6 +16455,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Five
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &892524158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16716,7 +16746,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: -70}
-  m_SizeDelta: {x: 425, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942569561
 MonoBehaviour:
@@ -16732,6 +16762,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Three
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &942569562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17273,6 +17305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: i
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &972513719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17427,7 +17461,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: -287}
-  m_SizeDelta: {x: 425, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974812910
 MonoBehaviour:
@@ -17443,6 +17477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Five
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &974812911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17926,7 +17962,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -176}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009594927
 MonoBehaviour:
@@ -17942,6 +17978,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Four
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1009594928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18459,7 +18497,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 40}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034006510
 MonoBehaviour:
@@ -18475,6 +18513,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Two
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1034006511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18688,7 +18728,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 40}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056958685
 MonoBehaviour:
@@ -18704,6 +18744,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Two
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1056958686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20817,7 +20859,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 150}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173768246
 MonoBehaviour:
@@ -20833,6 +20875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: One
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1173768247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21099,6 +21143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: i
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1179563698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21408,7 +21454,8 @@ MonoBehaviour:
   bg2: {fileID: 216880043}
   sourceAudio: {fileID: 1596365729}
   audioClip: {fileID: 8300000, guid: bec88091c2d720a4886a465dbf1c3f1e, type: 3}
-  ovenSound: {fileID: 0}
+  ovenSound: {fileID: 1574532928}
+  backgroundsound: {fileID: 5342434378198556202}
 --- !u!1 &1188417146
 GameObject:
   m_ObjectHideFlags: 0
@@ -21678,7 +21725,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -176}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199054301
 MonoBehaviour:
@@ -21694,6 +21741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Four
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1199054302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22312,7 +22361,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -399}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211747705
 MonoBehaviour:
@@ -22328,6 +22377,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Six
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1211747706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24538,7 +24589,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 40}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365484640
 MonoBehaviour:
@@ -24554,6 +24605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Two
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1365484641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26330,7 +26383,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: -176}
-  m_SizeDelta: {x: 425, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1428919719
 MonoBehaviour:
@@ -26346,6 +26399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Four
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1428919720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26711,7 +26766,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -399}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456006096
 MonoBehaviour:
@@ -26727,6 +26782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Six
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1456006097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27632,7 +27689,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: -399}
-  m_SizeDelta: {x: 425, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487245440
 MonoBehaviour:
@@ -27648,6 +27705,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Six
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1487245441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28013,7 +28072,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 150}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1514003913
 MonoBehaviour:
@@ -28029,6 +28088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: One
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1514003914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28690,7 +28751,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -287}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573952438
 MonoBehaviour:
@@ -28706,6 +28767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Five
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1573952439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28912,7 +28975,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: 40}
-  m_SizeDelta: {x: 425, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577807067
 MonoBehaviour:
@@ -28928,6 +28991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Two
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1577807068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33908,7 +33973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -627, y: -255}
+  m_AnchoredPosition: {x: -99, y: -255}
   m_SizeDelta: {x: 325, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857942691
@@ -36164,7 +36229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758, y: -257}
+  m_AnchoredPosition: {x: -650, y: -390}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932063883
@@ -36207,6 +36272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: o
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1932063885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36227,7 +36294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4221b89aca32d26479019fb12eab98c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca3278f60cf2da4a89ee471b2eea3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -36554,7 +36621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758, y: -257}
+  m_AnchoredPosition: {x: -650, y: -390}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935964889
@@ -36597,6 +36664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: o
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1935964891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36617,7 +36686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4221b89aca32d26479019fb12eab98c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca3278f60cf2da4a89ee471b2eea3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -36810,7 +36879,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -399}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1961063129
 MonoBehaviour:
@@ -36826,6 +36895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Six
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1961063130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37137,7 +37208,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -70}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980266969
 MonoBehaviour:
@@ -37153,6 +37224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Three
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1980266970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38588,7 +38661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758, y: -257}
+  m_AnchoredPosition: {x: -650, y: -390}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071656593
@@ -38631,6 +38704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: o
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &2071656595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38651,7 +38726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4221b89aca32d26479019fb12eab98c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca3278f60cf2da4a89ee471b2eea3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39739,7 +39814,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 150}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692456617774299120
 MonoBehaviour:
@@ -39755,6 +39830,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: One
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &692456617774299121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39833,7 +39910,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: 40}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692456617897119460
 MonoBehaviour:
@@ -39849,6 +39926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Two
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &692456617897119461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40636,7 +40715,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 315, y: -70}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 430, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692456618906983316
 MonoBehaviour:
@@ -40652,6 +40731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Placedobjecttag: Three
   canbePlaced: 0
+  dragSound: {fileID: 1285388970}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &692456618906983317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40977,7 +41058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &692456619530350200
 CanvasRenderer:
   m_ObjectHideFlags: 0

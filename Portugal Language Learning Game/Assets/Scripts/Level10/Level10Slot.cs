@@ -15,6 +15,9 @@ public class Level10Slot : MonoBehaviour, IDropHandler
     int mark = 1;
     //public string tag;
 
+    public AudioSource dragSound;
+    public AudioClip dragClip;
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -35,7 +38,9 @@ public class Level10Slot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
             level10Manager.Next(mark);
             //eventData.pointerDrag.gameObject.SetActive(false);
+            dragSound.PlayOneShot(dragClip);
         }
+       
     }
 
 }

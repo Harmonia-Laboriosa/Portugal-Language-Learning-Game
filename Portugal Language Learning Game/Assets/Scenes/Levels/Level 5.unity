@@ -8622,7 +8622,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11380,6 +11380,7 @@ MonoBehaviour:
   RightAnswer: {fileID: 12332069}
   sourceAudio: {fileID: 1596365729}
   audioClip: {fileID: 8300000, guid: bec88091c2d720a4886a465dbf1c3f1e, type: 3}
+  backgroundsound: {fileID: 701993195592097028}
 --- !u!82 &1187887122
 AudioSource:
   m_ObjectHideFlags: 0

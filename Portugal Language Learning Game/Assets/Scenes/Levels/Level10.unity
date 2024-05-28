@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 7423175}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Nine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 23909621}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,7 +1085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &55600142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,7 +1177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &64228184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,7 +1234,7 @@ GameObject:
   - component: {fileID: 98447765}
   m_Layer: 5
   m_Name: Image (4)
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1516,7 +1520,7 @@ GameObject:
   - component: {fileID: 118466866}
   m_Layer: 5
   m_Name: Image (2)
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1839,7 +1843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &172949515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,7 +1900,7 @@ GameObject:
   - component: {fileID: 180711867}
   m_Layer: 5
   m_Name: Image (2)
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1917,7 +1923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: -377}
+  m_AnchoredPosition: {x: -450, y: -200}
   m_SizeDelta: {x: 300.2, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &180711863
@@ -2081,7 +2087,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &202920025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2332,7 +2340,7 @@ GameObject:
   - component: {fileID: 227200574}
   m_Layer: 5
   m_Name: Image (3)
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2484,7 +2492,7 @@ GameObject:
   - component: {fileID: 238166195}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2770,7 +2778,7 @@ GameObject:
   - component: {fileID: 265993669}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3238,7 +3246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &282413984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3500,7 +3510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &304927574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,7 +4068,7 @@ GameObject:
   - component: {fileID: 342396304}
   m_Layer: 5
   m_Name: Image (3)
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4079,7 +4091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 452, y: -374}
+  m_AnchoredPosition: {x: 452, y: -200}
   m_SizeDelta: {x: 300.1, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &342396300
@@ -4562,7 +4574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &379348369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4657,6 +4671,7 @@ MonoBehaviour:
   RightAnswer: {fileID: 673925492}
   sourceAudio: {fileID: 1292150325}
   audioClip: {fileID: 8300000, guid: bec88091c2d720a4886a465dbf1c3f1e, type: 3}
+  backgroundsound: {fileID: 3043848409175436661}
 --- !u!1 &381634193
 GameObject:
   m_ObjectHideFlags: 0
@@ -4808,7 +4823,7 @@ GameObject:
   - component: {fileID: 387024881}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Seven
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4994,8 +5009,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   level10Manager: {fileID: 379348371}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &388557732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5468,7 +5485,7 @@ GameObject:
   - component: {fileID: 416188519}
   m_Layer: 5
   m_Name: Image (4)
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5755,7 +5772,7 @@ GameObject:
   - component: {fileID: 438037824}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Eight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6441,7 +6458,7 @@ GameObject:
   - component: {fileID: 485542633}
   m_Layer: 5
   m_Name: Image
-  m_TagString: o
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6464,7 +6481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: -200}
+  m_AnchoredPosition: {x: -450, y: -377}
   m_SizeDelta: {x: 300.2, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &485542629
@@ -6628,8 +6645,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: o
+  Placedobjecttag: One
   level10Manager: {fileID: 379348371}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &499629713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7302,7 +7321,7 @@ GameObject:
   - component: {fileID: 571701006}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Eight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7453,7 +7472,7 @@ GameObject:
   - component: {fileID: 576925561}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Nine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7731,7 +7750,7 @@ GameObject:
   - component: {fileID: 588695017}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8003,7 +8022,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &626273406
 GameObject:
   m_ObjectHideFlags: 0
@@ -8443,7 +8464,7 @@ GameObject:
   - component: {fileID: 660520330}
   m_Layer: 5
   m_Name: Image (3)
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8934,7 +8955,7 @@ GameObject:
   - component: {fileID: 692428567}
   m_Layer: 5
   m_Name: Image (2)
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9256,7 +9277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &721017169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9571,7 +9594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -200}
+  m_AnchoredPosition: {x: -600, y: -200}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &734521165
@@ -9590,7 +9613,7 @@ GameObject:
   - component: {fileID: 734521171}
   m_Layer: 5
   m_Name: Image (3)
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9777,7 +9800,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &743164899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10377,7 +10402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Nine
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &777976178
 GameObject:
   m_ObjectHideFlags: 0
@@ -10565,8 +10592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   level10Manager: {fileID: 379348371}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &794152377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10904,7 +10933,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Seven
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &811906538
 GameObject:
   m_ObjectHideFlags: 0
@@ -11092,7 +11123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Eight
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &864880916
 GameObject:
   m_ObjectHideFlags: 0
@@ -11254,7 +11287,7 @@ GameObject:
   - component: {fileID: 885219700}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Seven
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11575,7 +11608,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &917208046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11821,7 +11856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: -200}
+  m_AnchoredPosition: {x: 600, y: -200}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &958991763
@@ -12010,7 +12045,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Nine
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &968027017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12065,7 +12102,7 @@ GameObject:
   - component: {fileID: 971106355}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12251,8 +12288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
   level10Manager: {fileID: 0}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &995249664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12665,7 +12704,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190205
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -12749,7 +12788,7 @@ GameObject:
   - component: {fileID: 1030501551}
   m_Layer: 5
   m_Name: Image (3)
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13035,7 +13074,7 @@ GameObject:
   - component: {fileID: 1073754633}
   m_Layer: 5
   m_Name: Image (2)
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13222,7 +13261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Seven
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1094119368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13447,8 +13488,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   level10Manager: {fileID: 379348371}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1104286564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13903,7 +13946,7 @@ GameObject:
   - component: {fileID: 1155081039}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14189,7 +14232,7 @@ GameObject:
   - component: {fileID: 1184731322}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14567,7 +14610,7 @@ GameObject:
   - component: {fileID: 1232013706}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14865,7 +14908,7 @@ GameObject:
   - component: {fileID: 1246364911}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Nine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15151,7 +15194,7 @@ GameObject:
   - component: {fileID: 1251147183}
   m_Layer: 5
   m_Name: Image (4)
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15457,7 +15500,7 @@ GameObject:
   - component: {fileID: 1273525195}
   m_Layer: 5
   m_Name: Image (2)
-  m_TagString: i
+  m_TagString: Two
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15609,7 +15652,7 @@ GameObject:
   - component: {fileID: 1282616142}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Eight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15957,8 +16000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   level10Manager: {fileID: 0}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1303145203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16128,7 +16173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: -200}
+  m_AnchoredPosition: {x: -200, y: -200}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1327780165
@@ -16223,7 +16268,7 @@ GameObject:
   - component: {fileID: 1333026779}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16510,7 +16555,7 @@ GameObject:
   - component: {fileID: 1358685536}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16880,7 +16925,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &1372709588
 GameObject:
   m_ObjectHideFlags: 0
@@ -17147,7 +17194,7 @@ GameObject:
   - component: {fileID: 1395746537}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17978,8 +18025,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
   level10Manager: {fileID: 0}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1497698698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18169,7 +18218,7 @@ GameObject:
   - component: {fileID: 1503814191}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18438,7 +18487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Four
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1517641647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18493,7 +18544,7 @@ GameObject:
   - component: {fileID: 1520891086}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18759,7 +18810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: -200}
+  m_AnchoredPosition: {x: -600, y: -200}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1527978146
@@ -19204,7 +19255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -200}
+  m_AnchoredPosition: {x: -600, y: -200}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1558376022
@@ -19369,7 +19420,7 @@ GameObject:
   - component: {fileID: 1570250698}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Five
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19520,7 +19571,7 @@ GameObject:
   - component: {fileID: 1581110434}
   m_Layer: 5
   m_Name: Image (4)
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19890,7 +19941,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1583230428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20023,7 +20076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Eight
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1587452918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20248,8 +20303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   level10Manager: {fileID: 0}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1618132900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20339,7 +20396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Seven
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1619024992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20529,7 +20588,7 @@ GameObject:
   - component: {fileID: 1667208477}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20815,7 +20874,7 @@ GameObject:
   - component: {fileID: 1678415950}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21017,7 +21076,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190205
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -21506,7 +21565,7 @@ GameObject:
   - component: {fileID: 1708159396}
   m_Layer: 5
   m_Name: Image (4)
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21529,7 +21588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: -200}
+  m_AnchoredPosition: {x: 450, y: -374}
   m_SizeDelta: {x: 300.1, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1708159392
@@ -21658,7 +21717,7 @@ GameObject:
   - component: {fileID: 1715190989}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Six
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22114,7 +22173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1758451627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22204,7 +22265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Nine
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1775921552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22332,7 +22395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Two
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &1795490924
 GameObject:
   m_ObjectHideFlags: 0
@@ -22670,7 +22735,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190205
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -22940,7 +23005,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190205
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -23113,7 +23178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Eight
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1833888217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23750,7 +23817,7 @@ GameObject:
   - component: {fileID: 1888202955}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24071,7 +24138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Five
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &1889407826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24257,7 +24326,7 @@ GameObject:
   - component: {fileID: 1920960769}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Seven
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25458,7 +25527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e60d8780ac84e9e7c039225903ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Six
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!1 &2013374994
 GameObject:
   m_ObjectHideFlags: 0
@@ -25725,7 +25796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: -200}
+  m_AnchoredPosition: {x: 200, y: -200}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2050598141
@@ -25879,7 +25950,7 @@ GameObject:
   - component: {fileID: 2068441391}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26088,7 +26159,7 @@ GameObject:
   - component: {fileID: 2086053907}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Four
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26239,7 +26310,7 @@ GameObject:
   - component: {fileID: 2105923822}
   m_Layer: 5
   m_Name: Image
-  m_TagString: i
+  m_TagString: One
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26509,8 +26580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: Three
   level10Manager: {fileID: 379348371}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!114 &2139160846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26565,7 +26638,7 @@ GameObject:
   - component: {fileID: 2143254019}
   m_Layer: 5
   m_Name: ImageDrag
-  m_TagString: i
+  m_TagString: Three
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27477,8 +27550,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a930f1dda9073d4fabc4640279b3cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: One
   level10Manager: {fileID: 379348371}
+  dragSound: {fileID: 1939205833}
+  dragClip: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
 --- !u!222 &5459611429549134624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28291,7 +28366,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5dc9cbba95200cc4997cfb34e2e5a1c2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0

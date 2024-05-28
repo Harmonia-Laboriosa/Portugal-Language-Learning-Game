@@ -41,6 +41,9 @@ public class Level3Manager : MonoBehaviour
     public AudioSource WrongAnswer;
     public AudioSource RightAnswer;
 
+    public GameObject backgroundsound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,6 +116,7 @@ public class Level3Manager : MonoBehaviour
         }
         else
         {
+            backgroundsound.SetActive(false);
             Answerbuttons.SetActive(false);
             Debug.Log("Quiz completed!");
             // Display end game panel

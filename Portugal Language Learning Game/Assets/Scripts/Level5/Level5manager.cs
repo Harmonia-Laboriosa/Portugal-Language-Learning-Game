@@ -51,6 +51,8 @@ public class Level5manager : MonoBehaviour
     public AudioSource sourceAudio;
     public AudioClip audioClip;
 
+    public GameObject backgroundsound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -146,6 +148,7 @@ public class Level5manager : MonoBehaviour
         }
         else
         {
+            //backgroundsound.SetActive(false);
             Debug.Log("Quiz completed!");
             rockAnimator.SetBool("MoveBoulder", true);
             // Display end game panel
@@ -358,6 +361,7 @@ public class Level5manager : MonoBehaviour
 
     private void EndGameScore()
     {
+        backgroundsound.SetActive(false);
         Asource.PlayOneShot(clip, 0.15f);
         if (!gameEnded) // Check if the game has not ended yet
         {

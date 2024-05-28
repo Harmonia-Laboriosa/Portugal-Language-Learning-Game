@@ -12,6 +12,9 @@ public class Level10slots : MonoBehaviour, IDropHandler
     [SerializeField]
     public string Placedobjecttag;
 
+    public AudioSource dragSound;
+    public AudioClip dragClip;
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -23,6 +26,7 @@ public class Level10slots : MonoBehaviour, IDropHandler
 
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            dragSound.PlayOneShot(dragClip);
         }
     }
 }

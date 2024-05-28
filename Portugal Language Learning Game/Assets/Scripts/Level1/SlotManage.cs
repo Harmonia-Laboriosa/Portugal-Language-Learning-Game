@@ -222,7 +222,7 @@ public class SlotManage : MonoBehaviour
 
     private void EndGameScore()
     {
-
+        BackgroundSound.SetActive(false);
         SManage.instance.totalScore=SManage.instance.totalScore+SManage.instance.score;
         /*
         if(SManage.instance.totalScore>=0 && SManage.instance.totalScore<=12)

@@ -20,6 +20,13 @@ public class MatchController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzle;
     public GameObject EndGamePanel;
+
+    public AudioSource audioSound;
+
+    public AudioClip matchClip;
+    public AudioClip notmatchClip;
+
+
     private void Awake()
     {
         //puzzles = Resources.LoadAll<Sprite>("MSprites");
@@ -72,13 +79,14 @@ public class MatchController : MonoBehaviour
     public void PuzzlePick()
     {
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.tag;
-        //Debug.Log("You clicked " + tag);
+        Debug.Log("You clicked " + tag);
         if(!firstGuess)
         {
             firstGuess = true;
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
             btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
+            Debug.Log(firstGuessPuzzle);
         }
         else if(!secondGuess)
         {
@@ -87,6 +95,7 @@ public class MatchController : MonoBehaviour
             secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
             btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
             countGuesses++;
+            Debug.Log(secondGuessPuzzle);
             StartCoroutine(CheckIfThePuzzlesMatch());
         }
 
@@ -104,6 +113,8 @@ public class MatchController : MonoBehaviour
             btns[firstGuessIndex].image.color = new Color(0, 0, 0, 0);
             btns[secondGuessIndex].image.color = new Color(0, 0, 0, 0);
 
+            audioSound.PlayOneShot(matchClip);
+
             CheckIfTheGameFinished(); 
             //Debug.Log("Matched");
         }
@@ -113,6 +124,7 @@ public class MatchController : MonoBehaviour
 
             btns[firstGuessIndex].image.sprite = bgImage[firstGuessIndex];
             btns[secondGuessIndex].image.sprite = bgImage[secondGuessIndex];
+            audioSound.PlayOneShot(notmatchClip);
         }
         yield return new WaitForSeconds(0.25f);
         firstGuess = secondGuess = false;

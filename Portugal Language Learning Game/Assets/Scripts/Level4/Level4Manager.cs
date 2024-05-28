@@ -39,6 +39,8 @@ public class Level4Manager : MonoBehaviour
     public AudioSource sourceAudio;
     public AudioClip audioClip;
 
+    public GameObject backgroundsound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +109,7 @@ public class Level4Manager : MonoBehaviour
 
     private void EndGameScore()
     {
+        backgroundsound.SetActive(false);
         if (SManage.instance.score < 11)
         {
             failedPanel.SetActive(true);
