@@ -80,57 +80,62 @@ public class MatchController : MonoBehaviour
     {
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.tag;
         Debug.Log("You clicked " + tag);
-        if(!firstGuess)
+
+        int currentGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+
+        if (!firstGuess)
         {
             firstGuess = true;
-            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            firstGuessIndex = currentGuessIndex;
             firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
             btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
             Debug.Log(firstGuessPuzzle);
         }
-        else if(!secondGuess)
+        else if (!secondGuess && currentGuessIndex != firstGuessIndex) // Check if the same button is not clicked twice
         {
             secondGuess = true;
-            secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            secondGuessIndex = currentGuessIndex;
             secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
             btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
             countGuesses++;
             Debug.Log(secondGuessPuzzle);
             StartCoroutine(CheckIfThePuzzlesMatch());
         }
-
     }
 
     IEnumerator CheckIfThePuzzlesMatch()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         if (firstGuessPuzzle == secondGuessPuzzle)
         {
-            yield return new WaitForSeconds(0.25f);
+            btns[firstGuessIndex].image.color = Color.green;
+            btns[secondGuessIndex].image.color = Color.green;
+            yield return new WaitForSeconds(0.5f);
             btns[firstGuessIndex].interactable = false;
             btns[secondGuessIndex].interactable = false;
-
             btns[firstGuessIndex].image.color = new Color(0, 0, 0, 0);
             btns[secondGuessIndex].image.color = new Color(0, 0, 0, 0);
-
             audioSound.PlayOneShot(matchClip);
-
-            CheckIfTheGameFinished(); 
-            //Debug.Log("Matched");
+            CheckIfTheGameFinished();
         }
         else
         {
-            yield return new WaitForSeconds(0.25f);
-
+            btns[firstGuessIndex].image.color = Color.red;
+            btns[secondGuessIndex].image.color = Color.red;
+            audioSound.PlayOneShot(notmatchClip);
+            yield return new WaitForSeconds(1f);
+            btns[firstGuessIndex].image.color = new Color(1, 1, 1, 1); // Reset button color to original
+            btns[secondGuessIndex].image.color = new Color(1, 1, 1, 1); // Reset button color to original
+            
             btns[firstGuessIndex].image.sprite = bgImage[firstGuessIndex];
             btns[secondGuessIndex].image.sprite = bgImage[secondGuessIndex];
-            audioSound.PlayOneShot(notmatchClip);
+            
         }
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         firstGuess = secondGuess = false;
-
-
     }
+
+
 
     void CheckIfTheGameFinished()
     {
