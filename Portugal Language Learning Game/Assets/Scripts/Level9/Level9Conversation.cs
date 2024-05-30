@@ -45,6 +45,8 @@ public class Level9Conversation : MonoBehaviour
 
     public GameObject backgroundsound;
 
+    public Animator npcanim;
+
     void Awake()
     {
         
@@ -60,7 +62,13 @@ public class Level9Conversation : MonoBehaviour
     public void ConversationStart()
     {
         talk = true;
+        /*
+        if (!talk && npcanim != null)
+        {
+            npcanim.SetBool("npcTalk", talk);
 
+        }
+        */
         NPCImage.SetActive(true);
         isTalking = true;
         if (ConvoLocker != null)
@@ -119,7 +127,13 @@ public class Level9Conversation : MonoBehaviour
     void ConversationUpdate(string lineTree)
     {
         talk = true;
+        /*
+        if (!talk && npcanim != null)
+        {
+            npcanim.SetBool("npcTalk", talk);
 
+        }
+        */
         choiceButtons.PassChoice -= ConversationUpdate;
 
         if (lineTree == "TreeQuit")
@@ -152,7 +166,14 @@ public class Level9Conversation : MonoBehaviour
     void EndConversation()
 
     {
-
+        talk = false;
+        /*
+        if (!talk && npcanim != null)
+        {
+            npcanim.SetBool("npcTalk", talk);
+            
+        }
+        */
         FailedPanel.SetActive(true);
         talk = false;
         Btn.PlayerImage.SetActive(false);
