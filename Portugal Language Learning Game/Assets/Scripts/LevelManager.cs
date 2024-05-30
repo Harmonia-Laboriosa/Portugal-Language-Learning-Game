@@ -26,21 +26,24 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-   /* private void Awake()
-    {
-        
-        if (_instance != null && _instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
-        
-            
+    /* private void Awake()
+     {
+
+         if (_instance != null && _instance != this)
+         {
+             Destroy(gameObject);
+             return;
+         }
+         DontDestroyOnLoad(gameObject);
 
 
-     }*/
 
+
+      }*/
+
+
+    private IEnumerator coroutine1;
+    private IEnumerator coroutine2;
     public void Replay()
     {
         int currentscene = SceneManager.GetActiveScene().buildIndex;
@@ -48,17 +51,37 @@ public class LevelManager : MonoBehaviour
     }
     public void LoadNextLevel()
     {
+        StartCoroutine("Load_NextLevel");
+    }
+
+    IEnumerator Load_NextLevel()
+    {
+        yield return new WaitForSeconds(0.5f);
         int currentscene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentscene+1);
+        SceneManager.LoadScene(currentscene + 1);
     }
 
     public void LoadLevel(string level)
     {
-        SceneManager.LoadScene(level);
+        coroutine1 = Load_Level(level);
+        StartCoroutine(coroutine1);
     }
 
+
+    IEnumerator Load_Level(string level)
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(level);
+    }
     public void Home(int level)
     {
+        coroutine2 = Home_Level(level);
+        StartCoroutine(coroutine2);
+    }
+
+    IEnumerator Home_Level(int level)
+    {
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(level);
     }
 
