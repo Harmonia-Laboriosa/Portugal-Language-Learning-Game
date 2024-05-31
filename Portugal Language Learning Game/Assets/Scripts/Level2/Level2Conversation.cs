@@ -200,7 +200,7 @@ public class Level2Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
-        EndGameScore();
+        StartCoroutine("Ending");
         isTalking = false;
         if (level6 != null)
         {
@@ -216,6 +216,12 @@ public class Level2Conversation : MonoBehaviour
             ConvoLocker(isTalking);
         }
         NPCImage.SetActive(false);
+    }
+
+    private IEnumerator Ending()
+    {
+        yield return new WaitForSeconds(1.5f);
+        EndGameScore();
     }
 
     private void EndGameScore()

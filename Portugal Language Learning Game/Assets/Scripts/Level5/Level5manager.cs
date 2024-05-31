@@ -350,13 +350,19 @@ public class Level5manager : MonoBehaviour
             player2Animator.SetBool("move", true);
 
             // Display end game panel
-            EndGameScore();
+            StartCoroutine("Ending");
         }
         else if (allPlaced && !allCorrect)
         {
             // Reset all objects to their original position if not all correct for the last question
             ResetObjects(panel);
         }
+    }
+
+    private IEnumerator Ending()
+    {
+        yield return new WaitForSeconds(2f);
+        EndGameScore();
     }
 
     private void EndGameScore()

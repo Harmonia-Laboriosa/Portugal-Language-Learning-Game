@@ -10,6 +10,7 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     private RectTransform rectTransform;   //reference to RectTransform
     private CanvasGroup canvasGroup;       //reference to CanvasGroup
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
+    private Vector2 originalSize;          // Reference to the original size of the RectTransform
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
 
@@ -23,7 +24,7 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = rectTransform.anchoredPosition;
-
+        originalSize = rectTransform.sizeDelta;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -112,5 +113,12 @@ public class Level10DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     {
         //Debug.Log("OnPointerDown");
     }
+    public void ResetToOriginalPosition()
+    {
+        rectTransform.anchoredPosition = originalPosition;
+        rectTransform.sizeDelta = originalSize;
+        isDraggable = true;
+        isPlaceCorrect = false;
 
+    }
 }

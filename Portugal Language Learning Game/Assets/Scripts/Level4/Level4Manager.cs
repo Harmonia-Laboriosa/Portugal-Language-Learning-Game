@@ -102,10 +102,17 @@ public class Level4Manager : MonoBehaviour
         {
             Debug.Log("Quiz completed!");
             // Display end game panel
-            EndGameScore();
+            StartCoroutine("Ending");
         }
         EnableAnswerButtons();
     }
+
+    private IEnumerator Ending()
+    {
+        yield return new WaitForSeconds(2f);
+        EndGameScore();
+    }
+
 
     private void EndGameScore()
     {

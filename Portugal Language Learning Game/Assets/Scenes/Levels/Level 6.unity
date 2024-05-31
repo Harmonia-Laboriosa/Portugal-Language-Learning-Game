@@ -9477,7 +9477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817932812197988275, guid: bb3b36de1db2fbe4fa99e6bda743562f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9101539074866647445, guid: bb3b36de1db2fbe4fa99e6bda743562f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10864,13 +10864,14 @@ MonoBehaviour:
   m_text: 'Part 1
 
     Select the correct options to gain the wizard''s trust and
-    complete the dialogues.
+    to mask your true intentions
 
 
     Part 2
 
-    Select the correct option in the pamphlet
-    to learn what all the fuss is about and solve the village''s riddle.
+    Select the correct option in the
+    pamphlet to learn what all the fuss is about and solve the unsolvable riddle.
+
 
 '
   m_isRightToLeft: 0

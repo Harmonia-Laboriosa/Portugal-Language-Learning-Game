@@ -4228,8 +4228,8 @@ RectTransform:
   - {fileID: 5231423190073140064}
   - {fileID: 4604587689585125941}
   - {fileID: 3367970693435071989}
-  - {fileID: 6009744477132212539}
   - {fileID: 3256582874173589052}
+  - {fileID: 6009744477132212539}
   - {fileID: 2779969543163970064}
   - {fileID: 4890201705137713856}
   m_Father: {fileID: 0}
@@ -8342,7 +8342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817932812197988275, guid: bb3b36de1db2fbe4fa99e6bda743562f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9101539074866647445, guid: bb3b36de1db2fbe4fa99e6bda743562f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -25176,7 +25176,7 @@ RectTransform:
   - {fileID: 742251775}
   - {fileID: 8484039038125468926}
   m_Father: {fileID: 554120749}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25317,11 +25317,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Part  1\nTime to set the clock! Use the hour button to move the hour hand
-    and the minute button for the minute hand. Tick tock, let's get it right!\u201D\r\n\r\nPart
-    2\nChoose the right option to navigate the correct path ahead. Be careful, choosing
-    the wrong option will cost you the game!\r\n\r\nPart 3\nArrange the days of the
-    week in the correct order to find your way out of the cave of doom!\r\n"
+  m_text: 'Part  1
+
+    Time to set the clock! Use the hour button to move the hour
+    hand and the minute button for the minute hand. Tick tock, let''s get it right!
+
+    
+
+    Part
+    2
+
+    Choose the right option to navigate the correct path ahead. Be careful,
+    choosing the wrong one could set you back!
+
+    
+
+    Part 3
+
+    Arrange the
+    days of the week in the correct order to find your way out of the cave of doom!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -26982,7 +26998,7 @@ RectTransform:
   - {fileID: 6009744477215578409}
   - {fileID: 6009744477764557553}
   m_Father: {fileID: 554120749}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

@@ -92,6 +92,8 @@ public class Level10Managers : MonoBehaviour
     public void CheckAllObjectsPlacedInPanel(GameObject panel, int panelIndex)
     {
         bool allPlaced = true;
+        bool allCorrect = true;
+        int correctObjectCount = 0;
         foreach (Transform slot in panel.transform)
         {
             Level10DragDrop dragDrop = slot.GetComponentInChildren<Level10DragDrop>();
@@ -99,6 +101,18 @@ public class Level10Managers : MonoBehaviour
             {
                 allPlaced = false;
                 break;
+            }
+
+            if (dragDrop != null)
+            {
+                if (dragDrop.isPlaceCorrect)
+                {
+                    correctObjectCount++;
+                }
+                else
+                {
+                    allCorrect = false;
+                }
             }
         }
         allObjectsPlaced[panelIndex] = allPlaced;
@@ -121,21 +135,36 @@ public class Level10Managers : MonoBehaviour
                         sourceAudio.PlayOneShot(audioClip, 0.75f);
                         StartCoroutine(DelayBeforeNextQuestion());
                         TempScore = 0;
+                        scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
                     }
-
+               
                 }
-                if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
-                {
-                    scoreManager.IncreaseScore(1);
-                    sourceAudio.PlayOneShot(audioClip);
-                }
-
             }
-            scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
+            if (allPlaced && !allCorrect)
+            {
+                // Reset all objects to their original position if not all correct for the last question
+                ResetObjects(panel);
+            }
+            
         }
         // Activate next panel if all objects are placed
 
     }
+
+
+    private void ResetObjects(GameObject panel)
+    {
+        foreach (Transform slot in panel.transform)
+        {
+            Level10DragDrop dragDrop = slot.GetComponentInChildren<Level10DragDrop>();
+            if (dragDrop != null)
+            {
+                dragDrop.ResetToOriginalPosition();
+            }
+        }
+        //CheckAllObjectsPlacedInPanel(questions[questions.Length - 1], questions.Length - 1);
+    }
+
 
     void ActivateCurrentQuestion()
     {
@@ -175,6 +204,13 @@ public class Level10Managers : MonoBehaviour
     public IEnumerator endAnimation()
     {
         animations.end();
+        yield return new WaitForSeconds(3f);
+        StartCoroutine("Ending");
+    }
+
+
+    private IEnumerator Ending()
+    {
         yield return new WaitForSeconds(2f);
         EndGameScore();
     }

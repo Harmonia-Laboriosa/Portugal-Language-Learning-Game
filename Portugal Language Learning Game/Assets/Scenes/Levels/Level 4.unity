@@ -4200,7 +4200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817932812197988275, guid: bb3b36de1db2fbe4fa99e6bda743562f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9101539074866647445, guid: bb3b36de1db2fbe4fa99e6bda743562f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18029,9 +18029,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Part 1\n Spin the boulder by selecting the engraving to write the correct
-    article for the corresponding word. Let's rock this!\u201D\r\n\n\rPart 2 \nSelect
-    the correct option to open the cave gate.\r\n"
+  m_text: "Part 1\nSpin the boulder by selecting the engraving or hitting the space
+    bar to craft the correct article for each word. Step up to the challenge and
+    let's make this epic!\n\n\rPart 2 \nChoose wisely to shatter the rocks and unveil
+    the mysterious cave where your future awaits!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
