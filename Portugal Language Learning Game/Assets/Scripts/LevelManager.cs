@@ -73,13 +73,13 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(level);
     }
-    public void Home(int level)
+    public void Home(string level)
     {
         coroutine2 = Home_Level(level);
         StartCoroutine(coroutine2);
     }
 
-    IEnumerator Home_Level(int level)
+    IEnumerator Home_Level(string level)
     {
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(level);
