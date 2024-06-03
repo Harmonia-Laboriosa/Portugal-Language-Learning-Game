@@ -74,7 +74,9 @@
     
         <Tree0>Bem, eu sei que é um artefacto poderoso que dita o destino do reino.
           <Response next="1">Exatamente. Onde a posso encontrar?</Response>
-          <Response next="Quit">Exatamente. Onde a posso encontrar?</Response>
+          <Response next="Quit">
+			  Exatamente. O que a posso encontrar?
+		  </Response>
         </Tree0>
     
         <Tree1>Hm, qual é o seu interesse na VC?
@@ -89,7 +91,9 @@
         
         <Tree3>Começa daqui a uma semana, quando a lua se encher no céu..
           <Response next="4"> E como é que acha que posso usar a minha roupa mágica da invisibilidade?</Response>
-          <Response next="Quit">E quanto é que acha que posso usar a minha roupa mágica da invisibilidade</Response>
+          <Response next="Quit">
+			  E quanto é que acha que posso usar a minha roupa mágica da invisibilidade?
+		  </Response>
         </Tree3>
             
         <Tree4>Roupa mágica? Que ferramenta poderosa… Pode passar pelos guardas mais facilmente…
@@ -107,14 +111,15 @@
     <Character name="Sjerd">
       
       <Name>Sjerd</Name>
-      <Greeting>Então… tens de desbloquear a entrada da gruta e da aldeia. Cuidado, cada erro pode estragar tudo!
-        <Response next="0">onde fica a aldeia?</Response>
-        <Response next="Quit">Não posso ir direto à VC?</Response>
-      </Greeting>
+		<Greeting>Então… tens de desbloquear a entrada da gruta e da aldeia. Cuidado, cada erro pode estragar tudo!
+			<Response next="Quit">Não posso ir direto à VC?</Response>
+			<Response next="0">onde fica a aldeia?</Response>
+
+		</Greeting>
   
       <Tree0>Há um portal na gruta que te leva lá. Lá, tens de te ambientar aos costumes.
-        <Response next="1">Que costumes?</Response>
-        <Response next="Quit">deixe lá…</Response>
+            <Response next="Quit">deixe lá…</Response>
+		  <Response next="1">Que costumes?</Response> 
       </Tree0>
   
       <Tree1>Tens de te vestir, falar e comer como eles e os feiticeiros vão ajudar-te a encontrar o castelo, onde a VC está
@@ -123,12 +128,13 @@
       </Tree1>
   
       <Tree2>Depois dos feiticeiros, tens de conquistar a confiança dos guardas do castelo
+		  <Response next="Quit">Pois, se calhar já não tenho interesse…</Response>
         <Response next="3">E assim, tenho tudo para ganhar a VC?</Response>
-        <Response next="Quit">Pois, se calhar já não tenho interesse…</Response>
+        
       </Tree2>
       
       <Tree3>Não, tens de resolver o último desafio. No fim, a VC será tua. Boa sorte
-        <Response next="Success">SEE YOU THEN!</Response>
+        <Response next="Success">Até mais tarde!</Response>
       </Tree3>
   
         
@@ -148,7 +154,6 @@
 
       <Tree1>Hmm vamos fazer assim: se responderes aos meus enigmas, eu ajudo-te. Se não conseguires, não te posso ajudar.
         <Response next="Success"> Combinado. Vamos a isso.</Response>
-        <Response next="Quit">NO!</Response>
       </Tree1>
      
       
