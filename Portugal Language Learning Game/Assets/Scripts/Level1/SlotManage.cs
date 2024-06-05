@@ -320,7 +320,7 @@ public class SlotManage : MonoBehaviour
             }
         }
     }
-    private void ResetObjects(GameObject panel)
+    public void ResetObjects(GameObject panel)
     {
         foreach (Transform slot in panel.transform)
         {
