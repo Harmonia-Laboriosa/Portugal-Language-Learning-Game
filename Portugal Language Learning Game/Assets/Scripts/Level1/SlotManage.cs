@@ -26,7 +26,7 @@ public class SlotManage : MonoBehaviour
     //public TMP_Text UserScoreText;
 
     public AudioSource sourceAudio;
-    public AudioClip audioClip;
+    public AudioClip[] audioClip;
 
     public GameObject BackgroundSound;
     
@@ -78,6 +78,7 @@ public class SlotManage : MonoBehaviour
     public void CheckAllObjectsPlacedInPanel(GameObject panel, int panelIndex)
     {
         bool allPlaced = true;
+        bool allPlacedcorrect = false;
         foreach (Transform slot in panel.transform)
         {
             DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
@@ -105,13 +106,19 @@ public class SlotManage : MonoBehaviour
                     {
                         
                         scoreManager.IncreaseScore(1);
-                        sourceAudio.PlayOneShot(audioClip, 0.75f);
+                        sourceAudio.PlayOneShot(audioClip[0], 0.75f);
                         TempScore = 0;
+                        allPlacedcorrect = true;
                     }
+                    
 
                 }
+
             }
-           
+            if(!allPlacedcorrect)
+            {
+                   sourceAudio.PlayOneShot(audioClip[1], 0.75f);
+            }
 
             scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel
         }
@@ -199,7 +206,7 @@ public class SlotManage : MonoBehaviour
                     TempScore = TempScore + 1;
                     if (TempScore == 3 || TempScore == 6)
                     {
-                        sourceAudio.PlayOneShot(audioClip, 0.75f);
+                        sourceAudio.PlayOneShot(audioClip[0], 0.75f);
                         scoreManager.IncreaseScore(1);
                         TempScore = 0;
                     }
@@ -216,6 +223,7 @@ public class SlotManage : MonoBehaviour
         else if (allPlaced && !allCorrect)
         {
             // Reset all objects to their original position if not all correct for the last question
+            sourceAudio.PlayOneShot(audioClip[1], 0.75f);
             ResetObjects(panel);
         }
     }
