@@ -15,7 +15,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
     public GameObject SoundBtn;
-    public string textWord;
+    [SerializeField]
+    private string textWord;
 
     [SerializeField]
     private string tag;                    //tag of the gameobject where object will be placed
@@ -28,7 +29,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         originalPosition = rectTransform.anchoredPosition;
         
     }
-
+    public void Start()
+    {
+        textWord = gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
+       
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         //if isDraggable is false than return the function and cannot drag
@@ -128,7 +133,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform.anchoredPosition = originalPosition;
         isDraggable = true;
         isPlaceCorrect = false;
-
+        if (rectTransform != null)
+        {
+            rectTransform.sizeDelta = new Vector2(300, 125);
+        }
         foreach (Transform child in transform)
         {
             TextMeshProUGUI textComponent = child.GetComponent<TextMeshProUGUI>();
@@ -144,6 +152,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                 SoundBtn.SetActive(true);
                 // Make the button interactable
                 buttonComponent.interactable = true;
+                RectTransform rectTransform = buttonComponent.GetComponent<RectTransform>();
+                
             }
         }
     }
