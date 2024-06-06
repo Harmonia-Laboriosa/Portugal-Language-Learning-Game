@@ -12,6 +12,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;   //reference to RectTransform
     private CanvasGroup canvasGroup;       //reference to CanvasGroup
     private Vector2 originalPosition;      //Reference to the position it is at the start of the scene
+    private Vector2 originalSize;   
     public bool isDraggable = true;        //isDraggable bool to check whether you can drag the gameobject 
     public bool isPlaceCorrect = false;        //isDraggable bool to check whether you can drag the gameobject 
     public GameObject SoundBtn;
@@ -27,7 +28,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = rectTransform.anchoredPosition;
-        
+        originalSize = rectTransform.sizeDelta;
     }
     public void Start()
     {
@@ -43,9 +44,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         //make the draggable object little transparent
         canvasGroup.alpha = 0.75f;
         canvasGroup.blocksRaycasts = false;
+        
     }
 
-    public void OnDrag(PointerEventData eventData)
+
+public void OnDrag(PointerEventData eventData)
     {
         //if isDraggable is false than return the function and cannot drag
         if (!isDraggable) return;
@@ -133,10 +136,16 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform.anchoredPosition = originalPosition;
         isDraggable = true;
         isPlaceCorrect = false;
+<<<<<<< Updated upstream
         if (rectTransform != null)
         {
             rectTransform.sizeDelta = new Vector2(300, 125);
         }
+=======
+        rectTransform.sizeDelta = originalSize;
+
+
+>>>>>>> Stashed changes
         foreach (Transform child in transform)
         {
             TextMeshProUGUI textComponent = child.GetComponent<TextMeshProUGUI>();
@@ -156,5 +165,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                 
             }
         }
+    }
+    public void ResetToOriginalPos()
+    {
+        rectTransform.anchoredPosition = originalPosition;
+        isDraggable = true;
+        isPlaceCorrect = false;
     }
 }

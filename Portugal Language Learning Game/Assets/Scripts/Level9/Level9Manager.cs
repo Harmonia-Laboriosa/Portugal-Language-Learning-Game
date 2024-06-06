@@ -94,6 +94,18 @@ public class Level9Manager : MonoBehaviour
             ActivateNextPanel(panelIndex);
         }
     }
+    public void ResetObjects(GameObject panel)
+    {
+        foreach (Transform slot in panel.transform)
+        {
+            Level9DragDrop drag = slot.GetComponentInChildren<Level9DragDrop>();
+            if (drag != null)
+            {
+                drag.ResetToOriginalPosition();
+            }
+        }
+        CheckAllObjectsPlacedInPanel(questionPanels[questionPanels.Length - 1], questionPanels.Length - 1);
+    }
     public void ActivateNextPanel(int currentPanelIndex)
     {
 

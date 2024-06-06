@@ -117,6 +117,20 @@ public class Level8Manager : MonoBehaviour
             ActivateNextPanel(panelIndex);
         }
     }
+
+    public void ResetObjects(GameObject panel)
+    {
+        foreach (Transform slot in panel.transform)
+        {
+            DragDropLevel8 drag = slot.GetComponentInChildren<DragDropLevel8>();
+            if (drag != null)
+            {
+                drag.ResetToOriginalPosition();
+            }
+        }
+        CheckAllObjectsPlacedInPanel(questionPanels[questionPanels.Length - 1], questionPanels.Length - 1);
+    }
+
     public void ActivateNextPanel(int currentPanelIndex)
     {
         

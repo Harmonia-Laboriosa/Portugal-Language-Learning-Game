@@ -390,7 +390,7 @@ public class Level5manager : MonoBehaviour
             gameEnded = true; // Set the flag to true to indicate that the game has ended
         }
     }
-    private void ResetObjects(GameObject panel)
+    public void ResetObjects(GameObject panel)
     {
         foreach (Transform slot in panel.transform)
         {

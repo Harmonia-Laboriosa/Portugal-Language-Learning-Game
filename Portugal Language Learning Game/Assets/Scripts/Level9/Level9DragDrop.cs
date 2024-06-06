@@ -110,5 +110,6 @@ public class Level9DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         rectTransform.anchoredPosition = originalPosition;
         isDraggable = true;
         isPlaceCorrect = false;
+        GetComponent<Image>().color = new Color(255f, 255f, 255f, 255f);
     }
 }

@@ -224,5 +224,6 @@ public class DragDropLevel8 : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         rectTransform.anchoredPosition = originalPosition;
         isDraggable = true;
         isPlaceCorrect = false;
+        GetComponent<Image>().color = new Color(255f, 255f, 255f, 255f);
     }
 }

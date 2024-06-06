@@ -330,7 +330,20 @@ public class SlotManage : MonoBehaviour
                 dragDrop.ResetToOriginalPosition();
             }
         }
-        CheckAllObjectsinLsstPlacedInPanel(questionPanels[questionPanels.Length-1], questionPanels.Length-1);
+        CheckAllObjectsPlacedInPanel(questionPanels[questionPanels.Length-1], questionPanels.Length-1);
+        //CheckAllObjectsPlacedInPanel(questionPanels[questionPanels.Length - 1], questionPanels.Length - 1);
+    }
+    public void Reset(GameObject panel)
+    {
+        foreach (Transform slot in panel.transform)
+        {
+            DragDrop dragDrop = slot.GetComponentInChildren<DragDrop>();
+            if (dragDrop != null)
+            {
+                dragDrop.ResetToOriginalPos();
+            }
+        }
+        CheckAllObjectsPlacedInPanel(questionPanels[questionPanels.Length - 1], questionPanels.Length - 1);
     }
 }
    
