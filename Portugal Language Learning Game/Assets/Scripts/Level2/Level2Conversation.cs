@@ -202,15 +202,26 @@ public class Level2Conversation : MonoBehaviour
     {
         StartCoroutine("Ending");
         isTalking = false;
-        if (level6 != null)
-        {
-            level6.walk();
-        }
+        
         Btn.PlayerImage.SetActive(false);
         //namePrinter.PrintToUI("");
         dialogeueText.text = "";
         gameObject.SetActive(false);
+        if (SManage.instance.score < 5)
+        {
+            FailedPanel.SetActive(true);
+        }
+        else
+        {
+            if (SManage.instance.score == 5)
+            {
+                victoryPanel.SetActive(true);
+                EndPanel.SetActive(true);
+            }
 
+        }
+        backgroundsound1.SetActive(false);
+        backgroundsound2.SetActive(false);
         if (ConvoLocker != null)
         {
             ConvoLocker(isTalking);
@@ -218,32 +229,6 @@ public class Level2Conversation : MonoBehaviour
         NPCImage.SetActive(false);
     }
 
-    private IEnumerator Ending()
-    {
-        yield return new WaitForSeconds(1.5f);
-        EndGameScore();
-    }
-
-    private void EndGameScore()
-    {
-        backgroundsound1.SetActive(false);
-        backgroundsound2.SetActive(false);
-        if (SManage.instance.score < 5)
-            {
-                FailedPanel.SetActive(true);
-            }
-         else
-            {
-                if (SManage.instance.score == 5)
-                {
-                    victoryPanel.SetActive(true);
-                    EndPanel.SetActive(true);
-                }
-                
-            }
-
-         
-        
-    }
+    
 
 }
