@@ -11,6 +11,8 @@ public class ShowScore : MonoBehaviour
     public SManage scoreShow;
     public TMP_Text scoreText; // Reference to the UI text displaying the score 
     public int showScore;
+    public int DialogueLevelScore=0;
+    public GameObject ScoreOutOf;
 
 
     // Update is called once per frame
@@ -24,7 +26,19 @@ public class ShowScore : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + showScore.ToString(); // Update the text to display the current score
+            if (DialogueLevelScore >= 0)
+            {
+                if (showScore == DialogueLevelScore)
+                {
+                    if (ScoreOutOf != null)
+                        ScoreOutOf.SetActive(false);
+                    scoreText.text = "Wrong Converstation";
+                }
+            }
+            else
+            {
+                scoreText.text = "Score: " + showScore.ToString(); // Update the text to display the current score
+            }
         }
     }
 }
