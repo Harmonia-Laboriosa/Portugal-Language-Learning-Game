@@ -15399,7 +15399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d4f8c68e7c22f4b8228776d5bd280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: closed O
+  Placedobjecttag: i
   word1: Conqu
   word: star
   dragSound: {fileID: 1312828102}
@@ -16425,7 +16425,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /12
+  m_text: '/13
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -23454,7 +23456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d4f8c68e7c22f4b8228776d5bd280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: i
+  Placedobjecttag: closed O
   word1: Destin
   word: 
   dragSound: {fileID: 1312828102}
@@ -44603,6 +44605,10 @@ PrefabInstance:
     - target: {fileID: 1619042937969823734, guid: 06f5dc6502ee0c548849d1ffa786bc32, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -87.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266179087440070674, guid: 06f5dc6502ee0c548849d1ffa786bc32, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3723307754244869424, guid: 06f5dc6502ee0c548849d1ffa786bc32, type: 3}
       propertyPath: m_AnchorMax.y
