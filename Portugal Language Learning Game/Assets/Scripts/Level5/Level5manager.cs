@@ -351,6 +351,7 @@ public class Level5manager : MonoBehaviour
 
             // Display end game panel
             StartCoroutine("Ending");
+            //increase marks here
         }
         else if (allPlaced && !allCorrect)
         {

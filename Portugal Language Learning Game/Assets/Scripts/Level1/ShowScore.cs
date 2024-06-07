@@ -40,5 +40,6 @@ public class ShowScore : MonoBehaviour
                 scoreText.text = "Score: " + showScore.ToString(); // Update the text to display the current score
             }
         }
+        //scoreText.text = "Score: " + showScore.ToString();
     }
 }

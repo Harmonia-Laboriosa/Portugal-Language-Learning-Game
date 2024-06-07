@@ -136,16 +136,16 @@ public void OnDrag(PointerEventData eventData)
         rectTransform.anchoredPosition = originalPosition;
         isDraggable = true;
         isPlaceCorrect = false;
-<<<<<<< Updated upstream
+
         if (rectTransform != null)
         {
             rectTransform.sizeDelta = new Vector2(300, 125);
         }
-=======
+
         rectTransform.sizeDelta = originalSize;
 
 
->>>>>>> Stashed changes
+
         foreach (Transform child in transform)
         {
             TextMeshProUGUI textComponent = child.GetComponent<TextMeshProUGUI>();

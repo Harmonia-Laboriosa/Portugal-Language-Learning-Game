@@ -128,7 +128,7 @@ public class Level2Manager : MonoBehaviour
         RightAnswer.Play();
         // Change the selected (incorrect) answer button color to green
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        //selectedButton.GetComponent<Image>().color = Color.green; 
+        selectedButton.GetComponent<Image>().color = Color.green; 
          
         // Update the score using ScoreManager
         SManage.instance.IncreaseScore(1);
@@ -145,7 +145,7 @@ public class Level2Manager : MonoBehaviour
         WrongAnswer.Play();
         // Change the selected (incorrect) answer button color to red
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        //selectedButton.GetComponent<Image>().color = Color.red;
+        selectedButton.GetComponent<Image>().color = Color.red;
         
         // Shake the selected button
         StartCoroutine(ShakeButton(selectedButton.gameObject, 1f, 20f));
