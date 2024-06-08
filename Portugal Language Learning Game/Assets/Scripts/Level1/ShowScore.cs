@@ -11,7 +11,7 @@ public class ShowScore : MonoBehaviour
     public SManage scoreShow;
     public TMP_Text scoreText; // Reference to the UI text displaying the score 
     public int showScore;
-    public int DialogueLevelScore=0;
+    public int DialogueLevelScore;
     public GameObject ScoreOutOf;
 
 

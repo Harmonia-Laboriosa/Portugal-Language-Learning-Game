@@ -18137,7 +18137,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 2'
+  m_text: '
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -18237,6 +18240,7 @@ GameObject:
   - component: {fileID: 985379765126863887}
   - component: {fileID: 985379765126863884}
   - component: {fileID: 985379765126863885}
+  - component: {fileID: 985379765126863891}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -18244,6 +18248,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &985379765126863891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985379765126863890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2b35236f0c9694a901b8d1696b1753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreShow: {fileID: 1535866321}
+  scoreText: {fileID: 985379765126863885}
+  showScore: 0
+  DialogueLevelScore: 5
+  ScoreOutOf: {fileID: 1112229182}
 --- !u!222 &985379765299724577
 CanvasRenderer:
   m_ObjectHideFlags: 0
