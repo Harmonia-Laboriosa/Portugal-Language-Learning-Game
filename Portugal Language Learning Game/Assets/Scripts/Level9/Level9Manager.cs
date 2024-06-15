@@ -69,17 +69,18 @@ public class Level9Manager : MonoBehaviour
             foreach (Transform slot in panel.transform)
             {
                 Level9DragDrop dragDrop = slot.GetComponentInChildren<Level9DragDrop>();
-                if (dragDrop != null && dragDrop.isPlaceCorrect)
+                if (dragDrop != null && dragDrop.isPlaceCorrect==true)
                 {
 
                     TempScore = TempScore + 1;
 
                     Debug.Log(TempScore);
-                    if (TempScore == 4)
+                    if (TempScore==4)
                     {
                         scoreManager.IncreaseScore(1);
-                        sourceAudio.PlayOneShot(audioClip, 0.75f);
                         TempScore = 0;
+                        sourceAudio.PlayOneShot(audioClip, 0.75f);
+                        
                     }
 
                 }

@@ -72,7 +72,7 @@ public class Level9DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
 
                         // Check if the placed object tag matches the tag of this object
-                        if (string.Equals(placed_ObjectTag, gameObject.tag))
+                        if (string.Equals(placed_ObjectTag, this.gameObject.tag))
                         {
                             isPlaceCorrect = true;
                             // Debug.Log("Object placed correctly!");

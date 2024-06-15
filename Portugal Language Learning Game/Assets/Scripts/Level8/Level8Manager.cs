@@ -93,20 +93,10 @@ public class Level8Manager : MonoBehaviour
                         sourceAudio.PlayOneShot(audioClip, 0.75f);
                         //TempScore = 0;
                     }
-                    /*
-                    else
-                    {
-                        TempScore = 0;
-                    }
-                    */
+
                     
                 }
-                /*
-                if (dragDrop != null && dragDrop.isPlaceCorrect && slot.GetComponentInChildren<VerticalLayoutGroup>())
-                {
-                    scoreManager.IncreaseScore(1);
-                }
-                */
+
             }
             TempScore = 0;
             scoreIncreased[panelIndex] = true; // Mark that the score has been increased for this panel

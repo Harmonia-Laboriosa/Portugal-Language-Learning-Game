@@ -144,6 +144,8 @@ public class Level6Manager : MonoBehaviour
 
     public void CorrectAnswer(int correctButtonIndex)
     {
+        Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        selectedButton.GetComponent<Image>().color = Color.green;
         RightAnswer.Play();
         //Destroy(shatter);
         SManage.instance.IncreaseScore(1);
@@ -155,6 +157,8 @@ public class Level6Manager : MonoBehaviour
     public void IncorrectAnswer(int correctButtonIndex)
     {
         WrongAnswer.Play();
+        Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        selectedButton.GetComponent<Image>().color = Color.red;
         //FailedPanel.SetActive(false);
         /*
         Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
