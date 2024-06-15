@@ -19004,7 +19004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-1
+  m_text: Mestre das narrativas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -19139,7 +19139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3487027847267279569
@@ -19180,17 +19180,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Part 1
-
-    Gather information by asking questions to them. Let''s dig
-    for answers!
-
-
-
-    Part 2
-
-    To do so, ask the questions in chronological
-    order. Let''s unravel the mystery step by step!'
+  m_text: "Welcome to Level 9! It\u2019s time to gather information and uncover the
+    mystery. Here's how to play:\n\r\n1: Chronological Order\r\nA. Form the correct
+    Interrogative sentence according to grammar.\r\nB. Drag and drop the words in
+    correct order to form a question.\r\nC. If you place the incorrect word unmistakably,
+    do not worry, just click the reset button to reset.\n \r\n2: Asking Questions
+    to NPC\r\nA. Interact with characters to gather crucial information. Select the
+    right questions to ask based on the context of the conversation.\r\nB. Pay attention
+    to the responses, as they will provide hints and clues necessary for your investigation.\r\n\nGood
+    luck on your adventure!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -19217,8 +19215,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21649,7 +21647,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 1600, y: 250}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8771637320198394745
 GameObject:
@@ -21717,7 +21715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congrats on completing Level 9! The biggest challenge awaits. Sneak into
+  m_text: Awesome job beating Level 9! The biggest challenge is next. Sneak into
     the castle in Level 10. You can do it!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}

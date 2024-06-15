@@ -414,7 +414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 84}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &437518765
@@ -1067,8 +1067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1000, y: 250}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784711910
 MonoBehaviour:
@@ -1090,10 +1090,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Choose the correct dish to move forward, then gather the ingredients
-    from the market. Let's get cooking!\u201D\r\n\r\n\"Select the right ingredients
-    for the recipe above by putting the correct ones in the bowl and the wrong ones
-    in the basket. Let's whip up something delicious!\u201D\r\n"
+  m_text: "Welcome to Level 8! It's time to showcase your cooking skills. Here's
+    how to play:\n\n1: Choosing the Dish\r\nA. Select the correct dish from a given
+    set of options. \r\n\n2: Time to choose Ingredients to Recipe\r\nA. Time to guess
+    the right ingredients for the recipe. You will see the dish on screen.\r\nB.
+    You\u2019ll be presented with a variety of ingredients. Place the correct ingredients
+    for the recipe  in the core recipe bowl and discard the incorrect ones into the
+    leftover basket.\r\nC. Pay attention to the recipe requirements and make sure
+    only the necessary ingredients are used. So that it does not become padded.\r\n\n3:
+    Ordering the Steps\r\nA. Place the recipe steps in the correct order in the provided
+    blank. Follow the sequence precisely to create a delicious dish without any mishaps.\r\nB.
+    Ensuring the steps are in order will help you avoid confusion and complete the
+    recipe successfully.\r\n\nGood luck on your adventure!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -1120,8 +1128,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

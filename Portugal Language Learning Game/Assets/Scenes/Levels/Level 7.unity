@@ -26598,8 +26598,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well, now you've dressed up like the wizards, but can you survive on just
-    clothes? Head on to Level 8 to learn how to live and eat like them!
+  m_text: Great work on getting the outfit right in Level 7! Can you handle living
+    and eating like the wizards? Level 8 is waiting for you!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -26924,7 +26924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3487027847357021562
@@ -26965,9 +26965,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Part 1 \nSelect the correct clothes for each specific occasion.\n\nPart
-    2\r\nMatch the clothes to the correct profession. Let's gear up for greatness
-    and dress for success!\n"
+  m_text: 'Welcome to Level 7! It''s time to showcase your fashion sense. Here''s
+    how to play:
+
+
+    1: Dressing for Occasions
+
+    A. You''ll be given different
+    occasions such as a formal event, a beach party, or a sports activity. Select
+    the 4 appropriate attire for each occasion from the given clothes.
+
+    B. Ensure
+    the outfit matches the event perfectly to earn points.
+
+
+    2: Matching Professions
+
+    A.
+    Place the appropriate outfit on professions given. For example, place  a lab
+    coat on a scientist.
+
+
+    Good luck on your adventure!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -27443,7 +27462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-7
+  m_text: Mestre do disfarce
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -27860,8 +27879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1600, y: 250}
+  m_AnchoredPosition: {x: 0, y: -75}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &8956995312475816855
 Transform:

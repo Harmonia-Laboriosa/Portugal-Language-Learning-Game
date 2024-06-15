@@ -47274,7 +47274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3367970693435071988
@@ -47666,9 +47666,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well done on settling into the new village, but your main goal is not yet
-    completed. To secure the victory card, you must enquire and gather information
-    about it. Keep going!
+  m_text: Well done settling into the new village in Level 8, but your main goal
+    isn't done yet. To win, you need to find and gather info about the victory card.
+    Keep going!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -47910,23 +47910,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Part 1
-
-    Choose the correct dish to move forward, then gather the ingredients
-    from the market. Let''s get cooking!
-
-
-    Part 2
-
-    Select the right ingredients
-    for the recipe above by putting the correct ones in the bowl and the wrong ones
-    in the basket. Let''s whip up something delicious!
-
-
-    Part 3
-
-    Put the
-    recipe steps in order so you don''t mess it up. Let''s cook without chaos!'
+  m_text: "Welcome to Level 8! It's time to showcase your cooking skills. Here's
+    how to play:\n\n1: Choosing the Dish\r\nA. Select the correct dish from a given
+    set of options. \r\n\n2: Time to choose Ingredients to Recipe\r\nA. Time to guess
+    the right ingredients for the recipe. You will see the dish on screen.\r\nB.
+    You\u2019ll be presented with a variety of ingredients. Place the correct ingredients
+    for the recipe  in the core recipe bowl and discard the incorrect ones into the
+    leftover basket.\r\nC. Pay attention to the recipe requirements and make sure
+    only the necessary ingredients are used. So that it does not become padded.\r\n\n3:
+    Ordering the Steps\r\nA. Place the recipe steps in the correct order in the provided
+    blank. Follow the sequence precisely to create a delicious dish without any mishaps.\r\nB.
+    Ensuring the steps are in order will help you avoid confusion and complete the
+    recipe successfully.\r\n\nGood luck on your adventure!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -47953,8 +47948,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -50458,7 +50453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-8
+  m_text: "Mestre gastron\xF3mico"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -51157,5 +51152,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -71}
-  m_SizeDelta: {x: 1800, y: 250}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}

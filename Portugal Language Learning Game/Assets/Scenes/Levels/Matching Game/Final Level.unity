@@ -5414,8 +5414,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations on completing the game! Now, take the skills you've mastered
-    and become the king of your own life. The adventure continues in your world!
+  m_text: Amazing job finishing the game! Now, use the skills you've learned and
+    become the king of your own life. The adventure continues in your world!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -5662,7 +5662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3487027847066776352
@@ -5703,7 +5703,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Match the Portuguese word and its translation in English! \r"
+  m_text: 'Welcome to final level of the game  Here''s how you need to play?
+
+
+    1.
+    Click on a card tile to reveal the word underneath. The tile will turn over to
+    show the hidden image.
+
+    2. Click on a second card tile to reveal another
+    word. This tile will also turn over to show the hidden image.
+
+    3. If the
+    memory cards on both tiles are consequently explaining their meaning in Portuguese
+    and English, they will remain face-up and eventually disappear from the board.
+
+    4.
+    If the words on the tiles are different, they will turn back over, hiding the
+    cards once again.
+
+    5. Continue clicking and revealing pairs of words until
+    all pairs have been found and matched.
+
+
+    Good luck on your adventure!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -5877,6 +5899,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 250}
+  m_AnchoredPosition: {x: 0, y: -75}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}

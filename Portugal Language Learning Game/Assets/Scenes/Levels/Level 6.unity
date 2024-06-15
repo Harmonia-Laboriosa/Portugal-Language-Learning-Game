@@ -11656,9 +11656,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations on getting the wizards acquainted and clearing Level 6!
-    Now, can you survive by dressing up like them and not raising any suspicion?
-    Let's find out!
+  m_text: Fantastic job getting the wizards acquainted and clearing Level 6! Now,
+    can you blend in by dressing like them without raising suspicion? Let's find
+    out!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -12014,7 +12014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3367970693435071988
@@ -12131,19 +12131,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Part 1
-
-    Select the correct options to gain the wizard''s trust and
-    to mask your true intentions
-
-
-    Part 2
-
-    Select the correct option in the
-    pamphlet to learn what all the fuss is about and solve the unsolvable riddle.
-
-
-'
+  m_text: "Welcome to Level 6! Your goal is to gain the wizard's trust and solve
+    the unsolvable riddle. Here's how to play:\n\n1: Gaining the Wizard's Trust\r\nA.
+    Engage in a conversation with the wizard. Select the correct dialogue options
+    that will help you mask your true intentions and win his trust.\r\nB. Pay close
+    attention to the wizard\u2019s reactions and choose wisely to avoid suspicion.\r\n2:
+    Solving the Riddle\r\nA. Examine the pamphlet provided and select the correct
+    option to understand the riddle's context.\r\nB. Use critical thinking and logic
+    to solve the unsolvable riddle. Each choice you make will bring you closer to
+    the solution or lead you astray.\r\n\nGood luck on your adventure!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -14754,7 +14750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-6
+  m_text: Mestre da aldeia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -15452,8 +15448,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1600, y: 250}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &8970395764629101422
 Transform:

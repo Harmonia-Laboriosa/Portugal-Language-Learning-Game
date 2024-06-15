@@ -12526,7 +12526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nice job on this level! But watch out, Level 3 is tougher and more dangerous.
+  m_text: Great job on Level 2! But watch out, Level 3 is tougher and more dangerous.
     Are you ready to keep going?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -13388,7 +13388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3487027848648215341
@@ -13429,8 +13429,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Part 1\nPick the right answer to continue the dialogue. \r\r\n\nPart 2\nChoose
-    wisely from the options provided.\u201DKeep the conversation going!"
+  m_text: "Welcome to Level 2! You're in an old village, talking to a wise man to
+    learn about the Master Victory Card and Portuguese. Here's how to play:\r\n\n1.
+    Choose correct options in  5 Enigma carefully to gain points required to move
+    to level 3.\n2. Talk to the old man. Be careful, wrong choices mean restarting.\n3.
+    Pick the right things to say to the old man. Your choices matter.\n4. If you
+    make mistakes, keep trying! Practice makes perfect.\n\nGood luck on your adventure!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -13827,7 +13831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-2
+  m_text: Mestre das palavras
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -14233,7 +14237,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 1381.5215, y: 250}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &9175313404505861067
 PrefabInstance:

@@ -26212,8 +26212,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Great job escaping the cave! Now, it's time to venture into the unknown
-    and hope you don't get caught. Keep your wits about you!
+  m_text: Nice escape from the cave in Level 5! Now, it's time to venture into the
+    unknown and hope you don't get caught. Stay sharp!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -26768,7 +26768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3367970693435071988
@@ -26885,27 +26885,35 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Part  1
-
-    Time to set the clock! Use the hour button to move the hour
-    hand and the minute button for the minute hand. Tick tock, let''s get it right!
+  m_text: 'Welcome to level 5, Your goal is to open the entrance of the cave. Here''s
+    how to play:
 
 
+    1: Setting the Clock
 
-    Part
-    2
+    Use the hour button to move the
+    hour hand and the minute button for the minute hand. Make sure to set the correct
+    time to progress.
+
+    Tick tock, let''s get it right!
+
+
+    2: Navigating the
+    Path
 
     Choose the right option to navigate the correct path ahead. Be careful,
     choosing the wrong one could set you back!
 
 
+    3: Arranging the weekdays in
+    right order
 
-    Part 3
-
-    Arrange the days
+    Drag and drop the days in the correct place. Arrange the days
     of the week in the correct order to find your way out of the cave of doom!
 
-'
+
+    Good
+    luck on your adventure!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -26932,8 +26940,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -29516,7 +29524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-5
+  m_text: Mestre do tempo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}

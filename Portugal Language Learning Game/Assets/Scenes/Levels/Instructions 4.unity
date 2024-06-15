@@ -414,7 +414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 89}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &437518765
@@ -1067,8 +1067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1000, y: 250}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784711910
 MonoBehaviour:
@@ -1090,16 +1090,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Spin the boulder by selecting the engraving or hitting the space bar to
-    craft the correct article for each word. Step up to the challenge and let''s
-    make this epic!
+  m_text: 'Welcome to Level 4! Get ready for an exciting challenge in the mysterious
+    cave where your future awaits. Here''s how you need to play?
 
-    
 
-    "Choose wisely to shatter the rocks and unveil the
-    mysterious cave where your future awaits!
+    1: Boulder
+    Spinning
 
-    
+    A. Start and stop spinning the boulder by selecting the right engraving
+    or hitting the spacebar to match the correct article for each word.
+
+    B. Let''s
+    make this epic! Show your skills and craft the correct articles.
+
+
+    2: Rock
+    Shattering
+
+    A. Click the correct article written on rock to shatter the rocks
+    and reveal the mysterious cave.
+
+    B. Choose wisely and uncover the secrets
+    hidden inside.
+
+
+    Good luck on your adventure!
 
 '
   m_isRightToLeft: 0
@@ -1128,8 +1143,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

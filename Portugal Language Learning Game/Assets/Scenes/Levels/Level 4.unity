@@ -1508,8 +1508,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations for clearing this level! Now, it's time to enter the Cave
-    of Doom and face whatever challenges come your way. You've got this!
+  m_text: Way to go on clearing Level 4! Now, it's time to enter the Cave of Doom
+    and face whatever challenges come your way. You got this!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -19230,7 +19230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &3487027848878422344
@@ -19271,10 +19271,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Part 1\nSpin the boulder by selecting the engraving or hitting the space
-    bar to craft the correct article for each word. Step up to the challenge and
-    let's make this epic!\n\n\rPart 2 \nChoose wisely to shatter the rocks and unveil
-    the mysterious cave where your future awaits!\n"
+  m_text: 'Welcome to Level 4! Get ready for an exciting challenge in the mysterious
+    cave where your future awaits. Here''s how you need to play?
+
+
+    1: Boulder
+    Spinning
+
+    A. Start and stop spinning the boulder by selecting the right engraving
+    or hitting the spacebar to match the correct article for each word.
+
+    B. Let''s
+    make this epic! Show your skills and craft the correct articles.
+
+
+    2: Rock
+    Shattering
+
+    A. Click the correct article written on rock to shatter the rocks
+    and reveal the mysterious cave.
+
+    B. Choose wisely and uncover the secrets
+    hidden inside.
+
+
+    Good luck on your adventure!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -19765,7 +19788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory Card-4
+  m_text: Mestre dos artigos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -20183,5 +20206,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -91}
-  m_SizeDelta: {x: 1600, y: 500}
+  m_SizeDelta: {x: 1800, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
