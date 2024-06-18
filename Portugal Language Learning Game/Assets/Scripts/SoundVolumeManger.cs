@@ -14,7 +14,7 @@ public class SoundVolumeManger : MonoBehaviour
         volumeAudio.volume = 0.05f;
         if (!PlayerPrefs.HasKey("musicVolume"))
         {
-            PlayerPrefs.SetFloat("musicVolume", 1);
+            PlayerPrefs.SetFloat("musicVolume", 0.05f);
         }
         else
         {
