@@ -44622,29 +44622,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Level 1 of the game! Here''s how to play:
-
-
-    1. Listen to
-    the audio by clicking the orange sound button. You''ll find it aligned to the
-    right of each letter.
-
-    2. Drag the correct letter onto the correct word to
-    make a meaningful word and earn points.
-
-    3. If you accidentally place the
-    wrong letter on a word, don''t worry! You can reset it.
-
-    4.Remember, you
-    need to answer all questions correctly to advance to the next level.
-
-    5.
-    Need help? Hints are available!
-
-
-    Good luck on your adventure!
-
-'
+  m_text: "                                   Welcome to Level 1 of the game! Here's
+    how to play:\n\n1. Listen to the audio by clicking the orange sound button. You'll
+    find it aligned to the right of each letter.\n\n2. Drag the correct letter onto
+    the correct word to make a meaningful word and earn points.\n\n3. If you accidentally
+    place the wrong letter on a word, don't worry! You can reset it.\n\n4.Remember,
+    you need to answer all questions correctly to advance to the next level.\n\n5.
+    Need help? Hints are available!\n\n                                         
+    Good luck on your adventure!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -44653,8 +44638,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239487
+  m_fontColor: {r: 1, g: 0.7540984, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -44662,7 +44647,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: b35bea02bbdca9747ae453b19332503e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -44671,14 +44656,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -44688,7 +44673,7 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 0.258
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}

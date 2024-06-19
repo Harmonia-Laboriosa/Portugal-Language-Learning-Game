@@ -13429,12 +13429,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to Level 2! You're in an old village, talking to a wise man to
-    learn about the Master Victory Card and Portuguese. Here's how to play:\r\n\n1.
-    Choose correct options in  5 Enigma carefully to gain points required to move
-    to level 3.\n2. Talk to the old man. Be careful, wrong choices mean restarting.\n3.
-    Pick the right things to say to the old man. Your choices matter.\n4. If you
-    make mistakes, keep trying! Practice makes perfect.\n\nGood luck on your adventure!\r"
+  m_text: "\t\t\t\t\tWelcome to Level 2! \n\nYou're in an old village, talking to
+    a wise man to learn about the Master Victory Card and Portuguese. Here's how
+    to play:\r\n\n1. Choose correct options in  5 Enigma carefully to gain points
+    required to move to level 3.\n\n2. Talk to the old man. Be careful, wrong choices
+    mean restarting.\n\n3. Pick the right things to say to the old man. Your choices
+    matter.\n\n4. If you make mistakes, keep trying! Practice makes perfect.\n\n\t\t\t\t\tGood
+    luck on your adventure!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -13443,8 +13444,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239487
+  m_fontColor: {r: 1, g: 0.7529412, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -13452,7 +13453,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: b35bea02bbdca9747ae453b19332503e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -13461,14 +13462,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

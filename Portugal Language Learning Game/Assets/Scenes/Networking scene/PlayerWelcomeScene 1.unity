@@ -1421,21 +1421,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*Answer as many questions correctly as you can.
-
-
-    *Maximize your
-    points by getting each question right.
-
-
-    *Earn a victory card at the end
-    of each level by answering all questions correctly.
-
-
-    *Gather all the victory
-    cards to gain control of Portugal.
-
-'
+  m_text: "\u2022 Answer as many questions correctly as you can.\n\n\u2022 Maximize
+    your points by getting each question right.\n\n\u2022 Earn a victory card at
+    the end of each level by answering all questions correctly.\n\n\u2022 Gather
+    all the victory cards to gain control of Portugal.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -3572,33 +3561,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '* The game has 10 levels, each focusing on different aspects of a language.
-
-
-    *
-    Each correct answer gives you 1 point and your score is displayed in the top
-    right corner.
-
-
-    * For instructions at any time, click the "i" button at the
-    bottom of the screen.
-
-
-    * Use the settings icon to adjust the sound.
-
-
-    *
-    Click the back icon at the top right corner to return back to the main menu.
-
-
-    *
-    There are no checkpoints in the game.
-
-
-    * The Glossary can be used at any
-    point in the game if you need help with the understanding of the language!
-
-'
+  m_text: "\u2022 The game has 10 levels, each focusing on different aspects of a
+    language.\r\n\r\n\u2022 Each correct answer gives you 1 point and your score
+    is displayed in the top right corner.\r\n\r\n\u2022 For instructions at any time,
+    click the \"i\" button at the bottom of the screen.\r\n\r\n\u2022 Use the settings
+    icon to adjust the sound.\r\n\r\n\u2022 Click the back icon at the top right
+    corner to return back to the main menu.\r\n\r\n\u2022 There are no checkpoints
+    in the game.\r\n\r\n\u2022 The Glossary can be used at any point in the game
+    if you need help with the understanding of the Protugese language!\r\n\r\n<u><color=#BF6161>\u2022
+    For any support mail us at - info@harmonialaboriosa.com</color></u>\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -5099,13 +5070,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5696,13 +5667,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
