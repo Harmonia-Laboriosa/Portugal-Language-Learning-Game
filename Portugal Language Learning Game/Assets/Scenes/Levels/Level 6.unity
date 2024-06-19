@@ -12131,15 +12131,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to Level 6! Your goal is to gain the wizard's trust and solve
-    the unsolvable riddle. Here's how to play:\n\n1: Gaining the Wizard's Trust\r\nA.
-    Engage in a conversation with the wizard. Select the correct dialogue options
-    that will help you mask your true intentions and win his trust.\r\nB. Pay close
-    attention to the wizard\u2019s reactions and choose wisely to avoid suspicion.\r\n2:
-    Solving the Riddle\r\nA. Examine the pamphlet provided and select the correct
-    option to understand the riddle's context.\r\nB. Use critical thinking and logic
-    to solve the unsolvable riddle. Each choice you make will bring you closer to
-    the solution or lead you astray.\r\n\nGood luck on your adventure!\n"
+  m_text: "\t\t\t\t\t\tWelcome to Level 6! \nYour goal is to gain the wizard's trust
+    and solve the unsolvable riddle. Here's how to play:\n\n1: Gaining the Wizard's
+    Trust\r\n\nA. Engage in a conversation with the wizard. Select the correct dialogue
+    options that will help you mask your true intentions and win his trust.\r\nB.
+    Pay close attention to the wizard\u2019s reactions and choose wisely to avoid
+    suspicion.\r\n\n2: Solving the Riddle\r\n\nA. Examine the pamphlet provided and
+    select the correct option to understand the riddle's context.\r\nB. Use critical
+    thinking and logic to solve the unsolvable riddle. Each choice you make will
+    bring you closer to the solution or lead you astray.\r\n\n\t\t\t\t\tGood luck
+    on your adventure!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -12148,8 +12149,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239487
+  m_fontColor: {r: 1, g: 0.7529412, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -12157,7 +12158,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: b35bea02bbdca9747ae453b19332503e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -12166,19 +12167,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -5
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

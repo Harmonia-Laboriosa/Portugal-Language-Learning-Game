@@ -47910,18 +47910,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to Level 8! It's time to showcase your cooking skills. Here's
-    how to play:\n\n1: Choosing the Dish\r\nA. Select the correct dish from a given
-    set of options. \r\n\n2: Time to choose Ingredients to Recipe\r\nA. Time to guess
-    the right ingredients for the recipe. You will see the dish on screen.\r\nB.
-    You\u2019ll be presented with a variety of ingredients. Place the correct ingredients
-    for the recipe  in the core recipe bowl and discard the incorrect ones into the
-    leftover basket.\r\nC. Pay attention to the recipe requirements and make sure
-    only the necessary ingredients are used. So that it does not become padded.\r\n\n3:
-    Ordering the Steps\r\nA. Place the recipe steps in the correct order in the provided
-    blank. Follow the sequence precisely to create a delicious dish without any mishaps.\r\nB.
-    Ensuring the steps are in order will help you avoid confusion and complete the
-    recipe successfully.\r\n\nGood luck on your adventure!"
+  m_text: "\t\t\t\t\t\t     Welcome to Level 8!\n It's time to showcase your cooking
+    skills. Here's how to play:\n\n1: Choosing the Dish\r\nA. Select the correct
+    dish from a given set of options. \r\n\n2: Time to choose Ingredients to Recipe\r\nA.
+    Time to guess the right ingredients for the recipe. You will see the dish on
+    screen.\r\nB. You\u2019ll be presented with a variety of ingredients. Place the
+    correct ingredients for the recipe  in the core recipe bowl and discard the incorrect
+    ones into the leftover basket.\r\nC. Pay attention to the recipe requirements
+    and make sure only the necessary ingredients are used. So that it does not become
+    padded.\r\n\n3: Ordering the Steps\r\nA. Place the recipe steps in the correct
+    order in the provided blank. Follow the sequence precisely to create a delicious
+    dish without any mishaps.\r\nB. Ensuring the steps are in order will help you
+    avoid confusion and complete the recipe successfully.\r\n\n\t\t\t\t\t\tGood luck
+    on your adventure!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -47930,8 +47931,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239487
+  m_fontColor: {r: 1, g: 0.7529412, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -47939,7 +47940,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: b35bea02bbdca9747ae453b19332503e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -47948,19 +47949,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -5
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

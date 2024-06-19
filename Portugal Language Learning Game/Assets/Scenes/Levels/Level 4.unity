@@ -19271,33 +19271,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Level 4! Get ready for an exciting challenge in the mysterious
-    cave where your future awaits. Here''s how you need to play?
-
-
-    1: Boulder
-    Spinning
-
-    A. Start and stop spinning the boulder by selecting the right engraving
-    or hitting the spacebar to match the correct article for each word.
-
-    B. Let''s
-    make this epic! Show your skills and craft the correct articles.
-
-
-    2: Rock
-    Shattering
-
-    A. Click the correct article written on rock to shatter the rocks
-    and reveal the mysterious cave.
-
-    B. Choose wisely and uncover the secrets
-    hidden inside.
-
-
-    Good luck on your adventure!
-
-'
+  m_text: "\t\t\t\t\t      Welcome to Level 4!\nGet ready for an exciting challenge
+    in the mysterious cave where your future awaits. Here's how you need to play?\n\n1:
+    Boulder Spinning\n\nA. Start and stop spinning the boulder by selecting the right
+    engraving or hitting the spacebar to match the correct article for each word.\nB.
+    Let's make this epic! Show your skills and craft the correct articles.\n\n2:
+    Rock Shattering\n\nA. Click the correct article written on rock to shatter the
+    rocks and reveal the mysterious cave.\nB. Choose wisely and uncover the secrets
+    hidden inside.\n\n\t\t\t\t\tGood luck on your adventure!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -19306,8 +19287,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239487
+  m_fontColor: {r: 1, g: 0.7529412, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -19315,7 +19296,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: b35bea02bbdca9747ae453b19332503e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -19324,14 +19305,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

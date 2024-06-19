@@ -26965,28 +26965,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Level 7! It''s time to showcase your fashion sense. Here''s
-    how to play:
-
-
-    1: Dressing for Occasions
-
-    A. You''ll be given different
-    occasions such as a formal event, a beach party, or a sports activity. Select
-    the 4 appropriate attire for each occasion from the given clothes.
-
-    B. Ensure
-    the outfit matches the event perfectly to earn points.
-
-
-    2: Matching Professions
-
-    A.
-    Place the appropriate outfit on professions given. For example, place  a lab
-    coat on a scientist.
-
-
-    Good luck on your adventure!'
+  m_text: "\t\t\t\t\t      Welcome to Level 7! \n\nIt's time to showcase your fashion
+    sense. Here's how to play:\n\n1: Dressing for Occasions\n\nA. You'll be given
+    different occasions such as a formal event, a beach party, or a sports activity.
+    Select the 4 appropriate attire for each occasion from the given clothes.\n\nB.
+    Ensure the outfit matches the event perfectly to earn points.\n\n2: Matching
+    Professions\n\nA. Place the appropriate outfit on professions given. For example,
+    place  a lab coat on a scientist.\n\n\t\t\t\t\tGood luck on your adventure!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -26995,8 +26980,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239487
+  m_fontColor: {r: 1, g: 0.7529412, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -27004,7 +26989,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: b35bea02bbdca9747ae453b19332503e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -27013,14 +26998,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
