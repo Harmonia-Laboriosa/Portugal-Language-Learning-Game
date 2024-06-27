@@ -206,6 +206,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2890479132471649888, guid: dbacbf1982dc83c47a57f3573aabc093, type: 3}
+      propertyPath: videoname
+      value: Welcome.mp4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890479132471649890, guid: dbacbf1982dc83c47a57f3573aabc093, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 07baac0a827200a439387ee82ab2d028, type: 2}
     - target: {fileID: 2890479132471649891, guid: dbacbf1982dc83c47a57f3573aabc093, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -581,7 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1171906184}
   sceneToLoad: Level Selection
-  timeToFill: 2
+  timeToFill: 15
 --- !u!4 &484718298
 Transform:
   m_ObjectHideFlags: 0
@@ -1811,7 +1819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 052d3cba6822922419e4beecf847bbd7, type: 2}
+  m_Texture: {fileID: 8400000, guid: 07baac0a827200a439387ee82ab2d028, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
