@@ -523,8 +523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1171906184}
-  sceneToLoad: Level Selection
-  timeToFill: 2
+  sceneToLoad: Credits
+  timeToFill: 15
 --- !u!4 &484718298
 Transform:
   m_ObjectHideFlags: 0
@@ -1700,7 +1700,7 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 495fa0cf01faf364b80b6af5324be2c1, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: bcb08341d23b4694c833d4a09a9ed408, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b74c9bce9c4dd4eb3b1ea3807ebc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoname: LibraryS3.mp4
+  videoname: Final Cutscene pt2.mp4
 --- !u!1 &2890479130884295631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 495fa0cf01faf364b80b6af5324be2c1, type: 2}
+  m_Texture: {fileID: 8400000, guid: bcb08341d23b4694c833d4a09a9ed408, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
