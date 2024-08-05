@@ -14145,7 +14145,7 @@ GameObject:
   - component: {fileID: 688419270}
   m_Layer: 0
   m_Name: o(Word)
-  m_TagString: closed O
+  m_TagString: middle O
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14614,7 +14614,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708432529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -21178,6 +21178,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 747024183118246823, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 747024183118246823, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2008156053}
+    - target: {fileID: 747024183118246823, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 747024183118246823, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: e18db8af14739504f9dd3ca26a818873, type: 3}
+    - target: {fileID: 747024183118246823, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 959034702424138231, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21322,6 +21342,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6189878410540193341, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7921f183e3ee0764cb06cc31f8ba856e, type: 3}
     - target: {fileID: 6606705756752007343, guid: 7f8d5196cb66b3d4fb9d13cb65a58936, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -24602,7 +24626,7 @@ MonoBehaviour:
   scoreText: {fileID: 643322064}
   showScore: 0
   DialogueLevelScore: 0
-  ScoreOutOf: {fileID: 0}
+  ScoreOutOf: {fileID: 772029749}
 --- !u!82 &1155154820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26639,8 +26663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 789, y: -474}
-  m_SizeDelta: {x: 300, y: 110}
+  m_AnchoredPosition: {x: 875, y: -475}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245598974
 MonoBehaviour:
@@ -26730,7 +26754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83b16c08e0e62164a8f37a2858f121ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 933f2a157b7c605439fac59021a917be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28903,8 +28927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 565, y: 266.5}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchoredPosition: {x: 875, y: 475}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368129081
 MonoBehaviour:
@@ -30396,8 +30420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 789, y: -474}
-  m_SizeDelta: {x: 300, y: 110}
+  m_AnchoredPosition: {x: 875, y: -475}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468162128
 MonoBehaviour:
@@ -30487,7 +30511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83b16c08e0e62164a8f37a2858f121ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 933f2a157b7c605439fac59021a917be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35095,7 +35119,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: Fake Player Scene
+          m_StringArgument: PlayerWelcomeScene 1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1428352729}
@@ -38697,7 +38721,7 @@ GameObject:
   - component: {fileID: 1888842709}
   m_Layer: 0
   m_Name: ou(Word)
-  m_TagString: middle O
+  m_TagString: ou
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42993,7 +43017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d4f8c68e7c22f4b8228776d5bd280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: middle O
+  Placedobjecttag: ou
   word1: Tes
   word: ros
   dragSound: {fileID: 1312828102}
@@ -43358,7 +43382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d4f8c68e7c22f4b8228776d5bd280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placedobjecttag: closed O
+  Placedobjecttag: middle O
   word1: Emp
   word: lgante
   dragSound: {fileID: 1312828102}

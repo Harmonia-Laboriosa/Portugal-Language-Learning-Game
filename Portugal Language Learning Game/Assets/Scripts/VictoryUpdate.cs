@@ -9,7 +9,7 @@ public class VictoryUpdate : MonoBehaviour
     public GameObject[] BlurredLevel;
     public GameObject[] UnlockedLevel;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
         if (CurrentPlayer != null)

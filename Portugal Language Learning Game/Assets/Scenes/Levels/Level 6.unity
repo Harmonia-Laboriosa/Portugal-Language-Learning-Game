@@ -762,8 +762,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 779708382}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: Home
-        m_Mode: 3
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5953,7 +5953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /11
+  m_text: /4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -6992,7 +6992,7 @@ MonoBehaviour:
   FailedPanel: {fileID: 6009744477132212678}
   victoryPanel: {fileID: 5262681775596062020}
   dialoguePanel: {fileID: 1753431001}
-  scoreText: {fileID: 4604587689585125939}
+  scoreText: {fileID: 0}
   answerButtons:
   - {fileID: 1941073638}
   - {fileID: 1122592789}
@@ -13484,7 +13484,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 3'
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
   m_sharedMaterial: {fileID: 2715459809460050834, guid: d228338db1756b74d9ce8f00062860cf, type: 2}
@@ -13782,8 +13784,8 @@ MonoBehaviour:
   scoreShow: {fileID: 1596365728}
   scoreText: {fileID: 6009744476570311273}
   showScore: 0
-  DialogueLevelScore: 0
-  ScoreOutOf: {fileID: 0}
+  DialogueLevelScore: 4
+  ScoreOutOf: {fileID: 1064968554}
 --- !u!224 &6009744477132212539
 RectTransform:
   m_ObjectHideFlags: 0

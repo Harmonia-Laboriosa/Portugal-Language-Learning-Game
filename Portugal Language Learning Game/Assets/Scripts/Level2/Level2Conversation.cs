@@ -200,7 +200,7 @@ public class Level2Conversation : MonoBehaviour
 
     public void SucessConversation()
     {
-        StartCoroutine("Ending");
+       // StartCoroutine("Ending");
         isTalking = false;
         
         Btn.PlayerImage.SetActive(false);

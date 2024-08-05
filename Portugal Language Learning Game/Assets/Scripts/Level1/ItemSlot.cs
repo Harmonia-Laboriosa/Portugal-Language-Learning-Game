@@ -65,16 +65,19 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             {
                 eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + 'u' + word + "</i>";
             }
-
+            if (droppedObjectTag == "ou")
+            {
+                eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text = "<i>" + word1 + "ou" + word + "</i>";
+            }
 
             //eventData.pointerDrag.GetComponentInChildren<Button>().onClick.RemoveAllListeners(); 
-            if(eventData.pointerDrag.GetComponentInChildren<Button>()!=null)
+            if (eventData.pointerDrag.GetComponentInChildren<Button>()!=null)
             {
                 eventData.pointerDrag.GetComponentInChildren<Button>().interactable = false;
             }
             dragSound.PlayOneShot(dragClip);
             // Print the tag of the dropped object
-            Debug.Log("Tag of dropped object: " + droppedObjectTag);
+            //Debug.Log("Tag of dropped object: " + droppedObjectTag);
 
             // Move the dropped object to the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;

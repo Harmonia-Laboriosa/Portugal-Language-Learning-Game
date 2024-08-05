@@ -26,7 +26,7 @@ public class ShowScore : MonoBehaviour
     {
         if (scoreText != null)
         {
-            if (DialogueLevelScore >= 0)
+            if (DialogueLevelScore > 0)
             {
                 if (showScore == DialogueLevelScore)
                 {
@@ -34,11 +34,17 @@ public class ShowScore : MonoBehaviour
                         ScoreOutOf.SetActive(false);
                     scoreText.text = "Wrong Converstation";
                 }
+                else
+                {
+                    scoreText.text = "Score: " + showScore.ToString(); // Update the text to display the current score
+                }
+
             }
             else
             {
                 scoreText.text = "Score: " + showScore.ToString(); // Update the text to display the current score
             }
+
         }
         //scoreText.text = "Score: " + showScore.ToString();
     }

@@ -51,38 +51,41 @@ public class LevelManager : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        StartCoroutine("Load_NextLevel");
+        int currentscene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentscene + 1);
+       // StartCoroutine("Load_NextLevel");
     }
 
     IEnumerator Load_NextLevel()
     {
         yield return new WaitForSeconds(0.5f);
-        int currentscene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentscene + 1);
+        
     }
 
     public void LoadLevel(string level)
     {
-        coroutine1 = Load_Level(level);
-        StartCoroutine(coroutine1);
+        
+        SceneManager.LoadScene(level);
+      
     }
 
 
     IEnumerator Load_Level(string level)
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(level);
+        
     }
     public void Home(string level)
     {
-        coroutine2 = Home_Level(level);
-        StartCoroutine(coroutine2);
+        SceneManager.LoadScene(level);
+       /* coroutine2 = Home_Level(level);
+        StartCoroutine(coroutine2);*/
     }
 
     IEnumerator Home_Level(string level)
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(level);
+        
     }
 
 }

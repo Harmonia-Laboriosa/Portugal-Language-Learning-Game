@@ -12508,7 +12508,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: Fake Player Scene
+          m_StringArgument: PlayerWelcomeScene 1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733698440}
@@ -28636,7 +28636,7 @@ MonoBehaviour:
   scoreText: {fileID: 6009744476570311273}
   showScore: 0
   DialogueLevelScore: 0
-  ScoreOutOf: {fileID: 0}
+  ScoreOutOf: {fileID: 331886754}
 --- !u!224 &6009744477132212539
 RectTransform:
   m_ObjectHideFlags: 0

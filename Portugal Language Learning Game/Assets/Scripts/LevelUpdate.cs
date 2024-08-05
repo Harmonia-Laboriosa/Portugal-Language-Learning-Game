@@ -2,23 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class LevelUpdate : MonoBehaviour
 {
     int score;
     public Button[] Level;
     public GameObject[] BlurredLevel;
     public GameObject[] UnlockedLevel;
+
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-        if (CurrentPlayer != null && CurrentPlayer == null)
+        if (CurrentPlayer != null)
         {
             score = CurrentPlayer.GetComponent<CurrentPlayer>().Score;
             switch (score)
             {
                 case 1:
-                    UpdateLevelButtons(2); 
+                    UpdateLevelButtons(2);
                     break;
                 case 2:
                     UpdateLevelButtons(3);
@@ -52,9 +54,9 @@ public class LevelUpdate : MonoBehaviour
         }
     }
 
-   void UpdateLevelButtons(int x)
+    void UpdateLevelButtons(int x)
     {
-        for(int i= 0; i < x; i++)
+        for (int i = 0; i < x; i++)
         {
             Level[i].GetComponent<Button>().interactable = true;
             BlurredLevel[i].SetActive(false);

@@ -241,6 +241,7 @@ public class SlotManage : MonoBehaviour
         */
         if (!gameEnded) // Check if the game has not ended yet
         {
+
             CheckVictoryCard();
             if (scoreManager.score < 13)
             {
@@ -260,6 +261,7 @@ public class SlotManage : MonoBehaviour
                 EndPanel.SetActive(true);
                 if (scoreManager.score==13)
                 {
+                   
                     victoryPanel.SetActive(true);
                 }
             }
@@ -268,38 +270,7 @@ public class SlotManage : MonoBehaviour
         }
     }
 
-    IEnumerator SavePlayerScore()
-    {
-        var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
-
-        string username = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
-        string scoreFromPlayer = CurrentPlayer.GetComponent<CurrentPlayer>().Score.ToString();
-        WWWForm scoreForm = new WWWForm();
-        scoreForm.AddField("apppassword", "thisisfromtheapp");
-        scoreForm.AddField("username", username);
-        scoreForm.AddField("score", scoreFromPlayer);
-        UnityWebRequest updatePlayerRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/updateplayerscore.php", scoreForm);
-        yield return updatePlayerRequest.SendWebRequest();
-        if (updatePlayerRequest.error == null)
-        {
-
-            string result = updatePlayerRequest.downloadHandler.text;
-            Debug.Log(result);
-            if (result == "0")
-            {
-                //FindObjectOfType<SceneSwitch>().LoadGameScene();
-            }
-            else
-            {
-                Debug.Log("error");
-            }
-        }
-        else
-        {
-            Debug.Log(updatePlayerRequest.error);
-        }
-
-    }
+    
     public void CheckVictoryCard()
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
@@ -311,7 +282,7 @@ public class SlotManage : MonoBehaviour
                 {
                     Debug.Log("Victory 1 and level 2 Unlocked");
                     CurrentPlayer.GetComponent<CurrentPlayer>().Score = 1;
-                    StartCoroutine(SavePlayerScore());
+                    SManage.instance.StartCoroutine("SavePlayerScore");
                 }
                 else
                 {

@@ -1237,7 +1237,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: Fake Player Scene
+          m_StringArgument: PlayerWelcomeScene 1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1735924843}
@@ -2745,7 +2745,7 @@ MonoBehaviour:
   scoreText: {fileID: 404332258}
   showScore: 0
   DialogueLevelScore: 0
-  ScoreOutOf: {fileID: 0}
+  ScoreOutOf: {fileID: 1294474728}
 --- !u!114 &404332258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13335,7 +13335,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: Fake Player Scene
+          m_StringArgument: PlayerWelcomeScene 1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1735924843}

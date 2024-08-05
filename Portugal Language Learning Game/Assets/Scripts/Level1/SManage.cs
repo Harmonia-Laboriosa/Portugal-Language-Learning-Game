@@ -14,9 +14,11 @@ public class SManage : MonoBehaviour
     public int totalScore=0;
     public int score = 0; // Current score
     public TMP_Text scoreText; // Reference to the UI text displaying the score
-
-
  
+    private string apiUrl= "https://api.harmonialaboriosa.com/account/user/update/"; // API endpoint for login
+    private string jwtToken; // Store the JWT token after login
+
+
     void Awake()
     {
         if (instance == null)
@@ -82,31 +84,45 @@ public class SManage : MonoBehaviour
     {
         var CurrentPlayer = GameObject.FindGameObjectWithTag("CurrentPlayer");
 
-        string username = CurrentPlayer.GetComponent<CurrentPlayer>().Username;
-        string scoreFromPlayer = CurrentPlayer.GetComponent<CurrentPlayer>().Score.ToString();
-        WWWForm scoreForm = new WWWForm();
-        scoreForm.AddField("apppassword", "thisisfromtheapp");
-        scoreForm.AddField("username", username);
-        scoreForm.AddField("score", scoreFromPlayer);
-        UnityWebRequest updatePlayerRequest = UnityWebRequest.Post("http://ec2-54-172-175-103.compute-1.amazonaws.com/cruds/updateplayerscore.php", scoreForm);
-        yield return updatePlayerRequest.SendWebRequest();
-        if (updatePlayerRequest.error == null)
+        if (CurrentPlayer != null)
         {
+            var playerComponent = CurrentPlayer.GetComponent<CurrentPlayer>();
+            int score = playerComponent.Score;
+            string accessToken = playerComponent.accessToken;
+            jwtToken = accessToken;
 
-            string result = updatePlayerRequest.downloadHandler.text;
-            Debug.Log(result);
-            if (result == "0")
+            // Manually create the form data as a URL-encoded string
+            string formData = "game_score=" + UnityWebRequest.EscapeURL(score.ToString());
+
+            // Convert the string to a byte array
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(formData);
+
+            // Create the UnityWebRequest with PUT method
+            UnityWebRequest www = UnityWebRequest.Put(apiUrl, bodyRaw);
+
+            // Set the appropriate headers
+            if (!string.IsNullOrEmpty(jwtToken))
             {
-                //FindObjectOfType<SceneSwitch>().LoadGameScene();
+                www.SetRequestHeader("Authorization", "Bearer " + jwtToken);
+            }
+            www.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.Log($"Error: {www.error}");
             }
             else
             {
-                Debug.Log("error");
+                Debug.Log($"Score updated to {score}.");
+                
+                Debug.Log("Updated score: " + score);
             }
         }
         else
         {
-            Debug.Log(updatePlayerRequest.error);
+            Debug.Log("Error: CurrentPlayer not found.");
         }
 
     }
